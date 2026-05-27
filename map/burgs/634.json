@@ -1,0 +1,23 @@
+{
+  "cell": 3142,
+  "x": 505.5,
+  "y": 453.18,
+  "i": 634,
+  "state": 3,
+  "culture": 2,
+  "name": "Nejan",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.38,
+  "type": "Lake",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    7,
+    7
+  ]
+}

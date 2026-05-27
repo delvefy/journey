@@ -1,0 +1,23 @@
+{
+  "cell": 4476,
+  "x": 779.03,
+  "y": 566.89,
+  "i": 657,
+  "state": 14,
+  "culture": 2,
+  "name": "Kolestakhr",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.403,
+  "type": "Nomadic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    12,
+    8
+  ]
+}

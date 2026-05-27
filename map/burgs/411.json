@@ -1,0 +1,23 @@
+{
+  "cell": 1266,
+  "x": 1082.17,
+  "y": 267.15,
+  "i": 411,
+  "state": 12,
+  "culture": 10,
+  "name": "Lektos",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.008,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    16,
+    4
+  ]
+}

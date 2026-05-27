@@ -1,0 +1,23 @@
+{
+  "cell": 3715,
+  "x": 210.76,
+  "y": 506.31,
+  "i": 509,
+  "state": 1,
+  "culture": 9,
+  "name": "Gesonsium",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.717,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    3,
+    7
+  ]
+}

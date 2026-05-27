@@ -1,0 +1,23 @@
+{
+  "cell": 1014,
+  "x": 646.91,
+  "y": 244.75,
+  "i": 708,
+  "state": 3,
+  "culture": 6,
+  "name": "Victonium",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.324,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    10,
+    3
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 447,
+  "x": 1193.9,
+  "y": 187.6,
+  "i": 407,
+  "state": 12,
+  "culture": 10,
+  "name": "Neasenelio",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.163,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    18,
+    2
+  ]
+}

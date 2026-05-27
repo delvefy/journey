@@ -1,0 +1,23 @@
+{
+  "cell": 2755,
+  "x": 1091.95,
+  "y": 404.13,
+  "i": 376,
+  "state": 4,
+  "culture": 6,
+  "name": "Bodusonta",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.377,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    6
+  ]
+}

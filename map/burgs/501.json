@@ -1,0 +1,23 @@
+{
+  "cell": 255,
+  "x": 975.61,
+  "y": 159.84,
+  "i": 501,
+  "state": 9,
+  "culture": 10,
+  "name": "Emeleucia",
+  "feature": 2,
+  "capital": 0,
+  "population": 7.134,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    15,
+    2
+  ]
+}

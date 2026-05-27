@@ -1,0 +1,24 @@
+{
+  "cell": 4187,
+  "x": 177.8,
+  "y": 548.1,
+  "i": 42,
+  "state": 1,
+  "culture": 9,
+  "name": "Victogontes",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 4.959,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    2,
+    8
+  ]
+}

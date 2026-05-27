@@ -1,0 +1,23 @@
+{
+  "cell": 2427,
+  "x": 1130.07,
+  "y": 375.73,
+  "i": 715,
+  "state": 2,
+  "culture": 6,
+  "name": "Aegimiesa",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.528,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "trading_post",
+  "chunk": [
+    17,
+    5
+  ]
+}

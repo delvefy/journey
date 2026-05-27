@@ -1,0 +1,23 @@
+{
+  "cell": 4423,
+  "x": 241.4,
+  "y": 566.1,
+  "i": 111,
+  "state": 1,
+  "culture": 5,
+  "name": "Geimelheim",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.938,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    3,
+    8
+  ]
+}

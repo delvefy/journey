@@ -1,0 +1,23 @@
+{
+  "cell": 1631,
+  "x": 1130.93,
+  "y": 301.54,
+  "i": 331,
+  "state": 2,
+  "culture": 10,
+  "name": "Askroicodo",
+  "feature": 2,
+  "capital": 0,
+  "population": 4.73,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    4
+  ]
+}

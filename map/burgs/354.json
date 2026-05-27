@@ -1,0 +1,23 @@
+{
+  "cell": 4388,
+  "x": 951.41,
+  "y": 558.45,
+  "i": 354,
+  "state": 4,
+  "culture": 6,
+  "name": "Polleria",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.956,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    14,
+    8
+  ]
+}

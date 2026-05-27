@@ -1,0 +1,23 @@
+{
+  "cell": 721,
+  "x": 955.13,
+  "y": 214.12,
+  "i": 445,
+  "state": 9,
+  "culture": 10,
+  "name": "Stamon",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.024,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    14,
+    3
+  ]
+}

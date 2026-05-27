@@ -1,0 +1,23 @@
+{
+  "cell": 251,
+  "x": 925.93,
+  "y": 158.04,
+  "i": 9,
+  "state": 9,
+  "culture": 10,
+  "name": "Sparnegi",
+  "feature": 2,
+  "capital": 1,
+  "population": 11.393,
+  "type": "River",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "capital",
+  "chunk": [
+    14,
+    2
+  ]
+}

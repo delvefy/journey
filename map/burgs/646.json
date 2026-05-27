@@ -1,0 +1,23 @@
+{
+  "cell": 256,
+  "x": 979.1,
+  "y": 164.8,
+  "i": 646,
+  "state": 9,
+  "culture": 10,
+  "name": "Paphossos",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.512,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    15,
+    2
+  ]
+}

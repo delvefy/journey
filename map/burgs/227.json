@@ -1,0 +1,23 @@
+{
+  "cell": 3663,
+  "x": 926.6,
+  "y": 497.4,
+  "i": 227,
+  "state": 4,
+  "culture": 6,
+  "name": "Castrix",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.795,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    14,
+    7
+  ]
+}

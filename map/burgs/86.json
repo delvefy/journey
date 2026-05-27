@@ -1,0 +1,24 @@
+{
+  "cell": 1837,
+  "x": 836.21,
+  "y": 313.77,
+  "i": 86,
+  "state": 9,
+  "culture": 1,
+  "name": "Keshnaba",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 8.806,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    13,
+    4
+  ]
+}

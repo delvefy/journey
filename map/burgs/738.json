@@ -1,0 +1,23 @@
+{
+  "cell": 301,
+  "x": 726.45,
+  "y": 166.61,
+  "i": 738,
+  "state": 3,
+  "culture": 6,
+  "name": "Lugransis",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.563,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    11,
+    2
+  ]
+}

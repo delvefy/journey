@@ -1,0 +1,23 @@
+{
+  "cell": 731,
+  "x": 1063.95,
+  "y": 209.57,
+  "i": 189,
+  "state": 12,
+  "culture": 10,
+  "name": "Thybaies",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.268,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    16,
+    3
+  ]
+}

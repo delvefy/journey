@@ -1,0 +1,24 @@
+{
+  "cell": 60,
+  "x": 681.93,
+  "y": 129.6,
+  "i": 675,
+  "state": 3,
+  "culture": 2,
+  "name": "Jowstar",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 4.617,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    10,
+    2
+  ]
+}

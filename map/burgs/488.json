@@ -1,0 +1,23 @@
+{
+  "cell": 4629,
+  "x": 406.42,
+  "y": 597.24,
+  "i": 488,
+  "state": 11,
+  "culture": 3,
+  "name": "Lokka",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.359,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    6,
+    9
+  ]
+}

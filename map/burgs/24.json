@@ -1,0 +1,23 @@
+{
+  "cell": 873,
+  "x": 215.35,
+  "y": 234.87,
+  "i": 24,
+  "state": 10,
+  "culture": 7,
+  "name": "Racoligen",
+  "feature": 2,
+  "capital": 0,
+  "population": 10.909,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    3,
+    3
+  ]
+}

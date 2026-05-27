@@ -1,0 +1,151 @@
+{
+  "i": 10,
+  "name": "Cans",
+  "expansionism": 4.2,
+  "capital": 10,
+  "type": "Generic",
+  "center": 1074,
+  "culture": 7,
+  "pole": [
+    238,
+    327
+  ],
+  "neighbors": [
+    5,
+    1,
+    11
+  ],
+  "color": "#d89de0",
+  "campaigns": [
+    {
+      "name": "Epocian Conquest",
+      "start": 689,
+      "end": 703
+    },
+    {
+      "name": "Arviarian War",
+      "start": 725,
+      "end": 739
+    },
+    {
+      "name": "Kauresnasian Invasion",
+      "start": 927,
+      "end": 932
+    }
+  ],
+  "diplomacy": [
+    "x",
+    "Enemy",
+    "Neutral",
+    "Friendly",
+    "Neutral",
+    "Suspicion",
+    "Neutral",
+    "Friendly",
+    "Ally",
+    "Neutral",
+    "x",
+    "Suspicion",
+    "Neutral",
+    "Friendly",
+    "Neutral"
+  ],
+  "urban": 185.27200000000002,
+  "rural": 1275.1411012113094,
+  "burgs": 38,
+  "area": 26125,
+  "cells": 245,
+  "form": "Monarchy",
+  "formName": "Kingdom",
+  "fullName": "Kingdom of Cans",
+  "provinces": [
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    235
+  ],
+  "alert": 2.34,
+  "military": [
+    {
+      "i": 0,
+      "a": 6438,
+      "cell": 767,
+      "x": 243.23,
+      "y": 224.57,
+      "bx": 243.23,
+      "by": 224.57,
+      "u": {
+        "archers": 2788,
+        "artillery": 55,
+        "infantry": 2502,
+        "cavalry": 1093
+      },
+      "n": 0,
+      "name": "1st (Theborumia) Regiment",
+      "state": 10,
+      "icon": "\ud83c\udff9"
+    },
+    {
+      "i": 1,
+      "a": 3916,
+      "cell": 879,
+      "x": 278.78,
+      "y": 230.84,
+      "bx": 278.78,
+      "by": 230.84,
+      "u": {
+        "infantry": 1669,
+        "archers": 1171,
+        "cavalry": 1049,
+        "artillery": 27
+      },
+      "n": 0,
+      "name": "2nd (Martusorum) Regiment",
+      "state": 10,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 2,
+      "a": 3546,
+      "cell": 1074,
+      "x": 177,
+      "y": 262.8,
+      "bx": 177,
+      "by": 262.8,
+      "u": {
+        "archers": 1652,
+        "cavalry": 337,
+        "artillery": 60,
+        "infantry": 1497
+      },
+      "n": 0,
+      "name": "3rd (Sugustocia) Regiment",
+      "state": 10,
+      "icon": "\ud83d\udc51"
+    },
+    {
+      "i": 3,
+      "a": 19,
+      "cell": 1074,
+      "x": 171.66,
+      "y": 261.74,
+      "bx": 171.66,
+      "by": 261.74,
+      "u": {
+        "fleet": 19
+      },
+      "n": 1,
+      "name": "1st Fleet",
+      "state": 10,
+      "icon": "\ud83c\udf0a"
+    }
+  ]
+}

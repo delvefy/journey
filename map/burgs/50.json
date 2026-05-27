@@ -1,0 +1,23 @@
+{
+  "cell": 4922,
+  "x": 713.35,
+  "y": 621.79,
+  "i": 50,
+  "state": 14,
+  "culture": 2,
+  "name": "Vazhi",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.183,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    11,
+    9
+  ]
+}

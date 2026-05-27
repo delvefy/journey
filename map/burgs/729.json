@@ -1,0 +1,23 @@
+{
+  "cell": 3069,
+  "x": 874.51,
+  "y": 439.09,
+  "i": 729,
+  "state": 4,
+  "culture": 6,
+  "name": "Poboli",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.35,
+  "type": "Nomadic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    13,
+    6
+  ]
+}

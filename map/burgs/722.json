@@ -1,0 +1,23 @@
+{
+  "cell": 3949,
+  "x": 1144.64,
+  "y": 519.07,
+  "i": 722,
+  "state": 4,
+  "culture": 6,
+  "name": "Conodueg",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.972,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    8
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 4926,
+  "x": 757.62,
+  "y": 621.92,
+  "i": 60,
+  "state": 14,
+  "culture": 2,
+  "name": "Pamol",
+  "feature": 2,
+  "capital": 0,
+  "population": 10.782,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    11,
+    9
+  ]
+}

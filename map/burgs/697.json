@@ -1,0 +1,23 @@
+{
+  "cell": 618,
+  "x": 1012.89,
+  "y": 197.55,
+  "i": 697,
+  "state": 12,
+  "culture": 10,
+  "name": "Izephos",
+  "feature": 2,
+  "capital": 0,
+  "population": 11.219,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    15,
+    3
+  ]
+}

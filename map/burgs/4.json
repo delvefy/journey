@@ -1,0 +1,24 @@
+{
+  "cell": 3824,
+  "x": 1171.2,
+  "y": 505.36,
+  "i": 4,
+  "state": 4,
+  "culture": 6,
+  "name": "Ardum",
+  "feature": 2,
+  "capital": 1,
+  "port": 1,
+  "population": 24.072,
+  "type": "Naval",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 1,
+  "temple": 0,
+  "group": "capital",
+  "chunk": [
+    18,
+    7
+  ]
+}

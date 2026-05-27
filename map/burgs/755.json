@@ -1,0 +1,23 @@
+{
+  "cell": 2652,
+  "x": 1181.46,
+  "y": 400.3,
+  "i": 755,
+  "state": 6,
+  "culture": 10,
+  "name": "Lisagas",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.795,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    18,
+    6
+  ]
+}

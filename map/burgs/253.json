@@ -1,0 +1,23 @@
+{
+  "cell": 173,
+  "x": 884.58,
+  "y": 146.9,
+  "i": 253,
+  "state": 9,
+  "culture": 10,
+  "name": "Smyrgan",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.266,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    13,
+    2
+  ]
+}

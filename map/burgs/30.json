@@ -1,0 +1,24 @@
+{
+  "cell": 315,
+  "x": 832.7,
+  "y": 167.69,
+  "i": 30,
+  "state": 9,
+  "culture": 4,
+  "name": "Innaberc",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 10.337,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    13,
+    2
+  ]
+}

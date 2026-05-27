@@ -1,0 +1,23 @@
+{
+  "cell": 140,
+  "x": 605.77,
+  "y": 148.02,
+  "i": 287,
+  "state": 3,
+  "culture": 2,
+  "name": "Kabsard",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.08,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    9,
+    2
+  ]
+}

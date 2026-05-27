@@ -1,0 +1,23 @@
+{
+  "cell": 412,
+  "x": 941.68,
+  "y": 179.67,
+  "i": 333,
+  "state": 9,
+  "culture": 10,
+  "name": "Sparmacapo",
+  "feature": 2,
+  "capital": 0,
+  "population": 12.657,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    14,
+    2
+  ]
+}

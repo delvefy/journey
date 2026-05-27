@@ -1,0 +1,23 @@
+{
+  "cell": 722,
+  "x": 961.86,
+  "y": 215.61,
+  "i": 140,
+  "state": 9,
+  "culture": 10,
+  "name": "Martyn",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.173,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    15,
+    3
+  ]
+}

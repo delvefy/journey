@@ -1,0 +1,23 @@
+{
+  "cell": 605,
+  "x": 869.71,
+  "y": 198.95,
+  "i": 105,
+  "state": 9,
+  "culture": 10,
+  "name": "Peicopodoli",
+  "feature": 2,
+  "capital": 0,
+  "population": 18.062,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    13,
+    3
+  ]
+}

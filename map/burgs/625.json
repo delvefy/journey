@@ -1,0 +1,23 @@
+{
+  "cell": 1345,
+  "x": 731.51,
+  "y": 281.71,
+  "i": 625,
+  "state": 4,
+  "culture": 6,
+  "name": "Bironis",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.897,
+  "type": "Hunting",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    11,
+    4
+  ]
+}

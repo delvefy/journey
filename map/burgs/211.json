@@ -1,0 +1,23 @@
+{
+  "cell": 4622,
+  "x": 328.95,
+  "y": 587.21,
+  "i": 211,
+  "state": 11,
+  "culture": 5,
+  "name": "Altten",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.089,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    5,
+    9
+  ]
+}

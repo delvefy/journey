@@ -1,0 +1,24 @@
+{
+  "cell": 248,
+  "x": 887.71,
+  "y": 159.68,
+  "i": 462,
+  "state": 9,
+  "culture": 10,
+  "name": "Ropopolis",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 1.889,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    13,
+    2
+  ]
+}

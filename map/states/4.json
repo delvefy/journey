@@ -1,0 +1,217 @@
+{
+  "i": 4,
+  "name": "Beralia",
+  "expansionism": 5.2,
+  "capital": 4,
+  "type": "Generic",
+  "center": 3824,
+  "culture": 6,
+  "pole": [
+    1104,
+    459
+  ],
+  "neighbors": [
+    3,
+    0,
+    9,
+    2,
+    6,
+    13
+  ],
+  "color": "#e78ac3",
+  "campaigns": [
+    {
+      "name": "Mardesran War",
+      "start": 344,
+      "end": 347
+    },
+    {
+      "name": "Phirian Crusade",
+      "start": 868,
+      "end": 873
+    },
+    {
+      "name": "Khvordemian War",
+      "start": 900,
+      "end": 912
+    },
+    {
+      "name": "Durerian Expedition",
+      "start": 927,
+      "end": 928
+    },
+    {
+      "name": "Pargylis Conflict",
+      "start": 927,
+      "end": 932
+    },
+    {
+      "name": "Aemeian Conquest",
+      "start": 927,
+      "end": 932
+    }
+  ],
+  "diplomacy": [
+    "x",
+    "Suspicion",
+    "Suspicion",
+    "Friendly",
+    "x",
+    "Suspicion",
+    "Suzerain",
+    "Friendly",
+    "Unknown",
+    "Suspicion",
+    "Neutral",
+    "Neutral",
+    "Suspicion",
+    "Friendly",
+    "Friendly"
+  ],
+  "urban": 569.262,
+  "rural": 5069.859754920006,
+  "burgs": 136,
+  "area": 81741,
+  "cells": 792,
+  "form": "Theocracy",
+  "formName": "Theocracy",
+  "fullName": "Beralian Theocracy",
+  "provinces": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    228,
+    229,
+    230
+  ],
+  "alert": 0.3,
+  "military": [
+    {
+      "i": 0,
+      "a": 2234,
+      "cell": 3942,
+      "x": 1070.96,
+      "y": 515.88,
+      "bx": 1070.96,
+      "by": 515.88,
+      "u": {
+        "infantry": 1111,
+        "archers": 641,
+        "cavalry": 471,
+        "artillery": 11
+      },
+      "n": 0,
+      "name": "1st (Duegrande) Regiment",
+      "state": 4,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 1,
+      "a": 1949,
+      "cell": 3288,
+      "x": 900.4,
+      "y": 463.4,
+      "bx": 900.4,
+      "by": 463.4,
+      "u": {
+        "infantry": 854,
+        "archers": 482,
+        "cavalry": 609,
+        "artillery": 4
+      },
+      "n": 0,
+      "name": "2nd (Treventia) Regiment",
+      "state": 4,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 2,
+      "a": 1881,
+      "cell": 3688,
+      "x": 1136.79,
+      "y": 498.95,
+      "bx": 1136.79,
+      "by": 498.95,
+      "u": {
+        "archers": 815,
+        "cavalry": 224,
+        "artillery": 15,
+        "infantry": 827
+      },
+      "n": 0,
+      "name": "3rd (Tauturiro) Regiment",
+      "state": 4,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 3,
+      "a": 438,
+      "cell": 1704,
+      "x": 716.16,
+      "y": 311.62,
+      "bx": 716.16,
+      "by": 311.62,
+      "u": {
+        "infantry": 169,
+        "archers": 90,
+        "cavalry": 179
+      },
+      "n": 0,
+      "name": "4th (Bironis) Regiment",
+      "state": 4,
+      "icon": "\ud83d\udc34"
+    },
+    {
+      "i": 4,
+      "a": 1,
+      "cell": 3824,
+      "x": 1177.84,
+      "y": 509.16,
+      "bx": 1177.84,
+      "by": 509.16,
+      "u": {
+        "fleet": 1
+      },
+      "n": 1,
+      "name": "1st Fleet",
+      "state": 4,
+      "icon": "\ud83c\udf0a"
+    }
+  ]
+}

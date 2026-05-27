@@ -1,0 +1,24 @@
+{
+  "cell": 1922,
+  "x": 503.39,
+  "y": 339.31,
+  "i": 567,
+  "state": 3,
+  "culture": 2,
+  "name": "Abgard",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 14.599,
+  "type": "Naval",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    7,
+    5
+  ]
+}

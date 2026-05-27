@@ -1,0 +1,23 @@
+{
+  "cell": 4193,
+  "x": 235.14,
+  "y": 546.15,
+  "i": 79,
+  "state": 1,
+  "culture": 5,
+  "name": "Todtter",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.237,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    3,
+    8
+  ]
+}

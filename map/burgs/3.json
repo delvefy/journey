@@ -1,0 +1,23 @@
+{
+  "cell": 379,
+  "x": 607.47,
+  "y": 177.78,
+  "i": 3,
+  "state": 3,
+  "culture": 2,
+  "name": "Bezahabad",
+  "feature": 2,
+  "capital": 1,
+  "population": 27.77,
+  "type": "River",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 1,
+  "temple": 1,
+  "group": "capital",
+  "chunk": [
+    9,
+    2
+  ]
+}

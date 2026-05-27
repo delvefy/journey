@@ -1,0 +1,23 @@
+{
+  "cell": 2430,
+  "x": 1169.51,
+  "y": 378.53,
+  "i": 453,
+  "state": 2,
+  "culture": 10,
+  "name": "Igosthos",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.063,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    18,
+    5
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 1152,
+  "x": 1077.8,
+  "y": 255.33,
+  "i": 404,
+  "state": 12,
+  "culture": 10,
+  "name": "Egaicarta",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.503,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    16,
+    3
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "cell": 432,
+  "x": 1088.65,
+  "y": 178.23,
+  "i": 256,
+  "state": 12,
+  "culture": 10,
+  "name": "Pirinapon",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 2.457,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    2
+  ]
+}

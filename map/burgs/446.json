@@ -1,0 +1,23 @@
+{
+  "cell": 4067,
+  "x": 1156.8,
+  "y": 529.54,
+  "i": 446,
+  "state": 4,
+  "culture": 6,
+  "name": "Gletoviona",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.295,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    18,
+    8
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 1055,
+  "x": 1113.16,
+  "y": 241.16,
+  "i": 134,
+  "state": 12,
+  "culture": 10,
+  "name": "Pileraclea",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.534,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    3
+  ]
+}

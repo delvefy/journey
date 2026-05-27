@@ -1,0 +1,24 @@
+{
+  "cell": 1901,
+  "x": 378.88,
+  "y": 337.46,
+  "i": 574,
+  "state": 5,
+  "culture": 8,
+  "name": "Thapo",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 1.45,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    5,
+    5
+  ]
+}

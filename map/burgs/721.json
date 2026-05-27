@@ -1,0 +1,23 @@
+{
+  "cell": 1795,
+  "x": 472.04,
+  "y": 321.68,
+  "i": 721,
+  "state": 3,
+  "culture": 9,
+  "name": "Aeteva",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.776,
+  "type": "Hunting",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    7,
+    5
+  ]
+}

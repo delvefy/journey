@@ -1,0 +1,24 @@
+{
+  "cell": 184,
+  "x": 949.37,
+  "y": 148.24,
+  "i": 232,
+  "state": 9,
+  "culture": 10,
+  "name": "Dexandna",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 11.967,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    14,
+    2
+  ]
+}

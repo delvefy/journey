@@ -1,0 +1,23 @@
+{
+  "cell": 2129,
+  "x": 379.2,
+  "y": 357.1,
+  "i": 619,
+  "state": 5,
+  "culture": 8,
+  "name": "Sessaion",
+  "feature": 2,
+  "capital": 0,
+  "population": 4.412,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    5
+  ]
+}

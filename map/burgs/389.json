@@ -1,0 +1,23 @@
+{
+  "cell": 2636,
+  "x": 1008.02,
+  "y": 398.77,
+  "i": 389,
+  "state": 4,
+  "culture": 6,
+  "name": "Claurum",
+  "feature": 2,
+  "capital": 0,
+  "population": 7.743,
+  "type": "Highland",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    15,
+    6
+  ]
+}

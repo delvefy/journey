@@ -1,0 +1,23 @@
+{
+  "cell": 466,
+  "x": 356.4,
+  "y": 190.65,
+  "i": 213,
+  "state": 5,
+  "culture": 8,
+  "name": "Riton",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.847,
+  "type": "Hunting",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    5,
+    2
+  ]
+}

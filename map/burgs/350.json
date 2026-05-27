@@ -1,0 +1,23 @@
+{
+  "cell": 3723,
+  "x": 302.21,
+  "y": 502.01,
+  "i": 350,
+  "state": 1,
+  "culture": 9,
+  "name": "Borsate",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.884,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    4,
+    7
+  ]
+}

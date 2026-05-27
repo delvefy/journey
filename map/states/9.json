@@ -1,0 +1,348 @@
+{
+  "i": 9,
+  "name": "Phiria",
+  "expansionism": 6,
+  "capital": 9,
+  "type": "Generic",
+  "center": 251,
+  "culture": 10,
+  "pole": [
+    920,
+    297
+  ],
+  "neighbors": [
+    12,
+    3,
+    2,
+    4
+  ],
+  "color": "#a7f761",
+  "campaigns": [
+    {
+      "name": "Epicearan Conflict",
+      "start": 808,
+      "end": 815
+    },
+    {
+      "name": "Beralian Conflict",
+      "start": 834,
+      "end": 835
+    },
+    {
+      "name": "Khvordemian War",
+      "start": 867,
+      "end": 873
+    },
+    {
+      "name": "Pargylis Intervention",
+      "start": 915,
+      "end": 917
+    },
+    {
+      "name": "Phiria-Pargylisian War",
+      "start": 932,
+      "attacker": 9,
+      "defender": 2
+    }
+  ],
+  "diplomacy": [
+    "x",
+    "Neutral",
+    "Enemy",
+    "Rival",
+    "Suspicion",
+    "Suspicion",
+    "Suspicion",
+    "Rival",
+    "Friendly",
+    "x",
+    "Neutral",
+    "Neutral",
+    "Suzerain",
+    "Rival",
+    "Friendly"
+  ],
+  "urban": 592.877,
+  "rural": 3586.253265917301,
+  "burgs": 105,
+  "area": 46854,
+  "cells": 443,
+  "form": "Monarchy",
+  "formName": "Kingdom",
+  "fullName": "Kingdom of Phiria",
+  "provinces": [
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    233,
+    234
+  ],
+  "alert": 2.85,
+  "military": [
+    {
+      "i": 0,
+      "a": 10234,
+      "cell": 712,
+      "x": 852.5,
+      "y": 211.17,
+      "bx": 852.5,
+      "by": 211.17,
+      "u": {
+        "infantry": 4714,
+        "cavalry": 1729,
+        "artillery": 136,
+        "archers": 3655
+      },
+      "n": 0,
+      "name": "1st (Amphe) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 1,
+      "a": 6242,
+      "cell": 931,
+      "x": 894.61,
+      "y": 230.45,
+      "bx": 894.61,
+      "by": 230.45,
+      "u": {
+        "infantry": 3041,
+        "archers": 1634,
+        "cavalry": 1537,
+        "artillery": 30
+      },
+      "n": 0,
+      "name": "2nd (Syraseria) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 2,
+      "a": 5158,
+      "cell": 326,
+      "x": 961.23,
+      "y": 170.45,
+      "bx": 961.23,
+      "by": 170.45,
+      "u": {
+        "infantry": 2410,
+        "archers": 1822,
+        "cavalry": 855,
+        "artillery": 71
+      },
+      "n": 0,
+      "name": "3rd (Rhithumnos) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 3,
+      "a": 4320,
+      "cell": 1257,
+      "x": 983.38,
+      "y": 262.95,
+      "bx": 983.38,
+      "by": 262.95,
+      "u": {
+        "infantry": 1571,
+        "archers": 1018,
+        "cavalry": 1708,
+        "artillery": 23
+      },
+      "n": 0,
+      "name": "4th (Soros) Regiment",
+      "state": 9,
+      "icon": "\ud83d\udc34"
+    },
+    {
+      "i": 4,
+      "a": 3988,
+      "cell": 409,
+      "x": 902.57,
+      "y": 177.44,
+      "bx": 902.57,
+      "by": 177.44,
+      "u": {
+        "infantry": 1748,
+        "cavalry": 464,
+        "artillery": 55,
+        "archers": 1721
+      },
+      "n": 0,
+      "name": "5th (Mecekuseia) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 5,
+      "a": 3654,
+      "cell": 934,
+      "x": 931.4,
+      "y": 231.48,
+      "bx": 931.4,
+      "by": 231.48,
+      "u": {
+        "infantry": 1797,
+        "archers": 904,
+        "cavalry": 944,
+        "artillery": 9
+      },
+      "n": 0,
+      "name": "6th (Imblososia) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 6,
+      "a": 3139,
+      "cell": 323,
+      "x": 925.73,
+      "y": 168.15,
+      "bx": 925.73,
+      "by": 168.15,
+      "u": {
+        "archers": 1337,
+        "cavalry": 374,
+        "artillery": 57,
+        "infantry": 1371
+      },
+      "n": 0,
+      "name": "7th (Apoponia) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 7,
+      "a": 3054,
+      "cell": 610,
+      "x": 930.59,
+      "y": 200.91,
+      "bx": 930.59,
+      "by": 200.91,
+      "u": {
+        "infantry": 1464,
+        "archers": 1003,
+        "cavalry": 554,
+        "artillery": 33
+      },
+      "n": 0,
+      "name": "8th (Mecekuseia) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 8,
+      "a": 2777,
+      "cell": 1138,
+      "x": 929.91,
+      "y": 251.55,
+      "bx": 929.91,
+      "by": 251.55,
+      "u": {
+        "infantry": 1100,
+        "archers": 638,
+        "cavalry": 1024,
+        "artillery": 15
+      },
+      "n": 0,
+      "name": "9th (Imblososia) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 9,
+      "a": 2589,
+      "cell": 1837,
+      "x": 840.14,
+      "y": 318.98,
+      "bx": 840.14,
+      "by": 318.98,
+      "u": {
+        "infantry": 1082,
+        "cavalry": 863,
+        "artillery": 18,
+        "archers": 626
+      },
+      "n": 0,
+      "name": "10th (Shusha) Regiment",
+      "state": 9,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 10,
+      "a": 14,
+      "cell": 184,
+      "x": 952.15,
+      "y": 142.86,
+      "bx": 952.15,
+      "by": 142.86,
+      "u": {
+        "fleet": 14
+      },
+      "n": 1,
+      "name": "1st Fleet",
+      "state": 9,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 11,
+      "a": 4,
+      "cell": 600,
+      "x": 810.76,
+      "y": 196.57,
+      "bx": 810.76,
+      "by": 196.57,
+      "u": {
+        "fleet": 4
+      },
+      "n": 1,
+      "name": "2nd Fleet",
+      "state": 9,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 12,
+      "a": 2,
+      "cell": 1953,
+      "x": 779.98,
+      "y": 345.95,
+      "bx": 779.98,
+      "by": 345.95,
+      "u": {
+        "fleet": 2
+      },
+      "n": 1,
+      "name": "3rd Fleet",
+      "state": 9,
+      "icon": "\ud83c\udf0a"
+    }
+  ]
+}

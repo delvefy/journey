@@ -1,0 +1,23 @@
+{
+  "cell": 3539,
+  "x": 957.72,
+  "y": 484.25,
+  "i": 719,
+  "state": 4,
+  "culture": 6,
+  "name": "Lurovia",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.385,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    14,
+    7
+  ]
+}

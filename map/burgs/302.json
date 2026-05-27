@@ -1,0 +1,24 @@
+{
+  "cell": 3709,
+  "x": 176.03,
+  "y": 495.86,
+  "i": 302,
+  "state": 1,
+  "culture": 9,
+  "name": "Prenemego",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 1.113,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    2,
+    7
+  ]
+}

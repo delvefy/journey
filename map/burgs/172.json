@@ -1,0 +1,23 @@
+{
+  "cell": 1629,
+  "x": 1115.13,
+  "y": 293.77,
+  "i": 172,
+  "state": 2,
+  "culture": 10,
+  "name": "Murion",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.247,
+  "type": "Highland",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    4
+  ]
+}

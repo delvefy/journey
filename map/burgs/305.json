@@ -1,0 +1,23 @@
+{
+  "cell": 320,
+  "x": 898.48,
+  "y": 163.97,
+  "i": 305,
+  "state": 9,
+  "culture": 10,
+  "name": "Arapon",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.483,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    14,
+    2
+  ]
+}

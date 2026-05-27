@@ -1,0 +1,23 @@
+{
+  "cell": 3321,
+  "x": 1185.68,
+  "y": 465.26,
+  "i": 347,
+  "state": 4,
+  "culture": 6,
+  "name": "Cesontia",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.858,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    18,
+    7
+  ]
+}

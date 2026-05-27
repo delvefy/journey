@@ -1,0 +1,23 @@
+{
+  "cell": 314,
+  "x": 839.15,
+  "y": 164.93,
+  "i": 291,
+  "state": 9,
+  "culture": 4,
+  "name": "Brivarabert",
+  "feature": 2,
+  "capital": 0,
+  "population": 4.62,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    13,
+    2
+  ]
+}

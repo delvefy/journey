@@ -1,0 +1,23 @@
+{
+  "cell": 628,
+  "x": 1119.52,
+  "y": 203.75,
+  "i": 463,
+  "state": 12,
+  "culture": 10,
+  "name": "Tramon",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.361,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    3
+  ]
+}

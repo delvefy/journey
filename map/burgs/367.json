@@ -1,0 +1,23 @@
+{
+  "cell": 4703,
+  "x": 259.94,
+  "y": 607.59,
+  "i": 367,
+  "state": 8,
+  "culture": 5,
+  "name": "Waldb",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.431,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    4,
+    9
+  ]
+}

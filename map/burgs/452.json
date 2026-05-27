@@ -1,0 +1,23 @@
+{
+  "cell": 4541,
+  "x": 419.26,
+  "y": 576.67,
+  "i": 452,
+  "state": 11,
+  "culture": 3,
+  "name": "Niila",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.001,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    6,
+    9
+  ]
+}

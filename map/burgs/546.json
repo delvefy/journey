@@ -1,0 +1,23 @@
+{
+  "cell": 4433,
+  "x": 354.15,
+  "y": 564.88,
+  "i": 546,
+  "state": 11,
+  "culture": 5,
+  "name": "Dachster",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.152,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    8
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 1300,
+  "x": 352.03,
+  "y": 275.94,
+  "i": 767,
+  "state": 5,
+  "culture": 8,
+  "name": "Chios",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.905,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    4
+  ]
+}

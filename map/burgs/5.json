@@ -1,0 +1,24 @@
+{
+  "cell": 987,
+  "x": 331.47,
+  "y": 239.17,
+  "i": 5,
+  "state": 5,
+  "culture": 8,
+  "name": "Throlisa",
+  "feature": 2,
+  "capital": 1,
+  "port": 1,
+  "population": 18.883,
+  "type": "Naval",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "capital",
+  "chunk": [
+    5,
+    3
+  ]
+}

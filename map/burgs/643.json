@@ -1,0 +1,23 @@
+{
+  "cell": 4209,
+  "x": 406.6,
+  "y": 544.78,
+  "i": 643,
+  "state": 11,
+  "culture": 3,
+  "name": "Kaabo",
+  "feature": 2,
+  "capital": 0,
+  "population": 11.531,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    6,
+    8
+  ]
+}

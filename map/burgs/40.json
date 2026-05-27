@@ -1,0 +1,23 @@
+{
+  "cell": 4205,
+  "x": 360.15,
+  "y": 543.68,
+  "i": 40,
+  "state": 11,
+  "culture": 5,
+  "name": "Hunausen",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.239,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    8
+  ]
+}

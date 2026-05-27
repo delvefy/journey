@@ -1,0 +1,23 @@
+{
+  "cell": 3716,
+  "x": 221.98,
+  "y": 505.68,
+  "i": 303,
+  "state": 1,
+  "culture": 9,
+  "name": "Deriaca",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.842,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    3,
+    7
+  ]
+}

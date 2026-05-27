@@ -1,0 +1,23 @@
+{
+  "cell": 926,
+  "x": 841.9,
+  "y": 235.49,
+  "i": 544,
+  "state": 9,
+  "culture": 10,
+  "name": "Nauclealyra",
+  "feature": 2,
+  "capital": 0,
+  "population": 8.497,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    13,
+    3
+  ]
+}

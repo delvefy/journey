@@ -1,0 +1,23 @@
+{
+  "cell": 3406,
+  "x": 888.05,
+  "y": 468.62,
+  "i": 510,
+  "state": 4,
+  "culture": 6,
+  "name": "Agripinium",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.83,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    13,
+    7
+  ]
+}

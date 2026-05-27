@@ -1,0 +1,23 @@
+{
+  "cell": 767,
+  "x": 244.23,
+  "y": 225.57,
+  "i": 36,
+  "state": 10,
+  "culture": 7,
+  "name": "Scarausium",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.564,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    3,
+    3
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 4563,
+  "x": 618.08,
+  "y": 581.35,
+  "i": 360,
+  "state": 14,
+  "culture": 2,
+  "name": "Golshan",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.052,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    9,
+    9
+  ]
+}

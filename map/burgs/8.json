@@ -1,0 +1,24 @@
+{
+  "cell": 4960,
+  "x": 288.21,
+  "y": 641.83,
+  "i": 8,
+  "state": 8,
+  "culture": 5,
+  "name": "Haisen",
+  "feature": 2,
+  "capital": 1,
+  "port": 1,
+  "population": 28.364,
+  "type": "Naval",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 1,
+  "group": "capital",
+  "chunk": [
+    4,
+    10
+  ]
+}

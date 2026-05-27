@@ -1,0 +1,23 @@
+{
+  "cell": 403,
+  "x": 843.36,
+  "y": 175.35,
+  "i": 629,
+  "state": 9,
+  "culture": 4,
+  "name": "Hordh",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.166,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    13,
+    2
+  ]
+}

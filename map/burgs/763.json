@@ -1,0 +1,23 @@
+{
+  "cell": 3551,
+  "x": 1037.45,
+  "y": 480.74,
+  "i": 763,
+  "state": 4,
+  "culture": 6,
+  "name": "Vivistatate",
+  "feature": 2,
+  "capital": 0,
+  "population": 16.802,
+  "type": "River",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    16,
+    7
+  ]
+}

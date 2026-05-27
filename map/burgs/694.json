@@ -1,0 +1,23 @@
+{
+  "cell": 3143,
+  "x": 507.1,
+  "y": 458.8,
+  "i": 694,
+  "state": 7,
+  "culture": 2,
+  "name": "Anshah",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.401,
+  "type": "Lake",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    7,
+    7
+  ]
+}

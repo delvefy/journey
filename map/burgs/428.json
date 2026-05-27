@@ -1,0 +1,23 @@
+{
+  "cell": 218,
+  "x": 663.7,
+  "y": 160.71,
+  "i": 428,
+  "state": 3,
+  "culture": 6,
+  "name": "Bornomaca",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.225,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    10,
+    2
+  ]
+}

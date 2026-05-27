@@ -1,0 +1,23 @@
+{
+  "cell": 1326,
+  "x": 540.06,
+  "y": 276.3,
+  "i": 295,
+  "state": 3,
+  "culture": 2,
+  "name": "Pabastan",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.596,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    8,
+    4
+  ]
+}

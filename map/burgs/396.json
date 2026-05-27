@@ -1,0 +1,23 @@
+{
+  "cell": 4160,
+  "x": 923.8,
+  "y": 545.2,
+  "i": 396,
+  "state": 4,
+  "culture": 6,
+  "name": "Bicanum",
+  "feature": 2,
+  "capital": 0,
+  "population": 7.14,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    14,
+    8
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 4206,
+  "x": 378.18,
+  "y": 552.64,
+  "i": 632,
+  "state": 11,
+  "culture": 3,
+  "name": "Lauva",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.193,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    8
+  ]
+}

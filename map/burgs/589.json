@@ -1,0 +1,23 @@
+{
+  "cell": 4510,
+  "x": 1113.22,
+  "y": 575,
+  "i": 589,
+  "state": 4,
+  "culture": 6,
+  "name": "Veminium",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.199,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    17,
+    8
+  ]
+}

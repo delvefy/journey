@@ -1,0 +1,42 @@
+{
+  "i": 0,
+  "name": "Neutrals",
+  "neighbors": [
+    3,
+    4,
+    13
+  ],
+  "diplomacy": [
+    [
+      "Arviaria-Haisenian War",
+      "Arviaria declared a war on its rival Haisenia",
+      "Haisenia's ally Khvordemia joined the war on defenders side",
+      "Khvordemia's vassal Vaimiola joined the war on defenders side",
+      "Khvordemia's vassal Mardesra joined the war on defenders side",
+      "Haisenia's ally Epocia joined the war on defenders side",
+      "Haisenia's ally Cans joined the war on defenders side"
+    ],
+    [
+      "Phiria-Pargylisian War",
+      "Phiria declared a war on its rival Pargylis",
+      "Phiria's vassal Gontionia joined the war on attackers side",
+      "Phiria's ally Epocia avoided entering the war"
+    ],
+    [
+      "Kauresnasia-Epocian War",
+      "Kauresnasia declared a war on its rival Epocia",
+      "Frightened by Kauresnasia, Beralia severed the defense pact with Epocia",
+      "Being already at war, Haisenia severed the defense pact with Epocia",
+      "Being already at war, Phiria severed the defense pact with Epocia",
+      "Kauresnasia's ally Khvordemia joined the war on attackers side",
+      "Khvordemia's vassal Vaimiola joined the war on attackers side",
+      "Khvordemia's vassal Mardesra joined the war on attackers side"
+    ]
+  ],
+  "urban": 0,
+  "rural": 0,
+  "burgs": 0,
+  "area": 2213,
+  "cells": 19,
+  "provinces": []
+}

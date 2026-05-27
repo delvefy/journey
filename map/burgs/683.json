@@ -1,0 +1,23 @@
+{
+  "cell": 4897,
+  "x": 509.55,
+  "y": 620.08,
+  "i": 683,
+  "state": 7,
+  "culture": 3,
+  "name": "Kupunari",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.141,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    7,
+    9
+  ]
+}

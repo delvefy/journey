@@ -1,0 +1,23 @@
+{
+  "cell": 4927,
+  "x": 761.73,
+  "y": 624.65,
+  "i": 274,
+  "state": 14,
+  "culture": 2,
+  "name": "Sawan",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.202,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    11,
+    9
+  ]
+}

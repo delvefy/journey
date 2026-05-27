@@ -1,0 +1,23 @@
+{
+  "cell": 4886,
+  "x": 425.7,
+  "y": 630,
+  "i": 103,
+  "state": 11,
+  "culture": 3,
+  "name": "Rakkajo",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.747,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    6,
+    9
+  ]
+}

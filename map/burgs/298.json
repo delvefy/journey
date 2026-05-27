@@ -1,0 +1,23 @@
+{
+  "cell": 334,
+  "x": 1021.44,
+  "y": 169.32,
+  "i": 298,
+  "state": 12,
+  "culture": 10,
+  "name": "Ithum",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.14,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    15,
+    2
+  ]
+}

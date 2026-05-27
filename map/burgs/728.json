@@ -1,0 +1,23 @@
+{
+  "cell": 2015,
+  "x": 375.33,
+  "y": 344.5,
+  "i": 728,
+  "state": 5,
+  "culture": 8,
+  "name": "Arathesia",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.39,
+  "type": "Nomadic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    5
+  ]
+}

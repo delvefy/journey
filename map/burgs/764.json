@@ -1,0 +1,23 @@
+{
+  "cell": 4461,
+  "x": 615.36,
+  "y": 567.43,
+  "i": 764,
+  "state": 14,
+  "culture": 2,
+  "name": "Sialkhunch",
+  "feature": 2,
+  "capital": 0,
+  "population": 9.523,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    9,
+    8
+  ]
+}

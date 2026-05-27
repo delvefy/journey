@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "name": "Coulesia",
+  "world": {
+    "width": 1470,
+    "height": 802,
+    "chunkSize": 64,
+    "chunksX": 23,
+    "chunksY": 13
+  },
+  "files": {
+    "info": "world/info.json",
+    "settings": "world/settings.json",
+    "coordinates": "world/coordinates.json",
+    "biomes": "biomes.json",
+    "features": "features.json",
+    "cultures": "cultures.json",
+    "religions": "religions.json",
+    "provinces": "provinces.json",
+    "rivers": "rivers.json",
+    "zones": "zones.json",
+    "markers": "markers.json",
+    "routes": "routes.json",
+    "statesIndex": "states/index.json",
+    "stateDir": "states/",
+    "burgsIndex": "burgs/index.json",
+    "burgDir": "burgs/",
+    "notesIndex": "notes/index.json",
+    "noteDir": "notes/",
+    "chunksIndex": "chunks/index.json",
+    "chunkDir": "chunks/",
+    "cellLookup": "chunks/cell_lookup.json"
+  },
+  "counts": {
+    "cells": 5262,
+    "burgs": 769,
+    "states": 15,
+    "provinces": 240,
+    "religions": 21,
+    "cultures": 11,
+    "rivers": 163,
+    "routes": 557,
+    "markers": 64,
+    "zones": 15,
+    "notes": 142,
+    "features": 12,
+    "biomes": 13
+  }
+}

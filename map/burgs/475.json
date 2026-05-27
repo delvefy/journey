@@ -1,0 +1,23 @@
+{
+  "cell": 930,
+  "x": 883.57,
+  "y": 235.93,
+  "i": 475,
+  "state": 9,
+  "culture": 10,
+  "name": "Leideane",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.496,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    13,
+    3
+  ]
+}

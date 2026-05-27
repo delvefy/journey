@@ -1,0 +1,23 @@
+{
+  "cell": 4890,
+  "x": 462.8,
+  "y": 625.18,
+  "i": 766,
+  "state": 7,
+  "culture": 3,
+  "name": "Narma",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.966,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    7,
+    9
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 4837,
+  "x": 747.83,
+  "y": 611.86,
+  "i": 38,
+  "state": 14,
+  "culture": 2,
+  "name": "Nashahr",
+  "feature": 2,
+  "capital": 0,
+  "population": 9.344,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    11,
+    9
+  ]
+}

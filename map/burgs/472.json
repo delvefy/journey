@@ -1,0 +1,23 @@
+{
+  "cell": 4322,
+  "x": 342.63,
+  "y": 563.57,
+  "i": 472,
+  "state": 11,
+  "culture": 5,
+  "name": "Lieningen",
+  "feature": 2,
+  "capital": 0,
+  "population": 17.65,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    5,
+    8
+  ]
+}

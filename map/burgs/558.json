@@ -1,0 +1,23 @@
+{
+  "cell": 4930,
+  "x": 800.3,
+  "y": 626.65,
+  "i": 558,
+  "state": 14,
+  "culture": 2,
+  "name": "Shahrgabriz",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.078,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    12,
+    9
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 4955,
+  "x": 255.98,
+  "y": 630.4,
+  "i": 33,
+  "state": 8,
+  "culture": 5,
+  "name": "Berharmers",
+  "feature": 2,
+  "capital": 0,
+  "population": 14.664,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    3,
+    9
+  ]
+}

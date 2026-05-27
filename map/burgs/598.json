@@ -1,0 +1,23 @@
+{
+  "cell": 4614,
+  "x": 248.64,
+  "y": 593.12,
+  "i": 598,
+  "state": 1,
+  "culture": 5,
+  "name": "Vogtsbach",
+  "feature": 2,
+  "capital": 0,
+  "population": 8.856,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    3,
+    9
+  ]
+}

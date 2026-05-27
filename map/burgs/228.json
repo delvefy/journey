@@ -1,0 +1,23 @@
+{
+  "cell": 1372,
+  "x": 981,
+  "y": 276,
+  "i": 228,
+  "state": 9,
+  "culture": 10,
+  "name": "Itontinion",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.693,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    15,
+    4
+  ]
+}

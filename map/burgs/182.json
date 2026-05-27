@@ -1,0 +1,23 @@
+{
+  "cell": 4436,
+  "x": 390.32,
+  "y": 573.9,
+  "i": 182,
+  "state": 11,
+  "culture": 3,
+  "name": "Porvijarvi",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.034,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    6,
+    8
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 4871,
+  "x": 284.76,
+  "y": 624.73,
+  "i": 307,
+  "state": 8,
+  "culture": 5,
+  "name": "Wienau",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.217,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    4,
+    9
+  ]
+}

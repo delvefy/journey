@@ -1,0 +1,23 @@
+{
+  "cell": 3849,
+  "x": 274.11,
+  "y": 510.13,
+  "i": 571,
+  "state": 1,
+  "culture": 9,
+  "name": "Baniavalari",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.861,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    4,
+    7
+  ]
+}

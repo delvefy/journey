@@ -1,0 +1,24 @@
+{
+  "cell": 5010,
+  "x": 719.44,
+  "y": 642.81,
+  "i": 14,
+  "state": 14,
+  "culture": 2,
+  "name": "Diruzvans",
+  "feature": 2,
+  "capital": 1,
+  "port": 1,
+  "population": 20.172,
+  "type": "Naval",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 1,
+  "group": "capital",
+  "chunk": [
+    11,
+    10
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 823,
+  "x": 824.1,
+  "y": 229.3,
+  "i": 585,
+  "state": 9,
+  "culture": 10,
+  "name": "Pylis",
+  "feature": 2,
+  "capital": 0,
+  "population": 8.642,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    12,
+    3
+  ]
+}

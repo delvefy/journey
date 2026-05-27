@@ -1,0 +1,23 @@
+{
+  "cell": 4804,
+  "x": 464.69,
+  "y": 611.42,
+  "i": 126,
+  "state": 7,
+  "culture": 3,
+  "name": "Kilho",
+  "feature": 2,
+  "capital": 0,
+  "population": 13.677,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    7,
+    9
+  ]
+}

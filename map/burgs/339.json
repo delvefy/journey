@@ -1,0 +1,23 @@
+{
+  "cell": 4330,
+  "x": 425.77,
+  "y": 557.09,
+  "i": 339,
+  "state": 11,
+  "culture": 3,
+  "name": "Forsmuksyla",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.044,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    6,
+    8
+  ]
+}

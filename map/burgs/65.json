@@ -1,0 +1,23 @@
+{
+  "cell": 4792,
+  "x": 329.05,
+  "y": 609.45,
+  "i": 65,
+  "state": 11,
+  "culture": 5,
+  "name": "Sastetnau",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.115,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    9
+  ]
+}

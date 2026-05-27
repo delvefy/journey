@@ -1,0 +1,269 @@
+{
+  "i": 3,
+  "name": "Khvordemia",
+  "expansionism": 2.6,
+  "capital": 3,
+  "type": "Generic",
+  "center": 379,
+  "culture": 2,
+  "pole": [
+    592,
+    287
+  ],
+  "neighbors": [
+    9,
+    4,
+    5,
+    11,
+    0,
+    7,
+    14,
+    13
+  ],
+  "color": "#8da0cb",
+  "campaigns": [
+    {
+      "name": "Epocian Rebellion",
+      "start": 620,
+      "end": 634
+    },
+    {
+      "name": "Vaimiolan Rebellion",
+      "start": 728,
+      "end": 729
+    },
+    {
+      "name": "Mardesran Intervention",
+      "start": 872,
+      "end": 873
+    },
+    {
+      "name": "Beralian Invasion",
+      "start": 874,
+      "end": 875
+    },
+    {
+      "name": "Sabadian Conquest",
+      "start": 889,
+      "end": 890
+    },
+    {
+      "name": "Kauresnasian Crusade",
+      "start": 897,
+      "end": 903
+    },
+    {
+      "name": "Phirian Rebellion",
+      "start": 927,
+      "end": 931
+    },
+    {
+      "name": "Dahinian Expedition",
+      "start": 927,
+      "end": 928
+    }
+  ],
+  "diplomacy": [
+    "x",
+    "Enemy",
+    "Friendly",
+    "x",
+    "Friendly",
+    "Enemy",
+    "Friendly",
+    "Suzerain",
+    "Ally",
+    "Rival",
+    "Friendly",
+    "Ally",
+    "Rival",
+    "Suzerain",
+    "Neutral"
+  ],
+  "urban": 431.10100000000006,
+  "rural": 3365.8420416116714,
+  "burgs": 95,
+  "area": 54523,
+  "cells": 532,
+  "form": "Monarchy",
+  "formName": "Empire",
+  "fullName": "Khvordemian Empire",
+  "provinces": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    225,
+    226,
+    227
+  ],
+  "alert": 1.14,
+  "military": [
+    {
+      "i": 0,
+      "a": 5728,
+      "cell": 1011,
+      "x": 617.99,
+      "y": 242.16,
+      "bx": 617.99,
+      "by": 242.16,
+      "u": {
+        "infantry": 2267,
+        "archers": 1805,
+        "cavalry": 1617,
+        "artillery": 39
+      },
+      "n": 0,
+      "name": "1st (Kodin) Regiment",
+      "state": 3,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 1,
+      "a": 3174,
+      "cell": 692,
+      "x": 635.22,
+      "y": 216,
+      "bx": 635.22,
+      "by": 216,
+      "u": {
+        "infantry": 1366,
+        "archers": 1335,
+        "cavalry": 453,
+        "artillery": 20
+      },
+      "n": 0,
+      "name": "2nd (Sesia) Regiment",
+      "state": 3,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 2,
+      "a": 2737,
+      "cell": 379,
+      "x": 606.47,
+      "y": 178.78,
+      "bx": 606.47,
+      "by": 178.78,
+      "u": {
+        "archers": 1418,
+        "cavalry": 167,
+        "infantry": 1115,
+        "artillery": 37
+      },
+      "n": 0,
+      "name": "3rd (Zibashe) Regiment",
+      "state": 3,
+      "icon": "\ud83d\udc51"
+    },
+    {
+      "i": 3,
+      "a": 2581,
+      "cell": 2923,
+      "x": 518.42,
+      "y": 424.59,
+      "bx": 518.42,
+      "by": 424.59,
+      "u": {
+        "infantry": 811,
+        "cavalry": 1230,
+        "artillery": 13,
+        "archers": 527
+      },
+      "n": 0,
+      "name": "4th (Kabnak) Regiment",
+      "state": 3,
+      "icon": "\ud83d\udc34"
+    },
+    {
+      "i": 4,
+      "a": 2335,
+      "cell": 1446,
+      "x": 522.58,
+      "y": 284.73,
+      "bx": 522.58,
+      "by": 284.73,
+      "u": {
+        "infantry": 965,
+        "archers": 672,
+        "cavalry": 684,
+        "artillery": 14
+      },
+      "n": 0,
+      "name": "5th (Buged) Regiment",
+      "state": 3,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 5,
+      "a": 5,
+      "cell": 1922,
+      "x": 506.86,
+      "y": 345.13,
+      "bx": 506.86,
+      "by": 345.13,
+      "u": {
+        "fleet": 5
+      },
+      "n": 1,
+      "name": "1st Fleet",
+      "state": 3,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 6,
+      "a": 4,
+      "cell": 88,
+      "x": 602.24,
+      "y": 139.41,
+      "bx": 602.24,
+      "by": 139.41,
+      "u": {
+        "fleet": 4
+      },
+      "n": 1,
+      "name": "2nd Fleet",
+      "state": 3,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 7,
+      "a": 2,
+      "cell": 60,
+      "x": 685.77,
+      "y": 128.58,
+      "bx": 685.77,
+      "by": 128.58,
+      "u": {
+        "fleet": 2
+      },
+      "n": 1,
+      "name": "3rd Fleet",
+      "state": 3,
+      "icon": "\ud83c\udf0a"
+    }
+  ]
+}

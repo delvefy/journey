@@ -1,0 +1,23 @@
+{
+  "cell": 4571,
+  "x": 698.42,
+  "y": 582.17,
+  "i": 626,
+  "state": 14,
+  "culture": 2,
+  "name": "Khvor",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.225,
+  "type": "Nomadic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    10,
+    9
+  ]
+}

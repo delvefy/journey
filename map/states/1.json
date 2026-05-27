@@ -1,0 +1,206 @@
+{
+  "i": 1,
+  "name": "Arviaria",
+  "expansionism": 3.4,
+  "capital": 1,
+  "type": "Generic",
+  "center": 4419,
+  "culture": 9,
+  "pole": [
+    261,
+    459
+  ],
+  "neighbors": [
+    10,
+    11,
+    8
+  ],
+  "color": "#66c2a5",
+  "campaigns": [
+    {
+      "name": "Haisenian Conquest",
+      "start": 788,
+      "end": 792
+    },
+    {
+      "name": "Cansan War",
+      "start": 927,
+      "end": 931
+    },
+    {
+      "name": "Kauresnasian War",
+      "start": 927,
+      "end": 928
+    },
+    {
+      "name": "Arviaria-Haisenian War",
+      "start": 930,
+      "attacker": 1,
+      "defender": 8
+    }
+  ],
+  "diplomacy": [
+    "x",
+    "x",
+    "Unknown",
+    "Enemy",
+    "Suspicion",
+    "Enemy",
+    "Suspicion",
+    "Enemy",
+    "Enemy",
+    "Neutral",
+    "Enemy",
+    "Suspicion",
+    "Neutral",
+    "Enemy",
+    "Neutral"
+  ],
+  "urban": 143.107,
+  "rural": 1147.949414163828,
+  "burgs": 29,
+  "area": 26097,
+  "cells": 245,
+  "form": "Theocracy",
+  "formName": "Theocracy",
+  "fullName": "Arviarian Theocracy",
+  "provinces": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    223
+  ],
+  "alert": 2.9,
+  "military": [
+    {
+      "i": 0,
+      "a": 5041,
+      "cell": 3845,
+      "x": 234.61,
+      "y": 515.95,
+      "bx": 234.61,
+      "by": 515.95,
+      "u": {
+        "infantry": 1619,
+        "archers": 993,
+        "cavalry": 2420,
+        "artillery": 9
+      },
+      "n": 0,
+      "name": "1st (Calpiaiec) Regiment",
+      "state": 1,
+      "icon": "\ud83d\udc34"
+    },
+    {
+      "i": 1,
+      "a": 4923,
+      "cell": 4782,
+      "x": 220.59,
+      "y": 608.8,
+      "bx": 220.59,
+      "by": 608.8,
+      "u": {
+        "archers": 2540,
+        "cavalry": 314,
+        "artillery": 59,
+        "infantry": 2010
+      },
+      "n": 0,
+      "name": "2nd (Foduralori) Regiment",
+      "state": 1,
+      "icon": "\ud83c\udff9"
+    },
+    {
+      "i": 2,
+      "a": 2939,
+      "cell": 4191,
+      "x": 215.42,
+      "y": 550.18,
+      "bx": 215.42,
+      "by": 550.18,
+      "u": {
+        "archers": 1112,
+        "cavalry": 556,
+        "artillery": 29,
+        "infantry": 1242
+      },
+      "n": 0,
+      "name": "3rd (Calpiaiec) Regiment",
+      "state": 1,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 3,
+      "a": 2842,
+      "cell": 4419,
+      "x": 196.1,
+      "y": 573.8,
+      "bx": 196.1,
+      "by": 573.8,
+      "u": {
+        "archers": 1440,
+        "cavalry": 200,
+        "artillery": 27,
+        "infantry": 1175
+      },
+      "n": 0,
+      "name": "4th (Calpiaiec) Regiment",
+      "state": 1,
+      "icon": "\ud83c\udff9"
+    },
+    {
+      "i": 4,
+      "a": 13,
+      "cell": 4419,
+      "x": 188.04,
+      "y": 568.09,
+      "bx": 188.04,
+      "by": 568.09,
+      "u": {
+        "fleet": 13
+      },
+      "n": 1,
+      "name": "1st Fleet",
+      "state": 1,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 5,
+      "a": 4,
+      "cell": 4865,
+      "x": 230.3,
+      "y": 635.7,
+      "bx": 230.3,
+      "by": 635.7,
+      "u": {
+        "fleet": 4
+      },
+      "n": 1,
+      "name": "2nd Fleet",
+      "state": 1,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 6,
+      "a": 1,
+      "cell": 2780,
+      "x": 181.2,
+      "y": 423.9,
+      "bx": 181.2,
+      "by": 423.9,
+      "u": {
+        "fleet": 1
+      },
+      "n": 1,
+      "name": "3rd Fleet",
+      "state": 1,
+      "icon": "\ud83c\udf0a"
+    }
+  ]
+}

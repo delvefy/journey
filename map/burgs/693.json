@@ -1,0 +1,23 @@
+{
+  "cell": 2861,
+  "x": 982.2,
+  "y": 420.68,
+  "i": 693,
+  "state": 4,
+  "culture": 6,
+  "name": "Vivistium",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.954,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    15,
+    6
+  ]
+}

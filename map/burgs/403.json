@@ -1,0 +1,23 @@
+{
+  "cell": 807,
+  "x": 636.24,
+  "y": 224.64,
+  "i": 403,
+  "state": 3,
+  "culture": 2,
+  "name": "Kardandehva",
+  "feature": 2,
+  "capital": 0,
+  "population": 9.88,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    9,
+    3
+  ]
+}

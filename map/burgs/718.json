@@ -1,0 +1,23 @@
+{
+  "cell": 3185,
+  "x": 961.85,
+  "y": 455.08,
+  "i": 718,
+  "state": 4,
+  "culture": 6,
+  "name": "Dursacodu",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.871,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    15,
+    7
+  ]
+}

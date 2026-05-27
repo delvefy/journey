@@ -1,0 +1,23 @@
+{
+  "cell": 835,
+  "x": 953.59,
+  "y": 219.65,
+  "i": 173,
+  "state": 9,
+  "culture": 10,
+  "name": "Arnelion",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.209,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    14,
+    3
+  ]
+}

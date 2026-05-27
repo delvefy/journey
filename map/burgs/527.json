@@ -1,0 +1,24 @@
+{
+  "cell": 4845,
+  "x": 835.82,
+  "y": 610.57,
+  "i": 527,
+  "state": 14,
+  "culture": 2,
+  "name": "Talkhast",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 12.087,
+  "type": "Naval",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    13,
+    9
+  ]
+}

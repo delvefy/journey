@@ -1,0 +1,23 @@
+{
+  "cell": 4059,
+  "x": 1069.26,
+  "y": 529.37,
+  "i": 388,
+  "state": 4,
+  "culture": 6,
+  "name": "Duegrande",
+  "feature": 2,
+  "capital": 0,
+  "population": 10.559,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    16,
+    8
+  ]
+}

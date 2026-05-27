@@ -1,0 +1,24 @@
+{
+  "cell": 2138,
+  "x": 466.46,
+  "y": 345.67,
+  "i": 226,
+  "state": 3,
+  "culture": 2,
+  "name": "Rakeh",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 3.027,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    7,
+    5
+  ]
+}

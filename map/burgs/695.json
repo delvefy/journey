@@ -1,0 +1,23 @@
+{
+  "cell": 3752,
+  "x": 555.9,
+  "y": 510.1,
+  "i": 695,
+  "state": 14,
+  "culture": 2,
+  "name": "Nehiehrica",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.994,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    8,
+    7
+  ]
+}

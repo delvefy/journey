@@ -1,0 +1,23 @@
+{
+  "cell": 1330,
+  "x": 578.16,
+  "y": 274.57,
+  "i": 413,
+  "state": 3,
+  "culture": 2,
+  "name": "Nareheh",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.82,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    9,
+    4
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 3903,
+  "x": 770.17,
+  "y": 513.6,
+  "i": 592,
+  "state": 13,
+  "culture": 2,
+  "name": "Raymeheh",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.421,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    12,
+    8
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "cell": 653,
+  "x": 209.75,
+  "y": 206.33,
+  "i": 145,
+  "state": 10,
+  "culture": 7,
+  "name": "Lentia",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 1.492,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    3,
+    3
+  ]
+}

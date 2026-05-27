@@ -1,0 +1,23 @@
+{
+  "cell": 2922,
+  "x": 507.43,
+  "y": 437.23,
+  "i": 435,
+  "state": 3,
+  "culture": 2,
+  "name": "Kabnak",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.759,
+  "type": "Lake",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    7,
+    6
+  ]
+}

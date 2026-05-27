@@ -1,0 +1,23 @@
+{
+  "cell": 3190,
+  "x": 1014.41,
+  "y": 452.62,
+  "i": 477,
+  "state": 4,
+  "culture": 6,
+  "name": "Iusium",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.852,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    15,
+    7
+  ]
+}

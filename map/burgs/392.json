@@ -1,0 +1,23 @@
+{
+  "cell": 567,
+  "x": 346.71,
+  "y": 205.03,
+  "i": 392,
+  "state": 5,
+  "culture": 8,
+  "name": "Gourgos",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.07,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    5,
+    3
+  ]
+}

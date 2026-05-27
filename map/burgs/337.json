@@ -1,0 +1,24 @@
+{
+  "cell": 3211,
+  "x": 1253.18,
+  "y": 449.59,
+  "i": 337,
+  "state": 6,
+  "culture": 10,
+  "name": "Kydontioch",
+  "feature": 2,
+  "capital": 0,
+  "port": 1,
+  "population": 5.374,
+  "type": "Naval",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    19,
+    7
+  ]
+}

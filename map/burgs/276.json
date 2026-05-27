@@ -1,0 +1,23 @@
+{
+  "cell": 3565,
+  "x": 1189.55,
+  "y": 484.08,
+  "i": 276,
+  "state": 4,
+  "culture": 6,
+  "name": "Flaquintio",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.116,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    18,
+    7
+  ]
+}

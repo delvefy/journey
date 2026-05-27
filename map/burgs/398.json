@@ -1,0 +1,23 @@
+{
+  "cell": 1508,
+  "x": 1101.45,
+  "y": 288.81,
+  "i": 398,
+  "state": 2,
+  "culture": 10,
+  "name": "Rhyreumpopo",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.595,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    17,
+    4
+  ]
+}

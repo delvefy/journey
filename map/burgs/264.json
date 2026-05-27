@@ -1,0 +1,23 @@
+{
+  "cell": 4529,
+  "x": 285.21,
+  "y": 582.98,
+  "i": 264,
+  "state": 8,
+  "culture": 5,
+  "name": "Malstettin",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.585,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    4,
+    9
+  ]
+}

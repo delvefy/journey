@@ -1,0 +1,23 @@
+{
+  "cell": 2420,
+  "x": 1054.73,
+  "y": 371.06,
+  "i": 479,
+  "state": 4,
+  "culture": 10,
+  "name": "Armadamon",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.914,
+  "type": "Highland",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    16,
+    5
+  ]
+}

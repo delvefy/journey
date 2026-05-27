@@ -1,0 +1,23 @@
+{
+  "cell": 1564,
+  "x": 502.11,
+  "y": 303.13,
+  "i": 713,
+  "state": 3,
+  "culture": 2,
+  "name": "Teqandaq",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.973,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    7,
+    4
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "i": 5,
+  "name": "Epocia",
+  "expansionism": 1.8,
+  "capital": 5,
+  "type": "Generic",
+  "center": 987,
+  "culture": 8,
+  "pole": [
+    330,
+    281
+  ],
+  "neighbors": [
+    10,
+    3,
+    11
+  ],
+  "color": "#a6d854",
+  "campaigns": [
+    {
+      "name": "Leklenion War",
+      "start": 897,
+      "end": 898
+    },
+    {
+      "name": "Cansan Campaign",
+      "start": 927,
+      "end": 932
+    },
+    {
+      "name": "Khvordemian War",
+      "start": 927,
+      "end": 932
+    },
+    {
+      "name": "Kauresnasia-Epocian War",
+      "start": 930,
+      "attacker": 11,
+      "defender": 5
+    }
+  ],
+  "diplomacy": [
+    "x",
+    "Enemy",
+    "Unknown",
+    "Enemy",
+    "Suspicion",
+    "x",
+    "Ally",
+    "Enemy",
+    "Suspicion",
+    "Suspicion",
+    "Suspicion",
+    "Enemy",
+    "Ally",
+    "Enemy",
+    "Friendly"
+  ],
+  "urban": 190.948,
+  "rural": 1066.261863052845,
+  "burgs": 39,
+  "area": 16808,
+  "cells": 183,
+  "form": "Monarchy",
+  "formName": "Principality",
+  "fullName": "Principality of Epocia",
+  "provinces": [
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    231
+  ],
+  "alert": 2.39,
+  "military": [
+    {
+      "i": 0,
+      "a": 3888,
+      "cell": 987,
+      "x": 330.92,
+      "y": 242.46,
+      "bx": 330.92,
+      "by": 242.46,
+      "u": {
+        "archers": 1144,
+        "cavalry": 902,
+        "artillery": 46,
+        "infantry": 1796
+      },
+      "n": 0,
+      "name": "1st (Throlisa) Regiment",
+      "state": 5,
+      "icon": "\ud83d\udc51"
+    },
+    {
+      "i": 1,
+      "a": 3256,
+      "cell": 996,
+      "x": 374.9,
+      "y": 248.7,
+      "bx": 374.9,
+      "by": 248.7,
+      "u": {
+        "infantry": 1494,
+        "archers": 979,
+        "cavalry": 742,
+        "artillery": 41
+      },
+      "n": 0,
+      "name": "2nd (Eurionteia) Regiment",
+      "state": 5,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 2,
+      "a": 3196,
+      "cell": 2129,
+      "x": 378.2,
+      "y": 358.1,
+      "bx": 378.2,
+      "by": 358.1,
+      "u": {
+        "infantry": 1149,
+        "cavalry": 1311,
+        "artillery": 17,
+        "archers": 719
+      },
+      "n": 0,
+      "name": "3rd (Borsorum) Regiment",
+      "state": 5,
+      "icon": "\ud83d\udc34"
+    },
+    {
+      "i": 3,
+      "a": 2324,
+      "cell": 880,
+      "x": 283.71,
+      "y": 238.29,
+      "bx": 283.71,
+      "by": 238.29,
+      "u": {
+        "infantry": 1072,
+        "cavalry": 359,
+        "artillery": 24,
+        "archers": 869
+      },
+      "n": 0,
+      "name": "4th (Picartagia) Regiment",
+      "state": 5,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 4,
+      "a": 22,
+      "cell": 987,
+      "x": 334,
+      "y": 236.2,
+      "bx": 334,
+      "by": 236.2,
+      "u": {
+        "fleet": 22
+      },
+      "n": 1,
+      "name": "1st Fleet",
+      "state": 5,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 5,
+      "a": 3,
+      "cell": 1901,
+      "x": 381.4,
+      "y": 340.45,
+      "bx": 381.4,
+      "by": 340.45,
+      "u": {
+        "fleet": 3
+      },
+      "n": 1,
+      "name": "2nd Fleet",
+      "state": 5,
+      "icon": "\ud83c\udf0a"
+    }
+  ]
+}

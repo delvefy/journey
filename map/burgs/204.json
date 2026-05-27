@@ -1,0 +1,23 @@
+{
+  "cell": 4746,
+  "x": 671.87,
+  "y": 602.41,
+  "i": 204,
+  "state": 14,
+  "culture": 2,
+  "name": "Naqshahr",
+  "feature": 2,
+  "capital": 0,
+  "population": 11.62,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    10,
+    9
+  ]
+}

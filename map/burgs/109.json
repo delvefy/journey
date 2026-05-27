@@ -1,0 +1,23 @@
+{
+  "cell": 990,
+  "x": 350.6,
+  "y": 244.4,
+  "i": 109,
+  "state": 5,
+  "culture": 8,
+  "name": "Oseisa",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.179,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    5,
+    3
+  ]
+}

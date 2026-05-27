@@ -1,0 +1,23 @@
+{
+  "cell": 742,
+  "x": 1181.27,
+  "y": 211.15,
+  "i": 44,
+  "state": 12,
+  "culture": 10,
+  "name": "Aktas",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.339,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    18,
+    3
+  ]
+}

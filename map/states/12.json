@@ -1,0 +1,171 @@
+{
+  "i": 12,
+  "name": "Gontionia",
+  "expansionism": 1.7,
+  "capital": 12,
+  "type": "Generic",
+  "center": 332,
+  "culture": 10,
+  "pole": [
+    1074,
+    231
+  ],
+  "neighbors": [
+    9,
+    2
+  ],
+  "color": "#f4da5b",
+  "campaigns": [
+    {
+      "name": "Phirian War",
+      "start": 795,
+      "end": 804
+    },
+    {
+      "name": "Helorionese War",
+      "start": 927,
+      "end": 928
+    }
+  ],
+  "diplomacy": [
+    "x",
+    "Neutral",
+    "Enemy",
+    "Rival",
+    "Suspicion",
+    "Ally",
+    "Suspicion",
+    "Rival",
+    "Friendly",
+    "Vassal",
+    "Neutral",
+    "Neutral",
+    "x",
+    "Rival",
+    "Friendly"
+  ],
+  "urban": 348.75899999999996,
+  "rural": 2441.997545003891,
+  "burgs": 72,
+  "area": 18917,
+  "cells": 185,
+  "form": "Monarchy",
+  "formName": "Protectorate",
+  "fullName": "Protectorate of Gontionia",
+  "provinces": [
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    237
+  ],
+  "alert": 0.77,
+  "military": [
+    {
+      "i": 0,
+      "a": 3083,
+      "cell": 852,
+      "x": 1135.04,
+      "y": 224.32,
+      "bx": 1135.04,
+      "by": 224.32,
+      "u": {
+        "infantry": 1479,
+        "archers": 947,
+        "cavalry": 637,
+        "artillery": 20
+      },
+      "n": 0,
+      "name": "1st (Pileraclea) Regiment",
+      "state": 12,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 1,
+      "a": 2890,
+      "cell": 617,
+      "x": 1007.24,
+      "y": 204.79,
+      "bx": 1007.24,
+      "by": 204.79,
+      "u": {
+        "infantry": 1422,
+        "cavalry": 594,
+        "artillery": 30,
+        "archers": 844
+      },
+      "n": 0,
+      "name": "2nd (Gorta) Regiment",
+      "state": 12,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 2,
+      "a": 1844,
+      "cell": 733,
+      "x": 1084.11,
+      "y": 212.85,
+      "bx": 1084.11,
+      "by": 212.85,
+      "u": {
+        "infantry": 915,
+        "cavalry": 406,
+        "artillery": 12,
+        "archers": 511
+      },
+      "n": 0,
+      "name": "3rd (Magrikonia) Regiment",
+      "state": 12,
+      "icon": "\u2694\ufe0f"
+    },
+    {
+      "i": 3,
+      "a": 6,
+      "cell": 332,
+      "x": 1005.79,
+      "y": 157.28,
+      "bx": 1005.79,
+      "by": 157.28,
+      "u": {
+        "fleet": 6
+      },
+      "n": 1,
+      "name": "1st Fleet",
+      "state": 12,
+      "icon": "\ud83c\udf0a"
+    },
+    {
+      "i": 4,
+      "a": 3,
+      "cell": 445,
+      "x": 1191.6,
+      "y": 172,
+      "bx": 1191.6,
+      "by": 172,
+      "u": {
+        "fleet": 3
+      },
+      "n": 1,
+      "name": "2nd Fleet",
+      "state": 12,
+      "icon": "\ud83c\udf0a"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cell": 4429,
+  "x": 312.11,
+  "y": 570.19,
+  "i": 263,
+  "state": 11,
+  "culture": 5,
+  "name": "Haunauwei",
+  "feature": 2,
+  "capital": 0,
+  "population": 7.77,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    4,
+    8
+  ]
+}

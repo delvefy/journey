@@ -1,0 +1,23 @@
+{
+  "cell": 3905,
+  "x": 783.2,
+  "y": 511.17,
+  "i": 244,
+  "state": 13,
+  "culture": 6,
+  "name": "Covapususta",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.399,
+  "type": "Hunting",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    12,
+    7
+  ]
+}

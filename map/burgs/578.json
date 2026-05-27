@@ -1,0 +1,23 @@
+{
+  "cell": 4670,
+  "x": 810.63,
+  "y": 593.41,
+  "i": 578,
+  "state": 14,
+  "culture": 2,
+  "name": "Fehaq",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.308,
+  "type": "Nomadic",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "fort",
+  "chunk": [
+    12,
+    9
+  ]
+}

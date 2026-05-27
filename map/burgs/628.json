@@ -1,0 +1,23 @@
+{
+  "cell": 4736,
+  "x": 599.77,
+  "y": 604.61,
+  "i": 628,
+  "state": 14,
+  "culture": 2,
+  "name": "Anaharjoran",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.558,
+  "type": "Hunting",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    9,
+    9
+  ]
+}

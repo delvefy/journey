@@ -1,0 +1,23 @@
+{
+  "cell": 689,
+  "x": 603.89,
+  "y": 212.78,
+  "i": 425,
+  "state": 3,
+  "culture": 2,
+  "name": "Bushamvar",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.817,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    9,
+    3
+  ]
+}

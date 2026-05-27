@@ -1,0 +1,23 @@
+{
+  "cell": 1984,
+  "x": 1120.07,
+  "y": 337.01,
+  "i": 21,
+  "state": 2,
+  "culture": 10,
+  "name": "Gypetrea",
+  "feature": 2,
+  "capital": 0,
+  "population": 7.318,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    17,
+    5
+  ]
+}

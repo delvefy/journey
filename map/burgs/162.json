@@ -1,0 +1,23 @@
+{
+  "cell": 4269,
+  "x": 935.9,
+  "y": 545.63,
+  "i": 162,
+  "state": 4,
+  "culture": 6,
+  "name": "Lemiluri",
+  "feature": 2,
+  "capital": 0,
+  "population": 6.631,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    14,
+    8
+  ]
+}

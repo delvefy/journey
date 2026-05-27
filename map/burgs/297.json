@@ -1,0 +1,23 @@
+{
+  "cell": 4782,
+  "x": 219.66,
+  "y": 609.73,
+  "i": 297,
+  "state": 1,
+  "culture": 9,
+  "name": "Foduralori",
+  "feature": 2,
+  "capital": 0,
+  "population": 7.457,
+  "type": "River",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    3,
+    9
+  ]
+}

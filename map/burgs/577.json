@@ -1,0 +1,23 @@
+{
+  "cell": 3082,
+  "x": 1018.22,
+  "y": 436.33,
+  "i": 577,
+  "state": 4,
+  "culture": 6,
+  "name": "Laqurinico",
+  "feature": 2,
+  "capital": 0,
+  "population": 2.274,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    15,
+    6
+  ]
+}

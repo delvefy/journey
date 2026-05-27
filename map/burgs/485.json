@@ -1,0 +1,23 @@
+{
+  "cell": 1551,
+  "x": 421.97,
+  "y": 298.86,
+  "i": 485,
+  "state": 5,
+  "culture": 9,
+  "name": "Agrantia",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.354,
+  "type": "Hunting",
+  "citadel": 1,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    6,
+    4
+  ]
+}

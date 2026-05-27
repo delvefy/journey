@@ -1,0 +1,23 @@
+{
+  "cell": 2023,
+  "x": 450.35,
+  "y": 346.25,
+  "i": 745,
+  "state": 3,
+  "culture": 9,
+  "name": "Vennalanori",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.622,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "trading_post",
+  "chunk": [
+    7,
+    5
+  ]
+}

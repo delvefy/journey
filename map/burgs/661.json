@@ -1,0 +1,23 @@
+{
+  "cell": 1110,
+  "x": 609.54,
+  "y": 253.94,
+  "i": 661,
+  "state": 3,
+  "culture": 2,
+  "name": "Pabad",
+  "feature": 2,
+  "capital": 0,
+  "population": 3.385,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    9,
+    3
+  ]
+}

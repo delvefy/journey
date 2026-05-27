@@ -1,0 +1,23 @@
+{
+  "cell": 298,
+  "x": 690.97,
+  "y": 169.37,
+  "i": 153,
+  "state": 3,
+  "culture": 6,
+  "name": "Adrialeto",
+  "feature": 2,
+  "capital": 0,
+  "population": 5.835,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    10,
+    2
+  ]
+}

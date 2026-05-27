@@ -1,0 +1,23 @@
+{
+  "cell": 4434,
+  "x": 364.7,
+  "y": 573.21,
+  "i": 342,
+  "state": 11,
+  "culture": 3,
+  "name": "Kelottaval",
+  "feature": 2,
+  "capital": 0,
+  "population": 10.153,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "town",
+  "chunk": [
+    5,
+    8
+  ]
+}

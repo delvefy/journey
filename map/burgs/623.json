@@ -1,0 +1,23 @@
+{
+  "cell": 1184,
+  "x": 265.91,
+  "y": 270.77,
+  "i": 623,
+  "state": 10,
+  "culture": 7,
+  "name": "Victum",
+  "feature": 2,
+  "capital": 0,
+  "population": 1.539,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    4,
+    4
+  ]
+}

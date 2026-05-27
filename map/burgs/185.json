@@ -1,0 +1,23 @@
+{
+  "cell": 487,
+  "x": 691.06,
+  "y": 187.76,
+  "i": 185,
+  "state": 3,
+  "culture": 6,
+  "name": "Pisalarau",
+  "feature": 2,
+  "capital": 0,
+  "population": 0.988,
+  "type": "Generic",
+  "citadel": 0,
+  "plaza": 0,
+  "walls": 0,
+  "shanty": 0,
+  "temple": 0,
+  "group": "village",
+  "chunk": [
+    10,
+    2
+  ]
+}

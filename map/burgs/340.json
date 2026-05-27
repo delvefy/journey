@@ -1,0 +1,23 @@
+{
+  "cell": 940,
+  "x": 993.69,
+  "y": 237.79,
+  "i": 340,
+  "state": 12,
+  "culture": 10,
+  "name": "Skylcos",
+  "feature": 2,
+  "capital": 0,
+  "population": 11.729,
+  "type": "Generic",
+  "citadel": 1,
+  "plaza": 1,
+  "walls": 1,
+  "shanty": 0,
+  "temple": 0,
+  "group": "city",
+  "chunk": [
+    15,
+    3
+  ]
+}
