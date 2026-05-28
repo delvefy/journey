@@ -20,7 +20,7 @@
 # L0  Waking (name, gender)
 # L1  The man in the ditch
 # L2  Your hands' first wage
-# L3  The stranger who reads you           (TBD)
+# L3  The stranger who reads you
 # L4  The second man in the ditch           (TBD)
 # L5  A name from before                    (TBD)
 
@@ -56,14 +56,53 @@
 #     B  +2/+3  → (1,0)   → 3-tn   off the road, retreat from the act
 #     C  +3/+1  → (2,-2)  → 3-le   press on to Sadaiziche, sell the silver
 
-# ── Level 3 — TODO ───────────────────────────────────────────────────
-# Beat anchor: "The stranger who reads you" — an NPC in or near
-# Sadaiziche reflects who the player has become.
-# Reachable L3 buckets from L2: lg, ng, le, tn, cg, ce  (6 of 9)
-# Vacant L3 buckets: ln, cn, ne
-3-lg   TODO
-3-ng   TODO
-3-cg   TODO
-3-tn   TODO
-3-le   TODO
-3-ce   TODO
+# ── Level 3 — The stranger who reads you ─────────────────────────────
+3-lg   The Clerk's Pen        (south-gate clerk by the book; the kinsman lie meets the registry)
+3-ng   The Cup-Bearer's Hand  (wayside Vabum shrine; Mira the temple-nurse asks nothing)
+3-cg   The Rider Without a Cord (Behnam, Mardesran outrider, comes down the ditch)
+3-tn   The Pedlar's Donkey    (Razin the old pedlar at a roadside fire; will not remember your face)
+3-le   The Indenture-Broker   (Yusef at the south-gate market; three doors, one pen)
+3-ce   The Question-Priest    (Mehrdad at the crossroads; three doors, one robe)
+# Vacant L3 slots (no first-pass entry from L2):
+#   3-ln 3-cn 3-ne
+
+# L3 choice deltas and L4 destinations:
+#   3-lg  state (3,3)
+#     A  +1/+1  → (4,4)   → 4-lg   hold the lie at the registry
+#     B  -3/+1  → (0,4)   → 4-ng   bolt with him through the dye-yard
+#     C   0/-4  → (3,-1)  → 4-ln   recant cleanly at the desk
+#   3-ng  state (-1,3)
+#     A  +3/0   → (2,3)   → 4-lg   pay her coin, sign your name
+#     B  -1/+2  → (-2,5)  → 4-cg   stay; work the infirmary at no fee
+#     C  -2/-3  → (-3,0)  → 4-cn   rob Mira in the night
+#   3-cg  state (-3,3)
+#     A  -1/+1  → (-4,4)  → 4-cg   go with Behnam to the coast
+#     B  +2/+1  → (-1,4)  → 4-ng   part at the goat-track; walk east alone
+#     C  +3/-3  → (0,0)   → 4-tn   take the cover, then take the horse
+#   3-tn  state (1,0)
+#     A  +2/+1  → (3,1)   → 4-ln   buy news from Razin cleanly
+#     B  -2/+2  → (-1,2)  → 4-ng   speak the morning to him
+#     C  -1/-3  → (0,-3)  → 4-ne   rob the sleeping pedlar
+#   3-le  state (2,-2)
+#     A  +2/-1  → (4,-3)  → 4-le   take the Church's bounty door
+#     B  -1/+3  → (1,1)   → 4-tn   refuse the three doors; walk into town empty
+#     C  -1/-3  → (1,-5)  → 4-ne   take Mehri's door; walk the child to the ship
+#   3-ce  state (-2,-2) or (-2,-4)
+#     A  +3/0   → (1,-2)/(1,-4)   → 4-ne   apprentice to the question
+#     B  -1/+3  → (-3,1)/(-3,-1)  → 4-cn   refuse, ride to warn the farmhouse
+#     C   0/-3  → (-2,-5)/(-2,-7) → 4-ce   cross the four paces; kill the priest
+
+# ── Level 4 — TODO ───────────────────────────────────────────────────
+# Beat anchor: "The second man in the ditch" — a repeat moral test
+# refracted through who the player has now become.
+# Reachable L4 buckets from L3: lg, ng, ln, cg, tn, cn, le, ne, ce
+# All nine alignments are first-pass reachable at L4.
+4-lg   TODO
+4-ng   TODO
+4-cg   TODO
+4-ln   TODO
+4-tn   TODO
+4-cn   TODO
+4-le   TODO
+4-ne   TODO
+4-ce   TODO
