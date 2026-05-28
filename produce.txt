@@ -1,0 +1,166 @@
+PRODUCE.TXT — Instructions for Claude when generating new story nodes
+======================================================================
+
+You are extending a branching dark-fantasy story set in Coulesia, the
+Persian-flavored Khvordemian Empire. Before you write anything, read
+these files in order:
+
+  1. MARK.md         — current progress, last node added, what's next
+  2. nodes-map.txt   — node graph (parent -> children)
+  3. helpers/ALIGNMENT.md — alignment system, deltas, choice design
+  4. nodes/<parent>.html  — the node whose children you're writing
+  5. map/manifest.json (and burgs/, states/, etc.) — for geography
+
+------------------------------------------------------------
+THE RULES
+------------------------------------------------------------
+
+NODE NAMING
+  - Format: <level>-<letter>, e.g. 3-c.
+  - Letters run a, b, c, ... up to j. NEVER go past j.
+  - Maximum 10 nodes per level. This forces convergence at deeper
+    levels: when two parents at level N would point to the 11th child,
+    they must instead point to a shared child.
+
+WHAT EACH NODE IS
+  - One HTML file at nodes/<id>.html
+  - 500-1000 words of story prose
+  - Exactly 3 choices at the bottom, each a <button class="choice">
+    with data-next, data-law, data-good attributes
+  - Script tag at the bottom: <script>Story.bootNode("<id>");</script>
+
+LENGTH
+  - Aim for ~700 words of body. Acceptable range: 500 - 1000.
+  - Word count is the body inside <div class="story">, not the choices.
+
+CHOICES
+  - Always three choices, no more, no less.
+  - They must sample at least three different parts of the alignment
+    grid. Do not write three mild-good choices. See ALIGNMENT.md for
+    healthy three-way splits.
+  - Each choice has:
+      data-next="<child-node-id>"
+      data-law="<int>"   (positive lawful, negative chaotic)
+      data-good="<int>"  (positive good, negative evil)
+  - Typical magnitude: 1 - 3 per axis. Reserve 4 for truly definitive
+    moments.
+
+ALIGNMENT NUDGES
+  - Reflect the *flavor* of the choice, not its eventual consequence.
+    Helping a heretic earns +good even if it later kills you.
+  - When choices converge (two parents pointing to the same child), the
+    deltas the player applied are recorded on the parent's button, so
+    the converged child is alignment-agnostic in its writing — describe
+    consequences in a way that reads naturally for arrivals from any
+    parent.
+
+GENDER
+  - The player's gender was chosen at 0-a and is stored as
+    state.gender ("male" or "female"). Only nodes that are clearly
+    gender-distinct (like 1-a vs 1-b) should have separate variants.
+    Most nodes can be gender-neutral; if a passing line of dialogue
+    needs to gender-address the player, prefer ambiguous Khvordemian
+    forms or write inclusively (e.g., "the traveller").
+
+NAME
+  - The player's chosen name is in state.name. Use it sparingly in
+    second-person narration — only when an NPC addresses them, or when
+    it's stylistically necessary. Never assume the spelling matches any
+    specific culture.
+
+WORLD AND GEOGRAPHY
+  - Story setting: Khvordemian Empire (state 3 in map/states/index.json,
+    Persian culture, organized Persian Church religion plus folk
+    Vabumism plus the persecuted Mardesran Schism).
+  - Anchor scenes in real burgs and routes from the map/ folder. The
+    opening is set between Rabad and Sadaiziche on the imperial road;
+    natural next-scene cities to keep in play include Sadaiziche
+    (closer), and farther east the larger settlements toward the
+    Khvordemian heartland.
+  - Distances are given in farsang (Persian league, ~6 km). One day's
+    walk for a healthy traveller is ~6 farsang.
+
+TONE
+  - Dark fantasy in a Persian-flavored empire. Patient prose. Real
+    physical sensation. Sparse magic — when magic surfaces, it should
+    feel old and uncomfortable, not bright.
+  - The player is amnesiac; flashes of muscle memory (a word, a habit,
+    a recognised symbol) are welcome but should not collapse into
+    revealing the player's past too early.
+  - No emojis, no contemporary slang, no winking narration.
+
+FILES TO UPDATE AFTER EACH GENERATION PASS
+  - nodes-map.txt: add new edges, remove TODOs that you closed.
+  - MARK.md:
+      * update "Last node added" with date and id
+      * move newly-written nodes from "Next to generate" into the
+        "Nodes that exist" list
+      * regenerate the "Next to generate" table for the children of the
+        nodes you just wrote
+      * update setting notes if new lore was introduced
+  - This file (produce.txt) only if a rule changes.
+
+HTML TEMPLATE
+  Copy this skeleton when starting a new node. The header text and
+  title vary; structure does not.
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Coulesia — <scene title></title>
+      <link rel="stylesheet" href="../assets/style.css">
+    </head>
+    <body>
+    <main class="scroll">
+      <header class="crest">
+        <span><node-id> · <short scene tag></span>
+        <span id="alignment-readout"></span>
+      </header>
+
+      <h1 class="title"><scene title></h1>
+      <p class="subtitle"><one-line subtitle></p>
+
+      <div class="story">
+        <!-- 500-1000 words of prose, <p>...</p> per paragraph -->
+      </div>
+
+      <hr class="divider">
+
+      <div class="choices">
+        <button class="choice" data-next="<id>" data-law="<n>" data-good="<n>">
+          <span class="marker">A</span>
+          <choice text>
+        </button>
+        <button class="choice" data-next="<id>" data-law="<n>" data-good="<n>">
+          <span class="marker">B</span>
+          <choice text>
+        </button>
+        <button class="choice" data-next="<id>" data-law="<n>" data-good="<n>">
+          <span class="marker">C</span>
+          <choice text>
+        </button>
+      </div>
+
+      <footer class="foot">
+        <span><roman-numeral-act> · <scene tag></span>
+        <span><a href="../index.html">← title</a></span>
+      </footer>
+    </main>
+
+    <script src="../assets/story.js"></script>
+    <script>Story.bootNode("<node-id>");</script>
+    </body>
+    </html>
+
+CHECKLIST FOR EACH NEW NODE
+  [ ] body is 500-1000 words
+  [ ] exactly 3 choices
+  [ ] choices sample 3 distinct alignment regions
+  [ ] data-next, data-law, data-good set on every choice
+  [ ] node-id in header crest matches filename
+  [ ] Story.bootNode("<node-id>") at the bottom
+  [ ] entry added to nodes-map.txt
+  [ ] MARK.md updated
+  [ ] file at nodes/<id>.html

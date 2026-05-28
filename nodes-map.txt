@@ -1,0 +1,51 @@
+# Coulesia story graph
+# Format: <node-id> -> <child-1>, <child-2>, ...
+# Convention: level number + letter (a-j), max 10 nodes per level.
+# Leaves (no children yet) are marked TODO.
+#
+# Branching rule: each node has up to 3 choices; total nodes at level N
+# is capped at 10, which forces convergence at deeper levels.
+
+0-a -> 1-a, 1-b                   # gender split (male -> 1-a, female -> 1-b)
+
+1-a -> 2-a, 2-b, 2-c              # male path: help / hide / rob
+1-b -> 2-d, 2-e, 2-f              # female path: help / hide / rob
+
+# Level 2 -> 3. Gender pairs converge at level 3.
+2-a -> 3-a, 3-b, 3-c              # help (male):   lie on road / off-road / shrine-handoff
+2-d -> 3-a, 3-b, 3-c              # help (female): same trio, converged
+2-b -> 3-d, 3-e, 3-f              # hide (male):   false trail / stand silent / spook horse
+2-e -> 3-d, 3-e, 3-f              # hide (female): same trio, converged
+2-c -> 3-g, 3-h, 3-i              # rob (male):   silence the witness / vanish / sell in town
+2-f -> 3-g, 3-h, 3-i              # rob (female): same trio, converged
+
+# Level 3 -> 4. Heavy convergence: 9 nodes x 3 choices = 27 edges into 9 level-4 nodes.
+# 4-a = Sadaiziche warden-house (noon bell)
+# 4-b = the shepherd Asha's fire (oak scrub, southern slope)
+# 4-c = combat on the imperial road
+# 4-d = riding under church-warden escort
+# 4-e = alone east on the road, a death behind you
+# 4-f = the shrine of Vabum revisited (witness / framing)
+# 4-g = the vellum unfolded (three lines you cannot read)
+# 4-h = the river-path / dye-houses (Sadaiziche back-way, west wall)
+# 4-i = the wounded man speaks (sheltered, alive)
+3-a -> 4-a, 4-d, 4-b              # kinsman: honour summons / intercept wardens / break bargain
+3-b -> 4-b, 4-i, 4-e              # vine&oak: shepherd / shelter and listen / abandon
+3-c -> 4-a, 4-d, 4-f              # shrine handoff: walk on / escort wardens / witness
+3-d -> 4-i, 4-c, 4-b              # false trail: lie holds / leader doubles back / off-road together
+3-e -> 4-a, 4-f, 4-c              # silent watch: walk free / follow at distance / intervene
+3-f -> 4-c, 4-e, 4-d              # stone in hand: commit / flee / yield
+3-g -> 4-e, 4-f, 4-h              # mercy-kill: east / frame the shrine / off-road south
+3-h -> 4-b, 4-g, 4-e              # stripped rows: climb / read vellum / east cross-country
+3-i -> 4-a, 4-h, 4-g              # open road: south gate / dye-house back-way / shrine pause
+
+# TODO level 4 (9 of 10 letters used; 4-j held in reserve)
+4-a -> TODO
+4-b -> TODO
+4-c -> TODO
+4-d -> TODO
+4-e -> TODO
+4-f -> TODO
+4-g -> TODO
+4-h -> TODO
+4-i -> TODO

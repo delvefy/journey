@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coulesia — Waking</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main class="scroll">
+  <header class="crest">
+    <span>0-a · Waking</span>
+    <span id="alignment-readout"></span>
+  </header>
+
+  <h1 class="title">The Road East of Rabad</h1>
+  <p class="subtitle">An hour before dawn. Late autumn. The empire sleeping.</p>
+
+  <div class="story">
+    <p>You come back to yourself the way a coin sinks through still water — slowly, with no sense of effort, and no memory of having been dropped.</p>
+
+    <p>First: cold. A cold that has been with you long enough to have become familiar, the way a bad neighbour is familiar. It is in your fingers and the rims of your ears and along the line of your jaw, which is pressed against something hard and gritty. A road, you think. A road, with the small stones of a road, and the cold ruts of a road, and the patient, mineral smell of one. Somewhere not far off, water is moving — a stream, maybe, or only the wind in dry reeds pretending to be one.</p>
+
+    <p>Second: the sky. You open your eyes and see it sideways, slate-grey, with a single wandering star still burning above a line of black hills. It is the hour the Khvordemians call <em>baz-i shab</em>, the night's last hand, when the lamps in the towers are guttering and the bakers' fires have not yet been lit. There is no moon. There is no sound but the wind, and your own breathing, and somewhere very far away a dog that does not know yet why it is barking.</p>
+
+    <p>Third: yourself. You take inventory cautiously. You have a body. The body is on its side. The body has wet clothes — not from rain; the air is dry — and a faint, sour smell that you do not want to think about for too long. There is a heaviness on your left hip that, when you reach for it, turns out to be a small purse on a frayed cord. There is a scar on the inside of your wrist that you do not remember earning. There is a smear of dried blood along one of your knuckles. The blood is not yours. You are reasonably sure of this, though you cannot say why.</p>
+
+    <p>Fourth: nothing. Where a name should be, there is nothing. Where a face — a mother's, a lover's, an enemy's — should be, there is nothing. Where the road that brought you to this road should be, there is nothing. You reach for these things the way a tongue reaches for a missing tooth: gently, often, and with a small flare of horror each time you find the gap.</p>
+
+    <p>You sit up. The hills resolve, low and bare, with one black smudge on them that might be a watchtower and one paler smudge that, after a long second, you recognise as smoke. Far behind you to the west, perhaps a league back along the rutted road, a fistful of yellow lights flickers and steadies. A town. The signs hung at the milestones near where you woke — you noticed them without noticing — said <em>RABAD ½ farsang</em> in one direction and <em>SADAIZICHE 3 farsang</em> in the other. You are between the two, on the imperial road, in the cold, in the dark, in a body whose history you do not own.</p>
+
+    <p>Something else: a name. Not yours. Yours is still gone. But there is a word in your mouth, surfacing now from the same dark place your memory should be — a word like a stone you have been carrying under your tongue. You do not know whose it is. You do not know whether it is the name of someone you loved, or someone you wronged, or someone you are. You only know that when you mouth it silently into the cold, the wind seems to listen.</p>
+
+    <p>Pick it up. Speak it aloud. Make it yours, for now, until something truer claims you.</p>
+
+    <p><em>And before you stand — before the day finds you — settle one more question. The body you are in. Notice it. Choose what to call it. The empire's clerks, its priests, its road-wardens and slave-takers, will all want to know, and they will not be patient.</em></p>
+  </div>
+
+  <hr class="divider">
+
+  <form id="waking" autocomplete="off">
+    <label class="field" for="name">The name on your tongue</label>
+    <input class="name" id="name" type="text" maxlength="32" placeholder="speak it" required>
+
+    <label class="field">The body you have come back to</label>
+    <div class="gender-row">
+      <button type="submit" class="choice" data-gender="male"><span class="marker">♂</span> A man's body</button>
+      <button type="submit" class="choice" data-gender="female"><span class="marker">♀</span> A woman's body</button>
+    </div>
+  </form>
+
+  <footer class="foot">
+    <span>I · Waking</span>
+    <span><a href="../index.html">← title page</a></span>
+  </footer>
+</main>
+
+<script src="../assets/story.js"></script>
+<script>
+  Story.bootNode("0-a");
+
+  const form = document.getElementById("waking");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    if (!name) {
+      document.getElementById("name").focus();
+      return;
+    }
+    const gender = e.submitter?.dataset.gender;
+    if (!gender) return;
+
+    const state = Story.loadState();
+    state.name = name;
+    state.gender = gender;
+    Story.saveState(state);
+
+    const next = gender === "male" ? "1-a" : "1-b";
+    window.location.href = `${next}.html`;
+  });
+</script>
+</body>
+</html>

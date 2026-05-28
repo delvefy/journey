@@ -2,296 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Coulesia — walk</title>
-<style>
-  html, body { margin: 0; height: 100%; background: #0a0d14; color: #d8dee9;
-               font: 12px/1.4 ui-monospace, Menlo, monospace; overflow: hidden; }
-  canvas { display: block; image-rendering: pixelated; }
-  #hud { position: fixed; top: 10px; left: 10px;
-         background: rgba(10, 13, 20, 0.78); border: 1px solid #2c3447;
-         padding: 8px 12px; border-radius: 4px; pointer-events: none;
-         white-space: pre; min-width: 220px; }
-  #help { position: fixed; bottom: 10px; left: 10px;
-          background: rgba(10, 13, 20, 0.78); border: 1px solid #2c3447;
-          padding: 6px 10px; border-radius: 4px; opacity: 0.8; }
-  kbd { background: #2c3447; padding: 1px 5px; border-radius: 3px;
-        border: 1px solid #404a63; font: inherit; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coulesia — A Journey</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<canvas id="map"></canvas>
-<div id="hud">loading…</div>
-<div id="help"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> or <kbd>WASD</kbd> to walk · <kbd>+</kbd>/<kbd>-</kbd> zoom · <kbd>R</kbd> respawn</div>
+<main class="scroll">
+  <header class="crest">
+    <span>Coulesia · Year of the Black Sun</span>
+    <span id="alignment-readout"></span>
+  </header>
+
+  <h1 class="title">A Journey</h1>
+  <p class="subtitle">A waking road in the Khvordemian Empire.</p>
+
+  <div class="story">
+    <p>You do not remember your name.</p>
+    <p>You do not remember what brought you here, to the cold ribbon of road that runs east of Rabad, where the carters say the dust tastes of iron and old prayer. You only know that you are about to open your eyes — and that what you choose to be, from this morning onward, will be remembered by gods who keep their ledgers in fine, patient hand.</p>
+    <p>The empire stretches far. So does the road.</p>
+    <p>Begin when you are ready.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="choices">
+    <a href="nodes/0-a.html"><span class="marker">»</span> Open your eyes.</a>
+    <a href="#" id="reset"><span class="marker">·</span> Forget everything that came before (reset).</a>
+  </div>
+
+  <footer class="foot">
+    <span>I · The Threshold</span>
+    <span>Press <kbd>Shift</kbd>+<kbd>A</kbd> to glimpse alignment</span>
+  </footer>
+</main>
+
+<script src="assets/story.js"></script>
 <script>
-"use strict";
-
-const BASE = "map/";
-const CHUNK_RADIUS = 3;      // chunks to keep loaded around player
-const PLAYER_SPEED = 28;     // source px per second
-const RUN_MULTIPLIER = 3;    // shift to sprint
-
-const canvas = document.getElementById("map");
-const ctx = canvas.getContext("2d");
-const hud = document.getElementById("hud");
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener("resize", resize);
-
-const state = {
-  manifest: null,
-  biomes: {},
-  burgIndex: {},     // burgId -> slim record
-  states: {},        // stateId -> slim record
-  chunks: new Map(), // "cx,cy" -> chunk doc
-  inflight: new Map(),
-  cellLookup: null,
-  player: { x: 0, y: 0 },
-  zoom: 4,           // screen px per source px
-  keys: new Set(),
-  ready: false,
-};
-
-async function loadJSON(path) {
-  const r = await fetch(BASE + path);
-  if (!r.ok) throw new Error(`fetch ${path}: ${r.status}`);
-  return r.json();
-}
-
-async function loadChunk(cx, cy) {
-  const W = state.manifest.world;
-  if (cx < 0 || cy < 0 || cx >= W.chunksX || cy >= W.chunksY) return null;
-  const key = `${cx},${cy}`;
-  if (state.chunks.has(key)) return state.chunks.get(key);
-  if (state.inflight.has(key)) return state.inflight.get(key);
-  const p = loadJSON(`chunks/${cx}_${cy}.json`).then((doc) => {
-    state.chunks.set(key, doc);
-    state.inflight.delete(key);
-    return doc;
+  document.getElementById("reset").addEventListener("click", (e) => {
+    e.preventDefault();
+    Story.resetState();
+    window.location.href = "nodes/0-a.html";
   });
-  state.inflight.set(key, p);
-  return p;
-}
-
-async function ensureChunksAround(x, y, radius = CHUNK_RADIUS) {
-  const cs = state.manifest.world.chunkSize;
-  const cx = Math.floor(x / cs);
-  const cy = Math.floor(y / cs);
-  const promises = [];
-  for (let dy = -radius; dy <= radius; dy++) {
-    for (let dx = -radius; dx <= radius; dx++) {
-      promises.push(loadChunk(cx + dx, cy + dy));
-    }
-  }
-  await Promise.all(promises);
-}
-
-async function pickRandomLandSpawn() {
-  // The cell-lookup tells us which chunk each cell lives in; we sample
-  // a few random cells, load their chunks, and accept the first one
-  // whose biome is non-marine and height >= 20 (water threshold).
-  const ids = Object.keys(state.cellLookup);
-  for (let attempt = 0; attempt < 400; attempt++) {
-    const id = ids[(Math.random() * ids.length) | 0];
-    const [cx, cy] = state.cellLookup[id];
-    const chunk = await loadChunk(cx, cy);
-    if (!chunk) continue;
-    const cell = chunk.cells.find((c) => c.i === parseInt(id, 10));
-    if (!cell) continue;
-    if (cell.h >= 20 && cell.biome !== 0) {
-      return { x: cell.p[0], y: cell.p[1], cell };
-    }
-  }
-  const W = state.manifest.world;
-  return { x: W.width / 2, y: W.height / 2, cell: null };
-}
-
-function findCellAt(x, y) {
-  // Nearest pack-cell centre in nearby chunks (Voronoi membership = nearest seed).
-  const cs = state.manifest.world.chunkSize;
-  const cx = Math.floor(x / cs);
-  const cy = Math.floor(y / cs);
-  let best = null;
-  let bestD = Infinity;
-  for (let dy = -1; dy <= 1; dy++) {
-    for (let dx = -1; dx <= 1; dx++) {
-      const k = `${cx + dx},${cy + dy}`;
-      const chunk = state.chunks.get(k);
-      if (!chunk) continue;
-      for (const cell of chunk.cells) {
-        const ddx = cell.p[0] - x;
-        const ddy = cell.p[1] - y;
-        const d = ddx * ddx + ddy * ddy;
-        if (d < bestD) { bestD = d; best = cell; }
+  document.addEventListener("keydown", (e) => {
+    if (e.shiftKey && (e.key === "A" || e.key === "a")) {
+      document.body.classList.toggle("show-alignment");
+      const el = document.getElementById("alignment-readout");
+      if (el) {
+        const s = Story.loadState();
+        el.textContent = `${Story.alignmentLabel(s)} · L${s.law >= 0 ? "+" : ""}${s.law} G${s.good >= 0 ? "+" : ""}${s.good}`;
       }
     }
-  }
-  return best;
-}
-
-function drawWorld() {
-  const w = canvas.width, h = canvas.height;
-  const z = state.zoom;
-  const camX = state.player.x;
-  const camY = state.player.y;
-  const sx = (x) => (x - camX) * z + w / 2;
-  const sy = (y) => (y - camY) * z + h / 2;
-
-  // ocean / background
-  ctx.fillStyle = "#1c2638";
-  ctx.fillRect(0, 0, w, h);
-
-  // cells, filled polygons, biome-coloured
-  for (const chunk of state.chunks.values()) {
-    const [bx0, by0, bx1, by1] = chunk.bounds;
-    // generous cull margin since polygons can extend past chunk bounds
-    const margin = state.manifest.world.chunkSize;
-    if (sx(bx1 + margin) < 0 || sx(bx0 - margin) > w) continue;
-    if (sy(by1 + margin) < 0 || sy(by0 - margin) > h) continue;
-
-    for (const cell of chunk.cells) {
-      const vs = cell.v;
-      if (vs.length < 3) continue;
-      ctx.beginPath();
-      let started = false;
-      for (const vid of vs) {
-        const p = chunk.vertices[vid];
-        if (!p) continue;
-        const x = sx(p[0]);
-        const y = sy(p[1]);
-        if (!started) { ctx.moveTo(x, y); started = true; }
-        else ctx.lineTo(x, y);
-      }
-      if (!started) continue;
-      ctx.closePath();
-      const biome = state.biomes[cell.biome];
-      ctx.fillStyle = biome ? biome.color : "#445";
-      ctx.fill();
-    }
-  }
-
-  // burgs (capitals bigger / yellow, others red)
-  for (const chunk of state.chunks.values()) {
-    for (const burgId of chunk.burgs) {
-      const burg = state.burgIndex[burgId];
-      if (!burg) continue;
-      const x = sx(burg.x), y = sy(burg.y);
-      if (x < -10 || x > w + 10 || y < -10 || y > h + 10) continue;
-      const r = burg.capital ? 4 : 2.2;
-      ctx.fillStyle = burg.capital ? "#ffd866" : "#ff6b6b";
-      ctx.strokeStyle = "#1c1f26";
-      ctx.lineWidth = 1.2;
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.stroke();
-
-      if (burg.capital && z >= 3) {
-        ctx.fillStyle = "#fff";
-        ctx.font = "11px ui-monospace, monospace";
-        ctx.textAlign = "left";
-        ctx.fillText(burg.name, x + 6, y + 4);
-      }
-    }
-  }
-
-  // player marker
-  ctx.fillStyle = "#fff";
-  ctx.strokeStyle = "#000";
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  ctx.arc(w / 2, h / 2, 5, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.stroke();
-}
-
-let lastT = performance.now();
-function frame(t) {
-  const dt = Math.min(0.05, (t - lastT) / 1000);
-  lastT = t;
-
-  if (state.ready) {
-    let dx = 0, dy = 0;
-    if (state.keys.has("ArrowLeft")  || state.keys.has("KeyA")) dx -= 1;
-    if (state.keys.has("ArrowRight") || state.keys.has("KeyD")) dx += 1;
-    if (state.keys.has("ArrowUp")    || state.keys.has("KeyW")) dy -= 1;
-    if (state.keys.has("ArrowDown")  || state.keys.has("KeyS")) dy += 1;
-
-    if (dx || dy) {
-      const len = Math.hypot(dx, dy);
-      const speed = PLAYER_SPEED * (state.keys.has("ShiftLeft") || state.keys.has("ShiftRight") ? RUN_MULTIPLIER : 1);
-      state.player.x += (dx / len) * speed * dt;
-      state.player.y += (dy / len) * speed * dt;
-      const W = state.manifest.world;
-      state.player.x = Math.max(0, Math.min(W.width, state.player.x));
-      state.player.y = Math.max(0, Math.min(W.height, state.player.y));
-      ensureChunksAround(state.player.x, state.player.y);
-    }
-
-    drawWorld();
-    updateHud();
-  }
-
-  requestAnimationFrame(frame);
-}
-
-function updateHud() {
-  const cell = findCellAt(state.player.x, state.player.y);
-  const biome = cell ? state.biomes[cell.biome] : null;
-  const stateRec = cell && cell.state ? state.states[cell.state] : null;
-  hud.textContent =
-    `pos    ${state.player.x.toFixed(1)}, ${state.player.y.toFixed(1)}\n` +
-    `biome  ${biome ? biome.name : "—"}\n` +
-    `state  ${stateRec ? stateRec.name : "—"}\n` +
-    `height ${cell ? cell.h : "—"}\n` +
-    `temp   ${cell && cell.temp != null ? cell.temp + "°" : "—"}\n` +
-    `chunks ${state.chunks.size} loaded\n` +
-    `zoom   ${state.zoom}x`;
-}
-
-async function respawn() {
-  state.ready = false;
-  hud.textContent = "finding spawn…";
-  const spawn = await pickRandomLandSpawn();
-  state.player.x = spawn.x;
-  state.player.y = spawn.y;
-  await ensureChunksAround(spawn.x, spawn.y);
-  state.ready = true;
-}
-
-window.addEventListener("keydown", (e) => {
-  state.keys.add(e.code);
-  if (e.code.startsWith("Arrow")) e.preventDefault();
-  if (e.code === "Equal" || e.code === "NumpadAdd") state.zoom = Math.min(12, state.zoom + 1);
-  if (e.code === "Minus" || e.code === "NumpadSubtract") state.zoom = Math.max(1, state.zoom - 1);
-  if (e.code === "KeyR") respawn();
-});
-window.addEventListener("keyup", (e) => state.keys.delete(e.code));
-
-(async function init() {
-  hud.textContent = "loading manifest…";
-  state.manifest = await loadJSON("manifest.json");
-
-  hud.textContent = "loading biomes…";
-  const biomes = await loadJSON("biomes.json");
-  for (const b of biomes) state.biomes[b.i] = b;
-
-  hud.textContent = "loading burg + state indexes…";
-  const [burgIndex, stateIndex, cellLookup] = await Promise.all([
-    loadJSON("burgs/index.json"),
-    loadJSON("states/index.json"),
-    loadJSON("chunks/cell_lookup.json"),
-  ]);
-  for (const b of burgIndex) state.burgIndex[b.i] = b;
-  for (const s of stateIndex) state.states[s.i] = s;
-  state.cellLookup = cellLookup;
-
-  await respawn();
-  requestAnimationFrame(frame);
-})();
+  });
 </script>
 </body>
 </html>
