@@ -75,7 +75,7 @@
     state.gender = gender;
     Story.saveState(state);
 
-    const next = gender === "male" ? "1-a" : "1-b";
+    const next = gender === "male" ? "1-m" : "1-f";
     window.location.href = `${next}.html`;
   });
 </script>

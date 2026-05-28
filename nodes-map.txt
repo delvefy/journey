@@ -1,51 +1,69 @@
-# Coulesia story graph
-# Format: <node-id> -> <child-1>, <child-2>, ...
-# Convention: level number + letter (a-j), max 10 nodes per level.
-# Leaves (no children yet) are marked TODO.
+# Coulesia story graph — alignment-keyed grid
 #
-# Branching rule: each node has up to 3 choices; total nodes at level N
-# is capped at 10, which forces convergence at deeper levels.
+# Every level past 1 has up to 9 nodes, one per D&D alignment.
+# Node IDs: "<level>-<alignment-code>" where the code is one of
+#   lg ng cg   ln tn cn   le ne ce
+# Routing: each choice button has data-law and data-good (integers).
+# story.js applies the deltas, computes the new alignment bucket
+# (threshold T=2), and routes to "<level+1>-<bucket>.html"
+# automatically. No data-next attributes.
+#
+# Exceptions to the 9-per-level rule:
+#   - Level 0 is one intro node (0-a)
+#   - Level 1 is gender-distinct (1-m / 1-f), routed by 0-a's form
+#
+# Vacant slots (alignments not first-pass reachable at a given level)
+# are listed below for tracking. They may stay vacant or be filled
+# later if a re-entry mechanism is added.
 
-0-a -> 1-a, 1-b                   # gender split (male -> 1-a, female -> 1-b)
+# ── Beat anchors ─────────────────────────────────────────────────────
+# L0  Waking (name, gender)
+# L1  The man in the ditch
+# L2  Your hands' first wage
+# L3  The stranger who reads you           (TBD)
+# L4  The second man in the ditch           (TBD)
+# L5  A name from before                    (TBD)
 
-1-a -> 2-a, 2-b, 2-c              # male path: help / hide / rob
-1-b -> 2-d, 2-e, 2-f              # female path: help / hide / rob
+# ── Level 0 ──────────────────────────────────────────────────────────
+0-a                                    # intro; form routes to 1-m / 1-f
 
-# Level 2 -> 3. Gender pairs converge at level 3.
-2-a -> 3-a, 3-b, 3-c              # help (male):   lie on road / off-road / shrine-handoff
-2-d -> 3-a, 3-b, 3-c              # help (female): same trio, converged
-2-b -> 3-d, 3-e, 3-f              # hide (male):   false trail / stand silent / spook horse
-2-e -> 3-d, 3-e, 3-f              # hide (female): same trio, converged
-2-c -> 3-g, 3-h, 3-i              # rob (male):   silence the witness / vanish / sell in town
-2-f -> 3-g, 3-h, 3-i              # rob (female): same trio, converged
+# ── Level 1 ──────────────────────────────────────────────────────────
+1-m   male body, man in the ditch
+1-f   female body, man in the ditch
+# Each L1 node has three choices with the same deltas:
+#   help  +2 law / +2 good   → state (2, 2)   → 2-lg
+#   hide  -2 law / +1 good   → state (-2, 1)  → 2-cn
+#   rob   -1 law / -3 good   → state (-1, -3) → 2-ne
 
-# Level 3 -> 4. Heavy convergence: 9 nodes x 3 choices = 27 edges into 9 level-4 nodes.
-# 4-a = Sadaiziche warden-house (noon bell)
-# 4-b = the shepherd Asha's fire (oak scrub, southern slope)
-# 4-c = combat on the imperial road
-# 4-d = riding under church-warden escort
-# 4-e = alone east on the road, a death behind you
-# 4-f = the shrine of Vabum revisited (witness / framing)
-# 4-g = the vellum unfolded (three lines you cannot read)
-# 4-h = the river-path / dye-houses (Sadaiziche back-way, west wall)
-# 4-i = the wounded man speaks (sheltered, alive)
-3-a -> 4-a, 4-d, 4-b              # kinsman: honour summons / intercept wardens / break bargain
-3-b -> 4-b, 4-i, 4-e              # vine&oak: shepherd / shelter and listen / abandon
-3-c -> 4-a, 4-d, 4-f              # shrine handoff: walk on / escort wardens / witness
-3-d -> 4-i, 4-c, 4-b              # false trail: lie holds / leader doubles back / off-road together
-3-e -> 4-a, 4-f, 4-c              # silent watch: walk free / follow at distance / intervene
-3-f -> 4-c, 4-e, 4-d              # stone in hand: commit / flee / yield
-3-g -> 4-e, 4-f, 4-h              # mercy-kill: east / frame the shrine / off-road south
-3-h -> 4-b, 4-g, 4-e              # stripped rows: climb / read vellum / east cross-country
-3-i -> 4-a, 4-h, 4-g              # open road: south gate / dye-house back-way / shrine pause
+# ── Level 2 — Your hands' first wage ─────────────────────────────────
+2-lg   Kinsman          (help → kinsman-lie holds, warden-house at noon)
+2-cn   The Reeds        (hide → mud over the charm, wardens questioning)
+2-ne   A Man's Pockets  (rob  → silver, phial, vellum, the open road)
+# Vacant L2 slots (no first-pass entry from L1):
+#   2-ng 2-cg 2-ln 2-tn 2-le 2-ce
 
-# TODO level 4 (9 of 10 letters used; 4-j held in reserve)
-4-a -> TODO
-4-b -> TODO
-4-c -> TODO
-4-d -> TODO
-4-e -> TODO
-4-f -> TODO
-4-g -> TODO
-4-h -> TODO
-4-i -> TODO
+# L2 choice deltas and L3 destinations:
+#   2-lg  state (2,2)
+#     A  +1/+1  → (3,3)   → 3-lg   honour the noon summons
+#     B  -3/+1  → (-1,3)  → 3-ng   break the bargain, off-road south
+#     C   0/-4  → (2,-2)  → 3-le   recant; inform on him at the warden-house
+#   2-cn  state (-2,1)
+#     A  +3/-1  → (1,0)   → 3-tn   cooperate fully, surrender him
+#     B  -1/+2  → (-3,3)  → 3-cg   bold lie, send wardens west
+#     C   0/-3  → (-2,-2) → 3-ce   spook the horses, draw the knife
+#   2-ne  state (-1,-3)
+#     A  -1/-1  → (-2,-4) → 3-ce   return and silence him with a stone
+#     B  +2/+3  → (1,0)   → 3-tn   off the road, retreat from the act
+#     C  +3/+1  → (2,-2)  → 3-le   press on to Sadaiziche, sell the silver
+
+# ── Level 3 — TODO ───────────────────────────────────────────────────
+# Beat anchor: "The stranger who reads you" — an NPC in or near
+# Sadaiziche reflects who the player has become.
+# Reachable L3 buckets from L2: lg, ng, le, tn, cg, ce  (6 of 9)
+# Vacant L3 buckets: ln, cn, ne
+3-lg   TODO
+3-ng   TODO
+3-cg   TODO
+3-tn   TODO
+3-le   TODO
+3-ce   TODO
