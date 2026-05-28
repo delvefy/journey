@@ -21,8 +21,9 @@
 # L1  The man in the ditch
 # L2  Your hands' first wage
 # L3  The stranger who reads you
-# L4  The second man in the ditch           (TBD)
-# L5  A name from before                    (TBD)
+# L4  The second man in the ditch
+# L5  A name from before
+# L6  TBD
 
 # ── Level 0 ──────────────────────────────────────────────────────────
 0-a                                    # intro; form routes to 1-m / 1-f
@@ -92,17 +93,131 @@
 #     B  -1/+3  → (-3,1)/(-3,-1)  → 4-cn   refuse, ride to warn the farmhouse
 #     C   0/-3  → (-2,-5)/(-2,-7) → 4-ce   cross the four paces; kill the priest
 
-# ── Level 4 — TODO ───────────────────────────────────────────────────
-# Beat anchor: "The second man in the ditch" — a repeat moral test
-# refracted through who the player has now become.
-# Reachable L4 buckets from L3: lg, ng, ln, cg, tn, cn, le, ne, ce
-# All nine alignments are first-pass reachable at L4.
-4-lg   TODO
-4-ng   TODO
-4-cg   TODO
-4-ln   TODO
-4-tn   TODO
-4-cn   TODO
-4-le   TODO
-4-ne   TODO
-4-ce   TODO
+# ── Level 4 — The second man in the ditch ────────────────────────────
+4-lg   The Deacon at the Mile      (a Church deacon waylaid at a wagon-stop east of Sadaiziche)
+4-ng   The Bond-Boy in the Byre    (a beaten houseboy hiding under thatch in country east)
+4-cg   The Courier Without a Horse (a Mardesran with a list of six names, dying on Soraya's table)
+4-ln   The Pin on the Writ         (a brass pin, a culvert, and a man named Hamza in the dust)
+4-tn   The Stranger in the Dust    (a drunken frontier trooper thrown by his mare at a poplar)
+4-cn   The Chain at the Bend       (eleven debt-bondsmen on a single iron chain at a culvert)
+4-le   The Brick Floor             (a roadside post, a brazier, a man on a table, Mehrdad at the basin)
+4-ne   The Long Light              (a stroke-felled traveller alone at the verge, pockets intact)
+4-ce   The Smoke at the Bend       (a farmstead burning, three riders on the next ridge)
+
+# L4 choice deltas and L5 destinations:
+#   4-lg  state (2,3) or (4,4)
+#     A  +2/+2  → (4,5)/(6,6)    → 5-lg   ride for the post
+#     B  -3/+2  → (-1,5)/(1,6)   → 5-ng   cut him loose, off the road
+#     C  +1/-3  → (3,0)/(5,1)    → 5-ln   take the grey, ride east on the warrant
+#   4-ng  state (0,4), (-1,4), or (-1,2)
+#     A  +3/0   → (3,4)/(2,4)/(2,2)    → 5-lg   walk him to the Church post
+#     B  -2/+2  → (-2,6)/(-3,6)/(-3,4) → 5-cg   cut the cord, the goat-track south
+#     C  +1/-3  → (1,1)/(0,1)/(0,-1)   → 5-tn   read the brass, sell him back
+#   4-cg  state (-2,5) or (-4,4)
+#     A  -1/+2  → (-3,7)/(-5,6)  → 5-cg   take the strip, run the half-bell
+#     B  +3/+1  → (1,6)/(-1,5)   → 5-ng   stay with him, let Soraya pick
+#     C   0/-4  → (-2,1)/(-4,0)  → 5-cn   slip the strip, sell at the south gate
+#   4-ln  state (3,-1) or (3,1)
+#     A  +2/+1  → (5,0)/(5,2)    → 5-ln/5-lg  speak the writ, walk Hamza in
+#     B  -2/+2  → (1,1)/(1,3)    → 5-tn/5-ng  lie to the writ, return at moonrise
+#     C  +2/-3  → (5,-4)/(5,-2)  → 5-le   take the writ further; cut his purse
+#   4-tn  state (0,0) or (1,1)
+#     A  +1/+2  → (1,2)/(2,3)    → 5-ng/5-lg  crouch and keep the stranger
+#     B   0/-1  → (0,-1)/(1,0)   → 5-tn   walk past, cross the verge
+#     C  -1/-3  → (-1,-3)/(0,-2) → 5-ne   take the mare, leave the trooper
+#   4-cn  state (-3,0), (-3,1), or (-3,-1)
+#     A  -2/+2  → (-5,2)/(-5,3)/(-5,1)    → 5-cg/5-cn  the boy, the pin, the broom
+#     B  -3/-1  → (-6,-1)/(-6,0)/(-6,-2)  → 5-cn/5-ce  the pebble, the middle rider's pouch
+#     C  +3/-3  → (0,-3)/(0,-2)/(0,-4)    → 5-ne   sell what you know to the rear rider
+#   4-le  state (4,-3)
+#     A  +2/-3  → (6,-6)   → 5-le   apprentice on the table
+#     B  +1/+2  → (5,-1)   → 5-ln   witness only, sign the writ
+#     C  -3/+3  → (1,0)    → 5-tn   tip the brazier, cut the cords
+#   4-ne  state (0,-3), (1,-5), (1,-2), or (1,-4)
+#     A   0/-3  → (0,-6)/(1,-8)/(1,-5)/(1,-7) → 5-ne   strip cleanly
+#     B  +2/+1  → (2,-2)/(3,-4)/(3,-1)/(3,-3) → 5-le/5-ln  report at the next post
+#     C  -1/+2  → (-1,-1)/(0,-3)/(0,0)/(0,-2) → 5-tn/5-ne  bury him under the long light
+#   4-ce  state (-2,-5) or (-2,-7)
+#     A  -1/+4  → (-3,-1)/(-3,-3) → 5-cn/5-ce  ride the three down for the family
+#     B   0/-3  → (-2,-8)/(-2,-10) → 5-ce   strip the yard before the smoke draws a cart
+#     C  -2/-4  → (-4,-9)/(-4,-11) → 5-ce   silence the woman; ride east; join the band
+
+# ── Level 5 — A name from before ─────────────────────────────────────
+# The player's pre-amnesia identity is Khorshid Daiyani — son of a
+# Mardesran mother and a Khvordemian father at Khaboran; taken into the
+# Church seminary at thirteen; trained partway as a question-priest at
+# Khaboran (the same order as Mehrdad's); left the order at nineteen
+# to work as a field-informer mapping Mardesran cells. He has not
+# reported in four years. The order has held his column half-paid in
+# Father Karim's paybook. Recent operation: embedded in the Sadaiziche-
+# coastal route; struck down on the road east of Rabad at first light
+# of the morning the story opens. Identifying markers in body memory:
+# wrist scar (manacle), Khaboran knife-fold at the coat-lining's third
+# button, steady warden-questioning posture, the names Daiyan and
+# Khorshid surfacing under lies.
+
+5-lg   The Page in the Magistrate's Hand   (Magistrate-Father Hossein on circuit, post-priest's table)
+5-ng   Bahram at the Long Table            (a half-brother cooper at a wayside inn's long pine table)
+5-cg   Maziar at the Cold Spring           (a former order field-man, turned, at a night fire)
+5-ln   Captain Faramarz at the Desk        (imperial border captain arrives at the warden-post with a folder)
+5-tn   Parvin at the Trough                (a wash-woman of Khaboran years, now an inn-yard trough)
+5-cn   Roshanak in the Crowd               (a former lover at a country market's cloth-stall)
+5-le   Father Karim's Ledger               (the order's paymaster from Khaboran; strong-box on the table)
+5-ne   Cyrus at the Fence's Door           (a Mardesran whose family Khorshid took — at Bardas's door)
+5-ce   Behdad in the Hide-Fire             (Cyrus's brother, leader of a bandit-bowl in the ridge)
+
+# L5 choice deltas and L6 destinations:
+#   5-lg  state ~(4,4); also (2,3)/(5,2) from other parents
+#     A  +2/+2  → (6,6)/(7,5)/(4,5)        → 6-lg   answer the magistrate, close the column
+#     B  -3/+1  → (1,5)/(-1,4)/(2,3)       → 6-ng   walk past, the name is not yours yet
+#     C  +2/-3  → (6,1)/(4,0)/(7,-1)       → 6-ln   bargain back into the order on terms
+#   5-ng  state ~(1,3); also (-3,6)/(1,2) from other parents
+#     A  -2/+3  → (-1,6)/(-5,9)/(-1,5)     → 6-ng/6-cg  walk out with Bahram
+#     B  +1/+2  → (2,5)/(-2,8)/(2,4)       → 6-lg/6-cg  finish the cup, owe a returning
+#     C  +2/-3  → (3,0)/(-1,3)/(3,-1)      → 6-ln/6-ng/6-ln  make him eat the lie
+#   5-cg  state ~(-3,5); also (-5,6)/(-3,7)
+#     A  -1/+2  → (-4,7)/(-6,8)            → 6-cg   walk out with Maziar to the coast
+#     B  +2/+2  → (-1,7)/(-3,8)            → 6-ng/6-cg  ask back, take the night as an account-book
+#     C   0/-4  → (-3,1)/(-5,2)            → 6-cn   the Khaboran fold at the third button
+#   5-ln  state ~(5,0); also (3,-1)/(3,1)
+#     A  +2/+1  → (7,1)/(5,0)              → 6-ln   walk to the desk, hands flat
+#     B  -2/+2  → (3,2)/(1,1)              → 6-lg/6-tn  the window at the shoulder
+#     C  +2/-3  → (7,-3)/(5,-4)            → 6-le   bargain at the table-edge
+#   5-tn  state ~(0,0); also (-1,-2)/(1,0)
+#     A  +1/+2  → (1,2)/(0,0)/(2,2)        → 6-ng/6-tn/6-lg  ask Parvin at the kitchen door
+#     B   0/-1  → (0,-1)/(-1,-3)/(1,-1)    → 6-tn/6-ne/6-tn  walk out by the road
+#     C  -1/-3  → (-1,-3)/(-2,-5)/(0,-3)   → 6-ne/6-ce/6-ne  the hand at her neck
+#   5-cn  state ~(-4,0); also (-6,-1)/(-2,1)
+#     A  -2/+1  → (-6,1)/(-8,0)/(-4,2)     → 6-cn/6-cn/6-cg  set back to wall, ask
+#     B  -3/-1  → (-7,-1)/(-9,-2)/(-5,0)   → 6-cn/6-ce/6-cn  smile and step past
+#     C  -1/-4  → (-5,-4)/(-7,-5)/(-3,-3)  → 6-ce   the third button at the lining
+#   5-le  state ~(5,-2); also (4,-3)/(3,-3)
+#     A  +2/-3  → (7,-5)/(6,-6)/(5,-6)     → 6-le   reopen the column at the third-year margin
+#     B  +3/+2  → (8,0)/(7,-1)/(6,-1)      → 6-ln   close it clean, take what is owed
+#     C  -1/+2  → (4,0)/(3,-1)/(2,-1)      → 6-ln   close with nothing
+#   5-ne  state ~(0,-5); also (-1,-3)/(1,-7)
+#     A   0/-4  → (0,-9)/(-1,-7)/(1,-11)   → 6-ne   the knife across the counter
+#     B  +1/-2  → (1,-7)/(0,-5)/(2,-9)     → 6-ne   purse plus package on the counter
+#     C  -1/+3  → (-1,-2)/(-2,0)/(0,-4)    → 6-ne/6-cn/6-ne  hands flat on the counter
+#   5-ce  state ~(-3,-9); also (-2,-7)/(-4,-11)
+#     A  -2/-4  → (-5,-13)/(-4,-11)/(-6,-15) → 6-ce   take Behdad first
+#     B  +1/-3  → (-2,-12)/(-1,-10)/(-3,-14) → 6-ce   kneel at the fire, offer the third name
+#     C  -2/+3  → (-5,-6)/(-4,-4)/(-6,-8)    → 6-ce   the third name reads the order's drawer
+
+# ── Level 6 — TODO ───────────────────────────────────────────────────
+# Beat anchor: TBD — next, the consequences of the recognition. The
+# week the player has had now becomes a week other people have had on
+# their own account. Suggestions: "The first reckoning" — the cost of
+# the name spoken back collects itself; or "The road south" — the
+# choices made in L5 begin to converge into a destination the player
+# will spend the rest of the story arriving at.
+# Reachable L6 buckets from L5: all nine alignments.
+6-lg   TODO
+6-ng   TODO
+6-cg   TODO
+6-ln   TODO
+6-tn   TODO
+6-cn   TODO
+6-le   TODO
+6-ne   TODO
+6-ce   TODO
