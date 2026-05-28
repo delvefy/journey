@@ -106,7 +106,19 @@ function renderReadout() {
   el.textContent = `${alignmentLabel(s)} · L${s.law >= 0 ? "+" : ""}${s.law} G${s.good >= 0 ? "+" : ""}${s.good}`;
 }
 
+function maybeResumeToSaved(nodeId) {
+  const level = Number(nodeId.split("-")[0]);
+  if (!Number.isFinite(level) || level === 0) return false;
+  const { history } = loadState();
+  if (!history.length) return false;
+  const last = history[history.length - 1];
+  if (last === nodeId) return false;
+  window.location.replace(`${last}.html`);
+  return true;
+}
+
 function bootNode(nodeId) {
+  if (maybeResumeToSaved(nodeId)) return;
   CURRENT_NODE_ID = nodeId;
   recordVisit(nodeId);
   wireChoices();

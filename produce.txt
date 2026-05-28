@@ -80,6 +80,27 @@ threshold T=2:
 …and routes the player to "<currentLevel+1>-<code>.html".
 
 ----------------------------------------------------------------------
+PARENT-LEVEL COVERAGE
+----------------------------------------------------------------------
+
+When you author a new level N, every destination reachable from any
+choice at level N-1 must have a corresponding node at level N. Before
+closing the pass:
+
+  1. List every choice at every level-(N-1) node.
+  2. Compute each choice's destination bucket from a realistic
+     starting state (consider all reachable predecessor states).
+  3. Confirm each destination exists at nodes/<N>-<bucket>.html.
+
+If a parent choice routes to a bucket you have not authored, either
+(a) author the missing child in the same pass, or (b) change the
+parent's choice deltas so the choice no longer routes to a vacant
+bucket. Do not leave a 404 reachable from a previous level.
+
+This rule does NOT require every alignment slot at level N to exist —
+only the slots any level-(N-1) choice can reach.
+
+----------------------------------------------------------------------
 WHAT EACH NODE IS
 ----------------------------------------------------------------------
 

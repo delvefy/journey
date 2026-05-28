@@ -70,12 +70,15 @@
     const gender = e.submitter?.dataset.gender;
     if (!gender) return;
 
+    const next = gender === "male" ? "1-m" : "1-f";
+
+    Story.resetState();
     const state = Story.loadState();
     state.name = name;
     state.gender = gender;
+    state.history = ["0-a", next];
     Story.saveState(state);
 
-    const next = gender === "male" ? "1-m" : "1-f";
     window.location.href = `${next}.html`;
   });
 </script>

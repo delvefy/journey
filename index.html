@@ -26,8 +26,8 @@
   <hr class="divider">
 
   <div class="choices">
-    <a href="nodes/0-a.html"><span class="marker">»</span> Open your eyes.</a>
-    <a href="#" id="reset"><span class="marker">·</span> Forget everything that came before (reset).</a>
+    <button class="choice" id="new-game"><span class="marker">»</span> New Game</button>
+    <button class="choice" id="load-game"><span class="marker">»</span> Load Game</button>
   </div>
 
   <footer class="foot">
@@ -38,11 +38,24 @@
 
 <script src="assets/story.js"></script>
 <script>
-  document.getElementById("reset").addEventListener("click", (e) => {
-    e.preventDefault();
+  const loadBtn = document.getElementById("load-game");
+  const savedHistory = Story.loadState().history;
+  const lastNode = savedHistory[savedHistory.length - 1];
+  if (!lastNode) {
+    loadBtn.disabled = true;
+    loadBtn.style.opacity = "0.4";
+    loadBtn.style.cursor = "not-allowed";
+  }
+
+  document.getElementById("new-game").addEventListener("click", () => {
     Story.resetState();
     window.location.href = "nodes/0-a.html";
   });
+
+  loadBtn.addEventListener("click", () => {
+    if (lastNode) window.location.href = `nodes/${lastNode}.html`;
+  });
+
   document.addEventListener("keydown", (e) => {
     if (e.shiftKey && (e.key === "A" || e.key === "a")) {
       document.body.classList.toggle("show-alignment");
