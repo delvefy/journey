@@ -488,13 +488,13 @@
   {
     "name": "Frederick II, Holy Roman Emperor",
     "slug": "frederick-ii-holy-roman-emperor",
-    "count": 1,
+    "count": 2,
     "order": 82
   },
   {
     "name": "Pope Innocent III",
     "slug": "pope-innocent-iii",
-    "count": 1,
+    "count": 2,
     "order": 83
   },
   {
@@ -512,7 +512,67 @@
   {
     "name": "Eleanor of Aquitaine",
     "slug": "eleanor-of-aquitaine",
-    "count": 1,
+    "count": 2,
     "order": 86
+  },
+  {
+    "name": "Henry II of England",
+    "slug": "henry-ii-of-england",
+    "count": 2,
+    "order": 87
+  },
+  {
+    "name": "Thomas Becket",
+    "slug": "thomas-becket",
+    "count": 2,
+    "order": 88
+  },
+  {
+    "name": "Pope Alexander III",
+    "slug": "pope-alexander-iii",
+    "count": 2,
+    "order": 89
+  },
+  {
+    "name": "Frederick Barbarossa",
+    "slug": "frederick-barbarossa",
+    "count": 3,
+    "order": 90
+  },
+  {
+    "name": "Henry the Lion",
+    "slug": "henry-the-lion",
+    "count": 2,
+    "order": 91
+  },
+  {
+    "name": "Otto IV",
+    "slug": "otto-iv-holy-roman-emperor",
+    "count": 1,
+    "order": 92
+  },
+  {
+    "name": "Philip of Swabia",
+    "slug": "philip-of-swabia",
+    "count": 1,
+    "order": 93
+  },
+  {
+    "name": "Henry VI, Holy Roman Emperor",
+    "slug": "henry-vi-holy-roman-emperor",
+    "count": 2,
+    "order": 94
+  },
+  {
+    "name": "Constance of Sicily",
+    "slug": "constance-of-sicily",
+    "count": 2,
+    "order": 95
+  },
+  {
+    "name": "Roger II of Sicily",
+    "slug": "roger-ii-of-sicily",
+    "count": 1,
+    "order": 96
   }
 ]
