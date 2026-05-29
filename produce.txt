@@ -1,254 +1,139 @@
-PRODUCE.TXT — Instructions for Claude when generating new story nodes
-======================================================================
+PRODUCE-NEXT-ARTICLE — INSTRUCTIONS FOR CLAUDE
+================================================
 
-You are extending a branching dark-fantasy story set in Coulesia, the
-Persian-flavoured Khvordemian Empire. Before writing anything, read:
+WHEN THE USER SAYS "produce next N articles":
+  Loop the PROCEDURE below N times. Each iteration is fully self-contained —
+  if something fails mid-batch, every article completed so far is still on disk
+  and state.json points at the next one to write.
 
-  1. MARK.md         — current progress, last node added, what's next
-  2. nodes-map.txt   — beat anchors and reachability map
-  3. helpers/ALIGNMENT.md — alignment system and choice design
-  4. nodes/<all-parents>.html — every parent whose choice can route a
-     player to the node you're writing (see "Reading parents", below)
-  5. map/manifest.json (and burgs/, states/, etc.) — for geography
+PROJECT LAYOUT
+--------------
+  /index.html            ranked list (rendered from counter.json by JS)
+  /style.css             shared styles, mobile-friendly
+  /counter.json          [{ "name": "...", "slug": "...", "count": N, "order": K }, ...]
+                         "order" is the chronological position on the road (Jesus = 1,
+                         then 2, 3, ... in the sequence articles are written). It never
+                         changes once assigned. The index page can sort by count or by order.
+  /state.json            { "next_name": "...", "next_slug": "...", "seeded_from": "..." }
+  /articles/<slug>.html  one file per person
+  /produce.txt           this file
 
-----------------------------------------------------------------------
-THE STRUCTURE — ALIGNMENT-KEYED GRID
-----------------------------------------------------------------------
+SLUG RULES
+----------
+  lowercase, ASCII only, spaces -> hyphens, strip punctuation.
+  Examples:
+    "Jesus Christ"          -> "jesus-christ"
+    "Joseph of Arimathea"   -> "joseph-of-arimathea"
+    "Eleanor of Aquitaine"  -> "eleanor-of-aquitaine"
+    "Charlemagne"           -> "charlemagne"
 
-Every level past level 1 has up to nine nodes, one per D&D-style
-alignment. Node IDs follow the form "<level>-<alignment-code>" where
-the code is one of:
+INITIAL SEEDING
+---------------
+  If state.json.next_slug is null, the user must pick the first person.
+  Once picked, set state.json.next_name + next_slug and run the procedure.
 
-  lg ng cg   — Lawful Good, Neutral Good, Chaotic Good
-  ln tn cn   — Lawful Neutral, True Neutral, Chaotic Neutral
-  le ne ce   — Lawful Evil, Neutral Evil, Chaotic Evil
+PROCEDURE (one article)
+-----------------------
+1. Read state.json. Let TARGET = { next_name, next_slug }.
+   If TARGET.next_slug is null, stop and ask the user for a starting person.
 
-A LEVEL is anchored to a single STORY BEAT. The nine alignment-nodes
-at that level are nine versions of the same beat, each refracted
-through the moral grain of one alignment.
+2. Read counter.json into MEM.
 
-The player's current alignment IS their current node. When they make a
-choice, story.js applies the deltas, computes the new bucket, and
-routes them to the matching node at the next level.
+3. Write articles/<TARGET.next_slug>.html using the ARTICLE TEMPLATE below.
+   The body must be 800-1200 words covering the most important deeds of
+   TARGET.next_name's life: origins, formative events, principal achievements,
+   conflicts and turning points, legacy. Plain prose, paragraphs, no headings
+   inside the article body. Do NOT invent facts — if uncertain, omit.
+   Leave the "next link" pointing to a placeholder you will fill in step 7.
 
-EXCEPTIONS to the 9-per-level rule:
-  - Level 0 is a single intro node (0-a) where the alignment is 0/0
-    and the player picks a name and gender.
-  - Level 1 has gender-distinct nodes (1-m, 1-f). The gender encoding
-    has to live somewhere; from level 2 onward prose is gender-agnostic.
+4. Ensure TARGET is in counter.json:
+   - If MEM already has an entry with slug == TARGET.next_slug, leave count and order alone
+     (this should not normally happen, since TARGET was a "new" pick last round).
+   - Otherwise append { name: TARGET.next_name, slug: TARGET.next_slug, count: 1,
+     order: 1 + max(existing entries' order, or 0 if MEM was empty) }.
 
-NOT every alignment slot at every level is reachable from every prior
-state — reachability depends on the deltas of the parent's choices.
-Slots that are not first-pass reachable are left vacant for now; they
-can be authored later if a re-entry path is added.
+5. Build a short ranked candidate list of real historical persons closely
+   connected to TARGET (family, mentor, pupil, ally, rival, contemporary,
+   patron, successor, biographer, etc.). Rank using this composite:
 
-----------------------------------------------------------------------
-BEAT ANCHORS
-----------------------------------------------------------------------
+       narrative density  ×  symmetric importance  ×  onward branching
 
-  L1  The man in the ditch          (gender-distinct, two nodes)
-  L2  Your hands' first wage        (immediate aftermath of L1)
-  L3  The stranger who reads you    (an NPC in/near Sadaiziche
-                                     reflects who you've become)
-  L4  The second man in the ditch   (repeat moral test)
-  L5  A name from before            (first recognition of your
-                                     pre-amnesia self)
-  L6+ TBD
+   - narrative density: how much of TARGET's life cannot be told without
+     this person.
+   - symmetric importance: would TARGET be a top-3 connection in THIS
+     person's article too? Symmetric edges beat asymmetric ones.
+   - onward branching: does this person open onto a rich further graph,
+     or are they a near-dead-end?
 
-When you start a new level, decide its beat anchor first and write it
-into MARK.md. Every alignment-node at that level then dramatises that
-beat through its alignment's lens — same physical situation, nine
-moral colourings.
+   Hard gate: historical solidity. Drop any candidate whose record is
+   primarily legendary or whose existence is seriously disputed —
+   Arthurian / Grail / hagiographic figures do not qualify.
 
-----------------------------------------------------------------------
-ROUTING
-----------------------------------------------------------------------
+   Keep the shortlist mental — do not write it to disk, the article, or
+   state.json. Only the final pick is visible anywhere.
 
-Each choice button declares only two data attributes:
+6. Walk the ranked list starting at POSITION 3 (intentionally skip #1 and
+   #2 — the most-obvious connection is rarely the most interesting
+   continuation; this is what makes the chain feel surprising rather than
+   deterministic). For each position considered, in order 3, 4, 5, ...:
+   - If that candidate's slug is already in MEM, increment that entry's
+     count by 1 and move to the next position.
+   - The first considered candidate that is NOT already in MEM becomes
+     CANDIDATE.
+   Positions 1 and 2 are skipped silently — they are NOT bumped, because
+   they were skipped by design rather than by collision. If the shortlist
+   runs out before a new pick is found, extend it; do not lower the gate.
 
-  data-law="<integer>"     positive lawful, negative chaotic
-  data-good="<integer>"    positive good, negative evil
+7. Finalize the article we wrote in step 3: replace the next-link placeholder
+   with a real link:
+     <a href="<CANDIDATE.slug>.html"><CANDIDATE.name></a>
+   The target file does not need to exist yet — the link is forward-looking.
 
-There is NO data-next. story.js (in assets/story.js) applies the
-deltas to the player's state, computes the alignment-code with
-threshold T=2:
+8. Write counter.json (pretty-printed, 2-space indent, trailing newline).
 
-  law  ≥  2 → "l"     good ≥  2 → "g"
-  law  ≤ -2 → "c"     good ≤ -2 → "e"
-  otherwise → "n"     (and if both are "n" the code is "tn")
+9. Write state.json with:
+     next_name   = CANDIDATE.name
+     next_slug   = CANDIDATE.slug
+     seeded_from = TARGET.next_slug
 
-…and routes the player to "<currentLevel+1>-<code>.html".
+10. (No need to touch index.html — it reads counter.json at load time.)
 
-----------------------------------------------------------------------
-PARENT-LEVEL COVERAGE
-----------------------------------------------------------------------
+ARTICLE TEMPLATE (articles/<slug>.html)
+---------------------------------------
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><PERSON NAME></title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="site"><a href="../index.html">&larr; All the roads lead to:</a></header>
+  <article>
+    <h1><PERSON NAME></h1>
+    <p class="byline"><LIFESPAN OR ONE-LINE EPITHET></p>
 
-When you author a new level N, every destination reachable from any
-choice at level N-1 must have a corresponding node at level N. Before
-closing the pass:
+    <p>...paragraph 1...</p>
+    <p>...paragraph 2...</p>
+    ...
+    <p>...final paragraph...</p>
 
-  1. List every choice at every level-(N-1) node.
-  2. Compute each choice's destination bucket from a realistic
-     starting state (consider all reachable predecessor states).
-  3. Confirm each destination exists at nodes/<N>-<bucket>.html.
+    <p class="next-link">The road continues to <a href="<CANDIDATE-SLUG>.html"><CANDIDATE NAME></a>.</p>
+  </article>
+</main>
+</body>
+</html>
 
-If a parent choice routes to a bucket you have not authored, either
-(a) author the missing child in the same pass, or (b) change the
-parent's choice deltas so the choice no longer routes to a vacant
-bucket. Do not leave a 404 reachable from a previous level.
-
-This rule does NOT require every alignment slot at level N to exist —
-only the slots any level-(N-1) choice can reach.
-
-----------------------------------------------------------------------
-WHAT EACH NODE IS
-----------------------------------------------------------------------
-
-  - One HTML file at nodes/<level>-<alignment>.html
-  - 500–1000 words of body, aim ~700. Body = inside <div class="story">.
-  - Exactly 3 choices, each a <button class="choice"> with data-law
-    and data-good only. No data-next.
-  - Choices must sample three different parts of the alignment grid
-    (see helpers/ALIGNMENT.md). Do NOT write three nearly-identical
-    choices.
-  - Script tag at the bottom: <script>Story.bootNode("<id>");</script>
-
-CHOICE DELTAS
-  Typical magnitude ±1 to ±3 per axis. Reserve ±4 for definitive
-  moments. Reflect the FLAVOUR of the choice, not its eventual
-  consequence — a player who helps a heretic gets +good even if the
-  helping later kills them.
-
-  Before committing deltas, mentally compute where they land the
-  player from a realistic starting state. If two choices route into
-  the same bucket, it should be intentional (two roads to the same
-  moral place); usually you want three distinct destinations.
-
-----------------------------------------------------------------------
-READING PARENTS
-----------------------------------------------------------------------
-
-Before writing a node at level N, identify ALL nodes at level N-1
-whose choices can route a player into your node's bucket. Read each.
-Your opening lines must read naturally for arrivals from any of them.
-
-Practically:
-  - Do not name a specific prior decision in the opening.
-  - Open on the BEAT (the universal physical situation at this level),
-    refracted through this alignment's grain.
-  - If different parents leave the player in different physical
-    states (e.g. wounded man alive vs. dead; player carrying loot vs.
-    not), either keep the opening vague enough to accommodate both,
-    OR write a one-paragraph framing that resolves which state the
-    player arrived in (preferably by reference to alignment, not by
-    naming the parent).
-
-----------------------------------------------------------------------
-PROSE STANDARDS
-----------------------------------------------------------------------
-
-GENDER
-  state.gender is "male" or "female" (set at 0-a). From level 2
-  onward, prose is gender-agnostic. If a passing line of dialogue
-  needs to gender-address the player, write inclusively or use
-  ambiguous Khvordemian forms ("traveller", "friend").
-
-NAME
-  state.name is set at 0-a. Use sparingly — when an NPC addresses
-  the player, or when stylistically necessary. Never assume the
-  spelling matches a specific culture.
-
-WORLD AND GEOGRAPHY
-  - Khvordemian Empire (state 3 in map/states/index.json, Persian
-    culture). Persian Church + Old Vabumism + persecuted Mardesran
-    Schism.
-  - Anchor scenes in real burgs and routes from the map/ folder.
-  - Distances in farsang (Persian league, ~6 km). One day's walk for
-    a healthy traveller is ~6 farsang.
-
-TONE
-  Dark fantasy. Patient prose. Real physical sensation. Sparse magic
-  — when magic surfaces, it should feel old and uncomfortable, not
-  bright. The player is amnesiac; flashes of muscle memory are
-  welcome but should not collapse into revealing the past too early.
-  No emojis, no contemporary slang, no winking narration.
-
-----------------------------------------------------------------------
-HTML TEMPLATE
-----------------------------------------------------------------------
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Coulesia — <scene title></title>
-    <link rel="stylesheet" href="../assets/style.css">
-  </head>
-  <body>
-  <main class="scroll">
-    <header class="crest">
-      <span><node-id> · <short scene tag></span>
-      <span id="alignment-readout"></span>
-    </header>
-
-    <h1 class="title"><scene title></h1>
-    <p class="subtitle"><one-line subtitle></p>
-
-    <div class="story">
-      <!-- 500-1000 words of prose, <p>...</p> per paragraph -->
-    </div>
-
-    <hr class="divider">
-
-    <div class="choices">
-      <button class="choice" data-law="<n>" data-good="<n>">
-        <span class="marker">A</span>
-        <choice text>
-      </button>
-      <button class="choice" data-law="<n>" data-good="<n>">
-        <span class="marker">B</span>
-        <choice text>
-      </button>
-      <button class="choice" data-law="<n>" data-good="<n>">
-        <span class="marker">C</span>
-        <choice text>
-      </button>
-    </div>
-
-    <footer class="foot">
-      <span><roman-numeral-level> · <scene tag></span>
-      <span><a href="../index.html">← title</a></span>
-    </footer>
-  </main>
-
-  <script src="../assets/story.js"></script>
-  <script>Story.bootNode("<node-id>");</script>
-  </body>
-  </html>
-
-----------------------------------------------------------------------
-FILES TO UPDATE AFTER EACH GENERATION PASS
-----------------------------------------------------------------------
-
-  - nodes-map.txt: add new node IDs, update reachability per parent.
-  - MARK.md:
-      * update "Last node added" with date and id
-      * move newly-written nodes into "Nodes that exist"
-      * regenerate the "Next to generate" table for children of the
-        nodes you just wrote
-      * record any new lore in "Open setting notes"
-  - This file (produce.txt) only if a rule changes.
-
-CHECKLIST FOR EACH NEW NODE
-  [ ] body is 500–1000 words
-  [ ] exactly 3 choices, each with data-law and data-good only
-  [ ] choices sample 3 distinct alignment regions
-  [ ] computed each choice's destination bucket from a realistic
-      starting state and confirmed it lands somewhere meaningful
-  [ ] read every possible parent at level N-1 for your bucket
-  [ ] node-id in crest matches filename
-  [ ] Story.bootNode("<node-id>") at the bottom
-  [ ] entry added to nodes-map.txt
-  [ ] MARK.md updated
-  [ ] file at nodes/<level>-<alignment>.html
+NOTES
+-----
+- Articles link sideways within the articles/ folder, so use relative hrefs
+  like "joseph-of-arimathea.html" (no "articles/" prefix).
+- Stylesheet is at "../style.css" because articles live one level deep.
+- The byline line is one short italic line: dates if known, otherwise a brief
+  epithet ("Roman emperor", "Florentine painter").
+- Do not put any headings inside the article body — only the H1 title.
+- Keep word count between 800 and 1200. Count before committing.
+- Never silently overwrite an existing article file. If <slug>.html already
+  exists at step 3, something is wrong — stop and report to the user.

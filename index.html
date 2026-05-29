@@ -1,70 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coulesia — A Journey</title>
-<link rel="stylesheet" href="assets/style.css">
+<title>All the roads lead to:</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="scroll">
-  <header class="crest">
-    <span>Coulesia · Year of the Black Sun</span>
-    <span id="alignment-readout"></span>
-  </header>
-
-  <h1 class="title">A Journey</h1>
-  <p class="subtitle">A waking road in the Khvordemian Empire.</p>
-
-  <div class="story">
-    <p>You do not remember your name.</p>
-    <p>You do not remember what brought you here, to the cold ribbon of road that runs east of Rabad, where the carters say the dust tastes of iron and old prayer. You only know that you are about to open your eyes — and that what you choose to be, from this morning onward, will be remembered by gods who keep their ledgers in fine, patient hand.</p>
-    <p>The empire stretches far. So does the road.</p>
-    <p>Begin when you are ready.</p>
-  </div>
-
-  <hr class="divider">
-
-  <div class="choices">
-    <button class="choice" id="new-game"><span class="marker">»</span> New Game</button>
-    <button class="choice" id="load-game"><span class="marker">»</span> Load Game</button>
-  </div>
-
-  <footer class="foot">
-    <span>I · The Threshold</span>
-    <span>Press <kbd>Shift</kbd>+<kbd>A</kbd> to glimpse alignment</span>
-  </footer>
+<main class="wrap">
+  <h1 class="index-title">All the roads lead to:</h1>
+  <nav class="sort-toggle" aria-label="Sort order">
+    <button type="button" data-sort="count" class="active">by popularity</button>
+    <button type="button" data-sort="order">by road</button>
+  </nav>
+  <ol id="roads" class="roads"></ol>
+  <p id="empty" class="empty" hidden>No travelers yet. The first road has not been walked.</p>
 </main>
-
-<script src="assets/story.js"></script>
 <script>
-  const loadBtn = document.getElementById("load-game");
-  const savedHistory = Story.loadState().history;
-  const lastNode = savedHistory[savedHistory.length - 1];
-  if (!lastNode) {
-    loadBtn.disabled = true;
-    loadBtn.style.opacity = "0.4";
-    loadBtn.style.cursor = "not-allowed";
-  }
-
-  document.getElementById("new-game").addEventListener("click", () => {
-    Story.resetState();
-    window.location.href = "nodes/0-a.html";
-  });
-
-  loadBtn.addEventListener("click", () => {
-    if (lastNode) window.location.href = `nodes/${lastNode}.html`;
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.shiftKey && (e.key === "A" || e.key === "a")) {
-      document.body.classList.toggle("show-alignment");
-      const el = document.getElementById("alignment-readout");
-      if (el) {
-        const s = Story.loadState();
-        el.textContent = `${Story.alignmentLabel(s)} · L${s.law >= 0 ? "+" : ""}${s.law} G${s.good >= 0 ? "+" : ""}${s.good}`;
-      }
+fetch('counter.json', {cache: 'no-store'})
+  .then(r => r.ok ? r.json() : [])
+  .then(rows => {
+    const list = document.getElementById('roads');
+    const empty = document.getElementById('empty');
+    if (!Array.isArray(rows) || rows.length === 0) {
+      empty.hidden = false;
+      return;
     }
+
+    const sorters = {
+      count: (a, b) => (b.count - a.count) || ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
+      order: (a, b) => ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
+    };
+
+    function render(mode) {
+      list.innerHTML = '';
+      rows.slice().sort(sorters[mode]).forEach(r => {
+        const li = document.createElement('li');
+        const name = document.createElement('span');
+        name.className = 'name';
+        const a = document.createElement('a');
+        a.href = 'articles/' + r.slug + '.html';
+        a.textContent = r.name;
+        name.appendChild(a);
+        const meta = document.createElement('span');
+        meta.className = 'count';
+        meta.textContent = mode === 'order'
+          ? '#' + (r.order ?? '?')
+          : '× ' + r.count;
+        li.appendChild(name);
+        li.appendChild(meta);
+        list.appendChild(li);
+      });
+    }
+
+    const buttons = document.querySelectorAll('.sort-toggle button');
+    buttons.forEach(b => {
+      b.addEventListener('click', () => {
+        buttons.forEach(x => x.classList.toggle('active', x === b));
+        render(b.dataset.sort);
+      });
+    });
+
+    render('count');
+  })
+  .catch(() => {
+    document.getElementById('empty').hidden = false;
   });
 </script>
 </body>

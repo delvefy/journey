@@ -1,0 +1,153 @@
+:root {
+  --bg: #f7f3ec;
+  --ink: #1a1a1a;
+  --muted: #6b6357;
+  --accent: #7a2e2e;
+  --rule: #d9cfbf;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+header.site a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+header.site a:hover { color: var(--accent); }
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h1.index-title {
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.sort-toggle {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.sort-toggle button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  font-style: italic;
+}
+
+.sort-toggle button:hover { color: var(--accent); }
+
+.sort-toggle button.active {
+  color: var(--ink);
+  font-style: normal;
+  border-bottom: 1px solid var(--accent);
+}
+
+.byline {
+  color: var(--muted);
+  font-style: italic;
+  margin: 0 0 28px;
+  font-size: 0.95rem;
+}
+
+article p {
+  margin: 0 0 1.1em;
+  text-align: left;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+.next-link {
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  font-size: 1.05rem;
+}
+
+.next-link a {
+  display: inline-block;
+  font-weight: bold;
+}
+
+ol.roads {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: rank;
+}
+
+ol.roads li {
+  counter-increment: rank;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+ol.roads li::before {
+  content: counter(rank);
+  color: var(--muted);
+  font-size: 0.85rem;
+  min-width: 26px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+ol.roads .name { flex: 1; }
+ol.roads .name a { text-decoration: none; }
+ol.roads .name a:hover { text-decoration: underline; }
+
+ol.roads .count {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+  padding: 40px 0;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 16px 16px 48px; }
+  h1 { font-size: 1.6rem; }
+  h1.index-title { font-size: 1.5rem; }
+}

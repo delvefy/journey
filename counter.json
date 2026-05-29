@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Jesus Christ",
+    "slug": "jesus-christ",
+    "count": 1,
+    "order": 1
+  },
+  {
+    "name": "Joseph of Arimathea",
+    "slug": "joseph-of-arimathea",
+    "count": 1,
+    "order": 2
+  },
+  {
+    "name": "Pontius Pilate",
+    "slug": "pontius-pilate",
+    "count": 2,
+    "order": 3
+  },
+  {
+    "name": "Caiaphas",
+    "slug": "caiaphas",
+    "count": 1,
+    "order": 4
+  },
+  {
+    "name": "Peter the Apostle",
+    "slug": "peter-the-apostle",
+    "count": 2,
+    "order": 5
+  },
+  {
+    "name": "John the Apostle",
+    "slug": "john-the-apostle",
+    "count": 1,
+    "order": 6
+  },
+  {
+    "name": "James, son of Zebedee",
+    "slug": "james-son-of-zebedee",
+    "count": 1,
+    "order": 7
+  },
+  {
+    "name": "Herod Agrippa I",
+    "slug": "herod-agrippa-i",
+    "count": 1,
+    "order": 8
+  },
+  {
+    "name": "Herod the Great",
+    "slug": "herod-the-great",
+    "count": 1,
+    "order": 9
+  },
+  {
+    "name": "Cleopatra VII",
+    "slug": "cleopatra-vii",
+    "count": 1,
+    "order": 10
+  },
+  {
+    "name": "Augustus",
+    "slug": "augustus",
+    "count": 1,
+    "order": 11
+  },
+  {
+    "name": "Livia Drusilla",
+    "slug": "livia-drusilla",
+    "count": 1,
+    "order": 12
+  },
+  {
+    "name": "Drusus the Elder",
+    "slug": "drusus-the-elder",
+    "count": 2,
+    "order": 13
+  },
+  {
+    "name": "Germanicus",
+    "slug": "germanicus",
+    "count": 1,
+    "order": 14
+  }
+]
