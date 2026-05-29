@@ -194,13 +194,13 @@
   {
     "name": "Henry V of England",
     "slug": "henry-v-of-england",
-    "count": 2,
+    "count": 6,
     "order": 33
   },
   {
     "name": "Catherine of Valois",
     "slug": "catherine-of-valois",
-    "count": 2,
+    "count": 3,
     "order": 34
   },
   {
@@ -212,7 +212,7 @@
   {
     "name": "Henry VII of England",
     "slug": "henry-vii-of-england",
-    "count": 3,
+    "count": 4,
     "order": 36
   },
   {
@@ -230,7 +230,229 @@
   {
     "name": "Edward IV of England",
     "slug": "edward-iv-of-england",
-    "count": 1,
+    "count": 3,
     "order": 39
+  },
+  {
+    "name": "Richard III of England",
+    "slug": "richard-iii-of-england",
+    "count": 2,
+    "order": 40
+  },
+  {
+    "name": "Anne Neville",
+    "slug": "anne-neville",
+    "count": 1,
+    "order": 41
+  },
+  {
+    "name": "Richard Neville, Earl of Warwick",
+    "slug": "richard-neville-earl-of-warwick",
+    "count": 1,
+    "order": 42
+  },
+  {
+    "name": "Margaret of Anjou",
+    "slug": "margaret-of-anjou",
+    "count": 1,
+    "order": 43
+  },
+  {
+    "name": "Henry VI of England",
+    "slug": "henry-vi-of-england",
+    "count": 1,
+    "order": 44
+  },
+  {
+    "name": "Cardinal Henry Beaufort",
+    "slug": "cardinal-henry-beaufort",
+    "count": 1,
+    "order": 45
+  },
+  {
+    "name": "John of Gaunt",
+    "slug": "john-of-gaunt",
+    "count": 3,
+    "order": 46
+  },
+  {
+    "name": "Edward III of England",
+    "slug": "edward-iii-of-england",
+    "count": 3,
+    "order": 47
+  },
+  {
+    "name": "Edward the Black Prince",
+    "slug": "edward-the-black-prince",
+    "count": 1,
+    "order": 48
+  },
+  {
+    "name": "Richard II of England",
+    "slug": "richard-ii-of-england",
+    "count": 6,
+    "order": 49
+  },
+  {
+    "name": "Henry IV of England",
+    "slug": "henry-iv-of-england",
+    "count": 7,
+    "order": 50
+  },
+  {
+    "name": "Owain Glyndŵr",
+    "slug": "owain-glyndwr",
+    "count": 3,
+    "order": 51
+  },
+  {
+    "name": "Henry Percy (Hotspur)",
+    "slug": "henry-percy-hotspur",
+    "count": 2,
+    "order": 52
+  },
+  {
+    "name": "Henry Percy, 1st Earl of Northumberland",
+    "slug": "henry-percy-earl-of-northumberland",
+    "count": 2,
+    "order": 53
+  },
+  {
+    "name": "Archbishop Richard Scrope",
+    "slug": "archbishop-richard-scrope",
+    "count": 2,
+    "order": 54
+  },
+  {
+    "name": "Thomas Arundel",
+    "slug": "thomas-arundel",
+    "count": 1,
+    "order": 55
+  },
+  {
+    "name": "John Wycliffe",
+    "slug": "john-wycliffe",
+    "count": 2,
+    "order": 56
+  },
+  {
+    "name": "Jan Hus",
+    "slug": "jan-hus",
+    "count": 2,
+    "order": 57
+  },
+  {
+    "name": "Sigismund, Holy Roman Emperor",
+    "slug": "sigismund-holy-roman-emperor",
+    "count": 2,
+    "order": 58
+  },
+  {
+    "name": "Charles IV, Holy Roman Emperor",
+    "slug": "charles-iv-holy-roman-emperor",
+    "count": 3,
+    "order": 59
+  },
+  {
+    "name": "Wenceslaus IV of Bohemia",
+    "slug": "wenceslaus-iv-of-bohemia",
+    "count": 2,
+    "order": 60
+  },
+  {
+    "name": "Anne of Bohemia",
+    "slug": "anne-of-bohemia",
+    "count": 2,
+    "order": 61
+  },
+  {
+    "name": "Geoffrey Chaucer",
+    "slug": "geoffrey-chaucer",
+    "count": 2,
+    "order": 62
+  },
+  {
+    "name": "Giovanni Boccaccio",
+    "slug": "giovanni-boccaccio",
+    "count": 2,
+    "order": 63
+  },
+  {
+    "name": "Petrarch",
+    "slug": "petrarch",
+    "count": 1,
+    "order": 64
+  },
+  {
+    "name": "Dante Alighieri",
+    "slug": "dante-alighieri",
+    "count": 2,
+    "order": 65
+  },
+  {
+    "name": "Pope Boniface VIII",
+    "slug": "pope-boniface-viii",
+    "count": 4,
+    "order": 66
+  },
+  {
+    "name": "Philip IV of France",
+    "slug": "philip-iv-of-france",
+    "count": 4,
+    "order": 67
+  },
+  {
+    "name": "Pope Clement V",
+    "slug": "pope-clement-v",
+    "count": 3,
+    "order": 68
+  },
+  {
+    "name": "Jacques de Molay",
+    "slug": "jacques-de-molay",
+    "count": 1,
+    "order": 69
+  },
+  {
+    "name": "Guillaume de Nogaret",
+    "slug": "guillaume-de-nogaret",
+    "count": 1,
+    "order": 70
+  },
+  {
+    "name": "Sciarra Colonna",
+    "slug": "sciarra-colonna",
+    "count": 1,
+    "order": 71
+  },
+  {
+    "name": "Ludwig IV, Holy Roman Emperor",
+    "slug": "ludwig-iv-holy-roman-emperor",
+    "count": 2,
+    "order": 72
+  },
+  {
+    "name": "Pope John XXII",
+    "slug": "pope-john-xxii",
+    "count": 2,
+    "order": 73
+  },
+  {
+    "name": "William of Ockham",
+    "slug": "william-of-ockham",
+    "count": 2,
+    "order": 74
+  },
+  {
+    "name": "Duns Scotus",
+    "slug": "duns-scotus",
+    "count": 1,
+    "order": 75
+  },
+  {
+    "name": "Thomas Aquinas",
+    "slug": "thomas-aquinas",
+    "count": 1,
+    "order": 76
   }
 ]
