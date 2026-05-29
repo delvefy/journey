@@ -452,7 +452,67 @@
   {
     "name": "Thomas Aquinas",
     "slug": "thomas-aquinas",
-    "count": 1,
+    "count": 3,
     "order": 76
+  },
+  {
+    "name": "Albertus Magnus",
+    "slug": "albertus-magnus",
+    "count": 1,
+    "order": 77
+  },
+  {
+    "name": "Bonaventure",
+    "slug": "bonaventure",
+    "count": 1,
+    "order": 78
+  },
+  {
+    "name": "Francis of Assisi",
+    "slug": "francis-of-assisi",
+    "count": 2,
+    "order": 79
+  },
+  {
+    "name": "Clare of Assisi",
+    "slug": "clare-of-assisi",
+    "count": 1,
+    "order": 80
+  },
+  {
+    "name": "Pope Gregory IX",
+    "slug": "pope-gregory-ix",
+    "count": 2,
+    "order": 81
+  },
+  {
+    "name": "Frederick II, Holy Roman Emperor",
+    "slug": "frederick-ii-holy-roman-emperor",
+    "count": 1,
+    "order": 82
+  },
+  {
+    "name": "Pope Innocent III",
+    "slug": "pope-innocent-iii",
+    "count": 1,
+    "order": 83
+  },
+  {
+    "name": "Philip II Augustus",
+    "slug": "philip-ii-augustus",
+    "count": 2,
+    "order": 84
+  },
+  {
+    "name": "Richard I of England",
+    "slug": "richard-i-of-england",
+    "count": 1,
+    "order": 85
+  },
+  {
+    "name": "Eleanor of Aquitaine",
+    "slug": "eleanor-of-aquitaine",
+    "count": 1,
+    "order": 86
   }
 ]
