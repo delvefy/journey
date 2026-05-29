@@ -1,146 +1,20 @@
 [
   {
-    "name": "Jesus Christ",
-    "slug": "jesus-christ",
-    "count": 1,
+    "name": "Michael the Brave",
+    "slug": "michael-the-brave",
+    "count": 2,
     "order": 1
   },
   {
-    "name": "Joseph of Arimathea",
-    "slug": "joseph-of-arimathea",
+    "name": "Sigismund Báthory",
+    "slug": "sigismund-bathory",
     "count": 1,
     "order": 2
   },
   {
-    "name": "Pontius Pilate",
-    "slug": "pontius-pilate",
-    "count": 2,
+    "name": "Stephen Báthory",
+    "slug": "stephen-bathory",
+    "count": 1,
     "order": 3
-  },
-  {
-    "name": "Caiaphas",
-    "slug": "caiaphas",
-    "count": 1,
-    "order": 4
-  },
-  {
-    "name": "Peter the Apostle",
-    "slug": "peter-the-apostle",
-    "count": 2,
-    "order": 5
-  },
-  {
-    "name": "John the Apostle",
-    "slug": "john-the-apostle",
-    "count": 1,
-    "order": 6
-  },
-  {
-    "name": "James, son of Zebedee",
-    "slug": "james-son-of-zebedee",
-    "count": 1,
-    "order": 7
-  },
-  {
-    "name": "Herod Agrippa I",
-    "slug": "herod-agrippa-i",
-    "count": 1,
-    "order": 8
-  },
-  {
-    "name": "Herod the Great",
-    "slug": "herod-the-great",
-    "count": 1,
-    "order": 9
-  },
-  {
-    "name": "Cleopatra VII",
-    "slug": "cleopatra-vii",
-    "count": 1,
-    "order": 10
-  },
-  {
-    "name": "Augustus",
-    "slug": "augustus",
-    "count": 1,
-    "order": 11
-  },
-  {
-    "name": "Livia Drusilla",
-    "slug": "livia-drusilla",
-    "count": 1,
-    "order": 12
-  },
-  {
-    "name": "Drusus the Elder",
-    "slug": "drusus-the-elder",
-    "count": 3,
-    "order": 13
-  },
-  {
-    "name": "Germanicus",
-    "slug": "germanicus",
-    "count": 2,
-    "order": 14
-  },
-  {
-    "name": "Antonia the Younger",
-    "slug": "antonia-the-younger",
-    "count": 2,
-    "order": 15
-  },
-  {
-    "name": "Octavia the Younger",
-    "slug": "octavia-the-younger",
-    "count": 1,
-    "order": 16
-  },
-  {
-    "name": "Marcus Claudius Marcellus",
-    "slug": "marcus-claudius-marcellus",
-    "count": 1,
-    "order": 17
-  },
-  {
-    "name": "Julia the Elder",
-    "slug": "julia-the-elder",
-    "count": 1,
-    "order": 18
-  },
-  {
-    "name": "Tiberius",
-    "slug": "tiberius",
-    "count": 1,
-    "order": 19
-  },
-  {
-    "name": "Sejanus",
-    "slug": "sejanus",
-    "count": 1,
-    "order": 20
-  },
-  {
-    "name": "Drusus the Younger",
-    "slug": "drusus-the-younger",
-    "count": 1,
-    "order": 21
-  },
-  {
-    "name": "Livilla",
-    "slug": "livilla",
-    "count": 1,
-    "order": 22
-  },
-  {
-    "name": "Claudius",
-    "slug": "claudius",
-    "count": 1,
-    "order": 23
-  },
-  {
-    "name": "Messalina",
-    "slug": "messalina",
-    "count": 1,
-    "order": 24
   }
 ]

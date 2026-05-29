@@ -72,17 +72,14 @@ PROCEDURE (one article)
    Keep the shortlist mental — do not write it to disk, the article, or
    state.json. Only the final pick is visible anywhere.
 
-6. Walk the ranked list starting at POSITION 3 (intentionally skip #1 and
-   #2 — the most-obvious connection is rarely the most interesting
-   continuation; this is what makes the chain feel surprising rather than
-   deterministic). For each position considered, in order 3, 4, 5, ...:
+6. Walk the ranked list starting at POSITION 1. For each position
+   considered, in order 1, 2, 3, ...:
    - If that candidate's slug is already in MEM, increment that entry's
      count by 1 and move to the next position.
    - The first considered candidate that is NOT already in MEM becomes
      CANDIDATE.
-   Positions 1 and 2 are skipped silently — they are NOT bumped, because
-   they were skipped by design rather than by collision. If the shortlist
-   runs out before a new pick is found, extend it; do not lower the gate.
+   If the shortlist runs out before a new pick is found, extend it; do not
+   lower the gate.
 
 7. Finalize the article we wrote in step 3: replace the next-link placeholder
    with a real link:
