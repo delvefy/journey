@@ -56,7 +56,7 @@
   {
     "name": "Martin Luther",
     "slug": "martin-luther",
-    "count": 3,
+    "count": 4,
     "order": 10
   },
   {
@@ -68,7 +68,169 @@
   {
     "name": "Erasmus of Rotterdam",
     "slug": "erasmus-of-rotterdam",
-    "count": 1,
+    "count": 2,
     "order": 12
+  },
+  {
+    "name": "Thomas More",
+    "slug": "thomas-more",
+    "count": 2,
+    "order": 13
+  },
+  {
+    "name": "Henry VIII",
+    "slug": "henry-viii",
+    "count": 3,
+    "order": 14
+  },
+  {
+    "name": "Catherine of Aragon",
+    "slug": "catherine-of-aragon",
+    "count": 1,
+    "order": 15
+  },
+  {
+    "name": "Isabella I of Castile",
+    "slug": "isabella-i-of-castile",
+    "count": 2,
+    "order": 16
+  },
+  {
+    "name": "Ferdinand II of Aragon",
+    "slug": "ferdinand-ii-of-aragon",
+    "count": 1,
+    "order": 17
+  },
+  {
+    "name": "Charles V, Holy Roman Emperor",
+    "slug": "charles-v-holy-roman-emperor",
+    "count": 2,
+    "order": 18
+  },
+  {
+    "name": "Francis I of France",
+    "slug": "francis-i-of-france",
+    "count": 2,
+    "order": 19
+  },
+  {
+    "name": "Leonardo da Vinci",
+    "slug": "leonardo-da-vinci",
+    "count": 2,
+    "order": 20
+  },
+  {
+    "name": "Ludovico Sforza",
+    "slug": "ludovico-sforza",
+    "count": 2,
+    "order": 21
+  },
+  {
+    "name": "Maximilian I, Holy Roman Emperor",
+    "slug": "maximilian-i-holy-roman-emperor",
+    "count": 2,
+    "order": 22
+  },
+  {
+    "name": "Mary of Burgundy",
+    "slug": "mary-of-burgundy",
+    "count": 1,
+    "order": 23
+  },
+  {
+    "name": "Charles the Bold",
+    "slug": "charles-the-bold",
+    "count": 3,
+    "order": 24
+  },
+  {
+    "name": "Louis XI of France",
+    "slug": "louis-xi-of-france",
+    "count": 2,
+    "order": 25
+  },
+  {
+    "name": "Charles VII of France",
+    "slug": "charles-vii-of-france",
+    "count": 3,
+    "order": 26
+  },
+  {
+    "name": "Joan of Arc",
+    "slug": "joan-of-arc",
+    "count": 1,
+    "order": 27
+  },
+  {
+    "name": "Philip the Good",
+    "slug": "philip-the-good",
+    "count": 2,
+    "order": 28
+  },
+  {
+    "name": "John the Fearless",
+    "slug": "john-the-fearless",
+    "count": 2,
+    "order": 29
+  },
+  {
+    "name": "Louis I, Duke of Orléans",
+    "slug": "louis-i-duke-of-orleans",
+    "count": 3,
+    "order": 30
+  },
+  {
+    "name": "Charles VI of France",
+    "slug": "charles-vi-of-france",
+    "count": 3,
+    "order": 31
+  },
+  {
+    "name": "Isabeau of Bavaria",
+    "slug": "isabeau-of-bavaria",
+    "count": 1,
+    "order": 32
+  },
+  {
+    "name": "Henry V of England",
+    "slug": "henry-v-of-england",
+    "count": 2,
+    "order": 33
+  },
+  {
+    "name": "Catherine of Valois",
+    "slug": "catherine-of-valois",
+    "count": 2,
+    "order": 34
+  },
+  {
+    "name": "Owen Tudor",
+    "slug": "owen-tudor",
+    "count": 1,
+    "order": 35
+  },
+  {
+    "name": "Henry VII of England",
+    "slug": "henry-vii-of-england",
+    "count": 3,
+    "order": 36
+  },
+  {
+    "name": "Margaret Beaufort",
+    "slug": "margaret-beaufort",
+    "count": 1,
+    "order": 37
+  },
+  {
+    "name": "Elizabeth of York",
+    "slug": "elizabeth-of-york",
+    "count": 2,
+    "order": 38
+  },
+  {
+    "name": "Edward IV of England",
+    "slug": "edward-iv-of-england",
+    "count": 1,
+    "order": 39
   }
 ]

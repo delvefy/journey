@@ -2,9 +2,28 @@ PRODUCE-NEXT-ARTICLE — INSTRUCTIONS FOR CLAUDE
 ================================================
 
 WHEN THE USER SAYS "produce next N articles":
-  Loop the PROCEDURE below N times. Each iteration is fully self-contained —
-  if something fails mid-batch, every article completed so far is still on disk
-  and state.json points at the next one to write.
+  Run the PROCEDURE below N times, STRICTLY SEQUENTIALLY. Each iteration must
+  be fully completed and committed to disk before the next one begins.
+
+  "Fully completed" means: re-read state.json, write the article file, write
+  counter.json, and write state.json — in that order, for that one person —
+  before you so much as think about the next iteration. Do NOT batch: do not
+  write several article files in parallel, do not defer counter.json updates
+  to the end, do not pre-compute the whole chain in your head and then dump
+  it. The candidate-selection in step 6 depends on the CURRENT contents of
+  counter.json, which only become correct after the previous iteration has
+  finished writing it.
+
+  Concretely, for N=7 the sequence is:
+    iter 1: read state → write article → write counter → write state
+    iter 2: read state → write article → write counter → write state
+    ...
+    iter 7: read state → write article → write counter → write state
+
+  Rationale: if something fails mid-batch, every article completed so far is
+  still on disk and state.json points at exactly the next one to write, so the
+  user can resume by saying "produce next" again. Batching breaks this
+  invariant and tends to drift from the procedure's actual ranking logic.
 
 PROJECT LAYOUT
 --------------
