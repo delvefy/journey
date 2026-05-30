@@ -156,6 +156,21 @@ ol.roads .name { flex: 1; }
 ol.roads .name a { text-decoration: none; }
 ol.roads .name a:hover { text-decoration: underline; }
 
+ol.roads .leads-to {
+  display: block;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+ol.roads .leads-to a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+ol.roads .leads-to a:hover { color: var(--accent); }
+
 ol.roads .count {
   color: var(--muted);
   font-size: 0.9rem;

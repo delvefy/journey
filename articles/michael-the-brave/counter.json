@@ -44,13 +44,13 @@
   {
     "name": "Elizabeth I of England",
     "slug": "elizabeth-i-of-england",
-    "count": 9,
+    "count": 12,
     "order": 8
   },
   {
     "name": "William Shakespeare",
     "slug": "william-shakespeare",
-    "count": 2,
+    "count": 6,
     "order": 9
   },
   {
@@ -86,55 +86,55 @@
   {
     "name": "Charles V, Holy Roman Emperor",
     "slug": "charles-v-holy-roman-emperor",
-    "count": 11,
+    "count": 15,
     "order": 15
   },
   {
     "name": "Martin Luther",
     "slug": "martin-luther",
-    "count": 3,
+    "count": 5,
     "order": 16
   },
   {
     "name": "Erasmus of Rotterdam",
     "slug": "erasmus-of-rotterdam",
-    "count": 2,
+    "count": 3,
     "order": 17
   },
   {
     "name": "Thomas More",
     "slug": "thomas-more",
-    "count": 1,
+    "count": 3,
     "order": 18
   },
   {
     "name": "Henry VIII of England",
     "slug": "henry-viii-of-england",
-    "count": 8,
+    "count": 18,
     "order": 19
   },
   {
     "name": "Anne Boleyn",
     "slug": "anne-boleyn",
-    "count": 2,
+    "count": 5,
     "order": 20
   },
   {
     "name": "Catherine of Aragon",
     "slug": "catherine-of-aragon",
-    "count": 4,
+    "count": 8,
     "order": 21
   },
   {
     "name": "Isabella I of Castile",
     "slug": "isabella-i-of-castile",
-    "count": 5,
+    "count": 6,
     "order": 22
   },
   {
     "name": "Christopher Columbus",
     "slug": "christopher-columbus",
-    "count": 4,
+    "count": 5,
     "order": 23
   },
   {
@@ -146,7 +146,7 @@
   {
     "name": "Vasco da Gama",
     "slug": "vasco-da-gama",
-    "count": 4,
+    "count": 6,
     "order": 25
   },
   {
@@ -164,7 +164,7 @@
   {
     "name": "Manuel I of Portugal",
     "slug": "manuel-i-of-portugal",
-    "count": 1,
+    "count": 3,
     "order": 28
   },
   {
@@ -194,37 +194,37 @@
   {
     "name": "Francis I of France",
     "slug": "francis-i-of-france",
-    "count": 1,
+    "count": 2,
     "order": 33
   },
   {
     "name": "Leonardo da Vinci",
     "slug": "leonardo-da-vinci",
-    "count": 5,
+    "count": 7,
     "order": 34
   },
   {
     "name": "Michelangelo",
     "slug": "michelangelo",
-    "count": 2,
+    "count": 5,
     "order": 35
   },
   {
     "name": "Raphael",
     "slug": "raphael",
-    "count": 2,
+    "count": 3,
     "order": 36
   },
   {
     "name": "Pope Leo X",
     "slug": "pope-leo-x",
-    "count": 2,
+    "count": 4,
     "order": 37
   },
   {
     "name": "Niccolò Machiavelli",
     "slug": "niccolo-machiavelli",
-    "count": 2,
+    "count": 3,
     "order": 38
   },
   {
@@ -236,7 +236,7 @@
   {
     "name": "Pope Alexander VI",
     "slug": "pope-alexander-vi",
-    "count": 1,
+    "count": 2,
     "order": 40
   },
   {
@@ -254,7 +254,7 @@
   {
     "name": "Maximilian I, Holy Roman Emperor",
     "slug": "maximilian-i-holy-roman-emperor",
-    "count": 2,
+    "count": 3,
     "order": 43
   },
   {
@@ -278,25 +278,559 @@
   {
     "name": "Philip II of Spain",
     "slug": "philip-ii-of-spain",
-    "count": 2,
+    "count": 3,
     "order": 47
   },
   {
     "name": "Mary I of England",
     "slug": "mary-i-of-england",
-    "count": 3,
+    "count": 5,
     "order": 48
   },
   {
     "name": "Lady Jane Grey",
     "slug": "lady-jane-grey",
-    "count": 2,
+    "count": 3,
     "order": 49
   },
   {
     "name": "Edward VI",
     "slug": "edward-vi",
-    "count": 1,
+    "count": 4,
     "order": 50
+  },
+  {
+    "name": "Catherine Parr",
+    "slug": "catherine-parr",
+    "count": 1,
+    "order": 51
+  },
+  {
+    "name": "Jane Seymour",
+    "slug": "jane-seymour",
+    "count": 1,
+    "order": 52
+  },
+  {
+    "name": "Thomas Cromwell",
+    "slug": "thomas-cromwell",
+    "count": 2,
+    "order": 53
+  },
+  {
+    "name": "Cardinal Wolsey",
+    "slug": "cardinal-wolsey",
+    "count": 1,
+    "order": 54
+  },
+  {
+    "name": "Henry VII of England",
+    "slug": "henry-vii-of-england",
+    "count": 4,
+    "order": 55
+  },
+  {
+    "name": "Richard III",
+    "slug": "richard-iii",
+    "count": 2,
+    "order": 56
+  },
+  {
+    "name": "Edward IV",
+    "slug": "edward-iv",
+    "count": 1,
+    "order": 57
+  },
+  {
+    "name": "Henry VI",
+    "slug": "henry-vi",
+    "count": 4,
+    "order": 58
+  },
+  {
+    "name": "Joan of Arc",
+    "slug": "joan-of-arc",
+    "count": 2,
+    "order": 59
+  },
+  {
+    "name": "Charles VII of France",
+    "slug": "charles-vii-of-france",
+    "count": 4,
+    "order": 60
+  },
+  {
+    "name": "Henry V of England",
+    "slug": "henry-v-of-england",
+    "count": 4,
+    "order": 61
+  },
+  {
+    "name": "Henry IV of England",
+    "slug": "henry-iv-of-england",
+    "count": 3,
+    "order": 62
+  },
+  {
+    "name": "Edward III",
+    "slug": "edward-iii",
+    "count": 14,
+    "order": 63
+  },
+  {
+    "name": "Geoffrey Chaucer",
+    "slug": "geoffrey-chaucer",
+    "count": 6,
+    "order": 64
+  },
+  {
+    "name": "Petrarch",
+    "slug": "petrarch",
+    "count": 4,
+    "order": 65
+  },
+  {
+    "name": "Dante",
+    "slug": "dante",
+    "count": 5,
+    "order": 66
+  },
+  {
+    "name": "Giotto",
+    "slug": "giotto",
+    "count": 2,
+    "order": 67
+  },
+  {
+    "name": "Boccaccio",
+    "slug": "boccaccio",
+    "count": 2,
+    "order": 68
+  },
+  {
+    "name": "Charles IV, Holy Roman Emperor",
+    "slug": "charles-iv-holy-roman-emperor",
+    "count": 3,
+    "order": 69
+  },
+  {
+    "name": "Sigismund, Holy Roman Emperor",
+    "slug": "sigismund-holy-roman-emperor",
+    "count": 2,
+    "order": 70
+  },
+  {
+    "name": "Jan Hus",
+    "slug": "jan-hus",
+    "count": 2,
+    "order": 71
+  },
+  {
+    "name": "John Wycliffe",
+    "slug": "john-wycliffe",
+    "count": 2,
+    "order": 72
+  },
+  {
+    "name": "John of Gaunt",
+    "slug": "john-of-gaunt",
+    "count": 4,
+    "order": 73
+  },
+  {
+    "name": "Richard II",
+    "slug": "richard-ii",
+    "count": 5,
+    "order": 74
+  },
+  {
+    "name": "Edward the Black Prince",
+    "slug": "edward-the-black-prince",
+    "count": 7,
+    "order": 75
+  },
+  {
+    "name": "John II of France",
+    "slug": "john-ii-of-france",
+    "count": 5,
+    "order": 76
+  },
+  {
+    "name": "Charles V of France",
+    "slug": "charles-v-of-france",
+    "count": 6,
+    "order": 77
+  },
+  {
+    "name": "Charles VI of France",
+    "slug": "charles-vi-of-france",
+    "count": 2,
+    "order": 78
+  },
+  {
+    "name": "John the Fearless",
+    "slug": "john-the-fearless",
+    "count": 1,
+    "order": 79
+  },
+  {
+    "name": "Bayezid I",
+    "slug": "bayezid-i",
+    "count": 1,
+    "order": 80
+  },
+  {
+    "name": "Timur",
+    "slug": "timur",
+    "count": 1,
+    "order": 81
+  },
+  {
+    "name": "Mehmed I",
+    "slug": "mehmed-i",
+    "count": 1,
+    "order": 82
+  },
+  {
+    "name": "Murad II",
+    "slug": "murad-ii",
+    "count": 1,
+    "order": 83
+  },
+  {
+    "name": "John Hunyadi",
+    "slug": "john-hunyadi",
+    "count": 1,
+    "order": 84
+  },
+  {
+    "name": "Skanderbeg",
+    "slug": "skanderbeg",
+    "count": 1,
+    "order": 85
+  },
+  {
+    "name": "Mehmed II",
+    "slug": "mehmed-ii",
+    "count": 1,
+    "order": 86
+  },
+  {
+    "name": "Constantine XI Palaiologos",
+    "slug": "constantine-xi-palaiologos",
+    "count": 1,
+    "order": 87
+  },
+  {
+    "name": "John VIII Palaiologos",
+    "slug": "john-viii-palaiologos",
+    "count": 1,
+    "order": 88
+  },
+  {
+    "name": "Bessarion",
+    "slug": "bessarion",
+    "count": 1,
+    "order": 89
+  },
+  {
+    "name": "Gemistos Plethon",
+    "slug": "gemistos-plethon",
+    "count": 1,
+    "order": 90
+  },
+  {
+    "name": "Cosimo de' Medici",
+    "slug": "cosimo-de-medici",
+    "count": 5,
+    "order": 91
+  },
+  {
+    "name": "Filippo Brunelleschi",
+    "slug": "filippo-brunelleschi",
+    "count": 3,
+    "order": 92
+  },
+  {
+    "name": "Donatello",
+    "slug": "donatello",
+    "count": 3,
+    "order": 93
+  },
+  {
+    "name": "Masaccio",
+    "slug": "masaccio",
+    "count": 2,
+    "order": 94
+  },
+  {
+    "name": "Fra Angelico",
+    "slug": "fra-angelico",
+    "count": 2,
+    "order": 95
+  },
+  {
+    "name": "Piero della Francesca",
+    "slug": "piero-della-francesca",
+    "count": 1,
+    "order": 96
+  },
+  {
+    "name": "Leon Battista Alberti",
+    "slug": "leon-battista-alberti",
+    "count": 1,
+    "order": 97
+  },
+  {
+    "name": "Lorenzo de' Medici",
+    "slug": "lorenzo-de-medici",
+    "count": 4,
+    "order": 98
+  },
+  {
+    "name": "Sandro Botticelli",
+    "slug": "sandro-botticelli",
+    "count": 2,
+    "order": 99
+  },
+  {
+    "name": "Marsilio Ficino",
+    "slug": "marsilio-ficino",
+    "count": 1,
+    "order": 100
+  },
+  {
+    "name": "Pico della Mirandola",
+    "slug": "pico-della-mirandola",
+    "count": 1,
+    "order": 101
+  },
+  {
+    "name": "Savonarola",
+    "slug": "savonarola",
+    "count": 1,
+    "order": 102
+  },
+  {
+    "name": "Charles VIII of France",
+    "slug": "charles-viii-of-france",
+    "count": 2,
+    "order": 103
+  },
+  {
+    "name": "Louis XII of France",
+    "slug": "louis-xii-of-france",
+    "count": 3,
+    "order": 104
+  },
+  {
+    "name": "Anne of Brittany",
+    "slug": "anne-of-brittany",
+    "count": 1,
+    "order": 105
+  },
+  {
+    "name": "Gonzalo Fernández de Córdoba",
+    "slug": "gonzalo-fernandez-de-cordoba",
+    "count": 1,
+    "order": 106
+  },
+  {
+    "name": "Pierre Terrail, seigneur de Bayard",
+    "slug": "pierre-terrail-bayard",
+    "count": 1,
+    "order": 107
+  },
+  {
+    "name": "Gaston de Foix",
+    "slug": "gaston-de-foix",
+    "count": 1,
+    "order": 108
+  },
+  {
+    "name": "Pope Julius II",
+    "slug": "pope-julius-ii",
+    "count": 2,
+    "order": 109
+  },
+  {
+    "name": "Donato Bramante",
+    "slug": "donato-bramante",
+    "count": 1,
+    "order": 110
+  },
+  {
+    "name": "Ludovico Sforza",
+    "slug": "ludovico-sforza",
+    "count": 2,
+    "order": 111
+  },
+  {
+    "name": "Francesco Sforza",
+    "slug": "francesco-sforza",
+    "count": 2,
+    "order": 112
+  },
+  {
+    "name": "Filippo Maria Visconti",
+    "slug": "filippo-maria-visconti",
+    "count": 2,
+    "order": 113
+  },
+  {
+    "name": "Gian Galeazzo Visconti",
+    "slug": "gian-galeazzo-visconti",
+    "count": 3,
+    "order": 114
+  },
+  {
+    "name": "Bernabò Visconti",
+    "slug": "bernabo-visconti",
+    "count": 1,
+    "order": 115
+  },
+  {
+    "name": "John Hawkwood",
+    "slug": "john-hawkwood",
+    "count": 1,
+    "order": 116
+  },
+  {
+    "name": "Paolo Uccello",
+    "slug": "paolo-uccello",
+    "count": 2,
+    "order": 117
+  },
+  {
+    "name": "Lorenzo Ghiberti",
+    "slug": "lorenzo-ghiberti",
+    "count": 2,
+    "order": 118
+  },
+  {
+    "name": "Benozzo Gozzoli",
+    "slug": "benozzo-gozzoli",
+    "count": 1,
+    "order": 119
+  },
+  {
+    "name": "Piero the Gouty",
+    "slug": "piero-the-gouty",
+    "count": 1,
+    "order": 120
+  },
+  {
+    "name": "Giuliano de' Medici",
+    "slug": "giuliano-de-medici",
+    "count": 1,
+    "order": 121
+  },
+  {
+    "name": "Pope Clement VII",
+    "slug": "pope-clement-vii",
+    "count": 1,
+    "order": 122
+  },
+  {
+    "name": "Pope Paul III",
+    "slug": "pope-paul-iii",
+    "count": 3,
+    "order": 123
+  },
+  {
+    "name": "Ignatius of Loyola",
+    "slug": "ignatius-of-loyola",
+    "count": 2,
+    "order": 124
+  },
+  {
+    "name": "Francis Xavier",
+    "slug": "francis-xavier",
+    "count": 2,
+    "order": 125
+  },
+  {
+    "name": "John III of Portugal",
+    "slug": "john-iii-of-portugal",
+    "count": 1,
+    "order": 126
+  },
+  {
+    "name": "Sebastian of Portugal",
+    "slug": "sebastian-of-portugal",
+    "count": 2,
+    "order": 127
+  },
+  {
+    "name": "Luís de Camões",
+    "slug": "luis-de-camoes",
+    "count": 2,
+    "order": 128
+  },
+  {
+    "name": "Inês de Castro",
+    "slug": "ines-de-castro",
+    "count": 2,
+    "order": 129
+  },
+  {
+    "name": "Pedro I of Portugal",
+    "slug": "pedro-i-of-portugal",
+    "count": 1,
+    "order": 130
+  },
+  {
+    "name": "Peter of Castile",
+    "slug": "peter-of-castile",
+    "count": 2,
+    "order": 131
+  },
+  {
+    "name": "Bertrand du Guesclin",
+    "slug": "bertrand-du-guesclin",
+    "count": 2,
+    "order": 132
+  },
+  {
+    "name": "Charles II of Navarre",
+    "slug": "charles-ii-of-navarre",
+    "count": 2,
+    "order": 133
+  },
+  {
+    "name": "Étienne Marcel",
+    "slug": "etienne-marcel",
+    "count": 1,
+    "order": 134
+  },
+  {
+    "name": "Jean Froissart",
+    "slug": "jean-froissart",
+    "count": 1,
+    "order": 135
+  },
+  {
+    "name": "Philippa of Hainault",
+    "slug": "philippa-of-hainault",
+    "count": 1,
+    "order": 136
+  },
+  {
+    "name": "Isabella of France",
+    "slug": "isabella-of-france",
+    "count": 1,
+    "order": 137
+  },
+  {
+    "name": "Philip IV of France",
+    "slug": "philip-iv-of-france",
+    "count": 2,
+    "order": 138
+  },
+  {
+    "name": "Pope Boniface VIII",
+    "slug": "pope-boniface-viii",
+    "count": 1,
+    "order": 139
   }
 ]

@@ -54,7 +54,59 @@ PROJECT LAYOUT
                                            The seed person is always the
                                            first article (order=1) in their
                                            own folder.
+  /road.py                                 helper that performs the JSON
+                                           bookkeeping (see HELPER SCRIPT).
   /produce.txt                             this file
+
+HELPER SCRIPT (road.py)
+-----------------------
+  road.py owns the MECHANICAL JSON mutations only. It never invents history:
+  the article prose, the neighbour shortlist (step 5), the fame ranking
+  (step 6) and the choice of CANDIDATE stay with you. You do the thinking and
+  write the .html; the script applies your decisions to counter.json and
+  state.json atomically, in the project's exact format (2-space indent, raw
+  UTF-8, trailing newline), and prints a confirmation so you can verify.
+
+  Run from anywhere; it locates the repo from its own path.
+
+    python3 road.py status [--seed SLUG]
+        Procedure step 1. Prints current_seed, the next target, whether that
+        target's article file exists yet, road length vs the 1000 cap, and
+        the current top-count entries. Run this at the START of every
+        iteration to re-read state.
+
+    python3 road.py advance --next "Name" slug [--incr slug ...] [--dry-run]
+        Does steps 2, 4, 8 and 9 in one atomic move, AFTER you have written
+        the current target's article .html:
+          - cap check: at 1000 entries it refuses to append, marks the seed
+            complete, clears current_seed, and stops (so step 2 is automatic).
+          - appends the CURRENT target (whatever state points at) to
+            counter.json with count=1, order=max(order)+1.
+          - increments count by 1 for each --incr slug (your step-6 in-MEM
+            neighbours that ranked above the candidate); errors loudly if a
+            slug is not already in MEM, so a typo can't pass silently.
+          - repoints state.seeds[seed].next_* at the CANDIDATE (--next).
+        It REFUSES unless articles/<seed>/<target-slug>.html already exists,
+        which enforces the write-article-before-bookkeeping ordering for you.
+        Use --dry-run to print the plan (append + increments + new pointer)
+        and verify your ranking BEFORE committing anything.
+
+    python3 road.py start-seed --name "Name" --slug slug
+        The STARTING A NEW SEED flow end-to-end: appends to seeds.json,
+        creates articles/<slug>/ and an empty counter.json, sets
+        current_seed, and seeds the state entry. Then write article #1.
+
+    python3 road.py finish [--seed SLUG]
+        Manual escape hatch to mark a road complete and clear current_seed
+        (advance already does this at the cap).
+
+  Typical iteration with the helper:
+    1. python3 road.py status                 # see the target
+    2. write articles/<seed>/<target-slug>.html (prose + next-link)
+    3. (optional) road.py advance --next ... --incr ... --dry-run  # check
+    4. python3 road.py advance --next "Cand" cand-slug --incr s1 s2 ...
+  The strictly-sequential rule still holds: finish one person's article +
+  advance before touching the next.
 
 PER-ROAD CAP
 ------------
@@ -62,7 +114,8 @@ PER-ROAD CAP
   already has 1000 entries when you start an iteration, STOP. Mark
   state.seeds[<slug>].complete = true, clear state.current_seed (set to null),
   write state.json, and tell the user the road is finished and to pick a new
-  seed. Do NOT write a 1001st article.
+  seed. Do NOT write a 1001st article. (road.py advance does all of this
+  automatically when it sees the road is at the cap — it refuses to append.)
 
 SLUG RULES
 ----------
@@ -85,6 +138,8 @@ STARTING A NEW SEED
                                    next_slug: <picked slug>,
                                    complete: false }.
     6. Write state.json.
+  Steps 1-6 above are done for you by:  python3 road.py start-seed
+  --name "<picked name>" --slug "<picked slug>"
   Then run the PROCEDURE. The first iteration will write the seed person's
   own article as article #1 on this road.
 
@@ -183,6 +238,12 @@ PROCEDURE (one article)
    - state.seeds[SEED].next_name = CANDIDATE.name
    - state.seeds[SEED].next_slug = CANDIDATE.slug
    Then write state.json.
+
+   Steps 2 (cap), 4 (append target) and 8-9 (write both JSON files) are all
+   performed by a single call once the article .html is written:
+     python3 road.py advance --next "CANDIDATE.name" CANDIDATE.slug \
+        --incr <each in-MEM neighbour slug from step 6>
+   You still do steps 3 (write the article), 5 and 6 (the reasoning) yourself.
 
 10. (No need to touch index.html or seeds.json — index.html reads
     seeds.json + each road's counter.json at load time.)

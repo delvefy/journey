@@ -65,6 +65,9 @@
       a.href = '#' + s.slug;
       a.textContent = s.name;
       name.appendChild(a);
+      const leads = document.createElement('span');
+      leads.className = 'leads-to';
+      name.appendChild(leads);
       li.appendChild(name);
       if (typeof s.count === 'number') {
         const meta = document.createElement('span');
@@ -73,6 +76,21 @@
         li.appendChild(meta);
       }
       seedsList.appendChild(li);
+      fetch('articles/' + s.slug + '/counter.json', { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : [])
+        .then(rows => {
+          if (!Array.isArray(rows) || !rows.length) return;
+          const top = rows
+            .filter(r => r.slug !== s.slug)
+            .reduce((best, r) => (!best || r.count > best.count ? r : best), null);
+          if (!top) return;
+          leads.textContent = 'leads to: ';
+          const ta = document.createElement('a');
+          ta.href = 'articles/' + s.slug + '/' + top.slug + '.html';
+          ta.textContent = top.name;
+          leads.appendChild(ta);
+        })
+        .catch(() => {});
     });
   }
 
