@@ -6,13 +6,13 @@ WHEN THE USER SAYS "produce next N articles":
   be fully completed and committed to disk before the next one begins.
 
   "Fully completed" means: re-read state.json, write the article file, write
-  counter.json, and write state.json — in that order, for that one person —
-  before you so much as think about the next iteration. Do NOT batch: do not
-  write several article files in parallel, do not defer counter.json updates
-  to the end, do not pre-compute the whole chain in your head and then dump
-  it. The candidate-selection in step 6 depends on the CURRENT contents of
-  counter.json, which only become correct after the previous iteration has
-  finished writing it.
+  the seed's counter.json, and write state.json — in that order, for that
+  one person — before you so much as think about the next iteration. Do NOT
+  batch: do not write several article files in parallel, do not defer
+  counter.json updates to the end, do not pre-compute the whole chain in
+  your head and then dump it. The candidate-selection in step 6 depends on
+  the CURRENT contents of the seed's counter.json, which only become correct
+  after the previous iteration has finished writing it.
 
   Concretely, for N=7 the sequence is:
     iter 1: read state → write article → write counter → write state
@@ -27,15 +27,42 @@ WHEN THE USER SAYS "produce next N articles":
 
 PROJECT LAYOUT
 --------------
-  /index.html            ranked list (rendered from counter.json by JS)
-  /style.css             shared styles, mobile-friendly
-  /counter.json          [{ "name": "...", "slug": "...", "count": N, "order": K }, ...]
-                         "order" is the chronological position on the road (Jesus = 1,
-                         then 2, 3, ... in the sequence articles are written). It never
-                         changes once assigned. The index page can sort by count or by order.
-  /state.json            { "next_name": "...", "next_slug": "...", "seeded_from": "..." }
-  /articles/<slug>.html  one file per person
-  /produce.txt           this file
+  /index.html                              seeds list + per-road table (SPA)
+  /style.css                               shared styles, mobile-friendly
+  /seeds.json                              [{ "name": "...", "slug": "..." }, ...]
+                                           the master list of roads (seeds).
+                                           One entry per road.
+  /state.json                              { "current_seed": "<slug>|null",
+                                             "seeds": {
+                                               "<seed-slug>": {
+                                                 "next_name": "...",
+                                                 "next_slug": "...",
+                                                 "complete": false
+                                               }, ...
+                                             } }
+                                           current_seed names which road the
+                                           producer is walking right now.
+                                           seeds[<slug>] is that road's
+                                           progression state. complete=true
+                                           when the road hits the 1000 cap.
+  /articles/<seed-slug>/                   one folder per road, named after
+                                           the seed person's slug.
+  /articles/<seed-slug>/counter.json       [{ "name", "slug", "count",
+                                              "order" }, ...] scoped to this
+                                           road only.
+  /articles/<seed-slug>/<slug>.html        one file per person on this road.
+                                           The seed person is always the
+                                           first article (order=1) in their
+                                           own folder.
+  /produce.txt                             this file
+
+PER-ROAD CAP
+------------
+  Each road is capped at 1000 articles. If the current seed's counter.json
+  already has 1000 entries when you start an iteration, STOP. Mark
+  state.seeds[<slug>].complete = true, clear state.current_seed (set to null),
+  write state.json, and tell the user the road is finished and to pick a new
+  seed. Do NOT write a 1001st article.
 
 SLUG RULES
 ----------
@@ -46,30 +73,52 @@ SLUG RULES
     "Eleanor of Aquitaine"  -> "eleanor-of-aquitaine"
     "Charlemagne"           -> "charlemagne"
 
-INITIAL SEEDING
----------------
-  If state.json.next_slug is null, the user must pick the first person.
-  Once picked, set state.json.next_name + next_slug and run the procedure.
+STARTING A NEW SEED
+-------------------
+  If state.current_seed is null (no road in progress), the user must pick the
+  starting person for a new road. Once picked:
+    1. Append { name, slug } to seeds.json.
+    2. Create the folder articles/<slug>/ if it does not exist.
+    3. Create articles/<slug>/counter.json as [] (empty list).
+    4. Set state.current_seed = <slug>.
+    5. Set state.seeds[<slug>] = { next_name: <picked name>,
+                                   next_slug: <picked slug>,
+                                   complete: false }.
+    6. Write state.json.
+  Then run the PROCEDURE. The first iteration will write the seed person's
+  own article as article #1 on this road.
 
 PROCEDURE (one article)
 -----------------------
-1. Read state.json. Let TARGET = { next_name, next_slug }.
-   If TARGET.next_slug is null, stop and ask the user for a starting person.
+1. Read state.json. Let SEED = state.current_seed. If SEED is null, stop and
+   ask the user to pick a new starting person (see STARTING A NEW SEED).
+   Let TARGET = { next_name: state.seeds[SEED].next_name,
+                  next_slug: state.seeds[SEED].next_slug }.
+   If state.seeds[SEED].complete is true, stop and tell the user this road
+   is finished.
 
-2. Read counter.json into MEM.
+2. Read articles/<SEED>/counter.json into MEM.
+   If MEM.length >= 1000, stop: mark state.seeds[SEED].complete = true,
+   set state.current_seed = null, write state.json, and tell the user the
+   road is finished and to pick a new seed. Do NOT continue.
 
-3. Write articles/<TARGET.next_slug>.html using the ARTICLE TEMPLATE below.
-   The body must be 800-1200 words covering the most important deeds of
-   TARGET.next_name's life: origins, formative events, principal achievements,
-   conflicts and turning points, legacy. Plain prose, paragraphs, no headings
-   inside the article body. Do NOT invent facts — if uncertain, omit.
-   Leave the "next link" pointing to a placeholder you will fill in step 7.
+3. Write articles/<SEED>/<TARGET.next_slug>.html using the ARTICLE TEMPLATE
+   below. The body must be about 300 words covering the most important
+   deeds of TARGET.next_name's life: origins, formative events, principal
+   achievements, conflicts and turning points, legacy. Plain prose,
+   paragraphs, no headings inside the article body. Do NOT invent facts —
+   if uncertain, omit. Expand to up to 500 words ONLY if 300 cannot do the
+   life justice (e.g., a figure with many distinct, indispensable episodes).
+   Default is 300; 500 is the ceiling, not a target. Leave the "next link"
+   pointing to a placeholder you will fill in step 7.
 
-4. Ensure TARGET is in counter.json:
-   - If MEM already has an entry with slug == TARGET.next_slug, leave count and order alone
-     (this should not normally happen, since TARGET was a "new" pick last round).
-   - Otherwise append { name: TARGET.next_name, slug: TARGET.next_slug, count: 1,
-     order: 1 + max(existing entries' order, or 0 if MEM was empty) }.
+4. Ensure TARGET is in MEM:
+   - If MEM already has an entry with slug == TARGET.next_slug, leave count
+     and order alone (this should not normally happen, since TARGET was a
+     "new" pick last round — UNLESS this is the seed person on the first
+     iteration of the road; in that case, append per the rule below).
+   - Otherwise append { name: TARGET.next_name, slug: TARGET.next_slug,
+     count: 1, order: 1 + max(existing entries' order, or 0 if MEM was empty) }.
 
 5. List 3-5 real historical persons directly connected to TARGET. The
    connection can be of any kind: family, mentor, pupil, ally, rival,
@@ -105,28 +154,30 @@ PROCEDURE (one article)
      <a href="<CANDIDATE.slug>.html"><CANDIDATE.name></a>
    The target file does not need to exist yet — the link is forward-looking.
 
-8. Write counter.json (pretty-printed, 2-space indent, trailing newline).
+8. Write articles/<SEED>/counter.json (pretty-printed, 2-space indent,
+   trailing newline).
 
-9. Write state.json with:
-     next_name   = CANDIDATE.name
-     next_slug   = CANDIDATE.slug
-     seeded_from = TARGET.next_slug
+9. Update state.json:
+   - state.seeds[SEED].next_name = CANDIDATE.name
+   - state.seeds[SEED].next_slug = CANDIDATE.slug
+   Then write state.json.
 
-10. (No need to touch index.html — it reads counter.json at load time.)
+10. (No need to touch index.html or seeds.json — index.html reads
+    seeds.json + each road's counter.json at load time.)
 
-ARTICLE TEMPLATE (articles/<slug>.html)
----------------------------------------
+ARTICLE TEMPLATE (articles/<seed-slug>/<slug>.html)
+---------------------------------------------------
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><PERSON NAME></title>
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 <main class="wrap">
-  <header class="site"><a href="../index.html">&larr; All the roads lead to:</a></header>
+  <header class="site"><a href="../../index.html#<SEED-SLUG>">&larr; All the roads lead to:</a></header>
   <article>
     <h1><PERSON NAME></h1>
     <p class="byline"><LIFESPAN OR ONE-LINE EPITHET></p>
@@ -144,12 +195,19 @@ ARTICLE TEMPLATE (articles/<slug>.html)
 
 NOTES
 -----
-- Articles link sideways within the articles/ folder, so use relative hrefs
-  like "joseph-of-arimathea.html" (no "articles/" prefix).
-- Stylesheet is at "../style.css" because articles live one level deep.
+- Articles within a road link sideways within the same folder, so use
+  relative hrefs like "joseph-of-arimathea.html" (no folder prefix).
+- Stylesheet is at "../../style.css" because articles live two levels deep
+  (articles/<seed-slug>/<slug>.html).
+- The back-link points to "../../index.html#<seed-slug>" so the index opens
+  directly to that road's table.
 - The byline line is one short italic line: dates if known, otherwise a brief
   epithet ("Roman emperor", "Florentine painter").
 - Do not put any headings inside the article body — only the H1 title.
-- Keep word count between 800 and 1200. Count before committing.
-- Never silently overwrite an existing article file. If <slug>.html already
-  exists at step 3, something is wrong — stop and report to the user.
+- Word count: aim for ~300; expand toward 500 only when 300 cannot do the
+  life justice. Never exceed 500.
+- Never silently overwrite an existing article file. If the article file
+  already exists at step 3, something is wrong — stop and report to the user.
+- The seed person is always article #1 on their own road (order=1). The
+  seed's own next link points to whichever historical neighbor becomes
+  CANDIDATE on the seed's iteration.

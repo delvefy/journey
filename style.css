@@ -51,6 +51,30 @@ h1.index-title {
   margin-bottom: 16px;
 }
 
+.crumbs {
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.crumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.crumbs a:hover { color: var(--accent); }
+
+.view-intro {
+  color: var(--muted);
+  font-style: italic;
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+}
+
+.road-title {
+  font-size: 1.4rem;
+  margin: 0 0 14px;
+}
+
 .sort-toggle {
   display: flex;
   gap: 14px;

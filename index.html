@@ -9,63 +9,158 @@
 <body>
 <main class="wrap">
   <h1 class="index-title">All the roads lead to:</h1>
-  <nav class="sort-toggle" aria-label="Sort order">
-    <button type="button" data-sort="count" class="active">by popularity</button>
-    <button type="button" data-sort="order">by road</button>
-  </nav>
-  <ol id="roads" class="roads"></ol>
-  <p id="empty" class="empty" hidden>No travelers yet. The first road has not been walked.</p>
+
+  <section id="seeds-view">
+    <p class="view-intro">Pick a road.</p>
+    <ol id="seeds" class="roads seeds"></ol>
+    <p id="seeds-empty" class="empty" hidden>No roads have been walked yet.</p>
+  </section>
+
+  <section id="road-view" hidden>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="#" class="back-to-seeds">&larr; all roads</a>
+    </nav>
+    <h2 id="road-title" class="road-title"></h2>
+    <nav class="sort-toggle" aria-label="Sort order">
+      <button type="button" data-sort="count" class="active">by popularity</button>
+      <button type="button" data-sort="order">by road</button>
+    </nav>
+    <ol id="roads" class="roads"></ol>
+    <p id="road-empty" class="empty" hidden>This road has not been walked yet.</p>
+  </section>
 </main>
 <script>
-fetch('counter.json', {cache: 'no-store'})
-  .then(r => r.ok ? r.json() : [])
-  .then(rows => {
-    const list = document.getElementById('roads');
-    const empty = document.getElementById('empty');
-    if (!Array.isArray(rows) || rows.length === 0) {
-      empty.hidden = false;
+(function () {
+  const seedsView = document.getElementById('seeds-view');
+  const roadView = document.getElementById('road-view');
+  const seedsList = document.getElementById('seeds');
+  const seedsEmpty = document.getElementById('seeds-empty');
+  const roadList = document.getElementById('roads');
+  const roadEmpty = document.getElementById('road-empty');
+  const roadTitle = document.getElementById('road-title');
+  const sortButtons = document.querySelectorAll('.sort-toggle button');
+  const backLink = document.querySelector('.back-to-seeds');
+
+  let seeds = [];
+  let currentRows = [];
+  let currentSort = 'count';
+
+  const sorters = {
+    count: (a, b) => (b.count - a.count) || ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
+    order: (a, b) => ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
+  };
+
+  function renderSeeds() {
+    seedsList.innerHTML = '';
+    if (!seeds.length) {
+      seedsEmpty.hidden = false;
       return;
     }
-
-    const sorters = {
-      count: (a, b) => (b.count - a.count) || ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
-      order: (a, b) => ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
-    };
-
-    function render(mode) {
-      list.innerHTML = '';
-      rows.slice().sort(sorters[mode]).forEach(r => {
-        const li = document.createElement('li');
-        const name = document.createElement('span');
-        name.className = 'name';
-        const a = document.createElement('a');
-        a.href = 'articles/' + r.slug + '.html';
-        a.textContent = r.name;
-        name.appendChild(a);
+    seedsEmpty.hidden = true;
+    seeds.forEach(s => {
+      const li = document.createElement('li');
+      const name = document.createElement('span');
+      name.className = 'name';
+      const a = document.createElement('a');
+      a.href = '#' + s.slug;
+      a.textContent = s.name;
+      name.appendChild(a);
+      li.appendChild(name);
+      if (typeof s.count === 'number') {
         const meta = document.createElement('span');
         meta.className = 'count';
-        meta.textContent = mode === 'order'
-          ? '#' + (r.order ?? '?')
-          : '× ' + r.count;
-        li.appendChild(name);
+        meta.textContent = '× ' + s.count;
         li.appendChild(meta);
-        list.appendChild(li);
-      });
-    }
-
-    const buttons = document.querySelectorAll('.sort-toggle button');
-    buttons.forEach(b => {
-      b.addEventListener('click', () => {
-        buttons.forEach(x => x.classList.toggle('active', x === b));
-        render(b.dataset.sort);
-      });
+      }
+      seedsList.appendChild(li);
     });
+  }
 
-    render('count');
-  })
-  .catch(() => {
-    document.getElementById('empty').hidden = false;
+  function renderRoad() {
+    roadList.innerHTML = '';
+    if (!currentRows.length) {
+      roadEmpty.hidden = false;
+      return;
+    }
+    roadEmpty.hidden = true;
+    currentRows.slice().sort(sorters[currentSort]).forEach(r => {
+      const li = document.createElement('li');
+      const name = document.createElement('span');
+      name.className = 'name';
+      const a = document.createElement('a');
+      a.href = 'articles/' + r.seedSlug + '/' + r.slug + '.html';
+      a.textContent = r.name;
+      name.appendChild(a);
+      const meta = document.createElement('span');
+      meta.className = 'count';
+      meta.textContent = currentSort === 'order'
+        ? '#' + (r.order ?? '?')
+        : '× ' + r.count;
+      li.appendChild(name);
+      li.appendChild(meta);
+      roadList.appendChild(li);
+    });
+  }
+
+  function showSeeds() {
+    roadView.hidden = true;
+    seedsView.hidden = false;
+  }
+
+  function showRoad(seed) {
+    seedsView.hidden = true;
+    roadView.hidden = false;
+    roadTitle.textContent = seed.name;
+    currentRows = [];
+    roadList.innerHTML = '';
+    roadEmpty.hidden = true;
+    fetch('articles/' + seed.slug + '/counter.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : [])
+      .then(rows => {
+        currentRows = (Array.isArray(rows) ? rows : []).map(r => Object.assign({}, r, { seedSlug: seed.slug }));
+        renderRoad();
+      })
+      .catch(() => {
+        currentRows = [];
+        renderRoad();
+      });
+  }
+
+  function routeFromHash() {
+    const slug = (location.hash || '').replace(/^#/, '');
+    if (!slug) { showSeeds(); return; }
+    const seed = seeds.find(s => s.slug === slug);
+    if (!seed) { showSeeds(); return; }
+    showRoad(seed);
+  }
+
+  sortButtons.forEach(b => {
+    b.addEventListener('click', () => {
+      sortButtons.forEach(x => x.classList.toggle('active', x === b));
+      currentSort = b.dataset.sort;
+      renderRoad();
+    });
   });
+
+  backLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    history.pushState(null, '', location.pathname + location.search);
+    showSeeds();
+  });
+
+  window.addEventListener('hashchange', routeFromHash);
+
+  fetch('seeds.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : [])
+    .then(rows => {
+      seeds = Array.isArray(rows) ? rows : [];
+      renderSeeds();
+      routeFromHash();
+    })
+    .catch(() => {
+      seedsEmpty.hidden = false;
+    });
+})();
 </script>
 </body>
 </html>
