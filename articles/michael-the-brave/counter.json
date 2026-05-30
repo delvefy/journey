@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Michael the Brave",
+    "slug": "michael-the-brave",
+    "count": 1,
+    "order": 1
+  },
+  {
+    "name": "Rudolf II, Holy Roman Emperor",
+    "slug": "rudolf-ii-holy-roman-emperor",
+    "count": 1,
+    "order": 2
+  },
+  {
+    "name": "Johannes Kepler",
+    "slug": "johannes-kepler",
+    "count": 1,
+    "order": 3
+  },
+  {
+    "name": "Galileo Galilei",
+    "slug": "galileo-galilei",
+    "count": 1,
+    "order": 4
+  },
+  {
+    "name": "Pope Urban VIII",
+    "slug": "pope-urban-viii",
+    "count": 1,
+    "order": 5
+  },
+  {
+    "name": "Cardinal Richelieu",
+    "slug": "cardinal-richelieu",
+    "count": 1,
+    "order": 6
+  },
+  {
+    "name": "Henry IV of France",
+    "slug": "henry-iv-of-france",
+    "count": 1,
+    "order": 7
+  },
+  {
+    "name": "Elizabeth I of England",
+    "slug": "elizabeth-i-of-england",
+    "count": 1,
+    "order": 8
+  },
+  {
+    "name": "William Shakespeare",
+    "slug": "william-shakespeare",
+    "count": 1,
+    "order": 9
+  },
+  {
+    "name": "James VI and I",
+    "slug": "james-vi-and-i",
+    "count": 1,
+    "order": 10
+  },
+  {
+    "name": "Mary, Queen of Scots",
+    "slug": "mary-queen-of-scots",
+    "count": 1,
+    "order": 11
+  },
+  {
+    "name": "Catherine de' Medici",
+    "slug": "catherine-de-medici",
+    "count": 1,
+    "order": 12
+  },
+  {
+    "name": "Nostradamus",
+    "slug": "nostradamus",
+    "count": 1,
+    "order": 13
+  },
+  {
+    "name": "Henri II of France",
+    "slug": "henri-ii-of-france",
+    "count": 1,
+    "order": 14
+  },
+  {
+    "name": "Charles V, Holy Roman Emperor",
+    "slug": "charles-v-holy-roman-emperor",
+    "count": 1,
+    "order": 15
+  },
+  {
+    "name": "Martin Luther",
+    "slug": "martin-luther",
+    "count": 1,
+    "order": 16
+  },
+  {
+    "name": "Erasmus of Rotterdam",
+    "slug": "erasmus-of-rotterdam",
+    "count": 1,
+    "order": 17
+  },
+  {
+    "name": "Thomas More",
+    "slug": "thomas-more",
+    "count": 1,
+    "order": 18
+  },
+  {
+    "name": "Henry VIII of England",
+    "slug": "henry-viii-of-england",
+    "count": 1,
+    "order": 19
+  },
+  {
+    "name": "Anne Boleyn",
+    "slug": "anne-boleyn",
+    "count": 1,
+    "order": 20
+  },
+  {
+    "name": "Catherine of Aragon",
+    "slug": "catherine-of-aragon",
+    "count": 1,
+    "order": 21
+  },
+  {
+    "name": "Isabella I of Castile",
+    "slug": "isabella-i-of-castile",
+    "count": 1,
+    "order": 22
+  },
+  {
+    "name": "Christopher Columbus",
+    "slug": "christopher-columbus",
+    "count": 1,
+    "order": 23
+  },
+  {
+    "name": "Amerigo Vespucci",
+    "slug": "amerigo-vespucci",
+    "count": 1,
+    "order": 24
+  },
+  {
+    "name": "Vasco da Gama",
+    "slug": "vasco-da-gama",
+    "count": 1,
+    "order": 25
+  },
+  {
+    "name": "Bartolomeu Dias",
+    "slug": "bartolomeu-dias",
+    "count": 1,
+    "order": 26
+  },
+  {
+    "name": "Pedro Álvares Cabral",
+    "slug": "pedro-alvares-cabral",
+    "count": 1,
+    "order": 27
+  },
+  {
+    "name": "Manuel I of Portugal",
+    "slug": "manuel-i-of-portugal",
+    "count": 1,
+    "order": 28
+  },
+  {
+    "name": "Ferdinand Magellan",
+    "slug": "ferdinand-magellan",
+    "count": 1,
+    "order": 29
+  },
+  {
+    "name": "Afonso de Albuquerque",
+    "slug": "afonso-de-albuquerque",
+    "count": 1,
+    "order": 30
+  }
+]
