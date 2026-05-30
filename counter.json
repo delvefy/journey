@@ -574,5 +574,125 @@
     "slug": "roger-ii-of-sicily",
     "count": 1,
     "order": 96
+  },
+  {
+    "name": "Roger I of Sicily",
+    "slug": "roger-i-of-sicily",
+    "count": 1,
+    "order": 97
+  },
+  {
+    "name": "Robert Guiscard",
+    "slug": "robert-guiscard",
+    "count": 1,
+    "order": 98
+  },
+  {
+    "name": "Bohemond of Taranto",
+    "slug": "bohemond-of-taranto",
+    "count": 1,
+    "order": 99
+  },
+  {
+    "name": "Alexios I Komnenos",
+    "slug": "alexios-i-komnenos",
+    "count": 1,
+    "order": 100
+  },
+  {
+    "name": "Anna Komnene",
+    "slug": "anna-komnene",
+    "count": 1,
+    "order": 101
+  },
+  {
+    "name": "Nikephoros Bryennios the Younger",
+    "slug": "nikephoros-bryennios-the-younger",
+    "count": 1,
+    "order": 102
+  },
+  {
+    "name": "John II Komnenos",
+    "slug": "john-ii-komnenos",
+    "count": 1,
+    "order": 103
+  },
+  {
+    "name": "Manuel I Komnenos",
+    "slug": "manuel-i-komnenos",
+    "count": 1,
+    "order": 104
+  },
+  {
+    "name": "Andronikos I Komnenos",
+    "slug": "andronikos-i-komnenos",
+    "count": 1,
+    "order": 105
+  },
+  {
+    "name": "Isaac II Angelos",
+    "slug": "isaac-ii-angelos",
+    "count": 3,
+    "order": 106
+  },
+  {
+    "name": "Alexios III Angelos",
+    "slug": "alexios-iii-angelos",
+    "count": 1,
+    "order": 107
+  },
+  {
+    "name": "Alexios IV Angelos",
+    "slug": "alexios-iv-angelos",
+    "count": 1,
+    "order": 108
+  },
+  {
+    "name": "Enrico Dandolo",
+    "slug": "enrico-dandolo",
+    "count": 2,
+    "order": 109
+  },
+  {
+    "name": "Boniface of Montferrat",
+    "slug": "boniface-of-montferrat",
+    "count": 1,
+    "order": 110
+  },
+  {
+    "name": "Conrad of Montferrat",
+    "slug": "conrad-of-montferrat",
+    "count": 1,
+    "order": 111
+  },
+  {
+    "name": "Saladin",
+    "slug": "saladin",
+    "count": 1,
+    "order": 112
+  },
+  {
+    "name": "Nur ad-Din",
+    "slug": "nur-ad-din",
+    "count": 2,
+    "order": 113
+  },
+  {
+    "name": "Zengi",
+    "slug": "zengi",
+    "count": 2,
+    "order": 114
+  },
+  {
+    "name": "Joscelin II of Edessa",
+    "slug": "joscelin-ii-of-edessa",
+    "count": 1,
+    "order": 115
+  },
+  {
+    "name": "Joscelin I of Edessa",
+    "slug": "joscelin-i-of-edessa",
+    "count": 1,
+    "order": 116
   }
 ]

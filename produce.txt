@@ -71,18 +71,12 @@ PROCEDURE (one article)
    - Otherwise append { name: TARGET.next_name, slug: TARGET.next_slug, count: 1,
      order: 1 + max(existing entries' order, or 0 if MEM was empty) }.
 
-5. Build a short ranked candidate list of real historical persons closely
-   connected to TARGET (family, mentor, pupil, ally, rival, contemporary,
-   patron, successor, biographer, etc.). Rank using this composite:
-
-       narrative density  ×  symmetric importance  ×  onward branching
-
-   - narrative density: how much of TARGET's life cannot be told without
-     this person.
-   - symmetric importance: would TARGET be a top-3 connection in THIS
-     person's article too? Symmetric edges beat asymmetric ones.
-   - onward branching: does this person open onto a rich further graph,
-     or are they a near-dead-end?
+5. List 3-5 real historical persons directly connected to TARGET. The
+   connection can be of any kind: family, mentor, pupil, ally, rival,
+   contemporary, patron, successor, biographer, antagonist, neighbor.
+   You only need to know that the edge exists — you do NOT need to know
+   the candidate's wider graph, their other connections, or how famous
+   TARGET is in their story. This keeps the rule local and cheap.
 
    Hard gate: historical solidity. Drop any candidate whose record is
    primarily legendary or whose existence is seriously disputed —
@@ -91,14 +85,20 @@ PROCEDURE (one article)
    Keep the shortlist mental — do not write it to disk, the article, or
    state.json. Only the final pick is visible anywhere.
 
-6. Walk the ranked list starting at POSITION 1. For each position
-   considered, in order 1, 2, 3, ...:
+6. Rank the shortlist by a single criterion: how famous the candidate is
+   in general historical memory, irrespective of their connection to
+   TARGET. Use whatever rough sense of public recognition you have:
+   appears in standard textbooks, has a Wikipedia article in many
+   languages, the kind of name a literate non-specialist might recognize.
+   Ties broken by your gut. Do not try to score; just sort.
+
+   Then walk the ranked list starting at POSITION 1. For each position,
+   in order 1, 2, 3, ...:
    - If that candidate's slug is already in MEM, increment that entry's
      count by 1 and move to the next position.
-   - The first considered candidate that is NOT already in MEM becomes
-     CANDIDATE.
-   If the shortlist runs out before a new pick is found, extend it; do not
-   lower the gate.
+   - The first considered candidate NOT already in MEM becomes CANDIDATE.
+   If the shortlist runs out before a new pick is found, extend it with
+   more neighbors of TARGET; do not lower the historical-solidity gate.
 
 7. Finalize the article we wrote in step 3: replace the next-link placeholder
    with a real link:
