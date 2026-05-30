@@ -127,6 +127,17 @@ PROCEDURE (one article)
    the candidate's wider graph, their other connections, or how famous
    TARGET is in their story. This keeps the rule local and cheap.
 
+   INCLUDE in-MEM persons in the shortlist. Do NOT subconsciously skip
+   them just because they cannot be the new CANDIDATE. Their job in
+   step 6 is to absorb a count increment before the road moves on, and
+   that is the whole point of the counter. In dense clusters (a famous
+   court, a family of explorers, a generation of reformers) most of the
+   shortlist will already be in MEM — that is the SIGNAL, not noise. A
+   TARGET like Anne Boleyn MUST include Henry VIII and Elizabeth I in
+   its shortlist even though both are already written, because they are
+   the two most famous people directly tied to her, and the road is
+   supposed to record that.
+
    Hard gate: historical solidity. Drop any candidate whose record is
    primarily legendary or whose existence is seriously disputed —
    Arthurian / Grail / hagiographic figures do not qualify.
@@ -141,6 +152,9 @@ PROCEDURE (one article)
    languages, the kind of name a literate non-specialist might recognize.
    Ties broken by your gut. Do not try to score; just sort.
 
+   Rank EVERY shortlist entry, including in-MEM ones. Do not float
+   in-MEM names to the bottom — rank purely by fame, blind to MEM status.
+
    Then walk the ranked list starting at POSITION 1. For each position,
    in order 1, 2, 3, ...:
    - If that candidate's slug is already in MEM, increment that entry's
@@ -148,6 +162,14 @@ PROCEDURE (one article)
    - The first considered candidate NOT already in MEM becomes CANDIDATE.
    If the shortlist runs out before a new pick is found, extend it with
    more neighbors of TARGET; do not lower the historical-solidity gate.
+
+   Sanity check before exiting: if you chose CANDIDATE at position 1 of
+   the ranked list, ask yourself whether ANY in-MEM person could
+   reasonably be a direct connection AND rank above the CANDIDATE by
+   fame. On dense clusters that is suspicious — a Tudor-court TARGET
+   that produces zero increments is almost certainly missing a famous
+   in-MEM neighbor (Henry VIII, Elizabeth I, etc.) that should have been
+   in step 5's shortlist. Re-check before writing counter.json.
 
 7. Finalize the article we wrote in step 3: replace the next-link placeholder
    with a real link:
@@ -195,6 +217,14 @@ ARTICLE TEMPLATE (articles/<seed-slug>/<slug>.html)
 
 NOTES
 -----
+- The count field is the road's popularity metric: how many times this
+  person was a top-ranked direct neighbor of a later TARGET but was
+  skipped because they were already in MEM. Counts above 1 are the
+  expected outcome in dense clusters (Tudor court, Iberian explorers,
+  the Habsburg-Valois axis). A road on which every count stays at 1 is
+  a sign that step 5/6 were applied lazily — in-MEM neighbors were
+  silently excluded from the shortlist rather than ranked and
+  incremented.
 - Articles within a road link sideways within the same folder, so use
   relative hrefs like "joseph-of-arimathea.html" (no folder prefix).
 - Stylesheet is at "../../style.css" because articles live two levels deep
