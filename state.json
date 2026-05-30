@@ -1,4 +1,15 @@
 {
-  "current_seed": null,
-  "seeds": {}
+  "current_seed": "michael-the-brave",
+  "seeds": {
+    "michael-the-brave": {
+      "next_name": "Shah Ismail I",
+      "next_slug": "shah-ismail-i",
+      "complete": false
+    },
+    "jesus-christ": {
+      "next_name": "Jesus Christ",
+      "next_slug": "jesus-christ",
+      "complete": false
+    }
+  }
 }
