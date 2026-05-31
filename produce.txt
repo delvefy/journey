@@ -197,6 +197,34 @@ PROCEDURE (one article)
    are then ranked purely on fame like everyone else. The ONLY admission
    gate is historical existence (below) — never era, never recency.
 
+   THREE-BUCKET SWEEP. Build the shortlist by deliberately walking three
+   buckets, not by free association — free association collapses to
+   family and contemporaries and silently drops the cross-era edges this
+   road depends on. For every TARGET, gather candidates from all three:
+     1. SIDEWAYS — family, allies, rivals, mentors, pupils, patrons,
+        contemporaries.
+     2. BACKWARD — whom did TARGET build on, model themselves on,
+        translate, or descend from? (the long-dead source, the distant
+        ancestor, the thinker whose work they continued)
+     3. FORWARD — who built on, emulated, translated, descended from, or
+        wrote the history or biography of TARGET? This is the bucket most
+        easily forgotten, and skipping it is what strands the road among
+        obscure locals. Always ask which famous chronicler made TARGET a
+        principal subject: Herodotus, Thucydides, Xenophon, Polybius,
+        Cornelius Nepos, Diodorus Siculus, Sallust, Livy, Plutarch,
+        Tacitus, Suetonius, Arrian, Josephus, Procopius, Bede, Einhard,
+        Vasari, and the like.
+     4. Pool all three buckets, then rank in step 6 — blind to era and
+        blind to MEM status.
+
+   SALIENCE FILTER. Admit a backward/forward edge only if it is SALIENT:
+   TARGET is a major subject of that person's work, or a major influence
+   on them — not a passing mention. "Nepos wrote a whole Life of TARGET"
+   qualifies; "a historian names TARGET once in passing" does not. This
+   honors the cross-era rule without collapsing every road into a handful
+   of historians: a famous historian, once written, is merely incremented
+   thereafter, so they act as a hub back toward fame, never a sink.
+
    INCLUDE in-MEM persons in the shortlist. Do NOT subconsciously skip
    them just because they cannot be the new CANDIDATE. Their job in
    step 6 is to absorb a count increment before the road moves on, and
@@ -266,6 +294,13 @@ PROCEDURE (one article)
    that produces zero increments is almost certainly missing a famous
    in-MEM neighbor (Henry VIII, Elizabeth I, etc.) that should have been
    in step 5's shortlist. Re-check before writing counter.json.
+
+   Second red flag — an OBSCURE candidate. If the CANDIDATE you are about
+   to pick is obscure, treat that as a signal that you skipped a famous
+   FORWARD edge in step 5's bucket 3 (a biographer, historian, translator,
+   emulator, or notable heir). Re-run that bucket before committing: an
+   obscure pick is far more often a missed famous chronicler or successor
+   than a true dead end. Cross-era escapes are the rule, not the exception.
 
 7. Finalize the article we wrote in step 3: replace the next-link placeholder
    with a real link:
