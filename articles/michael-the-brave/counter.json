@@ -926,13 +926,13 @@
   {
     "name": "Aristotle",
     "slug": "aristotle",
-    "count": 10,
+    "count": 17,
     "order": 155
   },
   {
     "name": "Alexander the Great",
     "slug": "alexander-the-great",
-    "count": 6,
+    "count": 14,
     "order": 156
   },
   {
@@ -944,7 +944,7 @@
   {
     "name": "Cleopatra",
     "slug": "cleopatra",
-    "count": 5,
+    "count": 8,
     "order": 158
   },
   {
@@ -956,7 +956,7 @@
   {
     "name": "Cicero",
     "slug": "cicero",
-    "count": 11,
+    "count": 12,
     "order": 160
   },
   {
@@ -992,37 +992,37 @@
   {
     "name": "Pericles",
     "slug": "pericles",
-    "count": 1,
+    "count": 4,
     "order": 166
   },
   {
     "name": "Socrates",
     "slug": "socrates",
-    "count": 4,
+    "count": 8,
     "order": 167
   },
   {
     "name": "Plato",
     "slug": "plato",
-    "count": 11,
+    "count": 15,
     "order": 168
   },
   {
     "name": "Pythagoras",
     "slug": "pythagoras",
-    "count": 1,
+    "count": 2,
     "order": 169
   },
   {
     "name": "Euclid",
     "slug": "euclid",
-    "count": 2,
+    "count": 3,
     "order": 170
   },
   {
     "name": "Archimedes",
     "slug": "archimedes",
-    "count": 2,
+    "count": 3,
     "order": 171
   },
   {
@@ -1574,7 +1574,7 @@
   {
     "name": "Virgil",
     "slug": "virgil",
-    "count": 2,
+    "count": 3,
     "order": 263
   },
   {
@@ -2348,7 +2348,7 @@
   {
     "name": "Jesus Christ",
     "slug": "jesus-christ",
-    "count": 7,
+    "count": 8,
     "order": 392
   },
   {
@@ -2444,7 +2444,7 @@
   {
     "name": "Hannibal",
     "slug": "hannibal",
-    "count": 3,
+    "count": 5,
     "order": 408
   },
   {
@@ -2612,13 +2612,13 @@
   {
     "name": "Origen",
     "slug": "origen",
-    "count": 1,
+    "count": 5,
     "order": 436
   },
   {
     "name": "Jerome",
     "slug": "jerome",
-    "count": 2,
+    "count": 4,
     "order": 437
   },
   {
@@ -2632,5 +2632,305 @@
     "slug": "ambrose",
     "count": 1,
     "order": 439
+  },
+  {
+    "name": "Theodosius I",
+    "slug": "theodosius-i",
+    "count": 2,
+    "order": 440
+  },
+  {
+    "name": "Constantine the Great",
+    "slug": "constantine-the-great",
+    "count": 14,
+    "order": 441
+  },
+  {
+    "name": "Diocletian",
+    "slug": "diocletian",
+    "count": 4,
+    "order": 442
+  },
+  {
+    "name": "Maximian",
+    "slug": "maximian",
+    "count": 3,
+    "order": 443
+  },
+  {
+    "name": "Maxentius",
+    "slug": "maxentius",
+    "count": 1,
+    "order": 444
+  },
+  {
+    "name": "Galerius",
+    "slug": "galerius",
+    "count": 3,
+    "order": 445
+  },
+  {
+    "name": "Licinius",
+    "slug": "licinius",
+    "count": 2,
+    "order": 446
+  },
+  {
+    "name": "Maximinus Daia",
+    "slug": "maximinus-daia",
+    "count": 1,
+    "order": 447
+  },
+  {
+    "name": "Eusebius of Caesarea",
+    "slug": "eusebius-of-caesarea",
+    "count": 3,
+    "order": 448
+  },
+  {
+    "name": "Athanasius of Alexandria",
+    "slug": "athanasius-of-alexandria",
+    "count": 8,
+    "order": 449
+  },
+  {
+    "name": "Anthony the Great",
+    "slug": "anthony-the-great",
+    "count": 1,
+    "order": 450
+  },
+  {
+    "name": "Arius",
+    "slug": "arius",
+    "count": 2,
+    "order": 451
+  },
+  {
+    "name": "Eusebius of Nicomedia",
+    "slug": "eusebius-of-nicomedia",
+    "count": 1,
+    "order": 452
+  },
+  {
+    "name": "Constantius II",
+    "slug": "constantius-ii",
+    "count": 2,
+    "order": 453
+  },
+  {
+    "name": "Julian the Apostate",
+    "slug": "julian-the-apostate",
+    "count": 3,
+    "order": 454
+  },
+  {
+    "name": "Gregory of Nazianzus",
+    "slug": "gregory-of-nazianzus",
+    "count": 3,
+    "order": 455
+  },
+  {
+    "name": "Basil of Caesarea",
+    "slug": "basil-of-caesarea",
+    "count": 4,
+    "order": 456
+  },
+  {
+    "name": "Gregory of Nyssa",
+    "slug": "gregory-of-nyssa",
+    "count": 3,
+    "order": 457
+  },
+  {
+    "name": "Macrina the Younger",
+    "slug": "macrina-the-younger",
+    "count": 1,
+    "order": 458
+  },
+  {
+    "name": "Gregory Thaumaturgus",
+    "slug": "gregory-thaumaturgus",
+    "count": 1,
+    "order": 459
+  },
+  {
+    "name": "Paul of Samosata",
+    "slug": "paul-of-samosata",
+    "count": 1,
+    "order": 460
+  },
+  {
+    "name": "Aurelian",
+    "slug": "aurelian",
+    "count": 2,
+    "order": 461
+  },
+  {
+    "name": "Zenobia",
+    "slug": "zenobia",
+    "count": 2,
+    "order": 462
+  },
+  {
+    "name": "Odaenathus",
+    "slug": "odaenathus",
+    "count": 1,
+    "order": 463
+  },
+  {
+    "name": "Shapur I",
+    "slug": "shapur-i",
+    "count": 1,
+    "order": 464
+  },
+  {
+    "name": "Mani",
+    "slug": "mani",
+    "count": 1,
+    "order": 465
+  },
+  {
+    "name": "Gautama Buddha",
+    "slug": "gautama-buddha",
+    "count": 2,
+    "order": 466
+  },
+  {
+    "name": "Ashoka",
+    "slug": "ashoka",
+    "count": 3,
+    "order": 467
+  },
+  {
+    "name": "Chandragupta Maurya",
+    "slug": "chandragupta-maurya",
+    "count": 2,
+    "order": 468
+  },
+  {
+    "name": "Seleucus I Nicator",
+    "slug": "seleucus-i-nicator",
+    "count": 4,
+    "order": 469
+  },
+  {
+    "name": "Ptolemy I Soter",
+    "slug": "ptolemy-i-soter",
+    "count": 5,
+    "order": 470
+  },
+  {
+    "name": "Ptolemy II Philadelphus",
+    "slug": "ptolemy-ii-philadelphus",
+    "count": 2,
+    "order": 471
+  },
+  {
+    "name": "Theocritus",
+    "slug": "theocritus",
+    "count": 1,
+    "order": 472
+  },
+  {
+    "name": "Hiero II of Syracuse",
+    "slug": "hiero-ii-of-syracuse",
+    "count": 1,
+    "order": 473
+  },
+  {
+    "name": "Pyrrhus of Epirus",
+    "slug": "pyrrhus-of-epirus",
+    "count": 2,
+    "order": 474
+  },
+  {
+    "name": "Demetrius I Poliorcetes",
+    "slug": "demetrius-i-poliorcetes",
+    "count": 2,
+    "order": 475
+  },
+  {
+    "name": "Antigonus I Monophthalmus",
+    "slug": "antigonus-i-monophthalmus",
+    "count": 1,
+    "order": 476
+  },
+  {
+    "name": "Antipater",
+    "slug": "antipater",
+    "count": 2,
+    "order": 477
+  },
+  {
+    "name": "Philip II of Macedon",
+    "slug": "philip-ii-of-macedon",
+    "count": 4,
+    "order": 478
+  },
+  {
+    "name": "Demosthenes",
+    "slug": "demosthenes",
+    "count": 2,
+    "order": 479
+  },
+  {
+    "name": "Aeschines",
+    "slug": "aeschines",
+    "count": 1,
+    "order": 480
+  },
+  {
+    "name": "Isocrates",
+    "slug": "isocrates",
+    "count": 1,
+    "order": 481
+  },
+  {
+    "name": "Gorgias",
+    "slug": "gorgias",
+    "count": 1,
+    "order": 482
+  },
+  {
+    "name": "Empedocles",
+    "slug": "empedocles",
+    "count": 1,
+    "order": 483
+  },
+  {
+    "name": "Parmenides",
+    "slug": "parmenides",
+    "count": 2,
+    "order": 484
+  },
+  {
+    "name": "Zeno of Elea",
+    "slug": "zeno-of-elea",
+    "count": 1,
+    "order": 485
+  },
+  {
+    "name": "Melissus of Samos",
+    "slug": "melissus-of-samos",
+    "count": 1,
+    "order": 486
+  },
+  {
+    "name": "Sophocles",
+    "slug": "sophocles",
+    "count": 2,
+    "order": 487
+  },
+  {
+    "name": "Aeschylus",
+    "slug": "aeschylus",
+    "count": 1,
+    "order": 488
+  },
+  {
+    "name": "Darius the Great",
+    "slug": "darius-the-great",
+    "count": 1,
+    "order": 489
   }
 ]
