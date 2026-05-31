@@ -182,6 +182,21 @@ PROCEDURE (one article)
    the candidate's wider graph, their other connections, or how famous
    TARGET is in their story. This keeps the rule local and cheap.
 
+   NO CHRONOLOGY FILTER. The connection does NOT have to be a
+   contemporary or near-contemporary. Cross-era edges are fully valid
+   and must NOT be filtered out, down-weighted, or quietly dropped
+   because the two people lived centuries apart, or because picking them
+   would "pivot" the road into another period. The road is allowed to
+   jump eras; that is a feature, not a bug. Valid long-range edges
+   include, for example: an interpreter / commentator / synthesizer and
+   the long-dead thinker whose work they built on (Aquinas and
+   Aristotle; a Renaissance humanist and Cicero), a descendant and a
+   distant ancestor, an emulator and the figure they consciously
+   modelled themselves on, a translator and their source author. If such
+   a person is a genuine edge of TARGET, they BELONG in the shortlist and
+   are then ranked purely on fame like everyone else. The ONLY admission
+   gate is historical existence (below) — never era, never recency.
+
    INCLUDE in-MEM persons in the shortlist. Do NOT subconsciously skip
    them just because they cannot be the new CANDIDATE. Their job in
    step 6 is to absorb a count increment before the road moves on, and
@@ -193,16 +208,42 @@ PROCEDURE (one article)
    the two most famous people directly tied to her, and the road is
    supposed to record that.
 
-   Hard gate: historical solidity. Drop any candidate whose record is
-   primarily legendary or whose existence is seriously disputed —
-   Arthurian / Grail / hagiographic figures do not qualify.
+   Hard gate: historical existence — NOT biographical certainty. The
+   only question is whether the person really lived; how legendary the
+   surviving record of their life is does NOT matter. Admit any
+   candidate whom mainstream scholarship accepts as a real human being,
+   EVEN IF almost everything later told about them is legend, or the
+   works under their name are really a centuries-long accretion. Such
+   quasi-historical figures — Aesop, Homer, Pythagoras, Lycurgus,
+   Sappho — are fully valid and are then ranked purely on fame like
+   anyone else. A legend-encrusted biography is NEVER, by itself,
+   grounds to drop someone.
+
+   Drop a candidate ONLY when the figure is essentially fictional:
+   gods, demigods, and personifications, or persons known solely from
+   myth, romance, or devotional invention whom historians take to have
+   probably never lived — King Arthur, the Grail cast, William Tell,
+   Robin Hood, dragon-slaying or apocryphal saints. (Saints who really
+   existed, such as Francis of Assisi, are fine.) The test is what a
+   non-specialist historian would say: "probably a real person, however
+   embroidered" -> ADMIT; "probably never existed" -> DROP. When
+   genuinely unsure, lean to ADMIT.
+
+   For an admitted figure whose life is mostly legend, build the article
+   on whatever historical kernel is attested and mark the rest plainly
+   as tradition ("by tradition...", "later legend held..."). The
+   no-inventing-facts rule of step 3 still binds: report the legend AS
+   legend; never manufacture fresh detail.
 
    Keep the shortlist mental — do not write it to disk, the article, or
    state.json. Only the final pick is visible anywhere.
 
 6. Rank the shortlist by a single criterion: how famous the candidate is
    in general historical memory, irrespective of their connection to
-   TARGET. Use whatever rough sense of public recognition you have:
+   TARGET and irrespective of the era in which they lived. Fame is the
+   ONLY ranking key — never recency, never era, never chronological
+   closeness to TARGET, never a wish to keep the road in one period.
+   Use whatever rough sense of public recognition you have:
    appears in standard textbooks, has a Wikipedia article in many
    languages, the kind of name a literate non-specialist might recognize.
    Ties broken by your gut. Do not try to score; just sort.
@@ -216,7 +257,7 @@ PROCEDURE (one article)
      count by 1 and move to the next position.
    - The first considered candidate NOT already in MEM becomes CANDIDATE.
    If the shortlist runs out before a new pick is found, extend it with
-   more neighbors of TARGET; do not lower the historical-solidity gate.
+   more neighbors of TARGET; do not lower the historical-existence gate.
 
    Sanity check before exiting: if you chose CANDIDATE at position 1 of
    the ranked list, ask yourself whether ANY in-MEM person could
