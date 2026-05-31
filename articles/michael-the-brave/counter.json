@@ -1076,7 +1076,7 @@
   {
     "name": "Christina of Sweden",
     "slug": "christina-of-sweden",
-    "count": 1,
+    "count": 3,
     "order": 180
   },
   {
@@ -1130,19 +1130,19 @@
   {
     "name": "Johann Sebastian Bach",
     "slug": "johann-sebastian-bach",
-    "count": 5,
+    "count": 6,
     "order": 189
   },
   {
     "name": "George Frideric Handel",
     "slug": "george-frideric-handel",
-    "count": 5,
+    "count": 11,
     "order": 190
   },
   {
     "name": "George I of Great Britain",
     "slug": "george-i-of-great-britain",
-    "count": 2,
+    "count": 3,
     "order": 191
   },
   {
@@ -1178,7 +1178,7 @@
   {
     "name": "Napoleon Bonaparte",
     "slug": "napoleon-bonaparte",
-    "count": 14,
+    "count": 16,
     "order": 197
   },
   {
@@ -1190,7 +1190,7 @@
   {
     "name": "Wolfgang Amadeus Mozart",
     "slug": "wolfgang-amadeus-mozart",
-    "count": 8,
+    "count": 9,
     "order": 199
   },
   {
@@ -1244,7 +1244,7 @@
   {
     "name": "Marie Antoinette",
     "slug": "marie-antoinette",
-    "count": 8,
+    "count": 11,
     "order": 208
   },
   {
@@ -1406,13 +1406,13 @@
   {
     "name": "Charles II of England",
     "slug": "charles-ii-of-england",
-    "count": 4,
+    "count": 7,
     "order": 235
   },
   {
     "name": "Louis XIV",
     "slug": "louis-xiv-of-france",
-    "count": 10,
+    "count": 20,
     "order": 236
   },
   {
@@ -1448,7 +1448,7 @@
   {
     "name": "Cardinal Mazarin",
     "slug": "cardinal-mazarin",
-    "count": 2,
+    "count": 3,
     "order": 242
   },
   {
@@ -1460,7 +1460,7 @@
   {
     "name": "Charles I of England",
     "slug": "charles-i-of-england",
-    "count": 4,
+    "count": 6,
     "order": 244
   },
   {
@@ -1598,25 +1598,25 @@
   {
     "name": "Queen Victoria",
     "slug": "queen-victoria",
-    "count": 3,
+    "count": 4,
     "order": 267
   },
   {
     "name": "Kaiser Wilhelm II",
     "slug": "wilhelm-ii-german-emperor",
-    "count": 2,
+    "count": 3,
     "order": 268
   },
   {
     "name": "Otto von Bismarck",
     "slug": "otto-von-bismarck",
-    "count": 1,
+    "count": 2,
     "order": 269
   },
   {
     "name": "Napoleon III",
     "slug": "napoleon-iii",
-    "count": 1,
+    "count": 5,
     "order": 270
   },
   {
@@ -1676,19 +1676,19 @@
   {
     "name": "Claude Monet",
     "slug": "claude-monet",
-    "count": 2,
+    "count": 3,
     "order": 280
   },
   {
     "name": "Édouard Manet",
     "slug": "edouard-manet",
-    "count": 1,
+    "count": 2,
     "order": 281
   },
   {
     "name": "Charles Baudelaire",
     "slug": "charles-baudelaire",
-    "count": 2,
+    "count": 3,
     "order": 282
   },
   {
@@ -1748,7 +1748,7 @@
   {
     "name": "Winston Churchill",
     "slug": "winston-churchill",
-    "count": 6,
+    "count": 7,
     "order": 292
   },
   {
@@ -1760,7 +1760,7 @@
   {
     "name": "Karl Marx",
     "slug": "karl-marx",
-    "count": 3,
+    "count": 5,
     "order": 294
   },
   {
@@ -1880,7 +1880,7 @@
   {
     "name": "Richard Wagner",
     "slug": "richard-wagner",
-    "count": 7,
+    "count": 8,
     "order": 314
   },
   {
@@ -1904,7 +1904,7 @@
   {
     "name": "Ivan Turgenev",
     "slug": "ivan-turgenev",
-    "count": 1,
+    "count": 2,
     "order": 318
   },
   {
@@ -2036,7 +2036,7 @@
   {
     "name": "Georg Wilhelm Friedrich Hegel",
     "slug": "georg-wilhelm-friedrich-hegel",
-    "count": 1,
+    "count": 2,
     "order": 340
   },
   {
@@ -2090,7 +2090,7 @@
   {
     "name": "Alexander Pushkin",
     "slug": "alexander-pushkin",
-    "count": 1,
+    "count": 2,
     "order": 349
   },
   {
@@ -2150,13 +2150,13 @@
   {
     "name": "Giuseppe Mazzini",
     "slug": "giuseppe-mazzini",
-    "count": 1,
+    "count": 2,
     "order": 359
   },
   {
     "name": "Klemens von Metternich",
     "slug": "klemens-von-metternich",
-    "count": 1,
+    "count": 3,
     "order": 360
   },
   {
@@ -3368,7 +3368,7 @@
   {
     "name": "Catherine the Great",
     "slug": "catherine-the-great",
-    "count": 4,
+    "count": 5,
     "order": 562
   },
   {
@@ -3398,19 +3398,19 @@
   {
     "name": "Louis XV of France",
     "slug": "louis-xv-of-france",
-    "count": 2,
+    "count": 5,
     "order": 567
   },
   {
     "name": "Maria Theresa",
     "slug": "maria-theresa",
-    "count": 2,
+    "count": 6,
     "order": 568
   },
   {
     "name": "Joseph II, Holy Roman Emperor",
     "slug": "joseph-ii-holy-roman-emperor",
-    "count": 1,
+    "count": 3,
     "order": 569
   },
   {
@@ -3418,5 +3418,179 @@
     "slug": "christoph-willibald-gluck",
     "count": 1,
     "order": 570
+  },
+  {
+    "name": "Pietro Metastasio",
+    "slug": "pietro-metastasio",
+    "count": 1,
+    "order": 571
+  },
+  {
+    "name": "Antonio Vivaldi",
+    "slug": "antonio-vivaldi",
+    "count": 2,
+    "order": 572
+  },
+  {
+    "name": "Arcangelo Corelli",
+    "slug": "arcangelo-corelli",
+    "count": 1,
+    "order": 573
+  },
+  {
+    "name": "Alessandro Scarlatti",
+    "slug": "alessandro-scarlatti",
+    "count": 1,
+    "order": 574
+  },
+  {
+    "name": "Domenico Scarlatti",
+    "slug": "domenico-scarlatti",
+    "count": 1,
+    "order": 575
+  },
+  {
+    "name": "Farinelli",
+    "slug": "farinelli",
+    "count": 1,
+    "order": 576
+  },
+  {
+    "name": "Philip V of Spain",
+    "slug": "philip-v-of-spain",
+    "count": 2,
+    "order": 577
+  },
+  {
+    "name": "The Duke of Marlborough",
+    "slug": "duke-of-marlborough",
+    "count": 3,
+    "order": 578
+  },
+  {
+    "name": "William III of England",
+    "slug": "william-iii-of-england",
+    "count": 4,
+    "order": 579
+  },
+  {
+    "name": "James II of England",
+    "slug": "james-ii-of-england",
+    "count": 4,
+    "order": 580
+  },
+  {
+    "name": "Queen Anne",
+    "slug": "queen-anne-of-great-britain",
+    "count": 2,
+    "order": 581
+  },
+  {
+    "name": "Mary II of England",
+    "slug": "mary-ii-of-england",
+    "count": 1,
+    "order": 582
+  },
+  {
+    "name": "Mary of Modena",
+    "slug": "mary-of-modena",
+    "count": 1,
+    "order": 583
+  },
+  {
+    "name": "Charles Edward Stuart",
+    "slug": "charles-edward-stuart",
+    "count": 2,
+    "order": 584
+  },
+  {
+    "name": "John III Sobieski",
+    "slug": "john-iii-sobieski",
+    "count": 1,
+    "order": 585
+  },
+  {
+    "name": "Leopold I, Holy Roman Emperor",
+    "slug": "leopold-i-holy-roman-emperor",
+    "count": 2,
+    "order": 586
+  },
+  {
+    "name": "Prince Eugene of Savoy",
+    "slug": "prince-eugene-of-savoy",
+    "count": 2,
+    "order": 587
+  },
+  {
+    "name": "Charles VI, Holy Roman Emperor",
+    "slug": "charles-vi-holy-roman-emperor",
+    "count": 2,
+    "order": 588
+  },
+  {
+    "name": "Francis I, Holy Roman Emperor",
+    "slug": "francis-i-holy-roman-emperor",
+    "count": 1,
+    "order": 589
+  },
+  {
+    "name": "Leopold II, Holy Roman Emperor",
+    "slug": "leopold-ii-holy-roman-emperor",
+    "count": 1,
+    "order": 590
+  },
+  {
+    "name": "Francis II, Holy Roman Emperor",
+    "slug": "francis-ii-holy-roman-emperor",
+    "count": 1,
+    "order": 591
+  },
+  {
+    "name": "Alexander I of Russia",
+    "slug": "alexander-i-of-russia",
+    "count": 1,
+    "order": 592
+  },
+  {
+    "name": "Nicholas I of Russia",
+    "slug": "nicholas-i-of-russia",
+    "count": 1,
+    "order": 593
+  },
+  {
+    "name": "Franz Joseph I of Austria",
+    "slug": "franz-joseph-i-of-austria",
+    "count": 2,
+    "order": 594
+  },
+  {
+    "name": "Archduke Franz Ferdinand",
+    "slug": "archduke-franz-ferdinand",
+    "count": 2,
+    "order": 595
+  },
+  {
+    "name": "Gavrilo Princip",
+    "slug": "gavrilo-princip",
+    "count": 1,
+    "order": 596
+  },
+  {
+    "name": "Mikhail Bakunin",
+    "slug": "mikhail-bakunin",
+    "count": 1,
+    "order": 597
+  },
+  {
+    "name": "Pierre-Joseph Proudhon",
+    "slug": "pierre-joseph-proudhon",
+    "count": 1,
+    "order": 598
+  },
+  {
+    "name": "Gustave Courbet",
+    "slug": "gustave-courbet",
+    "count": 1,
+    "order": 599
   }
 ]
