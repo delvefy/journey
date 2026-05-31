@@ -1106,7 +1106,7 @@
   {
     "name": "Isaac Newton",
     "slug": "isaac-newton",
-    "count": 6,
+    "count": 7,
     "order": 185
   },
   {
@@ -1166,13 +1166,13 @@
   {
     "name": "George Washington",
     "slug": "george-washington",
-    "count": 9,
+    "count": 11,
     "order": 195
   },
   {
     "name": "Thomas Jefferson",
     "slug": "thomas-jefferson",
-    "count": 8,
+    "count": 9,
     "order": 196
   },
   {
@@ -1184,7 +1184,7 @@
   {
     "name": "Ludwig van Beethoven",
     "slug": "ludwig-van-beethoven",
-    "count": 7,
+    "count": 9,
     "order": 198
   },
   {
@@ -1214,7 +1214,7 @@
   {
     "name": "Johann Wolfgang von Goethe",
     "slug": "johann-wolfgang-von-goethe",
-    "count": 4,
+    "count": 7,
     "order": 203
   },
   {
@@ -1262,13 +1262,13 @@
   {
     "name": "John Adams",
     "slug": "john-adams",
-    "count": 3,
+    "count": 5,
     "order": 211
   },
   {
     "name": "Alexander Hamilton",
     "slug": "alexander-hamilton",
-    "count": 2,
+    "count": 3,
     "order": 212
   },
   {
@@ -1280,7 +1280,7 @@
   {
     "name": "James Monroe",
     "slug": "james-monroe",
-    "count": 1,
+    "count": 2,
     "order": 214
   },
   {
@@ -1622,7 +1622,7 @@
   {
     "name": "Victor Hugo",
     "slug": "victor-hugo",
-    "count": 6,
+    "count": 7,
     "order": 271
   },
   {
@@ -1634,13 +1634,13 @@
   {
     "name": "Honoré de Balzac",
     "slug": "honore-de-balzac",
-    "count": 2,
+    "count": 3,
     "order": 273
   },
   {
     "name": "Gustave Flaubert",
     "slug": "gustave-flaubert",
-    "count": 1,
+    "count": 2,
     "order": 274
   },
   {
@@ -1718,7 +1718,7 @@
   {
     "name": "Mark Twain",
     "slug": "mark-twain",
-    "count": 1,
+    "count": 3,
     "order": 287
   },
   {
@@ -1732,5 +1732,305 @@
     "slug": "thomas-edison",
     "count": 1,
     "order": 289
+  },
+  {
+    "name": "Henry Ford",
+    "slug": "henry-ford",
+    "count": 1,
+    "order": 290
+  },
+  {
+    "name": "Adolf Hitler",
+    "slug": "adolf-hitler",
+    "count": 4,
+    "order": 291
+  },
+  {
+    "name": "Winston Churchill",
+    "slug": "winston-churchill",
+    "count": 6,
+    "order": 292
+  },
+  {
+    "name": "Joseph Stalin",
+    "slug": "joseph-stalin",
+    "count": 4,
+    "order": 293
+  },
+  {
+    "name": "Karl Marx",
+    "slug": "karl-marx",
+    "count": 1,
+    "order": 294
+  },
+  {
+    "name": "Charles Darwin",
+    "slug": "charles-darwin",
+    "count": 2,
+    "order": 295
+  },
+  {
+    "name": "Thomas Henry Huxley",
+    "slug": "thomas-henry-huxley",
+    "count": 1,
+    "order": 296
+  },
+  {
+    "name": "Aldous Huxley",
+    "slug": "aldous-huxley",
+    "count": 1,
+    "order": 297
+  },
+  {
+    "name": "Bertrand Russell",
+    "slug": "bertrand-russell",
+    "count": 2,
+    "order": 298
+  },
+  {
+    "name": "Albert Einstein",
+    "slug": "albert-einstein",
+    "count": 7,
+    "order": 299
+  },
+  {
+    "name": "Marie Curie",
+    "slug": "marie-curie",
+    "count": 2,
+    "order": 300
+  },
+  {
+    "name": "Ernest Rutherford",
+    "slug": "ernest-rutherford",
+    "count": 2,
+    "order": 301
+  },
+  {
+    "name": "Niels Bohr",
+    "slug": "niels-bohr",
+    "count": 2,
+    "order": 302
+  },
+  {
+    "name": "Werner Heisenberg",
+    "slug": "werner-heisenberg",
+    "count": 1,
+    "order": 303
+  },
+  {
+    "name": "J. Robert Oppenheimer",
+    "slug": "j-robert-oppenheimer",
+    "count": 1,
+    "order": 304
+  },
+  {
+    "name": "Harry Truman",
+    "slug": "harry-truman",
+    "count": 1,
+    "order": 305
+  },
+  {
+    "name": "Franklin D. Roosevelt",
+    "slug": "franklin-d-roosevelt",
+    "count": 2,
+    "order": 306
+  },
+  {
+    "name": "Theodore Roosevelt",
+    "slug": "theodore-roosevelt",
+    "count": 1,
+    "order": 307
+  },
+  {
+    "name": "Woodrow Wilson",
+    "slug": "woodrow-wilson",
+    "count": 1,
+    "order": 308
+  },
+  {
+    "name": "Sigmund Freud",
+    "slug": "sigmund-freud",
+    "count": 2,
+    "order": 309
+  },
+  {
+    "name": "Carl Jung",
+    "slug": "carl-jung",
+    "count": 2,
+    "order": 310
+  },
+  {
+    "name": "Hermann Hesse",
+    "slug": "hermann-hesse",
+    "count": 1,
+    "order": 311
+  },
+  {
+    "name": "Thomas Mann",
+    "slug": "thomas-mann",
+    "count": 1,
+    "order": 312
+  },
+  {
+    "name": "Friedrich Nietzsche",
+    "slug": "friedrich-nietzsche",
+    "count": 1,
+    "order": 313
+  },
+  {
+    "name": "Richard Wagner",
+    "slug": "richard-wagner",
+    "count": 1,
+    "order": 314
+  },
+  {
+    "name": "Franz Liszt",
+    "slug": "franz-liszt",
+    "count": 2,
+    "order": 315
+  },
+  {
+    "name": "Frédéric Chopin",
+    "slug": "frederic-chopin",
+    "count": 2,
+    "order": 316
+  },
+  {
+    "name": "George Sand",
+    "slug": "george-sand",
+    "count": 1,
+    "order": 317
+  },
+  {
+    "name": "Ivan Turgenev",
+    "slug": "ivan-turgenev",
+    "count": 1,
+    "order": 318
+  },
+  {
+    "name": "Leo Tolstoy",
+    "slug": "leo-tolstoy",
+    "count": 1,
+    "order": 319
+  },
+  {
+    "name": "Mahatma Gandhi",
+    "slug": "mahatma-gandhi",
+    "count": 2,
+    "order": 320
+  },
+  {
+    "name": "Martin Luther King Jr.",
+    "slug": "martin-luther-king-jr",
+    "count": 1,
+    "order": 321
+  },
+  {
+    "name": "Abraham Lincoln",
+    "slug": "abraham-lincoln",
+    "count": 4,
+    "order": 322
+  },
+  {
+    "name": "Ulysses S. Grant",
+    "slug": "ulysses-s-grant",
+    "count": 2,
+    "order": 323
+  },
+  {
+    "name": "Robert E. Lee",
+    "slug": "robert-e-lee",
+    "count": 3,
+    "order": 324
+  },
+  {
+    "name": "Stonewall Jackson",
+    "slug": "stonewall-jackson",
+    "count": 1,
+    "order": 325
+  },
+  {
+    "name": "Jefferson Davis",
+    "slug": "jefferson-davis",
+    "count": 1,
+    "order": 326
+  },
+  {
+    "name": "John C. Calhoun",
+    "slug": "john-c-calhoun",
+    "count": 1,
+    "order": 327
+  },
+  {
+    "name": "Andrew Jackson",
+    "slug": "andrew-jackson",
+    "count": 2,
+    "order": 328
+  },
+  {
+    "name": "Henry Clay",
+    "slug": "henry-clay",
+    "count": 1,
+    "order": 329
+  },
+  {
+    "name": "John Quincy Adams",
+    "slug": "john-quincy-adams",
+    "count": 1,
+    "order": 330
+  },
+  {
+    "name": "Daniel Webster",
+    "slug": "daniel-webster",
+    "count": 1,
+    "order": 331
+  },
+  {
+    "name": "John Marshall",
+    "slug": "john-marshall",
+    "count": 1,
+    "order": 332
+  },
+  {
+    "name": "Aaron Burr",
+    "slug": "aaron-burr",
+    "count": 1,
+    "order": 333
+  },
+  {
+    "name": "Jeremy Bentham",
+    "slug": "jeremy-bentham",
+    "count": 1,
+    "order": 334
+  },
+  {
+    "name": "John Stuart Mill",
+    "slug": "john-stuart-mill",
+    "count": 1,
+    "order": 335
+  },
+  {
+    "name": "Thomas Carlyle",
+    "slug": "thomas-carlyle",
+    "count": 1,
+    "order": 336
+  },
+  {
+    "name": "Charles Dickens",
+    "slug": "charles-dickens",
+    "count": 2,
+    "order": 337
+  },
+  {
+    "name": "Hans Christian Andersen",
+    "slug": "hans-christian-andersen",
+    "count": 1,
+    "order": 338
+  },
+  {
+    "name": "Søren Kierkegaard",
+    "slug": "soren-kierkegaard",
+    "count": 1,
+    "order": 339
   }
 ]
