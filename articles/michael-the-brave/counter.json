@@ -50,7 +50,7 @@
   {
     "name": "William Shakespeare",
     "slug": "william-shakespeare",
-    "count": 14,
+    "count": 17,
     "order": 9
   },
   {
@@ -98,7 +98,7 @@
   {
     "name": "Erasmus of Rotterdam",
     "slug": "erasmus-of-rotterdam",
-    "count": 5,
+    "count": 6,
     "order": 17
   },
   {
@@ -170,7 +170,7 @@
   {
     "name": "Ferdinand Magellan",
     "slug": "ferdinand-magellan",
-    "count": 2,
+    "count": 3,
     "order": 29
   },
   {
@@ -350,7 +350,7 @@
   {
     "name": "Joan of Arc",
     "slug": "joan-of-arc",
-    "count": 3,
+    "count": 4,
     "order": 59
   },
   {
@@ -380,13 +380,13 @@
   {
     "name": "Geoffrey Chaucer",
     "slug": "geoffrey-chaucer",
-    "count": 6,
+    "count": 7,
     "order": 64
   },
   {
     "name": "Petrarch",
     "slug": "petrarch",
-    "count": 6,
+    "count": 8,
     "order": 65
   },
   {
@@ -830,7 +830,7 @@
   {
     "name": "Pope Boniface VIII",
     "slug": "pope-boniface-viii",
-    "count": 1,
+    "count": 2,
     "order": 139
   },
   {
@@ -920,13 +920,13 @@
   {
     "name": "Thomas Aquinas",
     "slug": "thomas-aquinas",
-    "count": 2,
+    "count": 3,
     "order": 154
   },
   {
     "name": "Aristotle",
     "slug": "aristotle",
-    "count": 22,
+    "count": 23,
     "order": 155
   },
   {
@@ -956,7 +956,7 @@
   {
     "name": "Cicero",
     "slug": "cicero",
-    "count": 17,
+    "count": 18,
     "order": 160
   },
   {
@@ -1178,13 +1178,13 @@
   {
     "name": "Napoleon Bonaparte",
     "slug": "napoleon-bonaparte",
-    "count": 17,
+    "count": 18,
     "order": 197
   },
   {
     "name": "Ludwig van Beethoven",
     "slug": "ludwig-van-beethoven",
-    "count": 14,
+    "count": 15,
     "order": 198
   },
   {
@@ -1220,13 +1220,13 @@
   {
     "name": "Friedrich Schiller",
     "slug": "friedrich-schiller",
-    "count": 1,
+    "count": 2,
     "order": 204
   },
   {
     "name": "Immanuel Kant",
     "slug": "immanuel-kant",
-    "count": 4,
+    "count": 5,
     "order": 205
   },
   {
@@ -1244,7 +1244,7 @@
   {
     "name": "Marie Antoinette",
     "slug": "marie-antoinette",
-    "count": 12,
+    "count": 13,
     "order": 208
   },
   {
@@ -1298,7 +1298,7 @@
   {
     "name": "Edmund Burke",
     "slug": "edmund-burke",
-    "count": 4,
+    "count": 6,
     "order": 217
   },
   {
@@ -1322,7 +1322,7 @@
   {
     "name": "Samuel Johnson",
     "slug": "samuel-johnson",
-    "count": 7,
+    "count": 8,
     "order": 221
   },
   {
@@ -1532,13 +1532,13 @@
   {
     "name": "Lord Byron",
     "slug": "lord-byron",
-    "count": 5,
+    "count": 10,
     "order": 256
   },
   {
     "name": "Percy Bysshe Shelley",
     "slug": "percy-bysshe-shelley",
-    "count": 2,
+    "count": 3,
     "order": 257
   },
   {
@@ -1562,7 +1562,7 @@
   {
     "name": "John Milton",
     "slug": "john-milton",
-    "count": 1,
+    "count": 2,
     "order": 261
   },
   {
@@ -1574,13 +1574,13 @@
   {
     "name": "Virgil",
     "slug": "virgil",
-    "count": 7,
+    "count": 8,
     "order": 263
   },
   {
     "name": "Homer",
     "slug": "homer",
-    "count": 4,
+    "count": 6,
     "order": 264
   },
   {
@@ -1598,7 +1598,7 @@
   {
     "name": "Queen Victoria",
     "slug": "queen-victoria",
-    "count": 7,
+    "count": 16,
     "order": 267
   },
   {
@@ -1610,25 +1610,25 @@
   {
     "name": "Otto von Bismarck",
     "slug": "otto-von-bismarck",
-    "count": 2,
+    "count": 6,
     "order": 269
   },
   {
     "name": "Napoleon III",
     "slug": "napoleon-iii",
-    "count": 5,
+    "count": 7,
     "order": 270
   },
   {
     "name": "Victor Hugo",
     "slug": "victor-hugo",
-    "count": 9,
+    "count": 11,
     "order": 271
   },
   {
     "name": "Alexandre Dumas",
     "slug": "alexandre-dumas",
-    "count": 3,
+    "count": 4,
     "order": 272
   },
   {
@@ -1646,7 +1646,7 @@
   {
     "name": "Émile Zola",
     "slug": "emile-zola",
-    "count": 1,
+    "count": 2,
     "order": 275
   },
   {
@@ -1706,19 +1706,19 @@
   {
     "name": "Oscar Wilde",
     "slug": "oscar-wilde",
-    "count": 1,
+    "count": 2,
     "order": 285
   },
   {
     "name": "George Bernard Shaw",
     "slug": "george-bernard-shaw",
-    "count": 1,
+    "count": 2,
     "order": 286
   },
   {
     "name": "Mark Twain",
     "slug": "mark-twain",
-    "count": 4,
+    "count": 8,
     "order": 287
   },
   {
@@ -1742,19 +1742,19 @@
   {
     "name": "Adolf Hitler",
     "slug": "adolf-hitler",
-    "count": 4,
+    "count": 6,
     "order": 291
   },
   {
     "name": "Winston Churchill",
     "slug": "winston-churchill",
-    "count": 12,
+    "count": 21,
     "order": 292
   },
   {
     "name": "Joseph Stalin",
     "slug": "joseph-stalin",
-    "count": 6,
+    "count": 10,
     "order": 293
   },
   {
@@ -1784,13 +1784,13 @@
   {
     "name": "Bertrand Russell",
     "slug": "bertrand-russell",
-    "count": 7,
+    "count": 9,
     "order": 298
   },
   {
     "name": "Albert Einstein",
     "slug": "albert-einstein",
-    "count": 12,
+    "count": 16,
     "order": 299
   },
   {
@@ -1832,25 +1832,25 @@
   {
     "name": "Franklin D. Roosevelt",
     "slug": "franklin-d-roosevelt",
-    "count": 3,
+    "count": 8,
     "order": 306
   },
   {
     "name": "Theodore Roosevelt",
     "slug": "theodore-roosevelt",
-    "count": 4,
+    "count": 10,
     "order": 307
   },
   {
     "name": "Woodrow Wilson",
     "slug": "woodrow-wilson",
-    "count": 1,
+    "count": 5,
     "order": 308
   },
   {
     "name": "Sigmund Freud",
     "slug": "sigmund-freud",
-    "count": 3,
+    "count": 5,
     "order": 309
   },
   {
@@ -1862,13 +1862,13 @@
   {
     "name": "Hermann Hesse",
     "slug": "hermann-hesse",
-    "count": 1,
+    "count": 3,
     "order": 311
   },
   {
     "name": "Thomas Mann",
     "slug": "thomas-mann",
-    "count": 1,
+    "count": 2,
     "order": 312
   },
   {
@@ -1904,37 +1904,37 @@
   {
     "name": "Ivan Turgenev",
     "slug": "ivan-turgenev",
-    "count": 2,
+    "count": 3,
     "order": 318
   },
   {
     "name": "Leo Tolstoy",
     "slug": "leo-tolstoy",
-    "count": 2,
+    "count": 7,
     "order": 319
   },
   {
     "name": "Mahatma Gandhi",
     "slug": "mahatma-gandhi",
-    "count": 5,
+    "count": 10,
     "order": 320
   },
   {
     "name": "Martin Luther King Jr.",
     "slug": "martin-luther-king-jr",
-    "count": 1,
+    "count": 2,
     "order": 321
   },
   {
     "name": "Abraham Lincoln",
     "slug": "abraham-lincoln",
-    "count": 5,
+    "count": 6,
     "order": 322
   },
   {
     "name": "Ulysses S. Grant",
     "slug": "ulysses-s-grant",
-    "count": 2,
+    "count": 5,
     "order": 323
   },
   {
@@ -2000,13 +2000,13 @@
   {
     "name": "Jeremy Bentham",
     "slug": "jeremy-bentham",
-    "count": 1,
+    "count": 2,
     "order": 334
   },
   {
     "name": "John Stuart Mill",
     "slug": "john-stuart-mill",
-    "count": 1,
+    "count": 3,
     "order": 335
   },
   {
@@ -2018,7 +2018,7 @@
   {
     "name": "Charles Dickens",
     "slug": "charles-dickens",
-    "count": 3,
+    "count": 7,
     "order": 337
   },
   {
@@ -2060,13 +2060,13 @@
   {
     "name": "Virginia Woolf",
     "slug": "virginia-woolf",
-    "count": 1,
+    "count": 6,
     "order": 344
   },
   {
     "name": "James Joyce",
     "slug": "james-joyce",
-    "count": 2,
+    "count": 5,
     "order": 345
   },
   {
@@ -2084,7 +2084,7 @@
   {
     "name": "Fyodor Dostoevsky",
     "slug": "fyodor-dostoevsky",
-    "count": 1,
+    "count": 2,
     "order": 348
   },
   {
@@ -2096,7 +2096,7 @@
   {
     "name": "Pyotr Tchaikovsky",
     "slug": "pyotr-tchaikovsky",
-    "count": 1,
+    "count": 2,
     "order": 350
   },
   {
@@ -2174,7 +2174,7 @@
   {
     "name": "William Pitt the Younger",
     "slug": "william-pitt-the-younger",
-    "count": 2,
+    "count": 3,
     "order": 363
   },
   {
@@ -3248,7 +3248,7 @@
   {
     "name": "Ovid",
     "slug": "ovid",
-    "count": 2,
+    "count": 3,
     "order": 542
   },
   {
@@ -3356,7 +3356,7 @@
   {
     "name": "John Locke",
     "slug": "john-locke",
-    "count": 2,
+    "count": 3,
     "order": 560
   },
   {
@@ -3554,7 +3554,7 @@
   {
     "name": "Nicholas I of Russia",
     "slug": "nicholas-i-of-russia",
-    "count": 1,
+    "count": 2,
     "order": 593
   },
   {
@@ -3578,7 +3578,7 @@
   {
     "name": "Mikhail Bakunin",
     "slug": "mikhail-bakunin",
-    "count": 1,
+    "count": 2,
     "order": 597
   },
   {
@@ -3656,7 +3656,7 @@
   {
     "name": "J.M.W. Turner",
     "slug": "j-m-w-turner",
-    "count": 5,
+    "count": 6,
     "order": 610
   },
   {
@@ -3788,7 +3788,7 @@
   {
     "name": "Margaret Thatcher",
     "slug": "margaret-thatcher",
-    "count": 2,
+    "count": 5,
     "order": 632
   },
   {
@@ -3800,7 +3800,7 @@
   {
     "name": "Diana, Princess of Wales",
     "slug": "diana-princess-of-wales",
-    "count": 3,
+    "count": 5,
     "order": 634
   },
   {
@@ -3824,13 +3824,13 @@
   {
     "name": "Jawaharlal Nehru",
     "slug": "jawaharlal-nehru",
-    "count": 2,
+    "count": 4,
     "order": 638
   },
   {
     "name": "Indira Gandhi",
     "slug": "indira-gandhi",
-    "count": 1,
+    "count": 2,
     "order": 639
   },
   {
@@ -3848,13 +3848,13 @@
   {
     "name": "Vladimir Lenin",
     "slug": "vladimir-lenin",
-    "count": 2,
+    "count": 4,
     "order": 642
   },
   {
     "name": "Leon Trotsky",
     "slug": "leon-trotsky",
-    "count": 3,
+    "count": 4,
     "order": 643
   },
   {
@@ -3878,7 +3878,7 @@
   {
     "name": "John D. Rockefeller",
     "slug": "john-d-rockefeller",
-    "count": 3,
+    "count": 4,
     "order": 647
   },
   {
@@ -3890,7 +3890,421 @@
   {
     "name": "J.P. Morgan",
     "slug": "j-p-morgan",
-    "count": 1,
+    "count": 4,
     "order": 649
+  },
+  {
+    "name": "Cornelius Vanderbilt",
+    "slug": "cornelius-vanderbilt",
+    "count": 3,
+    "order": 650
+  },
+  {
+    "name": "Jay Gould",
+    "slug": "jay-gould",
+    "count": 2,
+    "order": 651
+  },
+  {
+    "name": "Jim Fisk",
+    "slug": "jim-fisk",
+    "count": 1,
+    "order": 652
+  },
+  {
+    "name": "William M. Tweed",
+    "slug": "william-m-tweed",
+    "count": 2,
+    "order": 653
+  },
+  {
+    "name": "Thomas Nast",
+    "slug": "thomas-nast",
+    "count": 1,
+    "order": 654
+  },
+  {
+    "name": "Grover Cleveland",
+    "slug": "grover-cleveland",
+    "count": 1,
+    "order": 655
+  },
+  {
+    "name": "William Jennings Bryan",
+    "slug": "william-jennings-bryan",
+    "count": 1,
+    "order": 656
+  },
+  {
+    "name": "William McKinley",
+    "slug": "william-mckinley",
+    "count": 1,
+    "order": 657
+  },
+  {
+    "name": "William Randolph Hearst",
+    "slug": "william-randolph-hearst",
+    "count": 1,
+    "order": 658
+  },
+  {
+    "name": "Orson Welles",
+    "slug": "orson-welles",
+    "count": 1,
+    "order": 659
+  },
+  {
+    "name": "Charlie Chaplin",
+    "slug": "charlie-chaplin",
+    "count": 2,
+    "order": 660
+  },
+  {
+    "name": "Buster Keaton",
+    "slug": "buster-keaton",
+    "count": 1,
+    "order": 661
+  },
+  {
+    "name": "Samuel Beckett",
+    "slug": "samuel-beckett",
+    "count": 1,
+    "order": 662
+  },
+  {
+    "name": "Dante Alighieri",
+    "slug": "dante-alighieri",
+    "count": 2,
+    "order": 663
+  },
+  {
+    "name": "Giovanni Boccaccio",
+    "slug": "giovanni-boccaccio",
+    "count": 1,
+    "order": 664
+  },
+  {
+    "name": "John Keats",
+    "slug": "john-keats",
+    "count": 4,
+    "order": 665
+  },
+  {
+    "name": "William Wordsworth",
+    "slug": "william-wordsworth",
+    "count": 4,
+    "order": 666
+  },
+  {
+    "name": "Samuel Taylor Coleridge",
+    "slug": "samuel-taylor-coleridge",
+    "count": 3,
+    "order": 667
+  },
+  {
+    "name": "Charles Lamb",
+    "slug": "charles-lamb",
+    "count": 1,
+    "order": 668
+  },
+  {
+    "name": "William Hazlitt",
+    "slug": "william-hazlitt",
+    "count": 1,
+    "order": 669
+  },
+  {
+    "name": "Walter Scott",
+    "slug": "walter-scott",
+    "count": 2,
+    "order": 670
+  },
+  {
+    "name": "Jane Austen",
+    "slug": "jane-austen",
+    "count": 2,
+    "order": 671
+  },
+  {
+    "name": "Charlotte Brontë",
+    "slug": "charlotte-bronte",
+    "count": 4,
+    "order": 672
+  },
+  {
+    "name": "Emily Brontë",
+    "slug": "emily-bronte",
+    "count": 2,
+    "order": 673
+  },
+  {
+    "name": "Anne Brontë",
+    "slug": "anne-bronte",
+    "count": 1,
+    "order": 674
+  },
+  {
+    "name": "Elizabeth Gaskell",
+    "slug": "elizabeth-gaskell",
+    "count": 1,
+    "order": 675
+  },
+  {
+    "name": "Florence Nightingale",
+    "slug": "florence-nightingale",
+    "count": 1,
+    "order": 676
+  },
+  {
+    "name": "William Gladstone",
+    "slug": "william-gladstone",
+    "count": 3,
+    "order": 677
+  },
+  {
+    "name": "Benjamin Disraeli",
+    "slug": "benjamin-disraeli",
+    "count": 3,
+    "order": 678
+  },
+  {
+    "name": "Alexander II of Russia",
+    "slug": "alexander-ii-of-russia",
+    "count": 2,
+    "order": 679
+  },
+  {
+    "name": "Alexander III of Russia",
+    "slug": "alexander-iii-of-russia",
+    "count": 2,
+    "order": 680
+  },
+  {
+    "name": "Nicholas II of Russia",
+    "slug": "nicholas-ii-of-russia",
+    "count": 6,
+    "order": 681
+  },
+  {
+    "name": "Grigori Rasputin",
+    "slug": "grigori-rasputin",
+    "count": 2,
+    "order": 682
+  },
+  {
+    "name": "Alexandra Feodorovna",
+    "slug": "alexandra-feodorovna",
+    "count": 1,
+    "order": 683
+  },
+  {
+    "name": "Wilhelm II of Germany",
+    "slug": "wilhelm-ii-of-germany",
+    "count": 3,
+    "order": 684
+  },
+  {
+    "name": "Edward VII",
+    "slug": "edward-vii",
+    "count": 2,
+    "order": 685
+  },
+  {
+    "name": "George V",
+    "slug": "george-v",
+    "count": 1,
+    "order": 686
+  },
+  {
+    "name": "Elizabeth II",
+    "slug": "elizabeth-ii",
+    "count": 2,
+    "order": 687
+  },
+  {
+    "name": "Nelson Mandela",
+    "slug": "nelson-mandela",
+    "count": 3,
+    "order": 688
+  },
+  {
+    "name": "Barack Obama",
+    "slug": "barack-obama",
+    "count": 6,
+    "order": 689
+  },
+  {
+    "name": "Donald Trump",
+    "slug": "donald-trump",
+    "count": 5,
+    "order": 690
+  },
+  {
+    "name": "Vladimir Putin",
+    "slug": "vladimir-putin",
+    "count": 3,
+    "order": 691
+  },
+  {
+    "name": "Mikhail Gorbachev",
+    "slug": "mikhail-gorbachev",
+    "count": 4,
+    "order": 692
+  },
+  {
+    "name": "Ronald Reagan",
+    "slug": "ronald-reagan",
+    "count": 3,
+    "order": 693
+  },
+  {
+    "name": "Pope John Paul II",
+    "slug": "pope-john-paul-ii",
+    "count": 4,
+    "order": 694
+  },
+  {
+    "name": "Mother Teresa",
+    "slug": "mother-teresa",
+    "count": 2,
+    "order": 695
+  },
+  {
+    "name": "Pope Francis",
+    "slug": "pope-francis",
+    "count": 2,
+    "order": 696
+  },
+  {
+    "name": "Pope Benedict XVI",
+    "slug": "pope-benedict-xvi",
+    "count": 1,
+    "order": 697
+  },
+  {
+    "name": "Angela Merkel",
+    "slug": "angela-merkel",
+    "count": 2,
+    "order": 698
+  },
+  {
+    "name": "Helmut Kohl",
+    "slug": "helmut-kohl",
+    "count": 1,
+    "order": 699
+  },
+  {
+    "name": "Bill Clinton",
+    "slug": "bill-clinton",
+    "count": 1,
+    "order": 700
+  },
+  {
+    "name": "John F. Kennedy",
+    "slug": "john-f-kennedy",
+    "count": 2,
+    "order": 701
+  },
+  {
+    "name": "Dwight D. Eisenhower",
+    "slug": "dwight-d-eisenhower",
+    "count": 2,
+    "order": 702
+  },
+  {
+    "name": "Charles de Gaulle",
+    "slug": "charles-de-gaulle",
+    "count": 2,
+    "order": 703
+  },
+  {
+    "name": "Philippe Pétain",
+    "slug": "philippe-petain",
+    "count": 2,
+    "order": 704
+  },
+  {
+    "name": "Georges Clemenceau",
+    "slug": "georges-clemenceau",
+    "count": 2,
+    "order": 705
+  },
+  {
+    "name": "David Lloyd George",
+    "slug": "david-lloyd-george",
+    "count": 1,
+    "order": 706
+  },
+  {
+    "name": "Herbert Kitchener",
+    "slug": "herbert-kitchener",
+    "count": 1,
+    "order": 707
+  },
+  {
+    "name": "Cecil Rhodes",
+    "slug": "cecil-rhodes",
+    "count": 2,
+    "order": 708
+  },
+  {
+    "name": "Rudyard Kipling",
+    "slug": "rudyard-kipling",
+    "count": 2,
+    "order": 709
+  },
+  {
+    "name": "Robert Louis Stevenson",
+    "slug": "robert-louis-stevenson",
+    "count": 1,
+    "order": 710
+  },
+  {
+    "name": "Joseph Conrad",
+    "slug": "joseph-conrad",
+    "count": 2,
+    "order": 711
+  },
+  {
+    "name": "H. G. Wells",
+    "slug": "h-g-wells",
+    "count": 1,
+    "order": 712
+  },
+  {
+    "name": "Henry James",
+    "slug": "henry-james",
+    "count": 2,
+    "order": 713
+  },
+  {
+    "name": "T. S. Eliot",
+    "slug": "t-s-eliot",
+    "count": 2,
+    "order": 714
+  },
+  {
+    "name": "W. B. Yeats",
+    "slug": "w-b-yeats",
+    "count": 2,
+    "order": 715
+  },
+  {
+    "name": "Rabindranath Tagore",
+    "slug": "rabindranath-tagore",
+    "count": 2,
+    "order": 716
+  },
+  {
+    "name": "Romain Rolland",
+    "slug": "romain-rolland",
+    "count": 2,
+    "order": 717
+  },
+  {
+    "name": "Stefan Zweig",
+    "slug": "stefan-zweig",
+    "count": 1,
+    "order": 718
   }
 ]
