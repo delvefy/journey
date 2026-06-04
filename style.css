@@ -115,6 +115,18 @@ article p {
 a { color: var(--accent); }
 a:hover { text-decoration: none; }
 
+.back-links {
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  font-size: 1.05rem;
+}
+
+.back-links a {
+  color: #5a2a1d;
+  font-weight: bold;
+}
+
 .next-link {
   margin-top: 36px;
   padding-top: 18px;
@@ -124,7 +136,14 @@ a:hover { text-decoration: none; }
 
 .next-link a {
   display: inline-block;
+  color: #1a3a73;
   font-weight: bold;
+}
+
+.back-links + .next-link {
+  margin-top: 12px;
+  padding-top: 0;
+  border-top: none;
 }
 
 ol.roads {

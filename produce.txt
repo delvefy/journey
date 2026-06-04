@@ -303,9 +303,26 @@ PROCEDURE (one article)
    than a true dead end. Cross-era escapes are the rule, not the exception.
 
 7. Finalize the article we wrote in step 3: replace the next-link placeholder
-   with a real link:
-     <a href="<CANDIDATE.slug>.html"><CANDIDATE.name></a>
-   The target file does not need to exist yet — the link is forward-looking.
+   with the road's continuation block. The block has up to two paragraphs:
+
+   a. BACK-LINKS (existing connections) — one paragraph listing every in-MEM
+      neighbor whose count you incremented in step 6, in the order found (the
+      step-6 fame ranking, top to bottom). These are real edges of TARGET
+      whose articles already exist on this road, so we surface them to the
+      reader instead of letting the increment be invisible. Wrap with
+      class="back-links" so the stylesheet renders the links in dark
+      red-brown (the "existing road" color). Use plain comma-separated links.
+      OMIT the paragraph entirely if no in-MEM neighbors were incremented.
+
+   b. NEXT-LINK (the new road continuation) — one paragraph pointing at
+      CANDIDATE, the new entry just appended in step 4. Wrap with
+      class="next-link" so the stylesheet renders the link in dark blue
+      (the "new road" color). The target file does not need to exist yet —
+      the link is forward-looking.
+
+   Example final block when both paragraphs are present:
+     <p class="back-links">The road also leads back to <a href="x.html">X</a>, <a href="y.html">Y</a>.</p>
+     <p class="next-link">The road continues to <a href="<CANDIDATE.slug>.html"><CANDIDATE.name></a>.</p>
 
 8. Write articles/<SEED>/counter.json (pretty-printed, 2-space indent,
    trailing newline).
@@ -346,6 +363,9 @@ ARTICLE TEMPLATE (articles/<seed-slug>/<slug>.html)
     ...
     <p>...final paragraph...</p>
 
+    <!-- back-links: OMIT this paragraph entirely if step 6 incremented no
+         in-MEM neighbors. Otherwise list them in step-6 rank order. -->
+    <p class="back-links">The road also leads back to <a href="<IN-MEM-SLUG-1>.html"><IN-MEM NAME 1></a>, <a href="<IN-MEM-SLUG-2>.html"><IN-MEM NAME 2></a>.</p>
     <p class="next-link">The road continues to <a href="<CANDIDATE-SLUG>.html"><CANDIDATE NAME></a>.</p>
   </article>
 </main>
@@ -378,3 +398,10 @@ NOTES
 - The seed person is always article #1 on their own road (order=1). The
   seed's own next link points to whichever historical neighbor becomes
   CANDIDATE on the seed's iteration.
+- Continuation block coloring: the new-road link (class="next-link") is dark
+  blue; back-links to in-MEM neighbors (class="back-links") are dark
+  red-brown. Both classes are defined in style.css. Do NOT inline colors on
+  the <a> tags — always rely on the parent paragraph's class.
+- The back-links paragraph is OPTIONAL: omit it when step 6 incremented zero
+  in-MEM neighbors (i.e., CANDIDATE was at rank position 1). Never emit an
+  empty <p class="back-links"></p>.

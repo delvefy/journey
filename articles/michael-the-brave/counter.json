@@ -98,7 +98,7 @@
   {
     "name": "Erasmus of Rotterdam",
     "slug": "erasmus-of-rotterdam",
-    "count": 6,
+    "count": 7,
     "order": 17
   },
   {
@@ -1718,7 +1718,7 @@
   {
     "name": "Mark Twain",
     "slug": "mark-twain",
-    "count": 10,
+    "count": 11,
     "order": 287
   },
   {
@@ -1754,13 +1754,13 @@
   {
     "name": "Joseph Stalin",
     "slug": "joseph-stalin",
-    "count": 10,
+    "count": 11,
     "order": 293
   },
   {
     "name": "Karl Marx",
     "slug": "karl-marx",
-    "count": 12,
+    "count": 14,
     "order": 294
   },
   {
@@ -1778,7 +1778,7 @@
   {
     "name": "Aldous Huxley",
     "slug": "aldous-huxley",
-    "count": 1,
+    "count": 2,
     "order": 297
   },
   {
@@ -1874,7 +1874,7 @@
   {
     "name": "Friedrich Nietzsche",
     "slug": "friedrich-nietzsche",
-    "count": 5,
+    "count": 7,
     "order": 313
   },
   {
@@ -1922,7 +1922,7 @@
   {
     "name": "Martin Luther King Jr.",
     "slug": "martin-luther-king-jr",
-    "count": 3,
+    "count": 5,
     "order": 321
   },
   {
@@ -2018,7 +2018,7 @@
   {
     "name": "Charles Dickens",
     "slug": "charles-dickens",
-    "count": 7,
+    "count": 9,
     "order": 337
   },
   {
@@ -2066,7 +2066,7 @@
   {
     "name": "James Joyce",
     "slug": "james-joyce",
-    "count": 5,
+    "count": 6,
     "order": 345
   },
   {
@@ -2084,7 +2084,7 @@
   {
     "name": "Fyodor Dostoevsky",
     "slug": "fyodor-dostoevsky",
-    "count": 2,
+    "count": 4,
     "order": 348
   },
   {
@@ -3848,7 +3848,7 @@
   {
     "name": "Vladimir Lenin",
     "slug": "vladimir-lenin",
-    "count": 6,
+    "count": 7,
     "order": 642
   },
   {
@@ -4118,13 +4118,13 @@
   {
     "name": "Nelson Mandela",
     "slug": "nelson-mandela",
-    "count": 3,
+    "count": 4,
     "order": 688
   },
   {
     "name": "Barack Obama",
     "slug": "barack-obama",
-    "count": 6,
+    "count": 8,
     "order": 689
   },
   {
@@ -4274,7 +4274,7 @@
   {
     "name": "T. S. Eliot",
     "slug": "t-s-eliot",
-    "count": 2,
+    "count": 3,
     "order": 714
   },
   {
@@ -4400,13 +4400,13 @@
   {
     "name": "Ernest Hemingway",
     "slug": "ernest-hemingway",
-    "count": 1,
+    "count": 3,
     "order": 735
   },
   {
     "name": "Fidel Castro",
     "slug": "fidel-castro",
-    "count": 2,
+    "count": 3,
     "order": 736
   },
   {
@@ -4478,7 +4478,67 @@
   {
     "name": "Jonathan Swift",
     "slug": "jonathan-swift",
-    "count": 1,
+    "count": 2,
     "order": 748
+  },
+  {
+    "name": "George Orwell",
+    "slug": "george-orwell",
+    "count": 2,
+    "order": 749
+  },
+  {
+    "name": "Arthur Koestler",
+    "slug": "arthur-koestler",
+    "count": 1,
+    "order": 750
+  },
+  {
+    "name": "Jean-Paul Sartre",
+    "slug": "jean-paul-sartre",
+    "count": 1,
+    "order": 751
+  },
+  {
+    "name": "Albert Camus",
+    "slug": "albert-camus",
+    "count": 1,
+    "order": 752
+  },
+  {
+    "name": "Franz Kafka",
+    "slug": "franz-kafka",
+    "count": 1,
+    "order": 753
+  },
+  {
+    "name": "Gabriel García Márquez",
+    "slug": "gabriel-garcia-marquez",
+    "count": 1,
+    "order": 754
+  },
+  {
+    "name": "William Faulkner",
+    "slug": "william-faulkner",
+    "count": 1,
+    "order": 755
+  },
+  {
+    "name": "Toni Morrison",
+    "slug": "toni-morrison",
+    "count": 1,
+    "order": 756
+  },
+  {
+    "name": "Muhammad Ali",
+    "slug": "muhammad-ali",
+    "count": 2,
+    "order": 757
+  },
+  {
+    "name": "Malcolm X",
+    "slug": "malcolm-x",
+    "count": 1,
+    "order": 758
   }
 ]
