@@ -14,13 +14,13 @@
   {
     "name": "Johannes Kepler",
     "slug": "johannes-kepler",
-    "count": 5,
+    "count": 6,
     "order": 3
   },
   {
     "name": "Galileo Galilei",
     "slug": "galileo-galilei",
-    "count": 9,
+    "count": 10,
     "order": 4
   },
   {
@@ -50,7 +50,7 @@
   {
     "name": "William Shakespeare",
     "slug": "william-shakespeare",
-    "count": 17,
+    "count": 18,
     "order": 9
   },
   {
@@ -86,7 +86,7 @@
   {
     "name": "Charles V, Holy Roman Emperor",
     "slug": "charles-v-holy-roman-emperor",
-    "count": 24,
+    "count": 25,
     "order": 15
   },
   {
@@ -254,7 +254,7 @@
   {
     "name": "Maximilian I, Holy Roman Emperor",
     "slug": "maximilian-i-holy-roman-emperor",
-    "count": 7,
+    "count": 8,
     "order": 43
   },
   {
@@ -500,7 +500,7 @@
   {
     "name": "John Hunyadi",
     "slug": "john-hunyadi",
-    "count": 1,
+    "count": 3,
     "order": 84
   },
   {
@@ -512,7 +512,7 @@
   {
     "name": "Mehmed II",
     "slug": "mehmed-ii",
-    "count": 1,
+    "count": 4,
     "order": 86
   },
   {
@@ -530,7 +530,7 @@
   {
     "name": "Bessarion",
     "slug": "bessarion",
-    "count": 1,
+    "count": 2,
     "order": 89
   },
   {
@@ -884,7 +884,7 @@
   {
     "name": "Saladin",
     "slug": "saladin",
-    "count": 2,
+    "count": 3,
     "order": 148
   },
   {
@@ -896,7 +896,7 @@
   {
     "name": "Frederick II, Holy Roman Emperor",
     "slug": "frederick-ii-holy-roman-emperor",
-    "count": 1,
+    "count": 2,
     "order": 150
   },
   {
@@ -920,13 +920,13 @@
   {
     "name": "Thomas Aquinas",
     "slug": "thomas-aquinas",
-    "count": 3,
+    "count": 10,
     "order": 154
   },
   {
     "name": "Aristotle",
     "slug": "aristotle",
-    "count": 24,
+    "count": 32,
     "order": 155
   },
   {
@@ -998,25 +998,25 @@
   {
     "name": "Socrates",
     "slug": "socrates",
-    "count": 10,
+    "count": 11,
     "order": 167
   },
   {
     "name": "Plato",
     "slug": "plato",
-    "count": 25,
+    "count": 36,
     "order": 168
   },
   {
     "name": "Pythagoras",
     "slug": "pythagoras",
-    "count": 2,
+    "count": 3,
     "order": 169
   },
   {
     "name": "Euclid",
     "slug": "euclid",
-    "count": 4,
+    "count": 10,
     "order": 170
   },
   {
@@ -1040,13 +1040,13 @@
   {
     "name": "Ptolemy",
     "slug": "ptolemy",
-    "count": 1,
+    "count": 5,
     "order": 174
   },
   {
     "name": "Nicolaus Copernicus",
     "slug": "nicolaus-copernicus",
-    "count": 2,
+    "count": 4,
     "order": 175
   },
   {
@@ -1082,7 +1082,7 @@
   {
     "name": "René Descartes",
     "slug": "rene-descartes",
-    "count": 8,
+    "count": 9,
     "order": 181
   },
   {
@@ -1094,7 +1094,7 @@
   {
     "name": "Pierre de Fermat",
     "slug": "pierre-de-fermat",
-    "count": 1,
+    "count": 2,
     "order": 183
   },
   {
@@ -1112,7 +1112,7 @@
   {
     "name": "Gottfried Wilhelm Leibniz",
     "slug": "gottfried-wilhelm-leibniz",
-    "count": 6,
+    "count": 7,
     "order": 186
   },
   {
@@ -1178,7 +1178,7 @@
   {
     "name": "Napoleon Bonaparte",
     "slug": "napoleon-bonaparte",
-    "count": 20,
+    "count": 21,
     "order": 197
   },
   {
@@ -1214,7 +1214,7 @@
   {
     "name": "Johann Wolfgang von Goethe",
     "slug": "johann-wolfgang-von-goethe",
-    "count": 13,
+    "count": 15,
     "order": 203
   },
   {
@@ -1316,7 +1316,7 @@
   {
     "name": "Edward Gibbon",
     "slug": "edward-gibbon",
-    "count": 2,
+    "count": 3,
     "order": 220
   },
   {
@@ -1538,7 +1538,7 @@
   {
     "name": "Percy Bysshe Shelley",
     "slug": "percy-bysshe-shelley",
-    "count": 3,
+    "count": 4,
     "order": 257
   },
   {
@@ -1700,13 +1700,13 @@
   {
     "name": "Arthur Conan Doyle",
     "slug": "arthur-conan-doyle",
-    "count": 2,
+    "count": 3,
     "order": 284
   },
   {
     "name": "Oscar Wilde",
     "slug": "oscar-wilde",
-    "count": 2,
+    "count": 4,
     "order": 285
   },
   {
@@ -1790,7 +1790,7 @@
   {
     "name": "Albert Einstein",
     "slug": "albert-einstein",
-    "count": 16,
+    "count": 17,
     "order": 299
   },
   {
@@ -1838,7 +1838,7 @@
   {
     "name": "Theodore Roosevelt",
     "slug": "theodore-roosevelt",
-    "count": 10,
+    "count": 11,
     "order": 307
   },
   {
@@ -1850,7 +1850,7 @@
   {
     "name": "Sigmund Freud",
     "slug": "sigmund-freud",
-    "count": 6,
+    "count": 7,
     "order": 309
   },
   {
@@ -1874,7 +1874,7 @@
   {
     "name": "Friedrich Nietzsche",
     "slug": "friedrich-nietzsche",
-    "count": 7,
+    "count": 9,
     "order": 313
   },
   {
@@ -1910,25 +1910,25 @@
   {
     "name": "Leo Tolstoy",
     "slug": "leo-tolstoy",
-    "count": 7,
+    "count": 8,
     "order": 319
   },
   {
     "name": "Mahatma Gandhi",
     "slug": "mahatma-gandhi",
-    "count": 10,
+    "count": 11,
     "order": 320
   },
   {
     "name": "Martin Luther King Jr.",
     "slug": "martin-luther-king-jr",
-    "count": 5,
+    "count": 7,
     "order": 321
   },
   {
     "name": "Abraham Lincoln",
     "slug": "abraham-lincoln",
-    "count": 6,
+    "count": 8,
     "order": 322
   },
   {
@@ -1940,7 +1940,7 @@
   {
     "name": "Robert E. Lee",
     "slug": "robert-e-lee",
-    "count": 3,
+    "count": 4,
     "order": 324
   },
   {
@@ -2036,7 +2036,7 @@
   {
     "name": "Georg Wilhelm Friedrich Hegel",
     "slug": "georg-wilhelm-friedrich-hegel",
-    "count": 3,
+    "count": 4,
     "order": 340
   },
   {
@@ -2252,7 +2252,7 @@
   {
     "name": "Charles the Bold",
     "slug": "charles-the-bold",
-    "count": 2,
+    "count": 3,
     "order": 376
   },
   {
@@ -2324,7 +2324,7 @@
   {
     "name": "Michel de Montaigne",
     "slug": "michel-de-montaigne",
-    "count": 2,
+    "count": 3,
     "order": 388
   },
   {
@@ -2342,13 +2342,13 @@
   {
     "name": "Paul the Apostle",
     "slug": "paul-the-apostle",
-    "count": 4,
+    "count": 6,
     "order": 391
   },
   {
     "name": "Jesus Christ",
     "slug": "jesus-christ",
-    "count": 8,
+    "count": 12,
     "order": 392
   },
   {
@@ -2372,7 +2372,7 @@
   {
     "name": "Pontius Pilate",
     "slug": "pontius-pilate",
-    "count": 2,
+    "count": 3,
     "order": 396
   },
   {
@@ -2384,7 +2384,7 @@
   {
     "name": "Caligula",
     "slug": "caligula",
-    "count": 5,
+    "count": 6,
     "order": 398
   },
   {
@@ -2414,7 +2414,7 @@
   {
     "name": "Herod the Great",
     "slug": "herod-the-great",
-    "count": 2,
+    "count": 3,
     "order": 403
   },
   {
@@ -2498,25 +2498,25 @@
   {
     "name": "Galen",
     "slug": "galen",
-    "count": 1,
+    "count": 2,
     "order": 417
   },
   {
     "name": "Marcus Aurelius",
     "slug": "marcus-aurelius",
-    "count": 6,
+    "count": 14,
     "order": 418
   },
   {
     "name": "Hadrian",
     "slug": "hadrian",
-    "count": 3,
+    "count": 5,
     "order": 419
   },
   {
     "name": "Trajan",
     "slug": "trajan",
-    "count": 5,
+    "count": 6,
     "order": 420
   },
   {
@@ -2528,13 +2528,13 @@
   {
     "name": "Vespasian",
     "slug": "vespasian",
-    "count": 9,
+    "count": 10,
     "order": 422
   },
   {
     "name": "Titus",
     "slug": "titus",
-    "count": 5,
+    "count": 6,
     "order": 423
   },
   {
@@ -2570,25 +2570,25 @@
   {
     "name": "Cassius Dio",
     "slug": "cassius-dio",
-    "count": 1,
+    "count": 2,
     "order": 429
   },
   {
     "name": "Commodus",
     "slug": "commodus",
-    "count": 1,
+    "count": 6,
     "order": 430
   },
   {
     "name": "Septimius Severus",
     "slug": "septimius-severus",
-    "count": 5,
+    "count": 11,
     "order": 431
   },
   {
     "name": "Caracalla",
     "slug": "caracalla",
-    "count": 4,
+    "count": 5,
     "order": 432
   },
   {
@@ -2600,31 +2600,31 @@
   {
     "name": "Elagabalus",
     "slug": "elagabalus",
-    "count": 1,
+    "count": 2,
     "order": 434
   },
   {
     "name": "Alexander Severus",
     "slug": "alexander-severus",
-    "count": 1,
+    "count": 2,
     "order": 435
   },
   {
     "name": "Origen",
     "slug": "origen",
-    "count": 5,
+    "count": 9,
     "order": 436
   },
   {
     "name": "Jerome",
     "slug": "jerome",
-    "count": 4,
+    "count": 5,
     "order": 437
   },
   {
     "name": "Augustine of Hippo",
     "slug": "augustine-of-hippo",
-    "count": 2,
+    "count": 9,
     "order": 438
   },
   {
@@ -2690,7 +2690,7 @@
   {
     "name": "Athanasius of Alexandria",
     "slug": "athanasius-of-alexandria",
-    "count": 8,
+    "count": 9,
     "order": 449
   },
   {
@@ -2720,7 +2720,7 @@
   {
     "name": "Julian the Apostate",
     "slug": "julian-the-apostate",
-    "count": 3,
+    "count": 4,
     "order": 454
   },
   {
@@ -2780,7 +2780,7 @@
   {
     "name": "Shapur I",
     "slug": "shapur-i",
-    "count": 1,
+    "count": 4,
     "order": 464
   },
   {
@@ -2942,7 +2942,7 @@
   {
     "name": "Herodotus",
     "slug": "herodotus",
-    "count": 3,
+    "count": 4,
     "order": 491
   },
   {
@@ -3008,7 +3008,7 @@
   {
     "name": "Thucydides",
     "slug": "thucydides",
-    "count": 2,
+    "count": 3,
     "order": 502
   },
   {
@@ -3884,7 +3884,7 @@
   {
     "name": "Andrew Carnegie",
     "slug": "andrew-carnegie",
-    "count": 2,
+    "count": 3,
     "order": 648
   },
   {
@@ -3974,7 +3974,7 @@
   {
     "name": "Dante Alighieri",
     "slug": "dante-alighieri",
-    "count": 2,
+    "count": 3,
     "order": 663
   },
   {
@@ -4538,7 +4538,607 @@
   {
     "name": "Malcolm X",
     "slug": "malcolm-x",
-    "count": 1,
+    "count": 2,
     "order": 758
+  },
+  {
+    "name": "Marcus Garvey",
+    "slug": "marcus-garvey",
+    "count": 2,
+    "order": 759
+  },
+  {
+    "name": "W. E. B. Du Bois",
+    "slug": "w-e-b-du-bois",
+    "count": 1,
+    "order": 760
+  },
+  {
+    "name": "Booker T. Washington",
+    "slug": "booker-t-washington",
+    "count": 1,
+    "order": 761
+  },
+  {
+    "name": "Frederick Douglass",
+    "slug": "frederick-douglass",
+    "count": 3,
+    "order": 762
+  },
+  {
+    "name": "Harriet Tubman",
+    "slug": "harriet-tubman",
+    "count": 1,
+    "order": 763
+  },
+  {
+    "name": "John Brown",
+    "slug": "john-brown",
+    "count": 1,
+    "order": 764
+  },
+  {
+    "name": "Ralph Waldo Emerson",
+    "slug": "ralph-waldo-emerson",
+    "count": 3,
+    "order": 765
+  },
+  {
+    "name": "Henry David Thoreau",
+    "slug": "henry-david-thoreau",
+    "count": 2,
+    "order": 766
+  },
+  {
+    "name": "Walt Whitman",
+    "slug": "walt-whitman",
+    "count": 2,
+    "order": 767
+  },
+  {
+    "name": "Bram Stoker",
+    "slug": "bram-stoker",
+    "count": 2,
+    "order": 768
+  },
+  {
+    "name": "Vlad the Impaler",
+    "slug": "vlad-the-impaler",
+    "count": 2,
+    "order": 769
+  },
+  {
+    "name": "Matthias Corvinus",
+    "slug": "matthias-corvinus",
+    "count": 2,
+    "order": 770
+  },
+  {
+    "name": "Frederick III, Holy Roman Emperor",
+    "slug": "frederick-iii-holy-roman-emperor",
+    "count": 2,
+    "order": 771
+  },
+  {
+    "name": "Pope Pius II",
+    "slug": "pope-pius-ii",
+    "count": 1,
+    "order": 772
+  },
+  {
+    "name": "Nicholas of Cusa",
+    "slug": "nicholas-of-cusa",
+    "count": 1,
+    "order": 773
+  },
+  {
+    "name": "Giordano Bruno",
+    "slug": "giordano-bruno",
+    "count": 1,
+    "order": 774
+  },
+  {
+    "name": "Baruch Spinoza",
+    "slug": "baruch-spinoza",
+    "count": 1,
+    "order": 775
+  },
+  {
+    "name": "Maimonides",
+    "slug": "maimonides",
+    "count": 1,
+    "order": 776
+  },
+  {
+    "name": "Avicenna",
+    "slug": "avicenna",
+    "count": 4,
+    "order": 777
+  },
+  {
+    "name": "Averroes",
+    "slug": "averroes",
+    "count": 2,
+    "order": 778
+  },
+  {
+    "name": "Al-Ghazali",
+    "slug": "al-ghazali",
+    "count": 2,
+    "order": 779
+  },
+  {
+    "name": "Nizam al-Mulk",
+    "slug": "nizam-al-mulk",
+    "count": 1,
+    "order": 780
+  },
+  {
+    "name": "Omar Khayyam",
+    "slug": "omar-khayyam",
+    "count": 1,
+    "order": 781
+  },
+  {
+    "name": "Al-Khwarizmi",
+    "slug": "al-khwarizmi",
+    "count": 2,
+    "order": 782
+  },
+  {
+    "name": "Fibonacci",
+    "slug": "fibonacci",
+    "count": 1,
+    "order": 783
+  },
+  {
+    "name": "Diophantus",
+    "slug": "diophantus",
+    "count": 1,
+    "order": 784
+  },
+  {
+    "name": "Hypatia",
+    "slug": "hypatia",
+    "count": 1,
+    "order": 785
+  },
+  {
+    "name": "Cyril of Alexandria",
+    "slug": "cyril-of-alexandria",
+    "count": 2,
+    "order": 786
+  },
+  {
+    "name": "Nestorius",
+    "slug": "nestorius",
+    "count": 1,
+    "order": 787
+  },
+  {
+    "name": "Theodosius II",
+    "slug": "theodosius-ii",
+    "count": 2,
+    "order": 788
+  },
+  {
+    "name": "Attila the Hun",
+    "slug": "attila-the-hun",
+    "count": 3,
+    "order": 789
+  },
+  {
+    "name": "Pope Leo I",
+    "slug": "pope-leo-i",
+    "count": 2,
+    "order": 790
+  },
+  {
+    "name": "Gaiseric",
+    "slug": "gaiseric",
+    "count": 1,
+    "order": 791
+  },
+  {
+    "name": "Belisarius",
+    "slug": "belisarius",
+    "count": 5,
+    "order": 792
+  },
+  {
+    "name": "Justinian I",
+    "slug": "justinian-i",
+    "count": 4,
+    "order": 793
+  },
+  {
+    "name": "Theodora",
+    "slug": "theodora",
+    "count": 1,
+    "order": 794
+  },
+  {
+    "name": "Procopius",
+    "slug": "procopius",
+    "count": 1,
+    "order": 795
+  },
+  {
+    "name": "Khosrow I",
+    "slug": "khosrow-i",
+    "count": 1,
+    "order": 796
+  },
+  {
+    "name": "Khosrow II",
+    "slug": "khosrow-ii",
+    "count": 1,
+    "order": 797
+  },
+  {
+    "name": "Muhammad",
+    "slug": "muhammad",
+    "count": 12,
+    "order": 798
+  },
+  {
+    "name": "Ali ibn Abi Talib",
+    "slug": "ali-ibn-abi-talib",
+    "count": 9,
+    "order": 799
+  },
+  {
+    "name": "Umar ibn al-Khattab",
+    "slug": "umar-ibn-al-khattab",
+    "count": 3,
+    "order": 800
+  },
+  {
+    "name": "Abu Bakr",
+    "slug": "abu-bakr",
+    "count": 2,
+    "order": 801
+  },
+  {
+    "name": "Aisha",
+    "slug": "aisha",
+    "count": 1,
+    "order": 802
+  },
+  {
+    "name": "Uthman ibn Affan",
+    "slug": "uthman-ibn-affan",
+    "count": 1,
+    "order": 803
+  },
+  {
+    "name": "Muawiya I",
+    "slug": "muawiya-i",
+    "count": 1,
+    "order": 804
+  },
+  {
+    "name": "Husayn ibn Ali",
+    "slug": "husayn-ibn-ali",
+    "count": 1,
+    "order": 805
+  },
+  {
+    "name": "Fatima",
+    "slug": "fatima",
+    "count": 2,
+    "order": 806
+  },
+  {
+    "name": "Khadija",
+    "slug": "khadija",
+    "count": 1,
+    "order": 807
+  },
+  {
+    "name": "Waraqa ibn Nawfal",
+    "slug": "waraqa-ibn-nawfal",
+    "count": 1,
+    "order": 808
+  },
+  {
+    "name": "Moses",
+    "slug": "moses",
+    "count": 5,
+    "order": 809
+  },
+  {
+    "name": "Ramesses II",
+    "slug": "ramesses-ii",
+    "count": 3,
+    "order": 810
+  },
+  {
+    "name": "Nefertari",
+    "slug": "nefertari",
+    "count": 1,
+    "order": 811
+  },
+  {
+    "name": "Seti I",
+    "slug": "seti-i",
+    "count": 1,
+    "order": 812
+  },
+  {
+    "name": "Tutankhamun",
+    "slug": "tutankhamun",
+    "count": 4,
+    "order": 813
+  },
+  {
+    "name": "Akhenaten",
+    "slug": "akhenaten",
+    "count": 3,
+    "order": 814
+  },
+  {
+    "name": "Nefertiti",
+    "slug": "nefertiti",
+    "count": 2,
+    "order": 815
+  },
+  {
+    "name": "Amenhotep III",
+    "slug": "amenhotep-iii",
+    "count": 1,
+    "order": 816
+  },
+  {
+    "name": "Thutmose III",
+    "slug": "thutmose-iii",
+    "count": 3,
+    "order": 817
+  },
+  {
+    "name": "Hatshepsut",
+    "slug": "hatshepsut",
+    "count": 2,
+    "order": 818
+  },
+  {
+    "name": "Thutmose I",
+    "slug": "thutmose-i",
+    "count": 1,
+    "order": 819
+  },
+  {
+    "name": "Ahmose I",
+    "slug": "ahmose-i",
+    "count": 1,
+    "order": 820
+  },
+  {
+    "name": "Josephus",
+    "slug": "josephus",
+    "count": 1,
+    "order": 821
+  },
+  {
+    "name": "Philo of Alexandria",
+    "slug": "philo-of-alexandria",
+    "count": 2,
+    "order": 822
+  },
+  {
+    "name": "Clement of Alexandria",
+    "slug": "clement-of-alexandria",
+    "count": 1,
+    "order": 823
+  },
+  {
+    "name": "Valentinus",
+    "slug": "valentinus",
+    "count": 1,
+    "order": 824
+  },
+  {
+    "name": "Tertullian",
+    "slug": "tertullian",
+    "count": 3,
+    "order": 825
+  },
+  {
+    "name": "Marcion",
+    "slug": "marcion",
+    "count": 1,
+    "order": 826
+  },
+  {
+    "name": "Justin Martyr",
+    "slug": "justin-martyr",
+    "count": 1,
+    "order": 827
+  },
+  {
+    "name": "Antoninus Pius",
+    "slug": "antoninus-pius",
+    "count": 3,
+    "order": 828
+  },
+  {
+    "name": "Lucius Verus",
+    "slug": "lucius-verus",
+    "count": 4,
+    "order": 829
+  },
+  {
+    "name": "Avidius Cassius",
+    "slug": "avidius-cassius",
+    "count": 1,
+    "order": 830
+  },
+  {
+    "name": "Faustina the Younger",
+    "slug": "faustina-the-younger",
+    "count": 2,
+    "order": 831
+  },
+  {
+    "name": "Lucilla",
+    "slug": "lucilla",
+    "count": 1,
+    "order": 832
+  },
+  {
+    "name": "Claudius Pompeianus",
+    "slug": "claudius-pompeianus",
+    "count": 1,
+    "order": 833
+  },
+  {
+    "name": "Pertinax",
+    "slug": "pertinax",
+    "count": 3,
+    "order": 834
+  },
+  {
+    "name": "Didius Julianus",
+    "slug": "didius-julianus",
+    "count": 2,
+    "order": 835
+  },
+  {
+    "name": "Pescennius Niger",
+    "slug": "pescennius-niger",
+    "count": 1,
+    "order": 836
+  },
+  {
+    "name": "Clodius Albinus",
+    "slug": "clodius-albinus",
+    "count": 1,
+    "order": 837
+  },
+  {
+    "name": "Herodian",
+    "slug": "herodian",
+    "count": 1,
+    "order": 838
+  },
+  {
+    "name": "Maximinus Thrax",
+    "slug": "maximinus-thrax",
+    "count": 2,
+    "order": 839
+  },
+  {
+    "name": "Gordian III",
+    "slug": "gordian-iii",
+    "count": 1,
+    "order": 840
+  },
+  {
+    "name": "Philip the Arab",
+    "slug": "philip-the-arab",
+    "count": 1,
+    "order": 841
+  },
+  {
+    "name": "Decius",
+    "slug": "decius",
+    "count": 1,
+    "order": 842
+  },
+  {
+    "name": "Cyprian of Carthage",
+    "slug": "cyprian-of-carthage",
+    "count": 2,
+    "order": 843
+  },
+  {
+    "name": "Valerian",
+    "slug": "valerian",
+    "count": 2,
+    "order": 844
+  },
+  {
+    "name": "Gallienus",
+    "slug": "gallienus",
+    "count": 1,
+    "order": 845
+  },
+  {
+    "name": "Plotinus",
+    "slug": "plotinus",
+    "count": 4,
+    "order": 846
+  },
+  {
+    "name": "Porphyry",
+    "slug": "porphyry",
+    "count": 2,
+    "order": 847
+  },
+  {
+    "name": "Iamblichus",
+    "slug": "iamblichus",
+    "count": 1,
+    "order": 848
+  },
+  {
+    "name": "Proclus",
+    "slug": "proclus",
+    "count": 1,
+    "order": 849
+  },
+  {
+    "name": "Pseudo-Dionysius the Areopagite",
+    "slug": "pseudo-dionysius-the-areopagite",
+    "count": 1,
+    "order": 850
+  },
+  {
+    "name": "Meister Eckhart",
+    "slug": "meister-eckhart",
+    "count": 1,
+    "order": 851
+  },
+  {
+    "name": "Albertus Magnus",
+    "slug": "albertus-magnus",
+    "count": 1,
+    "order": 852
+  },
+  {
+    "name": "Roger Bacon",
+    "slug": "roger-bacon",
+    "count": 1,
+    "order": 853
+  },
+  {
+    "name": "Ibn al-Haytham",
+    "slug": "ibn-al-haytham",
+    "count": 2,
+    "order": 854
+  },
+  {
+    "name": "Al-Hakim",
+    "slug": "al-hakim",
+    "count": 1,
+    "order": 855
+  },
+  {
+    "name": "Basil II",
+    "slug": "basil-ii",
+    "count": 2,
+    "order": 856
+  },
+  {
+    "name": "Vladimir the Great",
+    "slug": "vladimir-the-great",
+    "count": 2,
+    "order": 857
+  },
+  {
+    "name": "Yaroslav the Wise",
+    "slug": "yaroslav-the-wise",
+    "count": 1,
+    "order": 858
   }
 ]
