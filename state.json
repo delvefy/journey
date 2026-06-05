@@ -1,14 +1,34 @@
 {
-  "current_seed": "michael-the-brave",
+  "current_seed": "mike-tyson",
   "seeds": {
-    "michael-the-brave": {
-      "next_name": "Harald Hardrada",
-      "next_slug": "harald-hardrada",
-      "complete": false
-    },
     "jesus-christ": {
       "next_name": "Jesus Christ",
       "next_slug": "jesus-christ",
+      "complete": false
+    },
+    "muhammad": {
+      "next_name": "Muhammad",
+      "next_slug": "muhammad",
+      "complete": false
+    },
+    "mike-tyson": {
+      "next_name": "Mike Tyson",
+      "next_slug": "mike-tyson",
+      "complete": false
+    },
+    "justin-bieber": {
+      "next_name": "Justin Bieber",
+      "next_slug": "justin-bieber",
+      "complete": false
+    },
+    "cleopatra": {
+      "next_name": "Cleopatra",
+      "next_slug": "cleopatra",
+      "complete": false
+    },
+    "miyamoto-musashi": {
+      "next_name": "Miyamoto Musashi",
+      "next_slug": "miyamoto-musashi",
       "complete": false
     }
   }

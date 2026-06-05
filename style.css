@@ -146,6 +146,24 @@ a:hover { text-decoration: none; }
   border-top: none;
 }
 
+/* Road-links list (article footer). Fixed order, one link per item:
+   parent (dark yellow) -> in-MEM back-links (dark red-brown) -> next (dark blue). */
+ul.road-links {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--rule);
+  font-size: 1.05rem;
+}
+
+ul.road-links li { margin: 0 0 6px; }
+ul.road-links li:last-child { margin-bottom: 0; }
+ul.road-links a { font-weight: bold; }
+
+ul.road-links .parent-link a  { color: #8a6d00; }  /* dark yellow — back to the parent article */
+ul.road-links .back-link a    { color: #5a2a1d; }  /* dark red-brown — existing in-MEM neighbors */
+ul.road-links .forward-link a { color: #1a3a73; }  /* dark blue — the new road continuation */
+
 ol.roads {
   list-style: none;
   padding: 0;

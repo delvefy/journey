@@ -303,26 +303,40 @@ PROCEDURE (one article)
    than a true dead end. Cross-era escapes are the rule, not the exception.
 
 7. Finalize the article we wrote in step 3: replace the next-link placeholder
-   with the road's continuation block. The block has up to two paragraphs:
+   with the road's continuation block. The block is now a SINGLE list,
+   <ul class="road-links">, with ONE link per <li>, in this fixed order:
 
-   a. BACK-LINKS (existing connections) — one paragraph listing every in-MEM
+   a. PARENT-LINK (dark yellow) — the FIRST item, pointing BACK to the parent
+      of TARGET: the article from which the road arrived here. The parent is
+      the in-MEM entry with the HIGHEST order BEFORE TARGET itself was appended
+      — equivalently, the article whose own next-link points at TARGET. Wrap
+      the <li> with class="parent-link" so the stylesheet renders the link in
+      dark yellow (the "where we came from" color).
+      OMIT this item ONLY on the seed's first iteration, when MEM is empty and
+      TARGET has no parent on this road. (The header's "All the roads lead to"
+      link already covers the way back to the index.)
+
+   b. BACK-LINKS (dark red-brown) — one <li class="back-link"> PER in-MEM
       neighbor whose count you incremented in step 6, in the order found (the
-      step-6 fame ranking, top to bottom). These are real edges of TARGET
-      whose articles already exist on this road, so we surface them to the
-      reader instead of letting the increment be invisible. Wrap with
-      class="back-links" so the stylesheet renders the links in dark
-      red-brown (the "existing road" color). Use plain comma-separated links.
-      OMIT the paragraph entirely if no in-MEM neighbors were incremented.
+      step-6 fame ranking, top to bottom). These are real edges of TARGET whose
+      articles already exist on this road, so we surface them to the reader
+      instead of letting the increment be invisible. OMIT these items entirely
+      if no in-MEM neighbors were incremented.
 
-   b. NEXT-LINK (the new road continuation) — one paragraph pointing at
-      CANDIDATE, the new entry just appended in step 4. Wrap with
-      class="next-link" so the stylesheet renders the link in dark blue
-      (the "new road" color). The target file does not need to exist yet —
-      the link is forward-looking.
+   c. NEXT-LINK (dark blue) — the LAST item, a <li class="forward-link">
+      pointing at CANDIDATE, the new entry just appended in step 4. The target
+      file does not need to exist yet — the link is forward-looking.
 
-   Example final block when both paragraphs are present:
-     <p class="back-links">The road also leads back to <a href="x.html">X</a>, <a href="y.html">Y</a>.</p>
-     <p class="next-link">The road continues to <a href="<CANDIDATE.slug>.html"><CANDIDATE.name></a>.</p>
+   One link per <li>; never comma-separate several links into one item. Order
+   is ALWAYS parent (yellow) -> back-links (red-brown) -> next (blue). Do NOT
+   inline colors on the <a> tags — always rely on the <li> class. Example final
+   block with all three kinds present:
+     <ul class="road-links">
+       <li class="parent-link">The road came from <a href="<PARENT.slug>.html"><PARENT.name></a>.</li>
+       <li class="back-link">The road also leads back to <a href="x.html">X</a>.</li>
+       <li class="back-link">The road also leads back to <a href="y.html">Y</a>.</li>
+       <li class="forward-link">The road continues to <a href="<CANDIDATE.slug>.html"><CANDIDATE.name></a>.</li>
+     </ul>
 
 8. Write articles/<SEED>/counter.json (pretty-printed, 2-space indent,
    trailing newline).
@@ -363,10 +377,17 @@ ARTICLE TEMPLATE (articles/<seed-slug>/<slug>.html)
     ...
     <p>...final paragraph...</p>
 
-    <!-- back-links: OMIT this paragraph entirely if step 6 incremented no
-         in-MEM neighbors. Otherwise list them in step-6 rank order. -->
-    <p class="back-links">The road also leads back to <a href="<IN-MEM-SLUG-1>.html"><IN-MEM NAME 1></a>, <a href="<IN-MEM-SLUG-2>.html"><IN-MEM NAME 2></a>.</p>
-    <p class="next-link">The road continues to <a href="<CANDIDATE-SLUG>.html"><CANDIDATE NAME></a>.</p>
+    <!-- Continuation block: a single <ul class="road-links">, one link per <li>,
+         in fixed order:
+           - parent-link  (dark yellow):    FIRST; omit ONLY on the seed (no parent).
+           - back-link    (dark red-brown): one <li> per in-MEM neighbor incremented
+                                            in step 6, in step-6 rank order; omit all if none.
+           - forward-link (dark blue):      LAST; the new CANDIDATE. -->
+    <ul class="road-links">
+      <li class="parent-link">The road came from <a href="<PARENT-SLUG>.html"><PARENT NAME></a>.</li>
+      <li class="back-link">The road also leads back to <a href="<IN-MEM-SLUG-1>.html"><IN-MEM NAME 1></a>.</li>
+      <li class="forward-link">The road continues to <a href="<CANDIDATE-SLUG>.html"><CANDIDATE NAME></a>.</li>
+    </ul>
   </article>
 </main>
 </body>
@@ -398,10 +419,18 @@ NOTES
 - The seed person is always article #1 on their own road (order=1). The
   seed's own next link points to whichever historical neighbor becomes
   CANDIDATE on the seed's iteration.
-- Continuation block coloring: the new-road link (class="next-link") is dark
-  blue; back-links to in-MEM neighbors (class="back-links") are dark
-  red-brown. Both classes are defined in style.css. Do NOT inline colors on
-  the <a> tags — always rely on the parent paragraph's class.
-- The back-links paragraph is OPTIONAL: omit it when step 6 incremented zero
+- Continuation block coloring: the parent link (class="parent-link") is dark
+  yellow, the in-MEM back-links (class="back-link") are dark red-brown, and the
+  new-road link (class="forward-link") is dark blue. All three are defined in
+  style.css under ul.road-links. Do NOT inline colors on the <a> tags — always
+  rely on the <li> class.
+- Fixed order inside <ul class="road-links">, one link per <li>: parent
+  (yellow) first, then the back-links (red-brown), then the next article (blue)
+  last.
+- The parent-link is present on every article EXCEPT the seed (article #1),
+  which has no parent on its own road — omit it there. The parent is the in-MEM
+  entry with the highest order before TARGET was appended (the article whose
+  next-link points at TARGET).
+- The back-link items are OPTIONAL: omit them when step 6 incremented zero
   in-MEM neighbors (i.e., CANDIDATE was at rank position 1). Never emit an
-  empty <p class="back-links"></p>.
+  empty <li class="back-link"></li>.

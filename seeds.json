@@ -1,10 +1,26 @@
 [
   {
-    "name": "Michael the Brave",
-    "slug": "michael-the-brave"
-  },
-  {
     "name": "Jesus Christ",
     "slug": "jesus-christ"
+  },
+  {
+    "name": "Muhammad",
+    "slug": "muhammad"
+  },
+  {
+    "name": "Mike Tyson",
+    "slug": "mike-tyson"
+  },
+  {
+    "name": "Justin Bieber",
+    "slug": "justin-bieber"
+  },
+  {
+    "name": "Cleopatra",
+    "slug": "cleopatra"
+  },
+  {
+    "name": "Miyamoto Musashi",
+    "slug": "miyamoto-musashi"
   }
 ]
