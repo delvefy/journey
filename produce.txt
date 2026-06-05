@@ -279,6 +279,17 @@ PROCEDURE (one article)
    Rank EVERY shortlist entry, including in-MEM ones. Do not float
    in-MEM names to the bottom — rank purely by fame, blind to MEM status.
 
+   INCLUDE THE PARENT in the ranking. The parent — the in-MEM entry the
+   road just arrived from (see step 7a) — is an in-MEM neighbor exactly
+   like any other and IS incremented whenever it ranks above the
+   CANDIDATE. Do NOT exclude it from step 6. Because the parent is
+   usually one of TARGET's most famous neighbors, it gets incremented at
+   most steps once the road has climbed into a dense region; only during
+   the initial climb, while each new candidate is more famous than the
+   parent, does the parent go un-incremented. The parent is still
+   DISPLAYED only as the parent-link, never also as a back-link (see 7b),
+   so its increment is real in counter.json but invisible in the prose.
+
    Then walk the ranked list starting at POSITION 1. For each position,
    in order 1, 2, 3, ...:
    - If that candidate's slug is already in MEM, increment that entry's
@@ -322,6 +333,11 @@ PROCEDURE (one article)
       articles already exist on this road, so we surface them to the reader
       instead of letting the increment be invisible. OMIT these items entirely
       if no in-MEM neighbors were incremented.
+      EXCLUDE THE PARENT from the back-links even when its count WAS
+      incremented in step 6: it already appears as the parent-link in 7a, and
+      a person must never appear twice in the road-links list. So the parent is
+      counted (step 6) but shown once, as the yellow parent-link, not as a
+      red-brown back-link.
 
    c. NEXT-LINK (dark blue) — the LAST item, a <li class="forward-link">
       pointing at CANDIDATE, the new entry just appended in step 4. The target
@@ -397,7 +413,11 @@ NOTES
 -----
 - The count field is the road's popularity metric: how many times this
   person was a top-ranked direct neighbor of a later TARGET but was
-  skipped because they were already in MEM. Counts above 1 are the
+  skipped because they were already in MEM. This explicitly INCLUDES the
+  step where the person is the PARENT of the next TARGET: if the parent
+  outranks that target's candidate by fame, it is incremented like any
+  other in-MEM neighbor (it is simply not re-listed as a back-link, since
+  it already shows as the parent-link). Counts above 1 are the
   expected outcome in dense clusters (Tudor court, Iberian explorers,
   the Habsburg-Valois axis). A road on which every count stays at 1 is
   a sign that step 5/6 were applied lazily — in-MEM neighbors were
