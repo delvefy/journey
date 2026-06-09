@@ -276,6 +276,19 @@ PROCEDURE (one article)
    languages, the kind of name a literate non-specialist might recognize.
    Ties broken by your gut. Do not try to score; just sort.
 
+   NO STEERING — the road is never aimed. The path the road takes is an
+   emergent result of this local, fame-only ranking and nothing else.
+   Never choose or reject a CANDIDATE based on where the road would go
+   next: not to reach a denser or more famous region, not to "bridge
+   back" toward big clusters, not to escape an obscure pocket, not to
+   manufacture increments, not for any notion of "road quality" or
+   variety. If, after an honest and COMPLETE three-bucket sweep (step 5),
+   the fame ranking still points at an obscure not-in-MEM neighbor, that
+   obscure neighbor is the pick. Increments are a byproduct of ranking
+   real edges honestly, never a target to engineer. The obscure-candidate
+   red flag below means "re-check you did not MISS a famous edge," NOT
+   "swap in a more convenient destination."
+
    Rank EVERY shortlist entry, including in-MEM ones. Do not float
    in-MEM names to the bottom — rank purely by fame, blind to MEM status.
 
