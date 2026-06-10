@@ -20,7 +20,7 @@
   {
     "name": "Mahatma Gandhi",
     "slug": "mahatma-gandhi",
-    "count": 9,
+    "count": 10,
     "order": 4
   },
   {
@@ -74,7 +74,7 @@
   {
     "name": "Albert Einstein",
     "slug": "albert-einstein",
-    "count": 13,
+    "count": 14,
     "order": 13
   },
   {
@@ -86,13 +86,13 @@
   {
     "name": "Aristotle",
     "slug": "aristotle",
-    "count": 41,
+    "count": 44,
     "order": 15
   },
   {
     "name": "Alexander the Great",
     "slug": "alexander-the-great",
-    "count": 27,
+    "count": 28,
     "order": 16
   },
   {
@@ -110,25 +110,25 @@
   {
     "name": "William Shakespeare",
     "slug": "william-shakespeare",
-    "count": 20,
+    "count": 25,
     "order": 19
   },
   {
     "name": "Elizabeth I",
     "slug": "elizabeth-i",
-    "count": 16,
+    "count": 19,
     "order": 20
   },
   {
     "name": "Henry VIII",
     "slug": "henry-viii",
-    "count": 14,
+    "count": 27,
     "order": 21
   },
   {
     "name": "Martin Luther",
     "slug": "martin-luther",
-    "count": 7,
+    "count": 8,
     "order": 22
   },
   {
@@ -140,7 +140,7 @@
   {
     "name": "Plato",
     "slug": "plato",
-    "count": 47,
+    "count": 48,
     "order": 24
   },
   {
@@ -224,7 +224,7 @@
   {
     "name": "Homer",
     "slug": "homer",
-    "count": 10,
+    "count": 11,
     "order": 38
   },
   {
@@ -242,7 +242,7 @@
   {
     "name": "Dante Alighieri",
     "slug": "dante-alighieri",
-    "count": 9,
+    "count": 14,
     "order": 41
   },
   {
@@ -260,19 +260,19 @@
   {
     "name": "Avicenna",
     "slug": "avicenna",
-    "count": 3,
+    "count": 6,
     "order": 44
   },
   {
     "name": "Hippocrates",
     "slug": "hippocrates",
-    "count": 3,
+    "count": 5,
     "order": 45
   },
   {
     "name": "Galen",
     "slug": "galen",
-    "count": 5,
+    "count": 8,
     "order": 46
   },
   {
@@ -326,7 +326,7 @@
   {
     "name": "Muhammad",
     "slug": "muhammad",
-    "count": 4,
+    "count": 18,
     "order": 55
   },
   {
@@ -362,31 +362,31 @@
   {
     "name": "Charles V",
     "slug": "charles-v",
-    "count": 11,
+    "count": 12,
     "order": 61
   },
   {
     "name": "Francis I",
     "slug": "francis-i",
-    "count": 4,
+    "count": 5,
     "order": 62
   },
   {
     "name": "Leonardo da Vinci",
     "slug": "leonardo-da-vinci",
-    "count": 14,
+    "count": 15,
     "order": 63
   },
   {
     "name": "Michelangelo",
     "slug": "michelangelo",
-    "count": 13,
+    "count": 15,
     "order": 64
   },
   {
     "name": "Raphael",
     "slug": "raphael",
-    "count": 9,
+    "count": 10,
     "order": 65
   },
   {
@@ -458,7 +458,7 @@
   {
     "name": "Shah Jahan",
     "slug": "shah-jahan",
-    "count": 6,
+    "count": 8,
     "order": 77
   },
   {
@@ -470,7 +470,7 @@
   {
     "name": "Shivaji",
     "slug": "shivaji",
-    "count": 2,
+    "count": 6,
     "order": 79
   },
   {
@@ -488,7 +488,7 @@
   {
     "name": "Jawaharlal Nehru",
     "slug": "jawaharlal-nehru",
-    "count": 1,
+    "count": 2,
     "order": 82
   },
   {
@@ -530,7 +530,7 @@
   {
     "name": "Napoleon Bonaparte",
     "slug": "napoleon-bonaparte",
-    "count": 31,
+    "count": 32,
     "order": 89
   },
   {
@@ -572,7 +572,7 @@
   {
     "name": "Voltaire",
     "slug": "voltaire",
-    "count": 18,
+    "count": 19,
     "order": 96
   },
   {
@@ -812,7 +812,7 @@
   {
     "name": "Euclid",
     "slug": "euclid",
-    "count": 8,
+    "count": 10,
     "order": 136
   },
   {
@@ -830,7 +830,7 @@
   {
     "name": "Ptolemy",
     "slug": "ptolemy",
-    "count": 3,
+    "count": 6,
     "order": 139
   },
   {
@@ -1118,7 +1118,7 @@
   {
     "name": "Mark Twain",
     "slug": "mark-twain",
-    "count": 1,
+    "count": 2,
     "order": 187
   },
   {
@@ -1262,19 +1262,19 @@
   {
     "name": "Mary I of England",
     "slug": "mary-i-of-england",
-    "count": 4,
+    "count": 7,
     "order": 211
   },
   {
     "name": "Anne Boleyn",
     "slug": "anne-boleyn",
-    "count": 5,
+    "count": 6,
     "order": 212
   },
   {
     "name": "Thomas More",
     "slug": "thomas-more",
-    "count": 6,
+    "count": 7,
     "order": 213
   },
   {
@@ -1292,7 +1292,7 @@
   {
     "name": "Maximilian I",
     "slug": "maximilian-i",
-    "count": 1,
+    "count": 3,
     "order": 216
   },
   {
@@ -1310,13 +1310,13 @@
   {
     "name": "Catherine of Aragon",
     "slug": "catherine-of-aragon",
-    "count": 2,
+    "count": 4,
     "order": 219
   },
   {
     "name": "Cardinal Wolsey",
     "slug": "cardinal-wolsey",
-    "count": 2,
+    "count": 3,
     "order": 220
   },
   {
@@ -1334,19 +1334,19 @@
   {
     "name": "Jane Seymour",
     "slug": "jane-seymour",
-    "count": 1,
+    "count": 3,
     "order": 223
   },
   {
     "name": "Edward VI",
     "slug": "edward-vi",
-    "count": 2,
+    "count": 6,
     "order": 224
   },
   {
     "name": "Thomas Cranmer",
     "slug": "thomas-cranmer",
-    "count": 2,
+    "count": 4,
     "order": 225
   },
   {
@@ -1364,7 +1364,7 @@
   {
     "name": "Mary, Queen of Scots",
     "slug": "mary-queen-of-scots",
-    "count": 10,
+    "count": 11,
     "order": 228
   },
   {
@@ -1406,25 +1406,25 @@
   {
     "name": "John of Gaunt",
     "slug": "john-of-gaunt",
-    "count": 1,
+    "count": 3,
     "order": 235
   },
   {
     "name": "Geoffrey Chaucer",
     "slug": "geoffrey-chaucer",
-    "count": 6,
+    "count": 8,
     "order": 236
   },
   {
     "name": "Petrarch",
     "slug": "petrarch",
-    "count": 4,
+    "count": 6,
     "order": 237
   },
   {
     "name": "Giovanni Boccaccio",
     "slug": "giovanni-boccaccio",
-    "count": 1,
+    "count": 2,
     "order": 238
   },
   {
@@ -1568,13 +1568,13 @@
   {
     "name": "Justinian I",
     "slug": "justinian-i",
-    "count": 3,
+    "count": 4,
     "order": 262
   },
   {
     "name": "Belisarius",
     "slug": "belisarius",
-    "count": 2,
+    "count": 3,
     "order": 263
   },
   {
@@ -1784,13 +1784,13 @@
   {
     "name": "Lorenzo de' Medici",
     "slug": "lorenzo-de-medici",
-    "count": 10,
+    "count": 11,
     "order": 298
   },
   {
     "name": "Sandro Botticelli",
     "slug": "sandro-botticelli",
-    "count": 3,
+    "count": 4,
     "order": 299
   },
   {
@@ -1826,7 +1826,7 @@
   {
     "name": "Filippo Brunelleschi",
     "slug": "filippo-brunelleschi",
-    "count": 3,
+    "count": 4,
     "order": 305
   },
   {
@@ -1898,13 +1898,13 @@
   {
     "name": "Edward III",
     "slug": "edward-iii",
-    "count": 5,
+    "count": 10,
     "order": 317
   },
   {
     "name": "Edward I",
     "slug": "edward-i",
-    "count": 4,
+    "count": 5,
     "order": 318
   },
   {
@@ -1940,13 +1940,13 @@
   {
     "name": "Louis IX",
     "slug": "louis-ix",
-    "count": 2,
+    "count": 7,
     "order": 324
   },
   {
     "name": "Frederick II, Holy Roman Emperor",
     "slug": "frederick-ii-holy-roman-emperor",
-    "count": 3,
+    "count": 5,
     "order": 325
   },
   {
@@ -1958,13 +1958,13 @@
   {
     "name": "Richard the Lionheart",
     "slug": "richard-the-lionheart",
-    "count": 2,
+    "count": 6,
     "order": 327
   },
   {
     "name": "Saladin",
     "slug": "saladin",
-    "count": 2,
+    "count": 3,
     "order": 328
   },
   {
@@ -1994,7 +1994,7 @@
   {
     "name": "Al-Khwarizmi",
     "slug": "al-khwarizmi",
-    "count": 2,
+    "count": 5,
     "order": 333
   },
   {
@@ -2030,7 +2030,7 @@
   {
     "name": "Pietro Perugino",
     "slug": "pietro-perugino",
-    "count": 2,
+    "count": 3,
     "order": 339
   },
   {
@@ -2432,7 +2432,7 @@
   {
     "name": "Gautama Buddha",
     "slug": "gautama-buddha",
-    "count": 9,
+    "count": 10,
     "order": 406
   },
   {
@@ -2594,7 +2594,7 @@
   {
     "name": "Jahangir",
     "slug": "jahangir",
-    "count": 2,
+    "count": 3,
     "order": 433
   },
   {
@@ -2666,7 +2666,7 @@
   {
     "name": "Walter Scott",
     "slug": "walter-scott",
-    "count": 2,
+    "count": 3,
     "order": 445
   },
   {
@@ -2744,7 +2744,7 @@
   {
     "name": "Martin Scorsese",
     "slug": "martin-scorsese",
-    "count": 2,
+    "count": 3,
     "order": 458
   },
   {
@@ -2792,7 +2792,7 @@
   {
     "name": "Steven Spielberg",
     "slug": "steven-spielberg",
-    "count": 2,
+    "count": 4,
     "order": 466
   },
   {
@@ -2804,7 +2804,7 @@
   {
     "name": "George Lucas",
     "slug": "george-lucas",
-    "count": 1,
+    "count": 2,
     "order": 468
   },
   {
@@ -2984,7 +2984,7 @@
   {
     "name": "Fyodor Dostoevsky",
     "slug": "fyodor-dostoevsky",
-    "count": 6,
+    "count": 7,
     "order": 498
   },
   {
@@ -3692,13 +3692,13 @@
   {
     "name": "George Bernard Shaw",
     "slug": "george-bernard-shaw",
-    "count": 2,
+    "count": 3,
     "order": 616
   },
   {
     "name": "Oscar Wilde",
     "slug": "oscar-wilde",
-    "count": 2,
+    "count": 3,
     "order": 617
   },
   {
@@ -3938,13 +3938,763 @@
   {
     "name": "Robert Dudley, 1st Earl of Leicester",
     "slug": "robert-dudley-1st-earl-of-leicester",
-    "count": 2,
+    "count": 3,
     "order": 657
   },
   {
     "name": "Lady Jane Grey",
     "slug": "lady-jane-grey",
-    "count": 1,
+    "count": 6,
     "order": 658
+  },
+  {
+    "name": "John Dudley, 1st Duke of Northumberland",
+    "slug": "john-dudley-1st-duke-of-northumberland",
+    "count": 2,
+    "order": 659
+  },
+  {
+    "name": "Edward Seymour, 1st Duke of Somerset",
+    "slug": "edward-seymour-1st-duke-of-somerset",
+    "count": 3,
+    "order": 660
+  },
+  {
+    "name": "Catherine Parr",
+    "slug": "catherine-parr",
+    "count": 2,
+    "order": 661
+  },
+  {
+    "name": "Thomas Seymour",
+    "slug": "thomas-seymour",
+    "count": 1,
+    "order": 662
+  },
+  {
+    "name": "Henry Grey, 1st Duke of Suffolk",
+    "slug": "henry-grey-1st-duke-of-suffolk",
+    "count": 1,
+    "order": 663
+  },
+  {
+    "name": "Charles Brandon, 1st Duke of Suffolk",
+    "slug": "charles-brandon-1st-duke-of-suffolk",
+    "count": 1,
+    "order": 664
+  },
+  {
+    "name": "Mary Tudor, Queen of France",
+    "slug": "mary-tudor-queen-of-france",
+    "count": 1,
+    "order": 665
+  },
+  {
+    "name": "Henry VII",
+    "slug": "henry-vii",
+    "count": 8,
+    "order": 666
+  },
+  {
+    "name": "Richard III",
+    "slug": "richard-iii",
+    "count": 7,
+    "order": 667
+  },
+  {
+    "name": "Edward IV",
+    "slug": "edward-iv",
+    "count": 8,
+    "order": 668
+  },
+  {
+    "name": "Henry VI",
+    "slug": "henry-vi",
+    "count": 7,
+    "order": 669
+  },
+  {
+    "name": "Joan of Arc",
+    "slug": "joan-of-arc",
+    "count": 3,
+    "order": 670
+  },
+  {
+    "name": "Charles VII of France",
+    "slug": "charles-vii-of-france",
+    "count": 5,
+    "order": 671
+  },
+  {
+    "name": "Henry V",
+    "slug": "henry-v",
+    "count": 4,
+    "order": 672
+  },
+  {
+    "name": "Richard II",
+    "slug": "richard-ii",
+    "count": 2,
+    "order": 673
+  },
+  {
+    "name": "Edward the Black Prince",
+    "slug": "edward-the-black-prince",
+    "count": 3,
+    "order": 674
+  },
+  {
+    "name": "John II of France",
+    "slug": "john-ii-of-france",
+    "count": 1,
+    "order": 675
+  },
+  {
+    "name": "Charles V of France",
+    "slug": "charles-v-of-france",
+    "count": 2,
+    "order": 676
+  },
+  {
+    "name": "Charles VI of France",
+    "slug": "charles-vi-of-france",
+    "count": 2,
+    "order": 677
+  },
+  {
+    "name": "Catherine of Valois",
+    "slug": "catherine-of-valois",
+    "count": 2,
+    "order": 678
+  },
+  {
+    "name": "Owen Tudor",
+    "slug": "owen-tudor",
+    "count": 1,
+    "order": 679
+  },
+  {
+    "name": "Margaret Beaufort",
+    "slug": "margaret-beaufort",
+    "count": 2,
+    "order": 680
+  },
+  {
+    "name": "Elizabeth of York",
+    "slug": "elizabeth-of-york",
+    "count": 1,
+    "order": 681
+  },
+  {
+    "name": "Elizabeth Woodville",
+    "slug": "elizabeth-woodville",
+    "count": 2,
+    "order": 682
+  },
+  {
+    "name": "Richard Neville, 16th Earl of Warwick",
+    "slug": "richard-neville-16th-earl-of-warwick",
+    "count": 2,
+    "order": 683
+  },
+  {
+    "name": "Margaret of Anjou",
+    "slug": "margaret-of-anjou",
+    "count": 1,
+    "order": 684
+  },
+  {
+    "name": "Louis XI",
+    "slug": "louis-xi",
+    "count": 3,
+    "order": 685
+  },
+  {
+    "name": "Charles the Bold",
+    "slug": "charles-the-bold",
+    "count": 1,
+    "order": 686
+  },
+  {
+    "name": "Philip the Good",
+    "slug": "philip-the-good",
+    "count": 3,
+    "order": 687
+  },
+  {
+    "name": "Jan van Eyck",
+    "slug": "jan-van-eyck",
+    "count": 4,
+    "order": 688
+  },
+  {
+    "name": "Rogier van der Weyden",
+    "slug": "rogier-van-der-weyden",
+    "count": 3,
+    "order": 689
+  },
+  {
+    "name": "Hans Memling",
+    "slug": "hans-memling",
+    "count": 1,
+    "order": 690
+  },
+  {
+    "name": "Hugo van der Goes",
+    "slug": "hugo-van-der-goes",
+    "count": 1,
+    "order": 691
+  },
+  {
+    "name": "Domenico Ghirlandaio",
+    "slug": "domenico-ghirlandaio",
+    "count": 1,
+    "order": 692
+  },
+  {
+    "name": "Giorgio Vasari",
+    "slug": "giorgio-vasari",
+    "count": 10,
+    "order": 693
+  },
+  {
+    "name": "Giotto",
+    "slug": "giotto",
+    "count": 8,
+    "order": 694
+  },
+  {
+    "name": "Cimabue",
+    "slug": "cimabue",
+    "count": 2,
+    "order": 695
+  },
+  {
+    "name": "Duccio",
+    "slug": "duccio",
+    "count": 4,
+    "order": 696
+  },
+  {
+    "name": "Simone Martini",
+    "slug": "simone-martini",
+    "count": 3,
+    "order": 697
+  },
+  {
+    "name": "Ambrogio Lorenzetti",
+    "slug": "ambrogio-lorenzetti",
+    "count": 2,
+    "order": 698
+  },
+  {
+    "name": "Pietro Lorenzetti",
+    "slug": "pietro-lorenzetti",
+    "count": 1,
+    "order": 699
+  },
+  {
+    "name": "Giovanni Pisano",
+    "slug": "giovanni-pisano",
+    "count": 2,
+    "order": 700
+  },
+  {
+    "name": "Nicola Pisano",
+    "slug": "nicola-pisano",
+    "count": 1,
+    "order": 701
+  },
+  {
+    "name": "Arnolfo di Cambio",
+    "slug": "arnolfo-di-cambio",
+    "count": 1,
+    "order": 702
+  },
+  {
+    "name": "Charles I of Anjou",
+    "slug": "charles-i-of-anjou",
+    "count": 2,
+    "order": 703
+  },
+  {
+    "name": "Blanche of Castile",
+    "slug": "blanche-of-castile",
+    "count": 3,
+    "order": 704
+  },
+  {
+    "name": "Eleanor of Aquitaine",
+    "slug": "eleanor-of-aquitaine",
+    "count": 3,
+    "order": 705
+  },
+  {
+    "name": "Henry II of England",
+    "slug": "henry-ii-of-england",
+    "count": 4,
+    "order": 706
+  },
+  {
+    "name": "Thomas Becket",
+    "slug": "thomas-becket",
+    "count": 2,
+    "order": 707
+  },
+  {
+    "name": "T. S. Eliot",
+    "slug": "t-s-eliot",
+    "count": 2,
+    "order": 708
+  },
+  {
+    "name": "James Joyce",
+    "slug": "james-joyce",
+    "count": 2,
+    "order": 709
+  },
+  {
+    "name": "W. B. Yeats",
+    "slug": "w-b-yeats",
+    "count": 2,
+    "order": 710
+  },
+  {
+    "name": "Rabindranath Tagore",
+    "slug": "rabindranath-tagore",
+    "count": 2,
+    "order": 711
+  },
+  {
+    "name": "Satyajit Ray",
+    "slug": "satyajit-ray",
+    "count": 2,
+    "order": 712
+  },
+  {
+    "name": "Akira Kurosawa",
+    "slug": "akira-kurosawa",
+    "count": 2,
+    "order": 713
+  },
+  {
+    "name": "Toshiro Mifune",
+    "slug": "toshiro-mifune",
+    "count": 1,
+    "order": 714
+  },
+  {
+    "name": "Miyamoto Musashi",
+    "slug": "miyamoto-musashi",
+    "count": 1,
+    "order": 715
+  },
+  {
+    "name": "Tokugawa Ieyasu",
+    "slug": "tokugawa-ieyasu",
+    "count": 3,
+    "order": 716
+  },
+  {
+    "name": "Oda Nobunaga",
+    "slug": "oda-nobunaga",
+    "count": 2,
+    "order": 717
+  },
+  {
+    "name": "Toyotomi Hideyoshi",
+    "slug": "toyotomi-hideyoshi",
+    "count": 3,
+    "order": 718
+  },
+  {
+    "name": "Yi Sun-sin",
+    "slug": "yi-sun-sin",
+    "count": 1,
+    "order": 719
+  },
+  {
+    "name": "Wanli Emperor",
+    "slug": "wanli-emperor",
+    "count": 1,
+    "order": 720
+  },
+  {
+    "name": "Matteo Ricci",
+    "slug": "matteo-ricci",
+    "count": 1,
+    "order": 721
+  },
+  {
+    "name": "Francis Xavier",
+    "slug": "francis-xavier",
+    "count": 1,
+    "order": 722
+  },
+  {
+    "name": "Ignatius of Loyola",
+    "slug": "ignatius-of-loyola",
+    "count": 1,
+    "order": 723
+  },
+  {
+    "name": "Pope Francis",
+    "slug": "pope-francis",
+    "count": 2,
+    "order": 724
+  },
+  {
+    "name": "Francis of Assisi",
+    "slug": "francis-of-assisi",
+    "count": 2,
+    "order": 725
+  },
+  {
+    "name": "Pope Innocent III",
+    "slug": "pope-innocent-iii",
+    "count": 2,
+    "order": 726
+  },
+  {
+    "name": "King John",
+    "slug": "king-john",
+    "count": 4,
+    "order": 727
+  },
+  {
+    "name": "Philip II Augustus",
+    "slug": "philip-ii-augustus",
+    "count": 2,
+    "order": 728
+  },
+  {
+    "name": "Louis VIII of France",
+    "slug": "louis-viii-of-france",
+    "count": 1,
+    "order": 729
+  },
+  {
+    "name": "Henry III of England",
+    "slug": "henry-iii-of-england",
+    "count": 1,
+    "order": 730
+  },
+  {
+    "name": "Edward the Confessor",
+    "slug": "edward-the-confessor",
+    "count": 5,
+    "order": 731
+  },
+  {
+    "name": "William the Conqueror",
+    "slug": "william-the-conqueror",
+    "count": 2,
+    "order": 732
+  },
+  {
+    "name": "Harold Godwinson",
+    "slug": "harold-godwinson",
+    "count": 2,
+    "order": 733
+  },
+  {
+    "name": "Harald Hardrada",
+    "slug": "harald-hardrada",
+    "count": 2,
+    "order": 734
+  },
+  {
+    "name": "Cnut the Great",
+    "slug": "cnut-the-great",
+    "count": 4,
+    "order": 735
+  },
+  {
+    "name": "Æthelred the Unready",
+    "slug": "aethelred-the-unready",
+    "count": 2,
+    "order": 736
+  },
+  {
+    "name": "Sweyn Forkbeard",
+    "slug": "sweyn-forkbeard",
+    "count": 1,
+    "order": 737
+  },
+  {
+    "name": "Harald Bluetooth",
+    "slug": "harald-bluetooth",
+    "count": 1,
+    "order": 738
+  },
+  {
+    "name": "Otto the Great",
+    "slug": "otto-the-great",
+    "count": 1,
+    "order": 739
+  },
+  {
+    "name": "Charlemagne",
+    "slug": "charlemagne",
+    "count": 2,
+    "order": 740
+  },
+  {
+    "name": "Harun al-Rashid",
+    "slug": "harun-al-rashid",
+    "count": 3,
+    "order": 741
+  },
+  {
+    "name": "al-Ma'mun",
+    "slug": "al-mamun",
+    "count": 2,
+    "order": 742
+  },
+  {
+    "name": "Hunayn ibn Ishaq",
+    "slug": "hunayn-ibn-ishaq",
+    "count": 1,
+    "order": 743
+  },
+  {
+    "name": "Al-Razi",
+    "slug": "al-razi",
+    "count": 2,
+    "order": 744
+  },
+  {
+    "name": "Jabir ibn Hayyan",
+    "slug": "jabir-ibn-hayyan",
+    "count": 1,
+    "order": 745
+  },
+  {
+    "name": "Ja'far al-Sadiq",
+    "slug": "jafar-al-sadiq",
+    "count": 1,
+    "order": 746
+  },
+  {
+    "name": "Ali ibn Abi Talib",
+    "slug": "ali-ibn-abi-talib",
+    "count": 10,
+    "order": 747
+  },
+  {
+    "name": "Umar ibn al-Khattab",
+    "slug": "umar-ibn-al-khattab",
+    "count": 5,
+    "order": 748
+  },
+  {
+    "name": "Abu Bakr",
+    "slug": "abu-bakr",
+    "count": 3,
+    "order": 749
+  },
+  {
+    "name": "Aisha",
+    "slug": "aisha",
+    "count": 2,
+    "order": 750
+  },
+  {
+    "name": "Khadija",
+    "slug": "khadija",
+    "count": 1,
+    "order": 751
+  },
+  {
+    "name": "Fatima",
+    "slug": "fatima",
+    "count": 2,
+    "order": 752
+  },
+  {
+    "name": "Husayn ibn Ali",
+    "slug": "husayn-ibn-ali",
+    "count": 2,
+    "order": 753
+  },
+  {
+    "name": "Mu'awiya I",
+    "slug": "muawiya-i",
+    "count": 3,
+    "order": 754
+  },
+  {
+    "name": "Uthman ibn Affan",
+    "slug": "uthman-ibn-affan",
+    "count": 2,
+    "order": 755
+  },
+  {
+    "name": "Amr ibn al-As",
+    "slug": "amr-ibn-al-as",
+    "count": 1,
+    "order": 756
+  },
+  {
+    "name": "Heraclius",
+    "slug": "heraclius",
+    "count": 2,
+    "order": 757
+  },
+  {
+    "name": "Khosrow II",
+    "slug": "khosrow-ii",
+    "count": 1,
+    "order": 758
+  },
+  {
+    "name": "Khosrow I",
+    "slug": "khosrow-i",
+    "count": 2,
+    "order": 759
+  },
+  {
+    "name": "Firdawsi",
+    "slug": "firdawsi",
+    "count": 2,
+    "order": 760
+  },
+  {
+    "name": "Mahmud of Ghazni",
+    "slug": "mahmud-of-ghazni",
+    "count": 2,
+    "order": 761
+  },
+  {
+    "name": "al-Biruni",
+    "slug": "al-biruni",
+    "count": 1,
+    "order": 762
+  },
+  {
+    "name": "Brahmagupta",
+    "slug": "brahmagupta",
+    "count": 3,
+    "order": 763
+  },
+  {
+    "name": "Aryabhata",
+    "slug": "aryabhata",
+    "count": 4,
+    "order": 764
+  },
+  {
+    "name": "Bhaskara II",
+    "slug": "bhaskara-ii",
+    "count": 2,
+    "order": 765
+  },
+  {
+    "name": "Madhava of Sangamagrama",
+    "slug": "madhava-of-sangamagrama",
+    "count": 3,
+    "order": 766
+  },
+  {
+    "name": "Nilakantha Somayaji",
+    "slug": "nilakantha-somayaji",
+    "count": 2,
+    "order": 767
+  },
+  {
+    "name": "Jyeshtadeva",
+    "slug": "jyeshtadeva",
+    "count": 1,
+    "order": 768
+  },
+  {
+    "name": "Achyuta Pisharati",
+    "slug": "achyuta-pisharati",
+    "count": 1,
+    "order": 769
+  },
+  {
+    "name": "Melpathur Narayana Bhattathiri",
+    "slug": "melpathur-narayana-bhattathiri",
+    "count": 1,
+    "order": 770
+  },
+  {
+    "name": "Vyasa",
+    "slug": "vyasa",
+    "count": 4,
+    "order": 771
+  },
+  {
+    "name": "Adi Shankara",
+    "slug": "adi-shankara",
+    "count": 3,
+    "order": 772
+  },
+  {
+    "name": "Ramanuja",
+    "slug": "ramanuja",
+    "count": 2,
+    "order": 773
+  },
+  {
+    "name": "Madhva",
+    "slug": "madhva",
+    "count": 2,
+    "order": 774
+  },
+  {
+    "name": "Purandara Dasa",
+    "slug": "purandara-dasa",
+    "count": 2,
+    "order": 775
+  },
+  {
+    "name": "Tyagaraja",
+    "slug": "tyagaraja",
+    "count": 3,
+    "order": 776
+  },
+  {
+    "name": "Muthuswami Dikshitar",
+    "slug": "muthuswami-dikshitar",
+    "count": 2,
+    "order": 777
+  },
+  {
+    "name": "Syama Sastri",
+    "slug": "syama-sastri",
+    "count": 2,
+    "order": 778
+  },
+  {
+    "name": "Pachimiriyam Adiyappa",
+    "slug": "pachimiriyam-adiyappa",
+    "count": 1,
+    "order": 779
+  },
+  {
+    "name": "Pratapasimha of Thanjavur",
+    "slug": "pratapasimha-of-thanjavur",
+    "count": 1,
+    "order": 780
+  },
+  {
+    "name": "Ekoji I",
+    "slug": "ekoji-i",
+    "count": 1,
+    "order": 781
+  },
+  {
+    "name": "Shahaji",
+    "slug": "shahaji",
+    "count": 1,
+    "order": 782
+  },
+  {
+    "name": "Malik Ambar",
+    "slug": "malik-ambar",
+    "count": 1,
+    "order": 783
   }
 ]
