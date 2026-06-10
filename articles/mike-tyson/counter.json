@@ -56,7 +56,7 @@
   {
     "name": "Adam Smith",
     "slug": "adam-smith",
-    "count": 5,
+    "count": 7,
     "order": 10
   },
   {
@@ -68,7 +68,7 @@
   {
     "name": "Isaac Newton",
     "slug": "isaac-newton",
-    "count": 23,
+    "count": 25,
     "order": 12
   },
   {
@@ -86,7 +86,7 @@
   {
     "name": "Aristotle",
     "slug": "aristotle",
-    "count": 40,
+    "count": 41,
     "order": 15
   },
   {
@@ -110,19 +110,19 @@
   {
     "name": "William Shakespeare",
     "slug": "william-shakespeare",
-    "count": 18,
+    "count": 20,
     "order": 19
   },
   {
     "name": "Elizabeth I",
     "slug": "elizabeth-i",
-    "count": 11,
+    "count": 16,
     "order": 20
   },
   {
     "name": "Henry VIII",
     "slug": "henry-viii",
-    "count": 13,
+    "count": 14,
     "order": 21
   },
   {
@@ -134,7 +134,7 @@
   {
     "name": "Augustine of Hippo",
     "slug": "augustine-of-hippo",
-    "count": 8,
+    "count": 9,
     "order": 23
   },
   {
@@ -362,13 +362,13 @@
   {
     "name": "Charles V",
     "slug": "charles-v",
-    "count": 9,
+    "count": 11,
     "order": 61
   },
   {
     "name": "Francis I",
     "slug": "francis-i",
-    "count": 1,
+    "count": 4,
     "order": 62
   },
   {
@@ -380,13 +380,13 @@
   {
     "name": "Michelangelo",
     "slug": "michelangelo",
-    "count": 12,
+    "count": 13,
     "order": 64
   },
   {
     "name": "Raphael",
     "slug": "raphael",
-    "count": 8,
+    "count": 9,
     "order": 65
   },
   {
@@ -506,7 +506,7 @@
   {
     "name": "Queen Victoria",
     "slug": "queen-victoria",
-    "count": 3,
+    "count": 4,
     "order": 85
   },
   {
@@ -530,13 +530,13 @@
   {
     "name": "Napoleon Bonaparte",
     "slug": "napoleon-bonaparte",
-    "count": 28,
+    "count": 31,
     "order": 89
   },
   {
     "name": "Duke of Wellington",
     "slug": "duke-of-wellington",
-    "count": 6,
+    "count": 7,
     "order": 90
   },
   {
@@ -548,7 +548,7 @@
   {
     "name": "George III",
     "slug": "george-iii",
-    "count": 1,
+    "count": 5,
     "order": 92
   },
   {
@@ -614,7 +614,7 @@
   {
     "name": "Gottfried Wilhelm Leibniz",
     "slug": "gottfried-wilhelm-leibniz",
-    "count": 5,
+    "count": 6,
     "order": 103
   },
   {
@@ -626,7 +626,7 @@
   {
     "name": "Robert Hooke",
     "slug": "robert-hooke",
-    "count": 2,
+    "count": 3,
     "order": 105
   },
   {
@@ -638,7 +638,7 @@
   {
     "name": "Francis Bacon",
     "slug": "francis-bacon",
-    "count": 3,
+    "count": 5,
     "order": 107
   },
   {
@@ -686,13 +686,13 @@
   {
     "name": "Cardinal Richelieu",
     "slug": "cardinal-richelieu",
-    "count": 1,
+    "count": 2,
     "order": 115
   },
   {
     "name": "Louis XIV",
     "slug": "louis-xiv",
-    "count": 7,
+    "count": 10,
     "order": 116
   },
   {
@@ -1232,37 +1232,37 @@
   {
     "name": "Oliver Cromwell",
     "slug": "oliver-cromwell",
-    "count": 2,
+    "count": 4,
     "order": 206
   },
   {
     "name": "Charles I",
     "slug": "charles-i",
-    "count": 3,
+    "count": 9,
     "order": 207
   },
   {
     "name": "Peter Paul Rubens",
     "slug": "peter-paul-rubens",
-    "count": 4,
+    "count": 6,
     "order": 208
   },
   {
     "name": "Titian",
     "slug": "titian",
-    "count": 5,
+    "count": 7,
     "order": 209
   },
   {
     "name": "Philip II of Spain",
     "slug": "philip-ii-of-spain",
-    "count": 4,
+    "count": 6,
     "order": 210
   },
   {
     "name": "Mary I of England",
     "slug": "mary-i-of-england",
-    "count": 3,
+    "count": 4,
     "order": 211
   },
   {
@@ -1340,7 +1340,7 @@
   {
     "name": "Edward VI",
     "slug": "edward-vi",
-    "count": 1,
+    "count": 2,
     "order": 224
   },
   {
@@ -1352,7 +1352,7 @@
   {
     "name": "John Calvin",
     "slug": "john-calvin",
-    "count": 2,
+    "count": 3,
     "order": 226
   },
   {
@@ -1364,7 +1364,7 @@
   {
     "name": "Mary, Queen of Scots",
     "slug": "mary-queen-of-scots",
-    "count": 2,
+    "count": 10,
     "order": 228
   },
   {
@@ -1376,7 +1376,7 @@
   {
     "name": "Walter Raleigh",
     "slug": "walter-raleigh",
-    "count": 1,
+    "count": 3,
     "order": 230
   },
   {
@@ -1592,19 +1592,19 @@
   {
     "name": "Samuel Johnson",
     "slug": "samuel-johnson",
-    "count": 2,
+    "count": 6,
     "order": 266
   },
   {
     "name": "Edmund Burke",
     "slug": "edmund-burke",
-    "count": 2,
+    "count": 7,
     "order": 267
   },
   {
     "name": "Thomas Paine",
     "slug": "thomas-paine",
-    "count": 2,
+    "count": 3,
     "order": 268
   },
   {
@@ -1724,7 +1724,7 @@
   {
     "name": "Gian Lorenzo Bernini",
     "slug": "gian-lorenzo-bernini",
-    "count": 1,
+    "count": 2,
     "order": 288
   },
   {
@@ -1736,7 +1736,7 @@
   {
     "name": "Rembrandt",
     "slug": "rembrandt",
-    "count": 5,
+    "count": 6,
     "order": 290
   },
   {
@@ -1784,7 +1784,7 @@
   {
     "name": "Lorenzo de' Medici",
     "slug": "lorenzo-de-medici",
-    "count": 9,
+    "count": 10,
     "order": 298
   },
   {
@@ -1844,7 +1844,7 @@
   {
     "name": "Andrea Palladio",
     "slug": "andrea-palladio",
-    "count": 2,
+    "count": 3,
     "order": 308
   },
   {
@@ -2618,7 +2618,7 @@
   {
     "name": "Arthur Schopenhauer",
     "slug": "arthur-schopenhauer",
-    "count": 1,
+    "count": 2,
     "order": 437
   },
   {
@@ -2660,13 +2660,13 @@
   {
     "name": "Alexandre Dumas",
     "slug": "alexandre-dumas",
-    "count": 2,
+    "count": 3,
     "order": 444
   },
   {
     "name": "Walter Scott",
     "slug": "walter-scott",
-    "count": 1,
+    "count": 2,
     "order": 445
   },
   {
@@ -2990,7 +2990,7 @@
   {
     "name": "Leo Tolstoy",
     "slug": "leo-tolstoy",
-    "count": 7,
+    "count": 8,
     "order": 499
   },
   {
@@ -3704,7 +3704,7 @@
   {
     "name": "Walt Whitman",
     "slug": "walt-whitman",
-    "count": 2,
+    "count": 3,
     "order": 618
   },
   {
@@ -3728,7 +3728,223 @@
   {
     "name": "Herman Melville",
     "slug": "herman-melville",
-    "count": 1,
+    "count": 2,
     "order": 622
+  },
+  {
+    "name": "D. H. Lawrence",
+    "slug": "d-h-lawrence",
+    "count": 1,
+    "order": 623
+  },
+  {
+    "name": "Bertrand Russell",
+    "slug": "bertrand-russell",
+    "count": 3,
+    "order": 624
+  },
+  {
+    "name": "Ludwig Wittgenstein",
+    "slug": "ludwig-wittgenstein",
+    "count": 2,
+    "order": 625
+  },
+  {
+    "name": "John Maynard Keynes",
+    "slug": "john-maynard-keynes",
+    "count": 1,
+    "order": 626
+  },
+  {
+    "name": "Virginia Woolf",
+    "slug": "virginia-woolf",
+    "count": 2,
+    "order": 627
+  },
+  {
+    "name": "Jane Austen",
+    "slug": "jane-austen",
+    "count": 2,
+    "order": 628
+  },
+  {
+    "name": "George IV",
+    "slug": "george-iv",
+    "count": 4,
+    "order": 629
+  },
+  {
+    "name": "William Pitt the Younger",
+    "slug": "william-pitt-the-younger",
+    "count": 3,
+    "order": 630
+  },
+  {
+    "name": "William Wilberforce",
+    "slug": "william-wilberforce",
+    "count": 2,
+    "order": 631
+  },
+  {
+    "name": "Charles James Fox",
+    "slug": "charles-james-fox",
+    "count": 2,
+    "order": 632
+  },
+  {
+    "name": "Richard Brinsley Sheridan",
+    "slug": "richard-brinsley-sheridan",
+    "count": 1,
+    "order": 633
+  },
+  {
+    "name": "David Garrick",
+    "slug": "david-garrick",
+    "count": 1,
+    "order": 634
+  },
+  {
+    "name": "Joshua Reynolds",
+    "slug": "joshua-reynolds",
+    "count": 1,
+    "order": 635
+  },
+  {
+    "name": "Thomas Gainsborough",
+    "slug": "thomas-gainsborough",
+    "count": 2,
+    "order": 636
+  },
+  {
+    "name": "Anthony van Dyck",
+    "slug": "anthony-van-dyck",
+    "count": 1,
+    "order": 637
+  },
+  {
+    "name": "Henrietta Maria",
+    "slug": "henrietta-maria",
+    "count": 1,
+    "order": 638
+  },
+  {
+    "name": "Henry IV of France",
+    "slug": "henry-iv-of-france",
+    "count": 7,
+    "order": 639
+  },
+  {
+    "name": "Catherine de' Medici",
+    "slug": "catherine-de-medici",
+    "count": 8,
+    "order": 640
+  },
+  {
+    "name": "Nostradamus",
+    "slug": "nostradamus",
+    "count": 3,
+    "order": 641
+  },
+  {
+    "name": "Henry II of France",
+    "slug": "henry-ii-of-france",
+    "count": 5,
+    "order": 642
+  },
+  {
+    "name": "Diane de Poitiers",
+    "slug": "diane-de-poitiers",
+    "count": 1,
+    "order": 643
+  },
+  {
+    "name": "Henry III of France",
+    "slug": "henry-iii-of-france",
+    "count": 3,
+    "order": 644
+  },
+  {
+    "name": "Margaret of Valois",
+    "slug": "margaret-of-valois",
+    "count": 2,
+    "order": 645
+  },
+  {
+    "name": "Charles IX of France",
+    "slug": "charles-ix-of-france",
+    "count": 1,
+    "order": 646
+  },
+  {
+    "name": "Gaspard de Coligny",
+    "slug": "gaspard-de-coligny",
+    "count": 1,
+    "order": 647
+  },
+  {
+    "name": "William the Silent",
+    "slug": "william-the-silent",
+    "count": 1,
+    "order": 648
+  },
+  {
+    "name": "William III of England",
+    "slug": "william-iii-of-england",
+    "count": 2,
+    "order": 649
+  },
+  {
+    "name": "Charles II",
+    "slug": "charles-ii",
+    "count": 2,
+    "order": 650
+  },
+  {
+    "name": "Christopher Wren",
+    "slug": "christopher-wren",
+    "count": 1,
+    "order": 651
+  },
+  {
+    "name": "Inigo Jones",
+    "slug": "inigo-jones",
+    "count": 1,
+    "order": 652
+  },
+  {
+    "name": "James I of England",
+    "slug": "james-i-of-england",
+    "count": 3,
+    "order": 653
+  },
+  {
+    "name": "Guy Fawkes",
+    "slug": "guy-fawkes",
+    "count": 2,
+    "order": 654
+  },
+  {
+    "name": "Robert Catesby",
+    "slug": "robert-catesby",
+    "count": 1,
+    "order": 655
+  },
+  {
+    "name": "Robert Devereux, 2nd Earl of Essex",
+    "slug": "robert-devereux-2nd-earl-of-essex",
+    "count": 1,
+    "order": 656
+  },
+  {
+    "name": "Robert Dudley, 1st Earl of Leicester",
+    "slug": "robert-dudley-1st-earl-of-leicester",
+    "count": 2,
+    "order": 657
+  },
+  {
+    "name": "Lady Jane Grey",
+    "slug": "lady-jane-grey",
+    "count": 1,
+    "order": 658
   }
 ]
