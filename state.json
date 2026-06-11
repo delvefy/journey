@@ -1,5 +1,5 @@
 {
-  "current_seed": "mike-tyson",
+  "current_seed": "miyamoto-musashi",
   "seeds": {
     "jesus-christ": {
       "next_name": "Jesus Christ",
@@ -12,9 +12,9 @@
       "complete": false
     },
     "mike-tyson": {
-      "next_name": "Chand Bibi",
-      "next_slug": "chand-bibi",
-      "complete": false
+      "next_name": "Oliver Hardy",
+      "next_slug": "oliver-hardy",
+      "complete": true
     },
     "justin-bieber": {
       "next_name": "Justin Bieber",
@@ -27,8 +27,8 @@
       "complete": false
     },
     "miyamoto-musashi": {
-      "next_name": "Miyamoto Musashi",
-      "next_slug": "miyamoto-musashi",
+      "next_name": "Max Planck",
+      "next_slug": "max-planck",
       "complete": false
     }
   }
