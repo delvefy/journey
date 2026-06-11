@@ -5,5 +5,19 @@
     "summary": "What Vlad's Journey is, how it is organised, and how its articles are written.",
     "tags": ["meta"],
     "date": "2026-06-11"
+  },
+  {
+    "slug": "gemeinsame-gluecksspielbehoerde-der-laender",
+    "title": "Gemeinsame Glücksspielbehörde der Länder",
+    "summary": "The GGL, Germany's joint authority of the sixteen Länder for regulating cross-state online gambling, seated in Halle (Saale) and fully operational since January 2023.",
+    "tags": ["gambling", "regulation", "germany"],
+    "date": "2026-06-11"
+  },
+  {
+    "slug": "polymer",
+    "title": "Polymer",
+    "summary": "Giant molecules built from repeating units — from cellulose and silk to nylon and polyethylene — whose chain-like architecture gives plastics, rubbers and fibres their character.",
+    "tags": ["chemistry", "material", "science"],
+    "date": "2026-06-11"
   }
 ]

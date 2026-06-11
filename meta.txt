@@ -40,11 +40,35 @@ More .json files may be added to db/ later if a feature needs them.
 HOW TO ADD AN ARTICLE (the routine task)
 ----------------------------------------
 1. Pick a kebab-case slug from the title (e.g. "the-silk-road").
-2. Create articles/<slug>.html from the skeleton below.
+2. Create articles/<slug>.html from the skeleton below, following the
+   ARTICLE STRUCTURE rules strictly.
 3. Append an entry to db/articles.json (slug, title, summary, tags, date = today).
 That's it — the front page picks it up automatically. Nothing else to update.
 
 A real specimen following the house style: articles/about-this-wiki.html
+
+ARTICLE STRUCTURE (strict — every article, no exceptions)
+---------------------------------------------------------
+An article takes one of two shapes, decided by how much reliable material
+the subject offers:
+
+1. OVERVIEW — mandatory, 500–1000 words.
+   The whole subject in miniature: the lead paragraph (class="lead")
+   defining it, then a few short <h2> sections covering the essentials.
+   A reader who stops at the end of the overview must still walk away
+   with the complete picture. The infobox, if any, belongs here.
+
+2. DEEPER DELVE — only when information is abundant, 5000–10000 words.
+   Follows the overview, separated by an <hr> and opened with the
+   heading <h2>A deeper delve</h2>. Its internal sections use <h3>
+   (and <h4> below that if needed). This is where the full history,
+   mechanics, figures, controversies and consequences live, at
+   encyclopedic depth.
+
+If the subject cannot honestly sustain 5000 words, stop after the
+overview — never pad. If it can, the delve is obligatory — never
+compress a rich subject into the overview alone. References, when
+present, come last of all (after the delve if there is one).
 
 ARTICLE SKELETON
 ----------------
@@ -86,14 +110,22 @@ ARTICLE SKELETON
       </dl>
     </aside>
 
+    <!-- ===== OVERVIEW (mandatory, 500-1000 words) ===== -->
     <!-- Lead paragraph: class "lead" gives it the illuminated drop cap -->
     <p class="lead">{Opening paragraph, encyclopedia voice.}</p>
 
     <h2>{Section heading}</h2>
     <p>{Body...}</p>
 
+    <!-- ===== DEEPER DELVE (only if information is abundant, 5000-10000 words) =====
+    <hr>
+    <h2>A deeper delve</h2>
+    <h3>{Subsection}</h3>
+    <p>{Body at depth...}</p>
+    -->
+
     <!-- Other available elements, all pre-styled:
-         <h3>, <blockquote>, <ul>/<ol>, <hr>,
+         <h3>, <h4>, <blockquote>, <ul>/<ol>, <hr>,
          <figure><img ...><figcaption>caption</figcaption></figure>,
          <h2>References</h2><ol class="references">...</ol> -->
   </main>
@@ -110,6 +142,8 @@ HOUSE STYLE (writing)
 ---------------------
 - Encyclopedia voice: third person, measured, slightly old-fashioned; wit is
   welcome, hype is not.
+- Follow ARTICLE STRUCTURE above strictly: overview always (500-1000 words);
+  deeper delve (5000-10000 words) only when the material is abundant.
 - Open with a lead paragraph (class="lead") that defines the subject.
 - Divide longer entries into <h2> sections; use the infobox for quick facts.
 - Tags: lowercase, singular where sensible, reuse existing tags before
