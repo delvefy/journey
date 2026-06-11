@@ -19,5 +19,12 @@
     "summary": "Giant molecules built from repeating units — from cellulose and silk to nylon and polyethylene — whose chain-like architecture gives plastics, rubbers and fibres their character.",
     "tags": ["chemistry", "material", "science"],
     "date": "2026-06-11"
+  },
+  {
+    "slug": "search-engine-optimization",
+    "title": "Search engine optimization",
+    "summary": "SEO, the craft of arranging a website so search engines — and the answer engines now built atop them — present it favourably: its technical mechanics, its history, and its passage into the age of generative search.",
+    "tags": ["seo", "web", "marketing"],
+    "date": "2026-06-11"
   }
 ]
