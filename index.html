@@ -3,180 +3,179 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All the roads lead to:</title>
+<title>Vlad&rsquo;s Journey</title>
+<meta name="description" content="A personal encyclopædia — notes, curiosities and wanderings, kept in good order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="wrap">
-  <h1 class="index-title">All the roads lead to:</h1>
+<div class="wrap">
 
-  <section id="seeds-view">
-    <p class="view-intro">Pick a road.</p>
-    <ol id="seeds" class="roads seeds"></ol>
-    <p id="seeds-empty" class="empty" hidden>No roads have been walked yet.</p>
-  </section>
+  <header class="masthead">
+    <p class="masthead-eyebrow">a personal encyclop&aelig;dia</p>
+    <h1 class="masthead-title">Vlad&rsquo;s Journey</h1>
+    <p class="masthead-motto">Notes, curiosities &amp; wanderings, kept in good order.</p>
+    <div class="ornament-rule" role="presentation"><span class="fleuron">&#10086;</span></div>
+  </header>
 
-  <section id="road-view" hidden>
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="#" class="back-to-seeds">&larr; all roads</a>
-    </nav>
-    <h2 id="road-title" class="road-title"></h2>
-    <nav class="sort-toggle" aria-label="Sort order">
-      <button type="button" data-sort="count" class="active">by popularity</button>
-      <button type="button" data-sort="order">by road</button>
-    </nav>
-    <ol id="roads" class="roads"></ol>
-    <p id="road-empty" class="empty" hidden>This road has not been walked yet.</p>
-  </section>
-</main>
+  <main>
+    <p class="about">
+      This is the private atlas of one traveller&rsquo;s mind &mdash; a slow accumulation of
+      <strong>articles</strong> on whatever proved worth writing down. New entries are
+      added from time to time; old ones are revised when the author knows better.
+    </p>
+
+    <section aria-label="Search">
+      <h2 class="section-heading">Search the archive</h2>
+      <div class="search-box">
+        <input id="search" class="search-input" type="search"
+               placeholder="Search by title or tag&hellip;" autocomplete="off">
+        <p id="search-note" class="search-note" hidden></p>
+      </div>
+      <ol id="results" class="entries" hidden></ol>
+    </section>
+
+    <section id="recent-section" aria-label="Recent articles">
+      <h2 class="section-heading">Recently added</h2>
+      <ol id="recent" class="entries"></ol>
+      <p id="recent-empty" class="empty-note" hidden>
+        The archive is empty &mdash; the first page is yet to be written.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="ornament-rule" role="presentation"><span class="fleuron">&#10086;</span></div>
+    <p>Vlad&rsquo;s Journey &mdash; written by hand, bound in amber.</p>
+  </footer>
+
+</div>
+
 <script>
 (function () {
-  const seedsView = document.getElementById('seeds-view');
-  const roadView = document.getElementById('road-view');
-  const seedsList = document.getElementById('seeds');
-  const seedsEmpty = document.getElementById('seeds-empty');
-  const roadList = document.getElementById('roads');
-  const roadEmpty = document.getElementById('road-empty');
-  const roadTitle = document.getElementById('road-title');
-  const sortButtons = document.querySelectorAll('.sort-toggle button');
-  const backLink = document.querySelector('.back-to-seeds');
+  const RECENT_COUNT = 6;
+  const searchInput = document.getElementById('search');
+  const searchNote = document.getElementById('search-note');
+  const resultsList = document.getElementById('results');
+  const recentSection = document.getElementById('recent-section');
+  const recentList = document.getElementById('recent');
+  const recentEmpty = document.getElementById('recent-empty');
 
-  let seeds = [];
-  let currentRows = [];
-  let currentSort = 'count';
+  let articles = [];
 
-  const sorters = {
-    count: (a, b) => (b.count - a.count) || ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
-    order: (a, b) => ((a.order || 0) - (b.order || 0)) || a.name.localeCompare(b.name),
-  };
+  function formatDate(iso) {
+    const d = new Date(iso + 'T00:00:00');
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
 
-  function renderSeeds() {
-    seedsList.innerHTML = '';
-    if (!seeds.length) {
-      seedsEmpty.hidden = false;
-      return;
+  function renderEntry(article) {
+    const li = document.createElement('li');
+    li.className = 'entry';
+
+    const head = document.createElement('div');
+    head.className = 'entry-head';
+
+    const title = document.createElement('a');
+    title.className = 'entry-title';
+    title.href = 'articles/' + article.slug + '.html';
+    title.textContent = article.title;
+    head.appendChild(title);
+
+    const date = document.createElement('span');
+    date.className = 'entry-date';
+    date.textContent = formatDate(article.date);
+    head.appendChild(date);
+
+    li.appendChild(head);
+
+    if (article.summary) {
+      const summary = document.createElement('p');
+      summary.className = 'entry-summary';
+      summary.textContent = article.summary;
+      li.appendChild(summary);
     }
-    seedsEmpty.hidden = true;
-    seeds.forEach(s => {
-      const li = document.createElement('li');
-      const name = document.createElement('span');
-      name.className = 'name';
-      const a = document.createElement('a');
-      a.href = '#' + s.slug;
-      a.textContent = s.name;
-      name.appendChild(a);
-      const leads = document.createElement('span');
-      leads.className = 'leads-to';
-      name.appendChild(leads);
-      li.appendChild(name);
-      if (typeof s.count === 'number') {
-        const meta = document.createElement('span');
-        meta.className = 'count';
-        meta.textContent = '× ' + s.count;
-        li.appendChild(meta);
-      }
-      seedsList.appendChild(li);
-      fetch('articles/' + s.slug + '/counter.json', { cache: 'no-store' })
-        .then(r => r.ok ? r.json() : [])
-        .then(rows => {
-          if (!Array.isArray(rows) || !rows.length) return;
-          const top = rows
-            .filter(r => r.slug !== s.slug)
-            .reduce((best, r) => (!best || r.count > best.count ? r : best), null);
-          if (!top) return;
-          leads.textContent = 'leads to: ';
-          const ta = document.createElement('a');
-          ta.href = 'articles/' + s.slug + '/' + top.slug + '.html';
-          ta.textContent = top.name;
-          leads.appendChild(ta);
-        })
-        .catch(() => {});
-    });
-  }
 
-  function renderRoad() {
-    roadList.innerHTML = '';
-    if (!currentRows.length) {
-      roadEmpty.hidden = false;
-      return;
-    }
-    roadEmpty.hidden = true;
-    currentRows.slice().sort(sorters[currentSort]).forEach(r => {
-      const li = document.createElement('li');
-      const name = document.createElement('span');
-      name.className = 'name';
-      const a = document.createElement('a');
-      a.href = 'articles/' + r.seedSlug + '/' + r.slug + '.html';
-      a.textContent = r.name;
-      name.appendChild(a);
-      const meta = document.createElement('span');
-      meta.className = 'count';
-      meta.textContent = currentSort === 'order'
-        ? '#' + (r.order ?? '?')
-        : '× ' + r.count;
-      li.appendChild(name);
-      li.appendChild(meta);
-      roadList.appendChild(li);
-    });
-  }
-
-  function showSeeds() {
-    roadView.hidden = true;
-    seedsView.hidden = false;
-  }
-
-  function showRoad(seed) {
-    seedsView.hidden = true;
-    roadView.hidden = false;
-    roadTitle.textContent = seed.name;
-    currentRows = [];
-    roadList.innerHTML = '';
-    roadEmpty.hidden = true;
-    fetch('articles/' + seed.slug + '/counter.json', { cache: 'no-store' })
-      .then(r => r.ok ? r.json() : [])
-      .then(rows => {
-        currentRows = (Array.isArray(rows) ? rows : []).map(r => Object.assign({}, r, { seedSlug: seed.slug }));
-        renderRoad();
-      })
-      .catch(() => {
-        currentRows = [];
-        renderRoad();
+    if (article.tags && article.tags.length) {
+      const tags = document.createElement('ul');
+      tags.className = 'tags';
+      article.tags.forEach(t => {
+        const tagLi = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tag';
+        btn.textContent = t;
+        btn.addEventListener('click', () => {
+          searchInput.value = t;
+          runSearch();
+          searchInput.focus();
+        });
+        tagLi.appendChild(btn);
+        tags.appendChild(tagLi);
       });
+      li.appendChild(tags);
+    }
+
+    return li;
   }
 
-  function routeFromHash() {
-    const slug = (location.hash || '').replace(/^#/, '');
-    if (!slug) { showSeeds(); return; }
-    const seed = seeds.find(s => s.slug === slug);
-    if (!seed) { showSeeds(); return; }
-    showRoad(seed);
+  function renderList(listEl, items) {
+    listEl.innerHTML = '';
+    items.forEach(a => listEl.appendChild(renderEntry(a)));
   }
 
-  sortButtons.forEach(b => {
-    b.addEventListener('click', () => {
-      sortButtons.forEach(x => x.classList.toggle('active', x === b));
-      currentSort = b.dataset.sort;
-      renderRoad();
+  function runSearch() {
+    const q = searchInput.value.trim().toLowerCase();
+
+    if (!q) {
+      resultsList.hidden = true;
+      searchNote.hidden = true;
+      recentSection.hidden = false;
+      return;
+    }
+
+    const terms = q.split(/\s+/);
+    const matches = articles.filter(a => {
+      const haystack = [a.title, a.summary || '', (a.tags || []).join(' ')].join(' ').toLowerCase();
+      return terms.every(t => haystack.includes(t));
     });
-  });
 
-  backLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    history.pushState(null, '', location.pathname + location.search);
-    showSeeds();
-  });
+    recentSection.hidden = true;
+    resultsList.hidden = false;
+    searchNote.hidden = false;
+    searchNote.textContent = matches.length === 1
+      ? 'One entry found.'
+      : matches.length + ' entries found.';
+    renderList(resultsList, matches);
+  }
 
-  window.addEventListener('hashchange', routeFromHash);
+  searchInput.addEventListener('input', runSearch);
 
-  fetch('seeds.json', { cache: 'no-store' })
+  fetch('db/articles.json', { cache: 'no-store' })
     .then(r => r.ok ? r.json() : [])
     .then(rows => {
-      seeds = Array.isArray(rows) ? rows : [];
-      renderSeeds();
-      routeFromHash();
+      articles = (Array.isArray(rows) ? rows : [])
+        .slice()
+        .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+      if (!articles.length) {
+        recentEmpty.hidden = false;
+      } else {
+        renderList(recentList, articles.slice(0, RECENT_COUNT));
+      }
+
+      // allow linking in with a pre-filled query, e.g. index.html?tag=history
+      const params = new URLSearchParams(location.search);
+      const preset = params.get('tag') || params.get('q');
+      if (preset) {
+        searchInput.value = preset;
+        runSearch();
+      }
     })
     .catch(() => {
-      seedsEmpty.hidden = false;
+      recentEmpty.hidden = false;
     });
 })();
 </script>

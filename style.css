@@ -1,229 +1,477 @@
+/* ==========================================================================
+   Vlad's Journey — shared stylesheet
+   Theme: dark umber paper, parchment ink, gilded amber accents.
+   Traditional encyclopedia look: serifs, double rules, small caps, fleurons.
+   ========================================================================== */
+
 :root {
-  --bg: #f7f3ec;
-  --ink: #1a1a1a;
-  --muted: #6b6357;
-  --accent: #7a2e2e;
-  --rule: #d9cfbf;
+  --paper: #1c1610;          /* deep umber page */
+  --paper-raised: #251e15;   /* panels, infoboxes */
+  --paper-edge: #15100b;     /* vignette edge */
+  --ink: #e7dcc3;            /* parchment body text */
+  --ink-dim: #a89876;        /* secondary text */
+  --ink-faint: #6f6248;      /* tertiary, hairlines text */
+  --amber: #e0a832;          /* gilded accent */
+  --amber-bright: #f0bc4e;   /* hover */
+  --amber-deep: #9c7218;     /* pressed, borders */
+  --rule: #463a27;           /* horizontal rules */
+  --rule-strong: #5d4d33;
+
+  --font-display: "IM Fell English", "Iowan Old Style", Georgia, serif;
+  --font-display-sc: "IM Fell English SC", "IM Fell English", Georgia, serif;
+  --font-body: "EB Garamond", "Iowan Old Style", Georgia, serif;
+
+  --measure: 44rem;
 }
 
 * { box-sizing: border-box; }
 
-html, body {
+html {
+  background: var(--paper);
+}
+
+body {
   margin: 0;
-  padding: 0;
-  background: var(--bg);
+  min-height: 100vh;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.65;
-  -webkit-text-size-adjust: 100%;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  /* lamplight vignette + faint grain */
+  background:
+    radial-gradient(ellipse 120% 90% at 50% 0%, rgba(224, 168, 50, 0.045), transparent 60%),
+    radial-gradient(ellipse 140% 120% at 50% 110%, var(--paper-edge), transparent 55%),
+    var(--paper);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .wrap {
-  max-width: 720px;
+  position: relative;
+  z-index: 2;
+  max-width: var(--measure);
   margin: 0 auto;
-  padding: 24px 20px 64px;
+  padding: 0 1.25rem 4rem;
 }
 
-header.site {
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 12px;
-  margin-bottom: 24px;
-  font-size: 0.95rem;
-}
+/* --------------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------------- */
 
-header.site a {
-  color: var(--muted);
+a {
+  color: var(--amber);
   text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--amber) 35%, transparent);
+  transition: color 120ms ease, border-color 120ms ease;
 }
 
-header.site a:hover { color: var(--accent); }
-
-h1 {
-  font-size: 2rem;
-  line-height: 1.2;
-  margin: 0 0 8px;
+a:hover {
+  color: var(--amber-bright);
+  border-bottom-color: var(--amber-bright);
 }
 
-h1.index-title {
-  font-size: 1.8rem;
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
+/* --------------------------------------------------------------------------
+   Masthead (main page)
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  text-align: center;
+  padding: 3.5rem 0 0;
 }
 
-.crumbs {
-  font-size: 0.9rem;
-  margin-bottom: 14px;
+.masthead-eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display-sc);
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  text-transform: lowercase; /* SC font renders lowercase as small caps */
+  color: var(--ink-dim);
 }
 
-.crumbs a {
-  color: var(--muted);
-  text-decoration: none;
+.masthead-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 8vw, 4.25rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-shadow: 0 0 28px rgba(224, 168, 50, 0.18);
 }
 
-.crumbs a:hover { color: var(--accent); }
+.masthead-title a {
+  color: inherit;
+  border-bottom: none;
+}
 
-.view-intro {
-  color: var(--muted);
+.masthead-motto {
+  margin: 0.75rem 0 0;
   font-style: italic;
-  margin: 0 0 16px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  color: var(--ink-dim);
 }
 
-.road-title {
-  font-size: 1.4rem;
-  margin: 0 0 14px;
-}
-
-.sort-toggle {
+/* double rule with centred fleuron */
+.ornament-rule {
   display: flex;
-  gap: 14px;
-  margin-bottom: 20px;
-  font-size: 0.9rem;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 2rem 0;
+  color: var(--amber-deep);
 }
 
-.sort-toggle button {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  color: var(--muted);
-  cursor: pointer;
+.ornament-rule::before,
+.ornament-rule::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule);
+  height: 3px;
+}
+
+.ornament-rule .fleuron {
+  font-size: 1.1rem;
+  color: var(--amber);
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Section headings — small caps with hanging rule
+   -------------------------------------------------------------------------- */
+
+.section-heading {
+  font-family: var(--font-display-sc);
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: 0.22em;
+  text-transform: lowercase;
+  color: var(--amber);
+  margin: 3rem 0 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* --------------------------------------------------------------------------
+   About blurb
+   -------------------------------------------------------------------------- */
+
+.about {
+  font-size: 1.16rem;
+  text-align: center;
   font-style: italic;
+  color: var(--ink-dim);
+  max-width: 36rem;
+  margin: 0 auto;
 }
 
-.sort-toggle button:hover { color: var(--accent); }
-
-.sort-toggle button.active {
+.about strong {
   color: var(--ink);
   font-style: normal;
-  border-bottom: 1px solid var(--accent);
 }
 
-.byline {
-  color: var(--muted);
+/* --------------------------------------------------------------------------
+   Search
+   -------------------------------------------------------------------------- */
+
+.search-box {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.7rem 0.25rem;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
   font-style: italic;
-  margin: 0 0 28px;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 3px double var(--rule-strong);
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.search-input::placeholder {
+  color: var(--ink-faint);
+}
+
+.search-input:focus {
+  border-bottom-color: var(--amber-deep);
+}
+
+.search-note {
+  margin: 0.5rem 0 0;
   font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-faint);
 }
 
-article p {
-  margin: 0 0 1.1em;
-  text-align: left;
-}
+/* --------------------------------------------------------------------------
+   Article entry lists (recent + search results)
+   -------------------------------------------------------------------------- */
 
-a { color: var(--accent); }
-a:hover { text-decoration: none; }
-
-.back-links {
-  margin-top: 36px;
-  padding-top: 18px;
-  border-top: 1px solid var(--rule);
-  font-size: 1.05rem;
-}
-
-.back-links a {
-  color: #5a2a1d;
-  font-weight: bold;
-}
-
-.next-link {
-  margin-top: 36px;
-  padding-top: 18px;
-  border-top: 1px solid var(--rule);
-  font-size: 1.05rem;
-}
-
-.next-link a {
-  display: inline-block;
-  color: #1a3a73;
-  font-weight: bold;
-}
-
-.back-links + .next-link {
-  margin-top: 12px;
-  padding-top: 0;
-  border-top: none;
-}
-
-/* Road-links list (article footer). Fixed order, one link per item:
-   parent (dark yellow) -> in-MEM back-links (dark red-brown) -> next (dark blue). */
-ul.road-links {
+.entries {
   list-style: none;
-  margin: 36px 0 0;
-  padding: 18px 0 0;
-  border-top: 1px solid var(--rule);
-  font-size: 1.05rem;
-}
-
-ul.road-links li { margin: 0 0 6px; }
-ul.road-links li:last-child { margin-bottom: 0; }
-ul.road-links a { font-weight: bold; }
-
-ul.road-links .parent-link a  { color: #8a6d00; }  /* dark yellow — back to the parent article */
-ul.road-links .back-link a    { color: #5a2a1d; }  /* dark red-brown — existing in-MEM neighbors */
-ul.road-links .forward-link a { color: #1a3a73; }  /* dark blue — the new road continuation */
-
-ol.roads {
-  list-style: none;
-  padding: 0;
   margin: 0;
-  counter-reset: rank;
+  padding: 0;
 }
 
-ol.roads li {
-  counter-increment: rank;
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding: 10px 0;
+.entry {
+  padding: 1.4rem 0;
   border-bottom: 1px solid var(--rule);
 }
 
-ol.roads li::before {
-  content: counter(rank);
-  color: var(--muted);
-  font-size: 0.85rem;
-  min-width: 26px;
-  text-align: right;
-  font-variant-numeric: tabular-nums;
+.entry:last-child {
+  border-bottom: none;
 }
 
-ol.roads .name { flex: 1; }
-ol.roads .name a { text-decoration: none; }
-ol.roads .name a:hover { text-decoration: underline; }
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-ol.roads .leads-to {
-  display: block;
-  color: var(--muted);
+.entry-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.entry-date {
+  font-family: var(--font-display-sc);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.entry-summary {
+  margin: 0.45rem 0 0.65rem;
+  color: var(--ink-dim);
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-display-sc);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  color: var(--amber);
+  border: 1px solid var(--amber-deep);
+  border-radius: 2px;
+  padding: 0.1rem 0.55rem 0.05rem;
+  cursor: pointer;
+  background: transparent;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.tag:hover {
+  background: var(--amber-deep);
+  color: var(--paper);
+}
+
+a.tag { border-bottom: 1px solid var(--amber-deep); }
+
+.empty-note {
   font-style: italic;
-  font-size: 0.85rem;
-  margin-top: 2px;
+  color: var(--ink-faint);
+  padding: 1.5rem 0;
 }
 
-ol.roads .leads-to a {
-  color: var(--muted);
-  text-decoration: none;
+/* --------------------------------------------------------------------------
+   Article pages
+   -------------------------------------------------------------------------- */
+
+.article-masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0 0.75rem;
+  border-bottom: 3px double var(--rule-strong);
 }
 
-ol.roads .leads-to a:hover { color: var(--accent); }
-
-ol.roads .count {
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-variant-numeric: tabular-nums;
+.article-masthead .home-link {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--ink);
+  border-bottom: none;
 }
 
-.empty {
-  color: var(--muted);
+.article-masthead .home-link:hover { color: var(--amber-bright); }
+
+.article-masthead .volume {
+  font-family: var(--font-display-sc);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: lowercase;
+  color: var(--ink-faint);
+}
+
+.article-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 6vw, 3rem);
+  line-height: 1.15;
+  margin: 2.5rem 0 0.5rem;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 2.25rem;
   font-style: italic;
-  padding: 40px 0;
+  color: var(--ink-faint);
+  font-size: 0.98rem;
+}
+
+.article h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin: 2.75rem 0 0.9rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.article h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 2rem 0 0.6rem;
+}
+
+.article p { margin: 0 0 1.1rem; }
+
+/* illuminated drop cap on the lead paragraph */
+.article .lead::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.4em;
+  line-height: 0.8;
+  float: left;
+  padding: 0.08em 0.12em 0 0;
+  color: var(--amber);
+}
+
+.article blockquote {
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px double var(--amber-deep);
+  font-style: italic;
+  color: var(--ink-dim);
+}
+
+.article ul, .article ol { padding-left: 1.5rem; }
+.article li { margin-bottom: 0.35rem; }
+
+.article hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+.article figure {
+  margin: 2rem 0;
   text-align: center;
 }
 
-@media (max-width: 480px) {
-  body { font-size: 17px; }
-  .wrap { padding: 16px 16px 48px; }
-  h1 { font-size: 1.6rem; }
-  h1.index-title { font-size: 1.5rem; }
+.article figure img {
+  max-width: 100%;
+  border: 1px solid var(--rule-strong);
+  padding: 4px;
+  background: var(--paper-raised);
+}
+
+.article figcaption {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--ink-faint);
+  margin-top: 0.5rem;
+}
+
+/* floated infobox, Wikipedia-style */
+.infobox {
+  float: right;
+  width: 15rem;
+  max-width: 45%;
+  margin: 0.3rem 0 1rem 1.5rem;
+  padding: 1rem 1.1rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  box-shadow: inset 0 0 0 3px var(--paper-raised), inset 0 0 0 4px var(--rule);
+  font-size: 0.95rem;
+}
+
+.infobox-title {
+  font-family: var(--font-display-sc);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--amber);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.infobox dl { margin: 0; }
+.infobox dt {
+  font-family: var(--font-display-sc);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  color: var(--ink-faint);
+}
+.infobox dd {
+  margin: 0 0 0.6rem;
+  color: var(--ink);
+}
+.infobox dd:last-child { margin-bottom: 0; }
+
+@media (max-width: 540px) {
+  .infobox {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 1.5rem 0;
+  }
+}
+
+/* footnote-style references */
+.article .references {
+  font-size: 0.95rem;
+  color: var(--ink-dim);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-faint);
 }
