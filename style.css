@@ -87,17 +87,70 @@ a:hover {
   padding: 3.5rem 0 0;
 }
 
+/* the eyebrow doubles as the toggle that expands the title + blurb */
+.masthead-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 auto;
+  padding: 0.4rem 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-dim);
+  -webkit-tap-highlight-color: transparent;
+  transition: color 140ms ease;
+}
+
+.masthead-toggle:hover { color: var(--amber); }
+
+.masthead-toggle:focus-visible {
+  outline: 1px solid var(--amber-deep);
+  outline-offset: 4px;
+}
+
 .masthead-eyebrow {
-  margin: 0 0 0.75rem;
   font-family: var(--font-display-sc);
   font-size: 0.8rem;
   letter-spacing: 0.35em;
   text-transform: lowercase; /* SC font renders lowercase as small caps */
-  color: var(--ink-dim);
+}
+
+/* chevron drawn from borders — points down when collapsed, up when open */
+.masthead-chevron {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.12em) rotate(45deg);
+  transition: transform 240ms ease, border-color 140ms ease;
+}
+
+.masthead-toggle:hover .masthead-chevron { border-color: var(--amber); }
+
+.masthead.is-open .masthead-chevron {
+  transform: translateY(0.12em) rotate(225deg);
+}
+
+/* smooth height reveal via the grid 0fr → 1fr trick */
+.masthead-detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 280ms ease;
+}
+
+.masthead-detail-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.masthead.is-open .masthead-detail {
+  grid-template-rows: 1fr;
 }
 
 .masthead-title {
-  margin: 0;
+  margin: 1.4rem 0 0;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2.6rem, 8vw, 4.25rem);
@@ -169,7 +222,7 @@ a:hover {
   font-style: italic;
   color: var(--ink-dim);
   max-width: 36rem;
-  margin: 0 auto;
+  margin: 1.5rem auto 0.5rem;
 }
 
 .about strong {
@@ -181,31 +234,55 @@ a:hover {
    Search
    -------------------------------------------------------------------------- */
 
+/* a prominent, framed search desk — the double inset frame echoes the infobox */
 .search-box {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.15rem 0.9rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  box-shadow:
+    inset 0 0 0 3px var(--paper-raised),
+    inset 0 0 0 4px var(--rule);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--amber-deep);
+  box-shadow:
+    inset 0 0 0 3px var(--paper-raised),
+    inset 0 0 0 4px var(--amber-deep),
+    0 0 24px rgba(224, 168, 50, 0.13);
+}
+
+.search-icon {
+  flex: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--amber);
 }
 
 .search-input {
+  flex: 1 1 auto;
   width: 100%;
-  padding: 0.7rem 0.25rem;
+  min-width: 0;
+  padding: 0.8rem 0;
   font-family: var(--font-body);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-style: italic;
   color: var(--ink);
   background: transparent;
   border: none;
-  border-bottom: 3px double var(--rule-strong);
   outline: none;
-  transition: border-color 150ms ease;
 }
 
 .search-input::placeholder {
   color: var(--ink-faint);
 }
 
-.search-input:focus {
-  border-bottom-color: var(--amber-deep);
-}
+/* hide the native clear control so it doesn't break the gilded look */
+.search-input::-webkit-search-cancel-button { -webkit-appearance: none; }
 
 .search-note {
   margin: 0.5rem 0 0;
@@ -295,6 +372,52 @@ a.tag { border-bottom: 1px solid var(--amber-deep); }
   font-style: italic;
   color: var(--ink-faint);
   padding: 1.5rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   Load more
+   -------------------------------------------------------------------------- */
+
+.load-more-wrap {
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
+.load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.4rem;
+  font-family: var(--font-display-sc);
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  color: var(--amber);
+  background: transparent;
+  border: 1px solid var(--amber-deep);
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.load-more:hover {
+  background: var(--amber-deep);
+  color: var(--paper);
+}
+
+.load-more:focus-visible {
+  outline: 1px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.load-more-chevron {
+  display: inline-block;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.14em) rotate(45deg);
 }
 
 /* --------------------------------------------------------------------------
@@ -474,4 +597,26 @@ a.tag { border-bottom: 1px solid var(--amber-deep); }
   font-style: italic;
   font-size: 0.95rem;
   color: var(--ink-faint);
+}
+
+/* --------------------------------------------------------------------------
+   Small screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  body { font-size: 1.06rem; }
+
+  .wrap { padding: 0 1rem 3rem; }
+
+  .masthead { padding: 2.5rem 0 0; }
+
+  .section-heading { margin-top: 2.25rem; }
+
+  .search-input { font-size: 1.1rem; }
+
+  .entry { padding: 1.15rem 0; }
+
+  .entry-head { gap: 0.25rem 0.75rem; }
+
+  .entry-title { font-size: 1.3rem; }
 }

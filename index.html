@@ -13,27 +13,41 @@
 <body>
 <div class="wrap">
 
-  <header class="masthead">
-    <p class="masthead-eyebrow">a personal encyclop&aelig;dia</p>
-    <h1 class="masthead-title">Vlad&rsquo;s Journey</h1>
-    <p class="masthead-motto">Notes, curiosities &amp; wanderings, kept in good order.</p>
+  <header id="masthead" class="masthead">
+    <button id="masthead-toggle" class="masthead-toggle" type="button"
+            aria-expanded="false" aria-controls="masthead-detail">
+      <span class="masthead-eyebrow">a personal encyclop&aelig;dia</span>
+      <span class="masthead-chevron" aria-hidden="true"></span>
+    </button>
+
+    <div id="masthead-detail" class="masthead-detail">
+      <div class="masthead-detail-inner">
+        <h1 class="masthead-title">Vlad&rsquo;s Journey</h1>
+        <p class="masthead-motto">Notes, curiosities &amp; wanderings, kept in good order.</p>
+        <p class="about">
+          This is the private atlas of one traveller&rsquo;s mind &mdash; a slow accumulation of
+          <strong>articles</strong> on whatever proved worth writing down. New entries are
+          added from time to time; old ones are revised when the author knows better.
+        </p>
+      </div>
+    </div>
+
     <div class="ornament-rule" role="presentation"><span class="fleuron">&#10086;</span></div>
   </header>
 
   <main>
-    <p class="about">
-      This is the private atlas of one traveller&rsquo;s mind &mdash; a slow accumulation of
-      <strong>articles</strong> on whatever proved worth writing down. New entries are
-      added from time to time; old ones are revised when the author knows better.
-    </p>
-
     <section aria-label="Search">
       <h2 class="section-heading">Search the archive</h2>
       <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
+          <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+        </svg>
         <input id="search" class="search-input" type="search"
-               placeholder="Search by title or tag&hellip;" autocomplete="off">
-        <p id="search-note" class="search-note" hidden></p>
+               placeholder="Search by title or tag&hellip;" autocomplete="off"
+               aria-label="Search the archive">
       </div>
+      <p id="search-note" class="search-note" hidden></p>
       <ol id="results" class="entries" hidden></ol>
     </section>
 
@@ -43,6 +57,12 @@
       <p id="recent-empty" class="empty-note" hidden>
         The archive is empty &mdash; the first page is yet to be written.
       </p>
+      <div id="load-more-wrap" class="load-more-wrap" hidden>
+        <button id="load-more" class="load-more" type="button">
+          <span>Load more</span>
+          <span class="load-more-chevron" aria-hidden="true"></span>
+        </button>
+      </div>
     </section>
   </main>
 
@@ -54,15 +74,27 @@
 
 <script>
 (function () {
-  const RECENT_COUNT = 6;
+  const PAGE_SIZE = 10;
+
+  const masthead = document.getElementById('masthead');
+  const mastheadToggle = document.getElementById('masthead-toggle');
   const searchInput = document.getElementById('search');
   const searchNote = document.getElementById('search-note');
   const resultsList = document.getElementById('results');
   const recentSection = document.getElementById('recent-section');
   const recentList = document.getElementById('recent');
   const recentEmpty = document.getElementById('recent-empty');
+  const loadMoreWrap = document.getElementById('load-more-wrap');
+  const loadMoreBtn = document.getElementById('load-more');
 
   let articles = [];
+  let shown = 0;
+
+  // collapsible masthead — starts collapsed, click reveals the full title + blurb
+  mastheadToggle.addEventListener('click', () => {
+    const open = masthead.classList.toggle('is-open');
+    mastheadToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
 
   function formatDate(iso) {
     const d = new Date(iso + 'T00:00:00');
@@ -125,6 +157,16 @@
     items.forEach(a => listEl.appendChild(renderEntry(a)));
   }
 
+  // append the next page of recent articles, hiding the button once exhausted
+  function showMore() {
+    const next = articles.slice(shown, shown + PAGE_SIZE);
+    next.forEach(a => recentList.appendChild(renderEntry(a)));
+    shown += next.length;
+    loadMoreWrap.hidden = shown >= articles.length;
+  }
+
+  loadMoreBtn.addEventListener('click', showMore);
+
   function runSearch() {
     const q = searchInput.value.trim().toLowerCase();
 
@@ -155,6 +197,7 @@
   fetch('db/articles.json', { cache: 'no-store' })
     .then(r => r.ok ? r.json() : [])
     .then(rows => {
+      // newest first
       articles = (Array.isArray(rows) ? rows : [])
         .slice()
         .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
@@ -162,7 +205,7 @@
       if (!articles.length) {
         recentEmpty.hidden = false;
       } else {
-        renderList(recentList, articles.slice(0, RECENT_COUNT));
+        showMore(); // first page of 10, plus a "Load more" button if there are more
       }
 
       // allow linking in with a pre-filled query, e.g. index.html?tag=history
