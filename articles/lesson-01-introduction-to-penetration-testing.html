@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1 &mdash; Introduction to Penetration Testing &mdash; Vlad&rsquo;s Journey</title>
+<meta name="description" content="What penetration testing is, how it differs from a QA bug hunt, the methodology that structures every engagement, the law and ethics that keep it legal, and your first safe scan from a Mac.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="article-masthead">
+    <a class="home-link" href="../index.html">Vlad&rsquo;s Journey</a>
+    <span class="volume">a course in penetration testing</span>
+  </header>
+
+  <main class="article">
+    <h1 class="article-title">Introduction to Penetration Testing</h1>
+    <p class="article-meta">
+      <span class="lesson-tag">Lesson 1 &middot; Beginner &middot; ~30 min + lab</span>
+      <span>&middot;</span>
+      <span>filed under</span>
+      <a class="tag" href="../index.html?tag=beginner">beginner</a>
+      <a class="tag" href="../index.html?tag=foundations">foundations</a>
+      <a class="tag" href="../index.html?tag=ethics">ethics</a>
+    </p>
+
+    <aside class="infobox">
+      <p class="infobox-title">At a glance</p>
+      <dl>
+        <dt>Level</dt><dd>Beginner</dd>
+        <dt>You&rsquo;ll need</dt><dd>Your MacBook, the Terminal, internet</dd>
+        <dt>You&rsquo;ll install</dt><dd>Homebrew, Nmap</dd>
+        <dt>Lab target</dt><dd>scanme.nmap.org (sanctioned)</dd>
+        <dt>Outcome</dt><dd>A clean first scan and a mental map of the craft</dd>
+      </dl>
+    </aside>
+
+    <p class="lead">
+      Welcome to the start of a long, rewarding road. Penetration testing is the
+      practice of attacking a system &mdash; legally, deliberately, and with
+      permission &mdash; in order to find the weaknesses a real attacker would, and
+      to report them before anyone with bad intentions gets there first. You spent
+      years in QA making software prove it does what it should. Pentesting is
+      the mirror image: you make software confess what it <em>shouldn&rsquo;t</em> do.
+      The instincts you already have transfer better than you think. This first
+      lesson lays the foundations &mdash; what the job actually is, the rules that
+      keep it lawful, the method that gives it shape &mdash; and ends with you
+      running your first scan from the Mac in front of you.
+    </p>
+
+    <h2>What you&rsquo;ll learn</h2>
+    <ul>
+      <li>What penetration testing is, and how it differs from vulnerability scanning, red teaming and bug bounties.</li>
+      <li>Why your QA background is a head start, not a handicap.</li>
+      <li>The five-to-seven phase methodology that structures every engagement.</li>
+      <li>The non-negotiable law and ethics: authorisation, scope, and rules of engagement.</li>
+      <li>Where you are allowed to practise &mdash; and where you are not.</li>
+      <li>How to install your first tool on macOS and run a legal scan.</li>
+    </ul>
+
+    <h2>What penetration testing actually is</h2>
+    <p>
+      A penetration test (&ldquo;pentest&rdquo;) is an <strong>authorised, simulated
+      attack</strong> against a computer system, network, or application, carried out
+      to evaluate its security. You take on the role of an attacker, but you operate
+      under a contract: a defined target, a defined window of time, and a written
+      permission slip. The deliverable is not chaos &mdash; it is a <em>report</em>
+      that tells the owner exactly what is broken, how badly, how you proved it, and
+      how to fix it. The point of breaking in is to make the system harder to break
+      into.
+    </p>
+    <p>
+      It helps to define the thing being protected. Security people talk about the
+      <strong>CIA triad</strong>: <em>Confidentiality</em> (only the right people can
+      read the data), <em>Integrity</em> (the data can&rsquo;t be tampered with
+      undetected), and <em>Availability</em> (the system is up when it&rsquo;s needed).
+      Almost every vulnerability you will ever find is, at root, a way to violate one
+      of those three. A SQL injection that dumps a customer table breaks
+      confidentiality; ransomware breaks availability; a tampered firmware update
+      breaks integrity. Keep the triad in the back of your mind &mdash; when you find
+      something, ask which leg of it you just kicked out.
+    </p>
+
+    <h3>It is not the same as its neighbours</h3>
+    <p>
+      Beginners blur these together; professionals don&rsquo;t. Knowing the
+      difference is the first sign you take the field seriously.
+    </p>
+    <ul>
+      <li><strong>Vulnerability scanning / assessment</strong> &mdash; an automated
+        tool sweeps for known weaknesses and produces a list. It is broad, shallow,
+        and does <em>not</em> exploit anything. It answers &ldquo;what might be
+        wrong?&rdquo;. A pentest answers &ldquo;what can an attacker actually
+        <em>do</em> with it?&rdquo; by proving the impact.</li>
+      <li><strong>Penetration testing</strong> &mdash; a human exploits real
+        weaknesses to demonstrate concrete impact, within an agreed scope. Breadth
+        meets depth.</li>
+      <li><strong>Red teaming</strong> &mdash; a goal-oriented, stealthy, often
+        long-running adversary <em>emulation</em> (&ldquo;get to the crown-jewel
+        database without the blue team noticing&rdquo;). It tests detection and
+        response, not just whether a hole exists.</li>
+      <li><strong>Bug bounty</strong> &mdash; crowdsourced, pay-per-valid-finding
+        testing of a public scope. Same skills, different commercial model.</li>
+    </ul>
+
+    <h2>Your QA background is a head start</h2>
+    <p>
+      You are not starting from zero. You are switching from one kind of testing to
+      another, and most of the discipline carries over. Make this mapping explicit in
+      your head &mdash; it will demystify a lot of what looks like new jargon:
+    </p>
+    <ul>
+      <li>A <strong>finding</strong> is a bug report with an exploit attached and an
+        impact statement. You already know how to write a tight, reproducible report
+        &mdash; that is half of what makes a good pentester.</li>
+      <li><strong>Reconnaissance</strong> is exploratory testing: poking at the edges
+        of a system to understand it before you have a plan.</li>
+      <li><strong>Steps to reproduce</strong> are steps to reproduce. A finding a
+        developer can&rsquo;t reproduce is as useless as a flaky bug.</li>
+      <li><strong>Severity / priority</strong> becomes <strong>CVSS</strong> (the
+        Common Vulnerability Scoring System) &mdash; a structured way to rate how bad
+        a finding is. Same instinct, formal scale.</li>
+      <li><strong>Regression testing</strong> becomes the <strong>retest</strong>:
+        after the client fixes a finding, you verify the fix actually holds.</li>
+      <li><strong>Edge cases and &ldquo;what if I do the unexpected thing?&rdquo;</strong>
+        is the entire job. The difference is one of <em>intent</em>: QA asks
+        &ldquo;does it work?&rdquo;; security asks &ldquo;can I make it misbehave on
+        purpose?&rdquo;.</li>
+    </ul>
+    <p>
+      The genuinely new muscles are the adversarial mindset (assume the system is
+      lying to you and look for the gap between what it promises and what it
+      enforces) and a body of technical knowledge &mdash; networking, the web stack,
+      operating-system internals, and a toolkit. We build that knowledge a lesson at
+      a time.
+    </p>
+
+    <h2>The shapes an engagement takes</h2>
+    <p>
+      How much you&rsquo;re told up front defines the &ldquo;box&rdquo; you work in:
+    </p>
+    <ul>
+      <li><strong>Black box</strong> &mdash; you get a name or an IP range and nothing
+        else, like an outside attacker. Realistic, but slow.</li>
+      <li><strong>White box</strong> (or crystal box) &mdash; you get full knowledge:
+        source code, credentials, architecture diagrams. Fast and thorough; best for
+        finding the most bugs per hour.</li>
+      <li><strong>Grey box</strong> &mdash; partial knowledge, e.g. a low-privilege
+        login. The common middle ground that simulates a malicious insider or a
+        compromised user.</li>
+    </ul>
+    <p>
+      Engagements also have a <strong>domain</strong>: network/infrastructure, web
+      application, mobile, wireless, cloud, social engineering, or physical. This
+      course leans toward network and web first &mdash; the bread and butter &mdash;
+      then branches out.
+    </p>
+
+    <h2>The methodology: the spine of every test</h2>
+    <p>
+      Professionals don&rsquo;t poke at random; they follow a repeatable process.
+      Several formal frameworks codify it &mdash; the <strong>PTES</strong>
+      (Penetration Testing Execution Standard), the <strong>OWASP</strong> testing
+      guide for web, the <strong>Cyber Kill Chain</strong>, and <strong>MITRE
+      ATT&amp;CK</strong> for cataloguing real-world attacker techniques. Strip them
+      down and they describe the same arc. Internalise these phases now; every later
+      lesson lives inside one of them.
+    </p>
+    <ol>
+      <li><strong>Pre-engagement</strong> &mdash; the paperwork that makes it legal:
+        scope, timing, contacts, and written authorisation. Skipped by amateurs,
+        never by professionals.</li>
+      <li><strong>Reconnaissance</strong> &mdash; gathering information about the
+        target. <em>Passive</em> (public records, DNS, search engines &mdash; without
+        touching the target) then <em>active</em> (interacting with it directly).</li>
+      <li><strong>Scanning &amp; enumeration</strong> &mdash; mapping live hosts,
+        open ports, running services and their versions. This is where Nmap, which
+        you&rsquo;ll meet today, earns its keep.</li>
+      <li><strong>Vulnerability analysis</strong> &mdash; turning that map into a list
+        of likely weaknesses and matching them to known exploits.</li>
+      <li><strong>Exploitation</strong> &mdash; the dramatic part: actually using a
+        weakness to gain access. Often a small fraction of the total effort.</li>
+      <li><strong>Post-exploitation</strong> &mdash; now that you&rsquo;re in, what
+        does it mean? Escalating privileges, moving deeper into the network
+        (&ldquo;pivoting&rdquo;), and demonstrating real business impact.</li>
+      <li><strong>Reporting</strong> &mdash; writing it all up so the client can fix
+        it. This is the product you are actually paid for, and the phase where your QA
+        report-writing makes you immediately better than most beginners.</li>
+    </ol>
+    <p>
+      Two truths beginners find surprising: most of the time goes into recon and
+      enumeration, not the &ldquo;hacking&rdquo; itself; and the report &mdash; not
+      the shell &mdash; is the deliverable. A brilliant compromise that nobody can
+      understand or fix is a failed engagement.
+    </p>
+
+    <h2>The law and ethics &mdash; read this twice</h2>
+    <p>
+      Everything in this course is legal in one context and a crime in another, and
+      the only thing separating them is <strong>permission</strong>. There is exactly
+      one rule, and it is absolute:
+    </p>
+    <blockquote>
+      Never test a system you do not own or do not have explicit, written
+      authorisation to test.
+    </blockquote>
+    <p>
+      Unauthorised access, and even unauthorised scanning, is a criminal offence
+      almost everywhere: the <em>Computer Fraud and Abuse Act</em> in the United
+      States, the <em>Computer Misuse Act</em> in the UK, and equivalents across the
+      EU and beyond. &ldquo;I was only curious&rdquo; and &ldquo;I didn&rsquo;t change
+      anything&rdquo; are not defences. A professional engagement is wrapped in
+      documents precisely to make the authorisation unambiguous:
+    </p>
+    <ul>
+      <li><strong>Scope</strong> &mdash; the exact systems, IPs, domains and times
+        you are allowed to touch. Anything not in scope is off-limits, full stop.</li>
+      <li><strong>Rules of Engagement (ROE)</strong> &mdash; what techniques are
+        permitted (is social engineering allowed? denial-of-service? testing in
+        production?), and who to call if something breaks.</li>
+      <li><strong>Authorisation letter</strong> &mdash; the signed
+        &ldquo;get-out-of-jail&rdquo; document from someone empowered to grant it,
+        proving you are acting with consent.</li>
+    </ul>
+    <p>
+      Beyond the law there is professional ethics: stay in scope, protect any data
+      you encounter, do no avoidable harm, and report honestly. The aim of the whole
+      discipline is a <em>better defender</em>. Skills pointed the other way make you
+      a criminal, not a hacker.
+    </p>
+
+    <div class="callout callout-caution">
+      <span class="callout-label">&#9888; Rules of engagement for this course</span>
+      <p>
+        From this lesson on, you will only ever practise against targets that are
+        yours or that explicitly invite testing. Permitted: your own machines and
+        VMs; intentionally vulnerable apps you run yourself (OWASP Juice Shop, DVWA,
+        Metasploitable); sanctioned learning platforms (PortSwigger Web Security
+        Academy, TryHackMe, Hack&nbsp;The&nbsp;Box, OverTheWire); and a small number
+        of hosts whose owners publicly permit light scanning &mdash; including
+        <code>scanme.nmap.org</code>, which we use today. Pointing these tools at any
+        other system &ldquo;just to see&rdquo; is illegal. When in doubt, don&rsquo;t.
+      </p>
+    </div>
+
+    <h2>Your Mac as a hacking workstation</h2>
+    <p>
+      Most of the trade&rsquo;s tooling grew up on Linux, and the famous distribution
+      &mdash; <strong>Kali Linux</strong> &mdash; ships hundreds of tools
+      preinstalled. You do not need it today, and you don&rsquo;t have to abandon
+      macOS to learn. You have three good paths on a Mac, and you&rsquo;ll end up
+      using all three:
+    </p>
+    <ul>
+      <li><strong>Native tools via Homebrew</strong> &mdash; a huge number of security
+        tools (Nmap, and many more) install straight onto macOS with one command.
+        Perfect for getting started, which is what we do now.</li>
+      <li><strong>Docker</strong> &mdash; to run vulnerable practice targets in
+        seconds without polluting your system.</li>
+      <li><strong>A Kali VM under UTM</strong> (free, Apple-Silicon-friendly) or
+        VMware Fusion &mdash; a full Linux attack box for when a tool is Linux-only.
+        We build this in Lesson 2.</li>
+    </ul>
+    <p>
+      <strong>Homebrew</strong> is the macOS package manager &mdash; think of it as
+      <code>apt</code> for the Mac. We&rsquo;ll lean on it constantly, so installing
+      it is step one of the whole course.
+    </p>
+
+    <div class="callout callout-lab">
+      <span class="callout-label">&#10095; Hands-on lab &mdash; your first scan</span>
+      <p>
+        Open the <strong>Terminal</strong> app (press <kbd>Cmd</kbd>+<kbd>Space</kbd>,
+        type <em>Terminal</em>, hit <kbd>Return</kbd>). We&rsquo;ll install Homebrew
+        and Nmap, then run a single, fully sanctioned scan.
+      </p>
+      <p><strong>1. Install Homebrew</strong> (skip if <code>brew --version</code> already works):</p>
+      <pre class="terminal" data-label="Terminal &mdash; macOS"><span class="prompt">$</span> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+<span class="comment"># Follow the prompts. On Apple Silicon, run the two "Next steps" lines</span>
+<span class="comment"># it prints so the `brew` command is on your PATH, then reopen Terminal.</span></pre>
+      <p><strong>2. Install Nmap</strong>, the network mapper &mdash; the single most useful tool in scanning &amp; enumeration:</p>
+      <pre class="terminal" data-label="Terminal &mdash; macOS"><span class="prompt">$</span> brew install nmap
+<span class="prompt">$</span> nmap --version
+<span class="out">Nmap version 7.9x ( https://nmap.org )</span></pre>
+      <p><strong>3. Run your first scan</strong> against <code>scanme.nmap.org</code> &mdash; a host the Nmap project explicitly provides for exactly this purpose:</p>
+      <pre class="terminal" data-label="Terminal &mdash; macOS"><span class="prompt">$</span> nmap -sV scanme.nmap.org
+<span class="out">Starting Nmap 7.9x ( https://nmap.org )
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.17s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 6.6.1p1 Ubuntu ...
+80/tcp    open  http    Apache httpd 2.4.7
+...
+Service detection performed. ...</span></pre>
+      <p>
+        <strong>What just happened.</strong> The <code>-sV</code> flag asked Nmap not
+        only <em>which</em> ports are open but <em>what software</em> is listening on
+        them (&ldquo;service/version detection&rdquo;). You now know the host is alive,
+        that it speaks SSH on port 22 and HTTP on port 80, and roughly which versions
+        are running. That last detail is gold: in a real engagement, a version number
+        is the thread you pull to find a known vulnerability. You have just completed,
+        in miniature, the <em>scanning &amp; enumeration</em> phase. Your exact output
+        will differ &mdash; the box changes over time &mdash; and that&rsquo;s fine.
+      </p>
+      <p>
+        <strong>If it didn&rsquo;t work:</strong> a corporate VPN or firewall can block
+        outbound scans &mdash; try from a home network. If <code>brew</code>
+        isn&rsquo;t found after install, you missed the &ldquo;Next steps&rdquo; PATH
+        lines; reopen Terminal and re-run them.
+      </p>
+    </div>
+
+    <h2>Key takeaways</h2>
+    <ul>
+      <li>A pentest is an <em>authorised</em>, methodical, simulated attack whose real
+        product is a clear report that makes the target more secure.</li>
+      <li>It is distinct from scanning (no exploitation), red teaming (stealthy,
+        goal-driven) and bug bounty (crowdsourced) &mdash; depth plus breadth, with
+        permission.</li>
+      <li>Your QA discipline &mdash; reproducible reports, severity, retesting,
+        exploratory poking &mdash; transfers directly; the new muscle is the
+        adversarial mindset.</li>
+      <li>Every engagement follows the same spine: recon &rarr; scan/enumerate
+        &rarr; analyse &rarr; exploit &rarr; post-exploit &rarr; report &mdash; and
+        most time lives in recon, not exploitation.</li>
+      <li>One absolute rule: <strong>only test what you own or are authorised, in
+        writing, to test.</strong></li>
+      <li>Your Mac is a fine starting workstation &mdash; Homebrew for native tools
+        now, Docker and a Kali VM soon.</li>
+    </ul>
+
+    <h2>Check your understanding</h2>
+    <ol>
+      <li>In one sentence each, distinguish a vulnerability assessment, a penetration
+        test, and a red-team engagement.</li>
+      <li>Which leg of the CIA triad does each of these break: a leaked password
+        database; a defaced homepage; a site knocked offline by traffic?</li>
+      <li>Name the seven methodology phases in order. Which one is the actual
+        deliverable, and which one usually consumes the most time?</li>
+      <li>You find a public-facing server belonging to a company you don&rsquo;t work
+        for and you&rsquo;re curious whether it&rsquo;s vulnerable. What do you do,
+        and why?</li>
+      <li>Re-run today&rsquo;s scan without <code>-sV</code> (just
+        <code>nmap scanme.nmap.org</code>). What information did you lose, and why
+        does the version detail matter to an attacker?</li>
+    </ol>
+
+    <h2>Coming up next</h2>
+    <p>
+      <strong>Lesson 2 &mdash; Building Your macOS Pentesting Lab.</strong> We turn
+      your Mac into a proper practice environment: a Kali Linux VM running under UTM,
+      a deliberately vulnerable target to attack safely, and the isolated networking
+      that lets them talk to each other and nothing else. From there, every technique
+      we learn has a legal home to run in.
+    </p>
+
+    <h2>References &amp; further reading</h2>
+    <ol class="references">
+      <li>The Penetration Testing Execution Standard (PTES) &mdash; <em>pentest-standard.org</em>.</li>
+      <li>OWASP Web Security Testing Guide &mdash; <em>owasp.org/www-project-web-security-testing-guide</em>.</li>
+      <li>MITRE ATT&amp;CK knowledge base &mdash; <em>attack.mitre.org</em>.</li>
+      <li>Nmap reference guide and the sanctioned host policy &mdash; <em>nmap.org/book</em> and <em>scanme.nmap.org</em>.</li>
+      <li>PortSwigger Web Security Academy (free, hands-on, lawful) &mdash; <em>portswigger.net/web-security</em>.</li>
+    </ol>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="ornament-rule" role="presentation"><span class="fleuron">&#10086;</span></div>
+  </footer>
+
+</div>
+</body>
+</html>
