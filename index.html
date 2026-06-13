@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vlad&rsquo;s Journey</title>
-<meta name="description" content="A personal encyclopædia — notes, curiosities and wanderings, kept in good order.">
+<meta name="description" content="A self-taught course in penetration testing — from beginner to advanced, tailored for a QA engineer on a Mac. Theory, examples, and hands-on labs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
@@ -16,18 +16,19 @@
   <header id="masthead" class="masthead">
     <button id="masthead-toggle" class="masthead-toggle" type="button"
             aria-expanded="false" aria-controls="masthead-detail">
-      <span class="masthead-eyebrow">a personal encyclop&aelig;dia</span>
+      <span class="masthead-eyebrow">a course in penetration testing</span>
       <span class="masthead-chevron" aria-hidden="true"></span>
     </button>
 
     <div id="masthead-detail" class="masthead-detail">
       <div class="masthead-detail-inner">
         <h1 class="masthead-title">Vlad&rsquo;s Journey</h1>
-        <p class="masthead-motto">Notes, curiosities &amp; wanderings, kept in good order.</p>
+        <p class="masthead-motto">A road into penetration testing &mdash; beginner to advanced, one lesson at a time.</p>
         <p class="about">
-          This is the private atlas of one traveller&rsquo;s mind &mdash; a slow accumulation of
-          <strong>articles</strong> on whatever proved worth writing down. New entries are
-          added from time to time; old ones are revised when the author knows better.
+          A self-taught <strong>course</strong> in offensive security, built for a QA
+          engineer working on a Mac. Each lesson pairs the theory with hands-on labs you
+          can run safely and legally. Work through them in order; the journey only goes
+          one way &mdash; forward.
         </p>
       </div>
     </div>
@@ -44,18 +45,18 @@
           <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
         </svg>
         <input id="search" class="search-input" type="search"
-               placeholder="Search by title or tag&hellip;" autocomplete="off"
-               aria-label="Search the archive">
+               placeholder="Search lessons by topic or tag&hellip;" autocomplete="off"
+               aria-label="Search the lessons">
       </div>
       <p id="search-note" class="search-note" hidden></p>
       <ol id="results" class="entries" hidden></ol>
     </section>
 
-    <section id="recent-section" aria-label="Recent articles">
-      <h2 class="section-heading">Recently added</h2>
+    <section id="recent-section" aria-label="The curriculum">
+      <h2 class="section-heading">The curriculum</h2>
       <ol id="recent" class="entries"></ol>
       <p id="recent-empty" class="empty-note" hidden>
-        The archive is empty &mdash; the first page is yet to be written.
+        No lessons yet &mdash; the first one is on its way.
       </p>
       <div id="load-more-wrap" class="load-more-wrap" hidden>
         <button id="load-more" class="load-more" type="button">
@@ -117,7 +118,11 @@
 
     const date = document.createElement('span');
     date.className = 'entry-date';
-    date.textContent = formatDate(article.date);
+    // show the lesson number as the marker; fall back to the date for any
+    // non-lesson page (e.g. an "about" entry without a lesson field)
+    date.textContent = (article.lesson != null)
+      ? 'Lesson ' + article.lesson + (article.level ? ' · ' + article.level : '')
+      : formatDate(article.date);
     head.appendChild(date);
 
     li.appendChild(head);
@@ -197,10 +202,16 @@
   fetch('db/articles.json', { cache: 'no-store' })
     .then(r => r.ok ? r.json() : [])
     .then(rows => {
-      // newest first
+      // course order: by lesson number ascending; anything without a lesson
+      // number sinks to the bottom, then ordered by date
       articles = (Array.isArray(rows) ? rows : [])
         .slice()
-        .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        .sort((a, b) => {
+          const la = (a.lesson != null) ? a.lesson : Infinity;
+          const lb = (b.lesson != null) ? b.lesson : Infinity;
+          if (la !== lb) return la - lb;
+          return (a.date || '').localeCompare(b.date || '');
+        });
 
       if (!articles.length) {
         recentEmpty.hidden = false;

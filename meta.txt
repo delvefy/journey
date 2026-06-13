@@ -3,23 +3,35 @@ VLAD'S JOURNEY — PROJECT CHEATSHEET (for AI assistants)
 
 WHAT THIS IS
 ------------
-A personal wiki / encyclopedia called "Vlad's Journey", published as a fully
-static site (GitHub Pages, custom domain in CNAME: journey.victorblackauthor.com).
-No build step, no framework, no server code. Plain HTML + CSS + vanilla JS.
+"Vlad's Journey", published as a fully static site (GitHub Pages, custom
+domain in CNAME: journey.victorblackauthor.com). No build step, no framework,
+no server code. Plain HTML + CSS + vanilla JS.
 
-Vlad adds articles from time to time. Articles look like traditional
-encyclopedia entries (Wikipedia-like) and carry tags. The front page shows a
-short site description, a search box, and the most recently added articles.
+It was originally a random-topic encyclopedia; it has been REPURPOSED into a
+single structured COURSE in penetration testing, running beginner ->
+intermediate -> advanced, tailored for Vlad (QA engineer, works on a MacBook).
+Each "article" is now a LESSON. The front page shows the course description, a
+search box, and the curriculum in lesson order.
+
+This file (meta.txt) describes the SITE PLUMBING. The task of WRITING the next
+lesson is governed by a separate file, produce.txt — read it for the learner
+profile, curriculum arc, lesson structure, and the safety rules. The two files
+are companions: produce.txt for content, meta.txt for layout/styling/JSON.
 
 STRUCTURE
 ---------
-index.html              Front page: description, search, recent articles.
-                        Fetches db/articles.json client-side and renders it.
-style.css               Shared stylesheet for ALL pages (front page + articles).
-db/articles.json        The "database": one JSON array indexing every article.
-                        Used for search (title/summary/tags) and recency sort.
-articles/<slug>.html    One static, self-contained page per article.
-meta.txt                This file.
+index.html              Front page: description, search, curriculum list.
+                        Fetches db/articles.json client-side and renders it,
+                        sorted by `lesson` ascending (course order).
+style.css               Shared stylesheet for ALL pages (front page + lessons).
+                        Includes lesson apparatus: code/terminal blocks and
+                        .callout panels (see "Lessons" section in the CSS).
+db/articles.json        The "database": one JSON array indexing every lesson.
+                        Used for search (title/summary/tags) and lesson order.
+articles/<slug>.html    One static, self-contained page per lesson.
+                        Naming: lesson-NN-<kebab-topic>.html.
+produce.txt             How to write the NEXT lesson (the recurring task).
+meta.txt                This file (site plumbing).
 CNAME                   GitHub Pages domain — do not touch.
 
 THE DATABASE: db/articles.json
@@ -27,129 +39,36 @@ THE DATABASE: db/articles.json
 A JSON array. One object per article:
 
   {
-    "slug": "about-this-wiki",          // kebab-case; must match the filename
+    "slug": "lesson-01-introduction-to-penetration-testing",
+                                        // kebab-case; must match the filename
                                         // articles/<slug>.html
-    "title": "About this wiki",
+    "title": "Lesson 1 — Introduction to Penetration Testing",
     "summary": "One or two sentences shown in lists and used by search.",
-    "tags": ["meta"],                   // lowercase, short, reusable
-    "date": "2026-06-11"                // ISO YYYY-MM-DD; drives "recently added"
+    "tags": ["beginner", "foundations"],// lowercase; FIRST tag = the level
+    "date": "2026-06-13",               // ISO YYYY-MM-DD; the day it was written
+    "lesson": 1,                        // integer; the front page sorts on this
+    "level": "beginner"                 // beginner | intermediate | advanced
   }
 
+`lesson` and `level` are the course fields; the front page orders by `lesson`
+ascending and shows "Lesson N · level" where the date used to be.
 More .json files may be added to db/ later if a feature needs them.
 
-HOW TO ADD AN ARTICLE (the routine task)
-----------------------------------------
-1. Pick a kebab-case slug from the title (e.g. "the-silk-road").
-2. Create articles/<slug>.html from the skeleton below, following the
-   ARTICLE STRUCTURE rules strictly.
-3. Append an entry to db/articles.json (slug, title, summary, tags, date = today).
-That's it — the front page picks it up automatically. Nothing else to update.
+HOW TO ADD A LESSON (the routine task)
+--------------------------------------
+This is now governed by produce.txt — read it. In short:
+1. Read db/articles.json; find the highest `lesson` number (the last lesson).
+2. Read that lesson's HTML (and skim the one before) for continuity.
+3. Write articles/lesson-NN-<kebab-topic>.html using the skeleton and lesson
+   structure in produce.txt (theory + hands-on lab + takeaways + self-check).
+4. Append an entry to db/articles.json (slug = filename, plus lesson + level).
+The front page picks it up automatically and slots it into course order.
 
-A real specimen following the house style: articles/about-this-wiki.html
+A real specimen: articles/lesson-01-introduction-to-penetration-testing.html
 
-ARTICLE STRUCTURE (strict — every article, no exceptions)
----------------------------------------------------------
-An article takes one of two shapes, decided by how much reliable material
-the subject offers:
-
-1. OVERVIEW — mandatory, 500–1000 words.
-   The whole subject in miniature: the lead paragraph (class="lead")
-   defining it, then a few short <h2> sections covering the essentials.
-   A reader who stops at the end of the overview must still walk away
-   with the complete picture. The infobox, if any, belongs here.
-
-2. DEEPER DELVE — only when information is abundant, 5000–10000 words.
-   Follows the overview, separated by an <hr> and opened with the
-   heading <h2>A deeper delve</h2>. Its internal sections use <h3>
-   (and <h4> below that if needed). This is where the full history,
-   mechanics, figures, controversies and consequences live, at
-   encyclopedic depth.
-
-If the subject cannot honestly sustain 5000 words, stop after the
-overview — never pad. If it can, the delve is obligatory — never
-compress a rich subject into the overview alone. References, when
-present, come last of all (after the delve if there is one).
-
-ARTICLE SKELETON
-----------------
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{TITLE} &mdash; Vlad&rsquo;s Journey</title>
-<meta name="description" content="{SUMMARY}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<div class="wrap">
-
-  <header class="article-masthead">
-    <a class="home-link" href="../index.html">Vlad&rsquo;s Journey</a>
-    <span class="volume">a personal encyclop&aelig;dia</span>
-  </header>
-
-  <main class="article">
-    <h1 class="article-title">{TITLE}</h1>
-    <p class="article-meta">
-      <time datetime="{YYYY-MM-DD}">{D Month YYYY}</time>
-      <span>&middot;</span>
-      <span>filed under</span>
-      <!-- one link per tag; ?tag= pre-fills the front-page search -->
-      <a class="tag" href="../index.html?tag={tag}">{tag}</a>
-    </p>
-
-    <!-- OPTIONAL right-floated infobox for quick facts -->
-    <aside class="infobox">
-      <p class="infobox-title">{Short title}</p>
-      <dl>
-        <dt>{Label}</dt><dd>{Value}</dd>
-      </dl>
-    </aside>
-
-    <!-- ===== OVERVIEW (mandatory, 500-1000 words) ===== -->
-    <!-- Lead paragraph: class "lead" gives it the illuminated drop cap -->
-    <p class="lead">{Opening paragraph, encyclopedia voice.}</p>
-
-    <h2>{Section heading}</h2>
-    <p>{Body...}</p>
-
-    <!-- ===== DEEPER DELVE (only if information is abundant, 5000-10000 words) =====
-    <hr>
-    <h2>A deeper delve</h2>
-    <h3>{Subsection}</h3>
-    <p>{Body at depth...}</p>
-    -->
-
-    <!-- Other available elements, all pre-styled:
-         <h3>, <h4>, <blockquote>, <ul>/<ol>, <hr>,
-         <figure><img ...><figcaption>caption</figcaption></figure>,
-         <h2>References</h2><ol class="references">...</ol> -->
-  </main>
-
-  <footer class="site-footer">
-    <div class="ornament-rule" role="presentation"><span class="fleuron">&#10086;</span></div>
-  </footer>
-
-</div>
-</body>
-</html>
-
-HOUSE STYLE (writing)
----------------------
-- Encyclopedia voice: third person, measured, slightly old-fashioned; wit is
-  welcome, hype is not.
-- Follow ARTICLE STRUCTURE above strictly: overview always (500-1000 words);
-  deeper delve (5000-10000 words) only when the material is abundant.
-- Open with a lead paragraph (class="lead") that defines the subject.
-- Divide longer entries into <h2> sections; use the infobox for quick facts.
-- Tags: lowercase, singular where sensible, reuse existing tags before
-  inventing new ones (check db/articles.json for the current vocabulary).
-- Typographic niceties: &mdash; for dashes, &rsquo; for apostrophes,
-  &ldquo;&rdquo; for quotes.
+The lesson HTML skeleton, content structure, learner profile, curriculum arc,
+writing voice, and the (non-negotiable) safety/legal rules all live in
+produce.txt. The plumbing and design language below still apply to every page.
 
 DESIGN LANGUAGE (style.css)
 ---------------------------
@@ -169,12 +88,14 @@ gradients, shadows, etc.).
 RULES / GOTCHAS
 ---------------
 - Keep everything static: no build tools, no npm, no frameworks.
-- Article pages live one level deep, so they reference ../style.css and
+- Lesson pages live one level deep, so they reference ../style.css and
   ../index.html.
 - The slug in db/articles.json MUST equal the filename (front page builds
   links as articles/<slug>.html).
-- Dates are ISO in the JSON and in <time datetime>; rendered dates are
-  long-form British style ("11 June 2026").
+- The front page orders by the `lesson` integer ascending; any entry without
+  a `lesson` field sinks to the bottom. Keep lesson numbers contiguous.
 - Search is client-side substring matching over title + summary + tags;
   every JSON entry should have a meaningful summary so search works well.
-- When changing shared styling, check both index.html and an article page.
+- Inside <pre>/<code>, use plain ASCII (not &mdash;/&rsquo;) so commands
+  copy-paste correctly. Typographic entities are for prose only.
+- When changing shared styling, check both index.html and a lesson page.

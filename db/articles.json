@@ -1,30 +1,29 @@
 [
   {
-    "slug": "about-this-wiki",
-    "title": "About this wiki",
-    "summary": "What Vlad's Journey is, how it is organised, and how its articles are written.",
-    "tags": ["meta"],
-    "date": "2026-06-11"
+    "slug": "lesson-01-introduction-to-penetration-testing",
+    "title": "Lesson 1 — Introduction to Penetration Testing",
+    "summary": "What penetration testing is, how it differs from a QA bug hunt, the methodology behind every engagement, the law and ethics that keep it legal, and your first safe scan from a Mac.",
+    "tags": ["beginner", "foundations", "ethics"],
+    "date": "2026-06-13",
+    "lesson": 1,
+    "level": "beginner"
   },
   {
-    "slug": "gemeinsame-gluecksspielbehoerde-der-laender",
-    "title": "Gemeinsame Glücksspielbehörde der Länder",
-    "summary": "The GGL, Germany's joint authority of the sixteen Länder for regulating cross-state online gambling, seated in Halle (Saale) and fully operational since January 2023.",
-    "tags": ["gambling", "regulation", "germany"],
-    "date": "2026-06-11"
+    "slug": "lesson-02-building-your-macos-pentesting-lab",
+    "title": "Lesson 2 — Building Your macOS Pentesting Lab",
+    "summary": "Turn your Mac into a safe, legal practice range: a Kali Linux VM under UTM as the attack box, a deliberately vulnerable target in Docker, the networking that joins them, and the snapshot habits that keep it repeatable.",
+    "tags": ["beginner", "lab", "kali", "docker"],
+    "date": "2026-06-13",
+    "lesson": 2,
+    "level": "beginner"
   },
   {
-    "slug": "polymer",
-    "title": "Polymer",
-    "summary": "Giant molecules built from repeating units — from cellulose and silk to nylon and polyethylene — whose chain-like architecture gives plastics, rubbers and fibres their character.",
-    "tags": ["chemistry", "material", "science"],
-    "date": "2026-06-11"
-  },
-  {
-    "slug": "search-engine-optimization",
-    "title": "Search engine optimization",
-    "summary": "SEO, the craft of arranging a website so search engines — and the answer engines now built atop them — present it favourably: its technical mechanics, its history, and its passage into the age of generative search.",
-    "tags": ["seo", "web", "marketing"],
-    "date": "2026-06-11"
+    "slug": "lesson-03-networking-foundations-for-pentesters",
+    "title": "Lesson 3 — Networking Foundations for Pentesters",
+    "summary": "The terrain every attack crosses: IP addresses and subnets, ports and sockets, the TCP three-way handshake, UDP and DNS — then watch a real handshake in your lab and see what Nmap's scan types are actually doing.",
+    "tags": ["beginner", "networking", "foundations"],
+    "date": "2026-06-13",
+    "lesson": 3,
+    "level": "beginner"
   }
 ]

@@ -588,6 +588,123 @@ a.tag { border-bottom: 1px solid var(--amber-deep); }
 }
 
 /* --------------------------------------------------------------------------
+   Lessons — code, terminals, callouts (course additions)
+   The course keeps the encyclopedia look; these add the apparatus a
+   hands-on lesson needs — command blocks, keystrokes, and ruled callouts
+   for labs, cautions and notes — all kept within the amber/umber palette.
+   -------------------------------------------------------------------------- */
+
+/* a small-caps "level · duration" strip under the lesson title */
+.article .lesson-tag {
+  font-family: var(--font-display-sc);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: lowercase;
+  color: var(--amber);
+  font-style: normal;
+}
+
+/* inline code & keystrokes */
+.article code,
+.article kbd,
+.article pre {
+  font-family: "SF Mono", "SFMono-Regular", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+.article :not(pre) > code {
+  font-size: 0.86em;
+  color: var(--amber-bright);
+  background: var(--paper-edge);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.05em 0.4em;
+}
+
+.article kbd {
+  font-size: 0.8em;
+  color: var(--ink);
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  padding: 0.05em 0.45em;
+}
+
+/* code / terminal blocks — a framed, scrollable panel */
+.article pre {
+  margin: 1.5rem 0;
+  padding: 1rem 1.1rem;
+  background: var(--paper-edge);
+  border: 1px solid var(--rule-strong);
+  box-shadow: inset 0 0 0 3px var(--paper-edge), inset 0 0 0 4px var(--rule);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.article pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  white-space: pre;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* spans usable inside a <pre>: amber prompt, faint comment, dimmed output */
+.article pre .prompt  { color: var(--amber); }
+.article pre .comment { color: var(--ink-faint); font-style: italic; }
+.article pre .out     { color: var(--ink-dim); }
+
+/* a terminal block carries a small-caps caption strip from data-label */
+.article pre.terminal {
+  position: relative;
+  padding-top: 2.2rem;
+}
+
+.article pre.terminal::before {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0 0 auto 0;
+  padding: 0.32rem 1.1rem;
+  font-family: var(--font-display-sc);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: var(--ink-faint);
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--rule);
+}
+
+/* callouts: lab tasks, cautions, notes — ruled panels with a small-caps label */
+.article .callout {
+  margin: 1.85rem 0;
+  padding: 1.1rem 1.3rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-left: 3px solid var(--amber-deep);
+}
+
+.article .callout > :first-child { margin-top: 0; }
+.article .callout > :last-child  { margin-bottom: 0; }
+
+.article .callout-label {
+  display: block;
+  font-family: var(--font-display-sc);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: var(--amber);
+  margin-bottom: 0.65rem;
+}
+
+/* caution / legal — heavier double rule, brighter label */
+.article .callout-caution { border-left: 3px double var(--amber-bright); }
+.article .callout-caution .callout-label { color: var(--amber-bright); }
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 
