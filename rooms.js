@@ -1,9 +1,9 @@
 /* ==========================================================================
    JOURNEY — shared room script. Two independent pieces, both keyed off the
-   single <script src="../rooms.js"> every room includes:
+   single <script src="../../rooms.js"> every room includes:
 
    1. PALETTE ENGINE. The world is a plane: y = TECH, x = MAGIC, each running
-      -500..+500 (see write.txt). A room's colours are not authored — they are
+      -150..+150 (see write.txt). A room's colours are not authored — they are
       interpolated from its coordinates between four corner palettes (the genre
       poles) and a medieval CENTRE that holds near the origin. So the look
       drifts a hair with every door, and the four corners feel like four worlds.
@@ -68,13 +68,17 @@
     return "rgb(" + r + "," + g + "," + b + ")";
   }
 
-  // (x,y) from the filename "<x>.<y>.html" (the canonical coordinate); fall
-  // back to the ".room-coord" text "X : Y"; give up (cover, unknown) -> null.
+  // (x,y) from the sharded path "rooms/<x>/<y>.html" (the canonical coordinate):
+  // x is the parent folder, y is the file basename. Fall back to the
+  // ".room-coord" text "X : Y" (file://, odd paths); give up (cover) -> null.
   function readCoords() {
-    var base = (location.pathname || "").split("/").pop().replace(/\.html?$/i, "");
-    var parts = base.split(".");
-    if (parts.length === 2 && /^-?\d+$/.test(parts[0]) && /^-?\d+$/.test(parts[1])) {
-      return [parseInt(parts[0], 10), parseInt(parts[1], 10)];
+    var segs = (location.pathname || "").split("/").filter(Boolean);
+    if (segs.length >= 2) {
+      var xs = segs[segs.length - 2];
+      var ys = segs[segs.length - 1].replace(/\.html?$/i, "");
+      if (/^-?\d+$/.test(xs) && /^-?\d+$/.test(ys)) {
+        return [parseInt(xs, 10), parseInt(ys, 10)];
+      }
     }
     var el = document.querySelector(".room-coord");
     if (el) {

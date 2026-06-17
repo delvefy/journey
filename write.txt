@@ -21,7 +21,7 @@ THE TWO COMPANION IDEAS
 
 FILES
 -----
-index.html        The cover / threshold. Title + an "enter" door to rooms/0.0.html.
+index.html        The cover / threshold. Title + an "enter" door to rooms/0/0.html.
 style.css         Shared stylesheet for the cover and every room. Mobile-first.
                   Holds the door-square component and the MEDIEVAL :root palette
                   (the origin's look + the no-JS fallback). It no longer carries
@@ -31,9 +31,15 @@ rooms.js          Shared room script. (1) PALETTE ENGINE: reads the room's (x,y)
                   medieval centre, so the look drifts with position automatically.
                   (2) DOOR LOGIC: probes each door's neighbour file; written rooms
                   show "open" (and reveal their name), unwritten ones "undreamt".
-                  Included by every room as <script src="../rooms.js">.
-rooms/<x>.<y>.html One self-contained page per room. THIS is what you write.
+                  Included by every room as <script src="../../rooms.js">.
+rooms/<x>/<y>.html One self-contained page per room. THIS is what you write. The
+                  per-x folders already exist (rooms/-150 .. rooms/150); you only
+                  add the <y>.html file inside the right folder.
 write.txt         This file.
+rooms-map.txt     The room tracker: short how-to-write instructions plus the LAST
+                  ROOM written. The next room is derived from that line (see THE
+                  FRONTIER). Update its LAST ROOM after writing each room. Not
+                  linked by the site.
 CNAME             GitHub Pages domain — do not touch.
 
 THE GRID: COORDINATES, FILENAMES, DOORS
@@ -43,12 +49,14 @@ from -150 to +150.
   x grows to the RIGHT (east) = MORE MAGIC; shrinks LEFT (west) = LESS magic.
   y grows UPWARD (north, "forward") = MORE TECH; shrinks DOWN (south) = LESS tech.
 
-Filename = "<x>.<y>.html" in rooms/. Examples:
-  0:0  -> rooms/0.0.html        1:0  -> rooms/1.0.html
- -1:0  -> rooms/-1.0.html       0:-1 -> rooms/0.-1.html
-The filename is the canonical coordinate AND the source of the room's palette
-(rooms.js parses it), so it must be exactly "<x>.<y>.html" — no padding, no extra
-dots. Integers only.
+Path = "rooms/<x>/<y>.html". The x coordinate is the FOLDER, the y coordinate is
+the FILE inside it. Examples:
+  0:0  -> rooms/0/0.html        1:0  -> rooms/1/0.html
+ -1:0  -> rooms/-1/0.html       0:-1 -> rooms/0/-1.html
+The "<x>/<y>" path is the canonical coordinate AND the source of the room's
+palette, so both segments must be exactly the integer coordinate — no padding,
+no extra dots, no ".html" on the folder. Integers only. The 301 x-folders
+(rooms/-150 .. rooms/150) are pre-created; never invent a new folder name.
 
 A room is drawn as a SQUARE with one door centred on each wall. From room (x,y)
 the four doors lead to:
@@ -67,18 +75,38 @@ The coordinate space is bounded: -150..+150 on each axis = at most 301 x 301 =
 hosting limits, so the whole world can live as plain files in this repo on
 GitHub Pages.
 
-Directory: rooms/ stays a single FLAT folder of "<x>.<y>.html" files for now.
-GitHub's guidance is <= 3,000 entries per directory; only if rooms/ ever nears
-~2,500 files do you shard to rooms/<x>/<y>.html (door links would become
-"../<x-or-x+1>/<y>.html", assets "../../style.css" and "../../rooms.js", and the
-coordinate parse in rooms.js would switch from the basename "<x>.<y>" to the last
-two path segments). Not needed until then — do NOT pre-shard.
+Directory: rooms/ is SHARDED — one folder per x value, rooms/<x>/, holding that
+column's "<y>.html" files. All 301 x-folders (rooms/-150 .. rooms/150) already
+exist; the y.html files are filled in on demand. This keeps every directory well
+under GitHub's ~3,000-entry guidance (at most 301 files per folder) and lets the
+whole bounded world live as plain files on GitHub Pages.
+
+Because rooms now live TWO levels deep (rooms/<x>/<y>.html):
+  - shared assets are referenced as "../../style.css" and "../../rooms.js";
+  - a door to a neighbour in the SAME column (north/south, y±1) links to a bare
+    "<y>.html"; a door to an ADJACENT column (east/west, x±1) links to
+    "../<x±1>/<y>.html";
+  - the coordinate is taken from the last two path segments "<x>/<y>" (rooms.js
+    parses the path; it also falls back to the ".room-coord" text "X : Y").
 
 What to write next = THE FRONTIER. There is no server to log which doors readers
-tried, so the worklist is computed by hand: scan rooms/, and for each room that
-exists, note which of its four neighbours (x,y+1 / x,y-1 / x+1,y / x-1,y) do NOT
-exist yet. Those missing neighbours are the frontier. A coordinate that several
-existing rooms already point at is the most "owed" — a natural next room to write.
+tried, so the worklist is computed from the files: scan rooms/, and for each room
+that exists, note which of its four neighbours (x,y+1 / x,y-1 / x+1,y / x-1,y) do
+NOT exist yet. Those missing neighbours are the frontier.
+
+ORDER OF WORK (the standing rule): write rooms ONE AT A TIME, and always take the
+unwritten room CLOSEST TO THE ORIGIN first. "Closest" = smallest straight-line
+distance from (0,0); break ties clockwise from north (N, NE, E, SE, S, SW, W, NW),
+so the next room is never ambiguous. This grows the world as a tight blob around
+0:0, so the room you write is always adjacent to one already written — continuity
+stays easy and the map never sprouts disconnected islands.
+
+Because rooms are always written in this order, the written rooms form one
+unbroken run outward from 0:0 — no full scan or whole-grid map is needed.
+rooms-map.txt records only the LAST ROOM written; the next room is simply the next
+coordinate in the order above. Write it, save the file, then update the LAST ROOM
+line in rooms-map.txt. (If a room is ever added out of order or removed, re-derive
+by walking the order from 0:0 outward and taking the first coordinate with no file.)
 
 THE TWO SPECTRA + THE DIAGONAL OF TIME
 --------------------------------------
@@ -210,7 +238,7 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../../style.css">
 </head>
 <body class="room">
 <div class="wrap">
@@ -230,41 +258,51 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
   <nav class="doors" aria-label="Doors out of this room">
     <p class="doors-title">choose a door</p>
     <div class="room-square">
-      <a class="door door-top"    href="X.Yplus1.html">&#8593;</a>
-      <a class="door door-right"  href="Xplus1.Y.html">&#8594;</a>
-      <a class="door door-bottom" href="X.Yminus1.html">&#8595;</a>
-      <a class="door door-left"   href="Xminus1.Y.html">&#8592;</a>
+      <a class="door door-top"    href="Yplus1.html">&#8593;</a>
+      <a class="door door-right"  href="../Xplus1/Y.html">&#8594;</a>
+      <a class="door door-bottom" href="Yminus1.html">&#8595;</a>
+      <a class="door door-left"   href="../Xminus1/Y.html">&#8592;</a>
       <span class="room-center" aria-hidden="true">&#10086;</span>
     </div>
     <p class="door-readout" aria-live="polite"></p>
   </nav>
 
 </div>
-<script src="../rooms.js"></script>
+<script src="../../rooms.js"></script>
 </body>
 </html>
 
 CHECKLIST TO ADD A ROOM (x,y)
 -----------------------------
+[ ] Pick the room: the next coordinate after LAST ROOM in rooms-map.txt — i.e. the
+    unwritten room closest to origin (see THE FRONTIER). Write only this one room.
 [ ] Place the room: read its tech level off y and its magic level off x (the
     spectra above). Know which corner it leans toward.
 [ ] Read every existing neighbour file; note the shared-door hook to pay off
     (the arrival door is the OPPOSITE cardinal of the one walked).
 [ ] Copy the skeleton; set <title> "Name — Journey", room-coord "x : y",
-    room-name, body class="room", and the four door hrefs to the real neighbour
-    files (mind negative numbers: e.g. "0.-1.html", "-1.0.html").
+    room-name, body class="room", and the four door hrefs to the real neighbours:
+    north/south stay in this column ("<y+1>.html", "<y-1>.html"); east/west cross
+    to the next column ("../<x+1>/<y>.html", "../<x-1>/<y>.html"). Mind negative
+    numbers: e.g. from 0:0 the south door is "-1.html", the west door is
+    "../-1/0.html".
 [ ] Write 200-300 words; pay off the arrival hook; plant new hooks under the
     other doors matching their drift; reuse/transform a motif (the spiral, etc.).
 [ ] Do NOT set colours or an era class — the palette is derived from (x,y).
-[ ] Save as rooms/<x>.<y>.html. The neighbouring rooms' doors light up
-    automatically (rooms.js); nothing else to register.
+[ ] Save as rooms/<x>/<y>.html (the x-folder already exists). The neighbouring
+    rooms' doors light up automatically (rooms.js); nothing else to register.
+[ ] Update rooms-map.txt: set its LAST ROOM line to the room you just wrote.
 
 GOTCHAS
 -------
 - Keep everything STATIC: no build tools, no npm, no frameworks.
-- Rooms live one level deep: they reference ../style.css and ../rooms.js.
-- The filename MUST equal "<x>.<y>.html" exactly; the doors link by coordinate
-  AND the palette engine parses it. A wrong filename mis-colours the room.
+- Rooms live TWO levels deep (rooms/<x>/<y>.html): they reference ../../style.css
+  and ../../rooms.js. Same-column doors link to a bare "<y>.html"; cross-column
+  doors link to "../<x±1>/<y>.html".
+- The path MUST be "rooms/<x>/<y>.html" exactly — x is the folder, y is the file,
+  both bare integers, ".html" only on the file. The doors link by coordinate AND
+  the palette engine reads it (from the path, falling back to the room-coord
+  text). A wrong path or folder mis-colours the room or breaks its doors.
 - <body class="room"> only. There are no era-* classes any more.
 - Mobile-first: never widen the layout or shrink touch targets; test narrow.
 - Use plain ASCII inside any code/command text; typographic entities
