@@ -101,6 +101,23 @@ so the next room is never ambiguous. This grows the world as a tight blob around
 0:0, so the room you write is always adjacent to one already written — continuity
 stays easy and the map never sprouts disconnected islands.
 
+ONE AT A TIME, NOT IN BATCHES (read this twice). Author each room as a COMPLETE
+unit, end to end, before touching the next: read its neighbours, write the file,
+update the LAST ROOM line in rooms-map.txt — and ONLY THEN move on. Never draft
+several rooms' prose in one sweep and save them at the end: if the process is
+interrupted you lose the whole unsaved batch, whereas the one-at-a-time loop never
+loses more than the single room in progress. It also keeps each room composed with
+full attention against its freshly-written neighbours instead of becoming an
+assembly line.
+
+"ONE AT A TIME" IS ABOUT THE SAVE RHYTHM, NOT A STOP-AFTER-ONE RULE. When the
+request names a number ("write the next 10 rooms"), it means: repeat the one-room
+unit above that many times — write a room, save it, update the tracker, then
+proceed to the next, looping until you have written that many (or the frontier runs
+out). It does NOT mean stop after one. A bare "write the next room" is just the
+count = 1 case. Stop early only if the user tells you to, or if something blocks you
+(in which case report where you stopped — the saved tracker shows exactly that).
+
 Because rooms are always written in this order, the written rooms form one
 unbroken run outward from 0:0 — no full scan or whole-grid map is needed.
 rooms-map.txt records only the LAST ROOM written; the next room is simply the next
@@ -275,7 +292,8 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
 CHECKLIST TO ADD A ROOM (x,y)
 -----------------------------
 [ ] Pick the room: the next coordinate after LAST ROOM in rooms-map.txt — i.e. the
-    unwritten room closest to origin (see THE FRONTIER). Write only this one room.
+    unwritten room closest to origin (see THE FRONTIER). Write only this ONE room,
+    even if more were requested (see ORDER OF WORK: no batching).
 [ ] Place the room: read its tech level off y and its magic level off x (the
     spectra above). Know which corner it leans toward.
 [ ] Read every existing neighbour file; note the shared-door hook to pay off
@@ -292,6 +310,12 @@ CHECKLIST TO ADD A ROOM (x,y)
 [ ] Save as rooms/<x>/<y>.html (the x-folder already exists). The neighbouring
     rooms' doors light up automatically (rooms.js); nothing else to register.
 [ ] Update rooms-map.txt: set its LAST ROOM line to the room you just wrote.
+[ ] Save the file and update the tracker BEFORE starting any further room — that
+    committed state is what makes the work safe to interrupt. If the request asked
+    for more than one room and the count is not yet reached, loop back to the top of
+    this checklist for the next coordinate. When the count is done (or the frontier
+    runs out, or the user stops you), report the room(s) you wrote and the next
+    coordinate in the order.
 
 GOTCHAS
 -------

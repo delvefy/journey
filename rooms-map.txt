@@ -2,7 +2,12 @@ JOURNEY — ROOM TRACKER
 ======================
 
 HOW TO WRITE THE NEXT ROOM
-  - Write rooms ONE AT A TIME.
+  - Write rooms ONE AT A TIME, never in batches: write the room, save the HTML,
+    update the LAST ROOM line below, and ONLY THEN start the next room. Saving each
+    room before beginning the next is what makes the work safe to interrupt.
+  - "Write the next N rooms" means repeat that one-room loop N times (write, save,
+    update tracker, proceed) — NOT write N at once, and NOT stop after one. "Write
+    the next room" is just N = 1. (Full reasoning: write.txt > ORDER OF WORK.)
   - The next room is the unwritten coordinate CLOSEST to the origin (0,0):
     smallest straight-line distance; ties broken clockwise from north
     (N, NE, E, SE, S, SW, W, NW).
@@ -13,4 +18,4 @@ HOW TO WRITE THE NEXT ROOM
   - Full authoring rules (continuity, voice, the room skeleton): see write.txt.
 
 LAST ROOM WRITTEN
-  0:0  —  The Antechamber
+  3:1  —  The Conjuring Frame
