@@ -1,0 +1,16 @@
+JOURNEY — ROOM TRACKER
+======================
+
+HOW TO WRITE THE NEXT ROOM
+  - Write rooms ONE AT A TIME.
+  - The next room is the unwritten coordinate CLOSEST to the origin (0,0):
+    smallest straight-line distance; ties broken clockwise from north
+    (N, NE, E, SE, S, SW, W, NW).
+  - Rooms are always written in this order, so the written rooms form one
+    unbroken run outward from 0:0. The LAST ROOM below therefore pins exactly
+    where we are; the next room is simply the next coordinate in that order.
+  - Save it as rooms/<x>/<y>.html, then update the LAST ROOM line below.
+  - Full authoring rules (continuity, voice, the room skeleton): see write.txt.
+
+LAST ROOM WRITTEN
+  0:0  —  The Antechamber
