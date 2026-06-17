@@ -1,16 +1,121 @@
 /* ==========================================================================
-   JOURNEY — door logic, shared by every room.
+   JOURNEY — shared room script. Two independent pieces, both keyed off the
+   single <script src="../rooms.js"> every room includes:
 
-   Each room links its four doors to neighbour coordinate files. On load we
-   probe each link:
-     - exists (HTTP 200)  -> "open": the door glows and reveals the room's name
-     - missing (HTTP 404) -> "unwritten": a dashed door that, when chosen,
-                             says the way has not been dreamt yet (no 404 page)
-     - cannot probe (e.g. opened from file://, fetch throws) -> left as a plain
-                             link so navigation still works offline.
+   1. PALETTE ENGINE. The world is a plane: y = TECH, x = MAGIC, each running
+      -500..+500 (see write.txt). A room's colours are not authored — they are
+      interpolated from its coordinates between four corner palettes (the genre
+      poles) and a medieval CENTRE that holds near the origin. So the look
+      drifts a hair with every door, and the four corners feel like four worlds.
 
-   No build step, no dependencies. Include with:  <script src="../rooms.js"></script>
+   2. DOOR LOGIC. Each room links its four doors to neighbour coordinate files.
+      On load we probe each link:
+        - exists (HTTP 200)  -> "open": the door glows and reveals the room name
+        - missing (HTTP 404) -> "unwritten": a dashed door that, when chosen,
+                                says the way has not been dreamt yet
+        - cannot probe (file://, fetch throws) -> left a plain navigable link
+
+   No build step, no dependencies. The palette degrades gracefully: with JS off
+   every page simply keeps the medieval :root base in style.css.
    ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. PALETTE ENGINE
+   ------------------------------------------------------------------------- */
+(function () {
+  "use strict";
+
+  // Themeable tokens, each an [r,g,b] (--glow is [r,g,b,a]) at five anchors:
+  // the four corners of the tech(y) x magic(x) plane, plus CENTRE (= the
+  // medieval :root base, held near the origin). To retune a region, edit here.
+  var ANCHOR = {
+    //               paper          paper-raised   paper-edge     ink              ink-dim         ink-faint     amber           amber-bright     amber-deep    rule           rule-strong   glow
+    // SW: low tech, no magic — The Waste (ash, ruin, the mundane void)
+    sw: { paper:[22,20,15],  raised:[32,29,22],  edge:[12,11,8],  ink:[201,196,181], dim:[138,133,120], faint:[85,81,74],  amber:[154,142,116], bright:[179,169,140], deep:[91,84,68],  rule:[44,42,35],  strong:[65,61,51],  glow:[154,142,116,0.07] },
+    // SE: low tech, high magic — The Wyld (myth, age of wonders, no gear)
+    se: { paper:[18,24,15],  raised:[27,36,22],  edge:[10,14,7],  ink:[232,237,202], dim:[169,180,135], faint:[105,115,78], amber:[216,185,74],  bright:[240,213,106], deep:[74,125,66], rule:[44,58,34],  strong:[66,84,49],  glow:[116,196,116,0.20] },
+    // NW: high tech, no magic — The Chrome (sterile, dead neon, cold machine)
+    nw: { paper:[14,16,20],  raised:[23,26,33],  edge:[8,9,12],   ink:[221,228,236], dim:[147,157,171], faint:[86,94,110], amber:[142,166,187], bright:[183,202,219], deep:[65,80,95],  rule:[34,38,46],  strong:[52,59,70],  glow:[142,166,187,0.13] },
+    // NE: high tech, high magic — The Lumen (magitech, arcane engines of light)
+    ne: { paper:[10,11,18],  raised:[18,19,32],  edge:[5,5,9],    ink:[217,232,242], dim:[130,143,176], faint:[76,85,120], amber:[60,224,200],  bright:[120,242,221], deep:[224,168,50], rule:[26,32,50],  strong:[43,53,86],  glow:[60,224,200,0.22] },
+    // CENTRE: the medieval Antechamber — matches style.css :root exactly
+    c:  { paper:[28,22,16],  raised:[37,30,21],  edge:[21,16,11], ink:[231,220,195], dim:[168,152,118], faint:[111,98,72], amber:[224,168,50],  bright:[240,188,78],  deep:[156,114,24], rule:[70,58,39],  strong:[93,77,51],  glow:[224,168,50,0.18] }
+  };
+
+  // token key in ANCHOR -> CSS custom property name
+  var VARS = {
+    paper: "--paper", raised: "--paper-raised", edge: "--paper-edge",
+    ink: "--ink", dim: "--ink-dim", faint: "--ink-faint",
+    amber: "--amber", bright: "--amber-bright", deep: "--amber-deep",
+    rule: "--rule", strong: "--rule-strong", glow: "--glow"
+  };
+
+  var SPAN = 150;        // axes run -SPAN..+SPAN
+  var CORE = 30;         // within this radius the medieval centre dominates
+
+  function clamp01(t) { return t < 0 ? 0 : t > 1 ? 1 : t; }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function mix(a, b, t) {
+    var out = [];
+    for (var i = 0; i < a.length; i++) out[i] = lerp(a[i], b[i], t);
+    return out;
+  }
+
+  function toCss(c) {
+    var r = Math.round(c[0]), g = Math.round(c[1]), b = Math.round(c[2]);
+    if (c.length > 3) return "rgba(" + r + "," + g + "," + b + "," + (Math.round(c[3] * 1000) / 1000) + ")";
+    return "rgb(" + r + "," + g + "," + b + ")";
+  }
+
+  // (x,y) from the filename "<x>.<y>.html" (the canonical coordinate); fall
+  // back to the ".room-coord" text "X : Y"; give up (cover, unknown) -> null.
+  function readCoords() {
+    var base = (location.pathname || "").split("/").pop().replace(/\.html?$/i, "");
+    var parts = base.split(".");
+    if (parts.length === 2 && /^-?\d+$/.test(parts[0]) && /^-?\d+$/.test(parts[1])) {
+      return [parseInt(parts[0], 10), parseInt(parts[1], 10)];
+    }
+    var el = document.querySelector(".room-coord");
+    if (el) {
+      var m = /(-?\d+)\s*:\s*(-?\d+)/.exec(el.textContent || "");
+      if (m) return [parseInt(m[1], 10), parseInt(m[2], 10)];
+    }
+    return null;
+  }
+
+  var coords = readCoords();
+  if (!coords) return; // cover / unknown: keep the medieval :root base
+
+  var x = coords[0], y = coords[1];
+  var tx = clamp01((x + SPAN) / (2 * SPAN));   // 0 = west/no-magic, 1 = east/high-magic
+  var ty = clamp01((y + SPAN) / (2 * SPAN));   // 0 = south/no-tech,  1 = north/high-tech
+  var cw = clamp01(1 - Math.max(Math.abs(x), Math.abs(y)) / CORE); // centre weight
+
+  var root = document.documentElement;
+  var body = document.body;
+  // suppress the body colour transition for this initial set, so each room
+  // loads already in its palette rather than fading up from medieval.
+  var savedTransition = body ? body.style.transition : "";
+  if (body) body.style.transition = "none";
+
+  Object.keys(VARS).forEach(function (k) {
+    var south = mix(ANCHOR.sw[k], ANCHOR.se[k], tx);  // y low
+    var north = mix(ANCHOR.nw[k], ANCHOR.ne[k], tx);  // y high
+    var corner = mix(south, north, ty);
+    var color = mix(corner, ANCHOR.c[k], cw);         // pull toward medieval near origin
+    root.style.setProperty(VARS[k], toCss(color));
+  });
+
+  if (body) {
+    void body.offsetHeight;            // force a reflow before re-enabling
+    body.style.transition = savedTransition; // restore stylesheet transition
+  }
+})();
+
+/* -------------------------------------------------------------------------
+   2. DOOR LOGIC
+   ------------------------------------------------------------------------- */
 (function () {
   "use strict";
 

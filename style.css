@@ -2,9 +2,10 @@
    JOURNEY — a branching hypertext fiction
    Shared stylesheet for the cover (index.html) and every room (rooms/*.html).
 
-   Mobile-first. The base palette is MEDIEVAL; later eras override the tokens
-   through a body class (era-medieval, era-modern, era-cyberpunk, ...) so the
-   look drifts with the story. See "ERA THEMES" at the foot of the file.
+   Mobile-first. The :root palette below is MEDIEVAL — the world's origin and
+   the no-JS fallback. Every other room is tinted at runtime by the PALETTE
+   ENGINE in rooms.js, which interpolates these tokens from the room's (x,y).
+   See "PALETTE" at the foot of the file.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -338,98 +339,12 @@ a:hover { color: var(--amber-bright); }
 }
 
 /* ==========================================================================
-   ERA THEMES
-   The story drifts medieval -> modern -> steampunk -> cyberpunk along the
-   y-axis (see write.txt). Each room sets ONE era class on <body>; the class
-   re-tints the tokens above so the palette moves with the prose. Keep the
-   structure identical — only colours (and, later, fonts) change. Add a new
-   block the first time the story reaches that era.
+   PALETTE — coordinate-driven, no era classes
+   The look is no longer chosen per room. rooms.js reads each room's (x,y) and
+   interpolates the tokens above between four corner palettes (the genre poles:
+   Chrome / Lumen / Wyld / Waste) and a medieval CENTRE that holds near the
+   origin. See "PALETTE ENGINE" in rooms.js — that is where regions are tuned.
+
+   The :root values above ARE the medieval base: the origin's palette, and the
+   graceful fallback for the cover and for any page with JavaScript disabled.
    ========================================================================== */
-
-/* y ~ 0 — the medieval core. Same as the :root base; named for clarity. */
-body.era-medieval { /* uses base tokens */ }
-
-/* y ~ 1-3 — renaissance / early modern: warmer, more candle-gold. */
-body.era-renaissance {
-  --paper: #1f1810;
-  --paper-raised: #2a2115;
-  --ink: #ece2cb;
-  --amber: #e8b94a;
-  --amber-bright: #f6cf6a;
-  --glow: rgba(232, 185, 74, 0.20);
-}
-
-/* y ~ 4-6 — industrial / gaslit: cooler, sootier, brass on iron. */
-body.era-industrial {
-  --paper: #16161a;
-  --paper-raised: #1f2026;
-  --paper-edge: #0e0e11;
-  --ink: #d9d6cc;
-  --ink-dim: #9a978c;
-  --amber: #c9a45c;
-  --amber-bright: #e0bd76;
-  --amber-deep: #7d6534;
-  --rule: #34353d;
-  --rule-strong: #474954;
-  --glow: rgba(201, 164, 92, 0.16);
-}
-
-/* y ~ 7-10 — modern: neutral concrete greys, cold daylight. */
-body.era-modern {
-  --paper: #14161a;
-  --paper-raised: #1d2026;
-  --paper-edge: #0d0e11;
-  --ink: #dfe3e8;
-  --ink-dim: #9aa1ab;
-  --ink-faint: #5f6670;
-  --amber: #9fb4c7;        /* steel-blue accent */
-  --amber-bright: #c3d4e3;
-  --amber-deep: #4a5a6b;
-  --rule: #2a2e35;
-  --rule-strong: #3c424b;
-  --glow: rgba(159, 180, 199, 0.16);
-}
-
-/* y ~ 11-13 — steampunk: brass, copper, verdigris. */
-body.era-steampunk {
-  --paper: #1a1410;
-  --paper-raised: #241c14;
-  --paper-edge: #0f0b08;
-  --ink: #e6d9c2;
-  --ink-dim: #ad9b7c;
-  --amber: #d98b3a;        /* hot copper */
-  --amber-bright: #f0a85a;
-  --amber-deep: #7e5326;
-  --rule: #3a2e20;
-  --rule-strong: #574532;
-  --glow: rgba(64, 168, 150, 0.18); /* verdigris glow */
-}
-
-/* y ~ 14-17 — cyberpunk: near-black, neon. */
-body.era-cyberpunk {
-  --paper: #0a0b12;
-  --paper-raised: #11131f;
-  --paper-edge: #050509;
-  --ink: #d7e6f0;
-  --ink-dim: #7e8aa6;
-  --ink-faint: #4a5270;
-  --amber: #34e0d0;        /* neon cyan */
-  --amber-bright: #6cf2e6;
-  --amber-deep: #c0257d;   /* neon magenta edge */
-  --rule: #1b2030;
-  --rule-strong: #2a3350;
-  --glow: rgba(52, 224, 208, 0.22);
-  --font-display: "IM Fell English", Georgia, serif;
-}
-
-/* y < 0 — older than the start: ancient / mythic, faded and stony. */
-body.era-mythic {
-  --paper: #181410;
-  --paper-raised: #221d15;
-  --ink: #ddd2bb;
-  --ink-dim: #9b8f74;
-  --amber: #cdb27a;        /* old bronze */
-  --amber-bright: #e3cb97;
-  --amber-deep: #6f5d36;
-  --glow: rgba(205, 178, 122, 0.14);
-}

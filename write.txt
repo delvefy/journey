@@ -7,11 +7,12 @@ WHAT THIS IS
 static site (GitHub Pages, custom domain in CNAME: journey.victorblackauthor.com).
 No build step, no framework, no server code. Plain HTML + CSS + vanilla JS.
 
-The world is an INFINITE square grid of rooms. The protagonist is an amnesiac
-who wakes in the first room and walks from room to room through doors. The
-reader IS the protagonist (second person, present tense). The project grows one
-room at a time, on demand: when the reader chooses a door that leads somewhere
-not yet written, that room gets authored next.
+The world is an INFINITE square grid of rooms laid over a plane with two axes
+of MEANING: north/south is TECHNOLOGY, east/west is MAGIC. The protagonist is an
+amnesiac who wakes in the first room and walks from room to room through doors.
+The reader IS the protagonist (second person, present tense). The project grows
+one room at a time, on demand: when the reader chooses a door that leads
+somewhere not yet written, that room gets authored next.
 
 THE TWO COMPANION IDEAS
   - write.txt (this file): how to WRITE a room and keep the world coherent.
@@ -22,34 +23,111 @@ FILES
 -----
 index.html        The cover / threshold. Title + an "enter" door to rooms/0.0.html.
 style.css         Shared stylesheet for the cover and every room. Mobile-first.
-                  Holds the door-square component and the ERA THEMES (body era-*
-                  classes that retint the palette as the story drifts).
-rooms.js          Shared door logic. Probes each door's neighbour file: written
-                  rooms show as "open" (and reveal their name), unwritten ones as
-                  "undreamt". Included by every room as <script src="../rooms.js">.
+                  Holds the door-square component and the MEDIEVAL :root palette
+                  (the origin's look + the no-JS fallback). It no longer carries
+                  era classes — colour is computed from coordinates now.
+rooms.js          Shared room script. (1) PALETTE ENGINE: reads the room's (x,y)
+                  and interpolates its colours between four corner palettes and a
+                  medieval centre, so the look drifts with position automatically.
+                  (2) DOOR LOGIC: probes each door's neighbour file; written rooms
+                  show "open" (and reveal their name), unwritten ones "undreamt".
+                  Included by every room as <script src="../rooms.js">.
 rooms/<x>.<y>.html One self-contained page per room. THIS is what you write.
 write.txt         This file.
 CNAME             GitHub Pages domain — do not touch.
 
 THE GRID: COORDINATES, FILENAMES, DOORS
 ---------------------------------------
-Every room has integer coordinates x:y. The first room is 0:0.
-  x grows to the RIGHT (east), shrinks to the LEFT (west).
-  y grows UPWARD / "forward" (north, the top door), shrinks DOWNWARD (south).
+Every room has integer coordinates x:y. The first room is 0:0. Both axes run
+from -150 to +150.
+  x grows to the RIGHT (east) = MORE MAGIC; shrinks LEFT (west) = LESS magic.
+  y grows UPWARD (north, "forward") = MORE TECH; shrinks DOWN (south) = LESS tech.
 
 Filename = "<x>.<y>.html" in rooms/. Examples:
   0:0  -> rooms/0.0.html        1:0  -> rooms/1.0.html
  -1:0  -> rooms/-1.0.html       0:-1 -> rooms/0.-1.html
+The filename is the canonical coordinate AND the source of the room's palette
+(rooms.js parses it), so it must be exactly "<x>.<y>.html" — no padding, no extra
+dots. Integers only.
 
 A room is drawn as a SQUARE with one door centred on each wall. From room (x,y)
 the four doors lead to:
-  top    (north / "forward") -> (x,   y+1) -> "<x>.<y+1>.html"
-  right  (east)              -> (x+1, y  ) -> "<x+1>.<y>.html"
-  bottom (south / "back")    -> (x,   y-1) -> "<x>.<y-1>.html"
-  left   (west)              -> (x-1, y  ) -> "<x-1>.<y>.html"
+  top    (north / "forward") -> (x,   y+1) -> "<x>.<y+1>.html"   MORE TECH
+  right  (east)              -> (x+1, y  ) -> "<x+1>.<y>.html"   MORE MAGIC
+  bottom (south / "back")    -> (x,   y-1) -> "<x>.<y-1>.html"   LESS TECH
+  left   (west)              -> (x-1, y  ) -> "<x-1>.<y>.html"   LESS MAGIC
 
 All four doors are always present in the HTML. rooms.js styles a door as
 "undreamt" if its target file does not exist yet — that is normal and expected.
+
+SCALE & FILES (how big this gets, and how to find the next room)
+----------------------------------------------------------------
+The coordinate space is bounded: -150..+150 on each axis = at most 301 x 301 =
+90,601 rooms (~250 MB of HTML at most). That sits comfortably within static
+hosting limits, so the whole world can live as plain files in this repo on
+GitHub Pages.
+
+Directory: rooms/ stays a single FLAT folder of "<x>.<y>.html" files for now.
+GitHub's guidance is <= 3,000 entries per directory; only if rooms/ ever nears
+~2,500 files do you shard to rooms/<x>/<y>.html (door links would become
+"../<x-or-x+1>/<y>.html", assets "../../style.css" and "../../rooms.js", and the
+coordinate parse in rooms.js would switch from the basename "<x>.<y>" to the last
+two path segments). Not needed until then — do NOT pre-shard.
+
+What to write next = THE FRONTIER. There is no server to log which doors readers
+tried, so the worklist is computed by hand: scan rooms/, and for each room that
+exists, note which of its four neighbours (x,y+1 / x,y-1 / x+1,y / x-1,y) do NOT
+exist yet. Those missing neighbours are the frontier. A coordinate that several
+existing rooms already point at is the most "owed" — a natural next room to write.
+
+THE TWO SPECTRA + THE DIAGONAL OF TIME
+--------------------------------------
+TECH runs along y, MAGIC along x. They are INDEPENDENT dials. Each runs through
+the same magnitude bands; |value| 0-10 nascent, 10-40 rising, 40-90 high,
+90-150 the pole. Going negative on an axis is not "less" but active LOSS.
+
+  TECH (the y-axis)
+    y   90..150   The Tech Pole — post-human: self-building matter, intelligence
+                  without flesh, the body wired or shed entirely.
+    y   40..90    high tech — electric light, glass, networks, machines that think.
+    y   10..40    rising tech — the forge matures into the engine: print, steam.
+    y    0..10    nascent tech — hand-tools, the wheel, rushlight. Craft, not industry.
+    y    0        THE START band — medieval craft.
+    y   -1..-90   pre-tool — fire, flint, hide and bone; the made thing half-dreamt.
+    y <= -90      before fire — the body and the dark, older than any tool.
+
+  MAGIC (the x-axis)
+    x   90..150   The Magic Pole — reality is consensual: names reshape matter,
+                  gods walk, the dead are neighbours.
+    x   40..90    high magic — magic as infrastructure: wards, summonings, the
+                  dead speak when asked.
+    x   10..40    rising magic — working spells, hedge-witches, spirits answer if called.
+    x    0..10    nascent magic — omens half-believed; a charm that might be coincidence.
+    x    0        THE START band — balance.
+    x   -1..-90   disenchantment — magic remembered, then doubted; the charms stop.
+    x <= -90      magic dead and forgotten; the Waste, where nothing answers.
+
+THE FOUR CORNERS (where the dials reach their extremes together) — suggested
+region names; rename in prose as you like:
+    NE (+tech +magic)  THE LUMEN  — magitech: arcane engines, cities of light,
+                                    spell and circuit fused. The deep FUTURE.
+    NW (+tech -magic)  THE CHROME — the sterile, disenchanted machine; dead neon,
+                                    wonder banished, only the engine left.
+    SE (-tech +magic)  THE WYLD   — pure myth, the age of wonders, not a gear in sight.
+    SW (-tech -magic)  THE WASTE  — ash and ruin, the mundane void; neither spell
+                                    nor engine. The primordial deep PAST.
+    (0,0)              THE THRESHOLD — medieval, both forces nascent. The balance.
+
+TIME is the SW<->NE DIAGONAL. Toward NE both forces mature together: that reads
+as "later", the future. Toward SW is the primordial past. The off-diagonal
+corners (NW, SE) are timelines that chose a side — a future that killed magic,
+or an eternity that never industrialised.
+
+GRADUAL ALWAYS. A north/south step changes only TECH by one notch (same magic);
+an east/west step changes only MAGIC (same tech). And each step is ~1/150 of a
+spectrum, so neighbours are nearly identical — let the atmosphere drift by a
+hair between rooms, never jump. The palette engine already does this with colour;
+your prose should match its restraint.
 
 VOICE & LENGTH
 --------------
@@ -68,73 +146,57 @@ Before writing room (x,y):
   1. List its four neighbours and check which files already exist in rooms/.
   2. READ every neighbour that exists.
   3. Honour the shared edge. The door the reader used to ARRIVE here is the same
-     physical door, seen from the other side. If the neighbour's prose said its
-     east door leaked torchlight and a bell, then arriving from that side, this
-     room's matching (west) door must still owe that bell and that light.
+     physical door, seen from the other side, and it is the OPPOSITE cardinal of
+     the one they walked (arrive through a north door -> you entered from the
+     south side). If the neighbour's prose said its east door smelled of
+     spellwork, then arriving from that side, this room's matching (west) door
+     must still owe that scent.
   4. Carry sensory threads across the seam: a sound, a smell, a quality of light,
      a temperature, a recurring object. Continuity is mostly atmosphere.
-  5. Plant new hooks under THIS room's unwritten doors (a draft, a glow, a noise,
-     a mark) so whoever writes those neighbours later has something to answer.
-  6. Keep the era consistent with position (below).
+  5. Plant new hooks under THIS room's unwritten doors that match each door's
+     DIRECTION of drift: north hints at more tech, east at more magic, south at
+     the more primal, west at the more disenchanted. Whoever writes those
+     neighbours later answers your hook.
+  6. Keep tech/magic consistent with position (the spectra above).
 
 Room 0:0 already plants these hooks, as the template specimen:
-  north door -> cold air, pine and rain     east door -> torchlight, a far bell
-  south door -> warm, "almost breathing"    west door -> a gouged SPIRAL
+  north door (+tech) -> a faint hum, cold metal-tasting air, a hairline of too-even light
+  east door  (+magic) -> torchlight that bends wrong, a bell rung in the mind, old spellwork
+  south door (-tech)  -> warm, "almost breathing"; wet earth, older than tools
+  west door  (-magic) -> a draught of ash and silence; a gouged SPIRAL, half scratched out
 Any neighbour you write must pay off the hook on its shared door.
 
-THE ERA GRADIENT (medieval -> modern -> steampunk -> cyberpunk)
----------------------------------------------------------------
-TIME runs along the y-axis. Going "forward" (north / up) advances the era;
-going south goes deeper into the past. The x-axis is LATERAL: same era,
-different place and mood. So north/south neighbours are ONE era-step apart;
-east/west neighbours share this room's era. Transitions must be GRADUAL — blend,
-never jump. Treat the bands below as a slow dissolve, not hard borders; near a
-boundary, let the older era's residue linger and the next era bleed in early.
+THEMING IS AUTOMATIC (do not set an era class)
+----------------------------------------------
+You never choose colours. rooms.js reads the room's coordinates and tints the
+page by interpolating between the four corner palettes (Chrome / Lumen / Wyld /
+Waste) and the medieval centre. Set ONLY <body class="room"> — nothing more. The
+warmth/coldness and hue will already match the room's place in the world; write
+prose whose imagery agrees with the colour it will be shown in.
 
-  y >= 18      Beyond — post-human / far future
-  y 14 .. 17   Cyberpunk    (neon, rain, chrome, networks, the body wired)
-  y 11 .. 13   Steampunk    (brass, steam, clockwork, airships, verdigris)
-  y  7 .. 10   Modern       (concrete, electric light, glass, machines)
-  y  4 ..  6   Industrial   (gaslight, iron, soot, the first engines)
-  y  1 ..  3   Renaissance  (printing, courts, candlelight and reason)
-  y  =  0      Medieval     (THE START — stone, rushlight, bell, spiral)
-  y -1 .. -3   Early medieval / dark ages (mud, ritual, smaller fires)
-  y -4 .. -7   Antiquity    (marble, bronze, classical ruin)
-  y <= -8      Mythic / primordial (cave, star, the world before names)
-
-Note the order is the reader's chosen one: modern comes BEFORE steampunk, so
-modern drifts into a retro-futurist brass age before it digitises into
-cyberpunk. Make that turn feel like the world re-dreaming itself, not a glitch.
-
-X (lateral) gives variety without changing era. Optionally let mood drift with
-x: westward (-x) toward decay, wilderness, forgetting; eastward (+x) toward
-order, structure, remembering. Keep it subtle.
+To RETUNE a region's look (not per room — globally), edit the ANCHOR palettes in
+the PALETTE ENGINE block at the top of rooms.js. The medieval :root block in
+style.css is the origin's palette and the JS-disabled fallback; leave it.
 
 ROOM NAMING & TITLE
 -------------------
-- Give each room an evocative NAME fitting its era and place (e.g. "The
+- Give each room an evocative NAME fitting its tech/magic place (e.g. "The
   Antechamber", "The Pinewood Gate", "The Clockmaker's Landing", "Neon Reliquary").
 - The <h1 class="room-name"> text is what neighbouring doors display, and the
   <title> must read exactly:  Room Name — Journey
   (rooms.js reads both; keep the " — Journey" suffix.)
 
-STYLING / ERA THEME CLASS
--------------------------
-Set ONE era class on <body>, matching the band: era-medieval, era-renaissance,
-era-industrial, era-modern, era-steampunk, era-cyberpunk, or era-mythic. The
-class only retints CSS variables; the markup stays identical. The first time the
-story reaches an era not yet defined in style.css, add a new "body.era-NAME {}"
-block there (override the palette tokens only) before using it.
-
 RECURRING MOTIFS (the spine that holds an infinite, branching thing together)
 -----------------------------------------------------------------------------
-- The SPIRAL: a mark that keeps reappearing across eras in different materials
-  (chalk, then ink, then etched steel, then a glowing glyph). The reader's only
-  thread back to themselves.
+- The SPIRAL: a mark that keeps reappearing in whatever the room is made of —
+  chalk here, etched steel in the Chrome, a living vine in the Wyld, a glowing
+  glyph in the Lumen, ash-scratch in the Waste. The reader's only thread back to
+  themselves.
 - The unfinished JOURNEY: the certainty of having been going somewhere.
-- The BELL / a distant counting of time, reheard in changed forms.
+- The BELL / a distant counting of time, reheard in changed forms (tolling iron,
+  a bell rung in the mind, a network ping).
 - The almost-remembered NAME.
-Reuse at least one motif per room; transform it to fit the era.
+Reuse at least one motif per room; transform it to fit the room's tech and magic.
 
 THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
 -----------------------------------------------------------
@@ -150,7 +212,7 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 </head>
-<body class="room era-ERANAME">
+<body class="room">
 <div class="wrap">
 
   <p class="room-coord">X : Y</p>
@@ -159,7 +221,8 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
   <div class="prose">
     <p>200-300 WORDS OF PROSE, SECOND PERSON PRESENT TENSE. FIRST PARAGRAPH GETS
     THE DROP CAP AUTOMATICALLY. PAY OFF THE SHARED-DOOR HOOK FROM THE NEIGHBOUR
-    YOU ARRIVED FROM; PLANT HOOKS UNDER THE OTHER DOORS.</p>
+    YOU ARRIVED FROM; PLANT HOOKS UNDER THE OTHER DOORS (north=more tech,
+    east=more magic, south=more primal, west=more disenchanted).</p>
   </div>
 
   <div class="fleuron" role="presentation"><span>&#10086;</span></div>
@@ -183,14 +246,16 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
 
 CHECKLIST TO ADD A ROOM (x,y)
 -----------------------------
-[ ] Pick the era band from y; choose the body era-* class (add its palette block
-    to style.css if it is new).
-[ ] Read every existing neighbour file; note the shared-door hook to pay off.
+[ ] Place the room: read its tech level off y and its magic level off x (the
+    spectra above). Know which corner it leans toward.
+[ ] Read every existing neighbour file; note the shared-door hook to pay off
+    (the arrival door is the OPPOSITE cardinal of the one walked).
 [ ] Copy the skeleton; set <title> "Name — Journey", room-coord "x : y",
-    room-name, era class, and the four door hrefs to the real neighbour files
-    (mind negative numbers: e.g. "0.-1.html", "-1.0.html").
+    room-name, body class="room", and the four door hrefs to the real neighbour
+    files (mind negative numbers: e.g. "0.-1.html", "-1.0.html").
 [ ] Write 200-300 words; pay off the arrival hook; plant new hooks under the
-    other doors; reuse/transform a motif (the spiral, etc.).
+    other doors matching their drift; reuse/transform a motif (the spiral, etc.).
+[ ] Do NOT set colours or an era class — the palette is derived from (x,y).
 [ ] Save as rooms/<x>.<y>.html. The neighbouring rooms' doors light up
     automatically (rooms.js); nothing else to register.
 
@@ -198,7 +263,9 @@ GOTCHAS
 -------
 - Keep everything STATIC: no build tools, no npm, no frameworks.
 - Rooms live one level deep: they reference ../style.css and ../rooms.js.
-- The filename MUST equal "<x>.<y>.html" exactly; the doors link by coordinate.
+- The filename MUST equal "<x>.<y>.html" exactly; the doors link by coordinate
+  AND the palette engine parses it. A wrong filename mis-colours the room.
+- <body class="room"> only. There are no era-* classes any more.
 - Mobile-first: never widen the layout or shrink touch targets; test narrow.
 - Use plain ASCII inside any code/command text; typographic entities
   (&mdash; &rsquo; &amp;) are for prose only.
