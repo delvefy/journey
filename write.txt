@@ -1,0 +1,205 @@
+JOURNEY — HOW TO WRITE THE NEXT ROOM (cheatsheet for AI assistants)
+==================================================================
+
+WHAT THIS IS
+------------
+"Journey" is a branching work of hypertext fiction, published as a fully
+static site (GitHub Pages, custom domain in CNAME: journey.victorblackauthor.com).
+No build step, no framework, no server code. Plain HTML + CSS + vanilla JS.
+
+The world is an INFINITE square grid of rooms. The protagonist is an amnesiac
+who wakes in the first room and walks from room to room through doors. The
+reader IS the protagonist (second person, present tense). The project grows one
+room at a time, on demand: when the reader chooses a door that leads somewhere
+not yet written, that room gets authored next.
+
+THE TWO COMPANION IDEAS
+  - write.txt (this file): how to WRITE a room and keep the world coherent.
+  - the existing rooms in rooms/: the canon. Always read the neighbours of the
+    room you are about to write before writing it.
+
+FILES
+-----
+index.html        The cover / threshold. Title + an "enter" door to rooms/0.0.html.
+style.css         Shared stylesheet for the cover and every room. Mobile-first.
+                  Holds the door-square component and the ERA THEMES (body era-*
+                  classes that retint the palette as the story drifts).
+rooms.js          Shared door logic. Probes each door's neighbour file: written
+                  rooms show as "open" (and reveal their name), unwritten ones as
+                  "undreamt". Included by every room as <script src="../rooms.js">.
+rooms/<x>.<y>.html One self-contained page per room. THIS is what you write.
+write.txt         This file.
+CNAME             GitHub Pages domain — do not touch.
+
+THE GRID: COORDINATES, FILENAMES, DOORS
+---------------------------------------
+Every room has integer coordinates x:y. The first room is 0:0.
+  x grows to the RIGHT (east), shrinks to the LEFT (west).
+  y grows UPWARD / "forward" (north, the top door), shrinks DOWNWARD (south).
+
+Filename = "<x>.<y>.html" in rooms/. Examples:
+  0:0  -> rooms/0.0.html        1:0  -> rooms/1.0.html
+ -1:0  -> rooms/-1.0.html       0:-1 -> rooms/0.-1.html
+
+A room is drawn as a SQUARE with one door centred on each wall. From room (x,y)
+the four doors lead to:
+  top    (north / "forward") -> (x,   y+1) -> "<x>.<y+1>.html"
+  right  (east)              -> (x+1, y  ) -> "<x+1>.<y>.html"
+  bottom (south / "back")    -> (x,   y-1) -> "<x>.<y-1>.html"
+  left   (west)              -> (x-1, y  ) -> "<x-1>.<y>.html"
+
+All four doors are always present in the HTML. rooms.js styles a door as
+"undreamt" if its target file does not exist yet — that is normal and expected.
+
+VOICE & LENGTH
+--------------
+- Second person, present tense ("You wake...", "You step through...").
+- 200-300 words of prose per room. No more.
+- Dreamlike, liminal, literary. Concrete sensory detail over abstraction.
+- The amnesia is a slow drip: never resolve it quickly. A room may surface ONE
+  small fragment (an image, a smell, a name almost remembered) — never a full
+  memory, never a tidy explanation.
+- End the prose with a quiet beat that turns the reader toward the doors. Do not
+  list the doors in prose; the square does that.
+
+CONTINUITY — READ THE NEIGHBOURS FIRST (non-negotiable)
+-------------------------------------------------------
+Before writing room (x,y):
+  1. List its four neighbours and check which files already exist in rooms/.
+  2. READ every neighbour that exists.
+  3. Honour the shared edge. The door the reader used to ARRIVE here is the same
+     physical door, seen from the other side. If the neighbour's prose said its
+     east door leaked torchlight and a bell, then arriving from that side, this
+     room's matching (west) door must still owe that bell and that light.
+  4. Carry sensory threads across the seam: a sound, a smell, a quality of light,
+     a temperature, a recurring object. Continuity is mostly atmosphere.
+  5. Plant new hooks under THIS room's unwritten doors (a draft, a glow, a noise,
+     a mark) so whoever writes those neighbours later has something to answer.
+  6. Keep the era consistent with position (below).
+
+Room 0:0 already plants these hooks, as the template specimen:
+  north door -> cold air, pine and rain     east door -> torchlight, a far bell
+  south door -> warm, "almost breathing"    west door -> a gouged SPIRAL
+Any neighbour you write must pay off the hook on its shared door.
+
+THE ERA GRADIENT (medieval -> modern -> steampunk -> cyberpunk)
+---------------------------------------------------------------
+TIME runs along the y-axis. Going "forward" (north / up) advances the era;
+going south goes deeper into the past. The x-axis is LATERAL: same era,
+different place and mood. So north/south neighbours are ONE era-step apart;
+east/west neighbours share this room's era. Transitions must be GRADUAL — blend,
+never jump. Treat the bands below as a slow dissolve, not hard borders; near a
+boundary, let the older era's residue linger and the next era bleed in early.
+
+  y >= 18      Beyond — post-human / far future
+  y 14 .. 17   Cyberpunk    (neon, rain, chrome, networks, the body wired)
+  y 11 .. 13   Steampunk    (brass, steam, clockwork, airships, verdigris)
+  y  7 .. 10   Modern       (concrete, electric light, glass, machines)
+  y  4 ..  6   Industrial   (gaslight, iron, soot, the first engines)
+  y  1 ..  3   Renaissance  (printing, courts, candlelight and reason)
+  y  =  0      Medieval     (THE START — stone, rushlight, bell, spiral)
+  y -1 .. -3   Early medieval / dark ages (mud, ritual, smaller fires)
+  y -4 .. -7   Antiquity    (marble, bronze, classical ruin)
+  y <= -8      Mythic / primordial (cave, star, the world before names)
+
+Note the order is the reader's chosen one: modern comes BEFORE steampunk, so
+modern drifts into a retro-futurist brass age before it digitises into
+cyberpunk. Make that turn feel like the world re-dreaming itself, not a glitch.
+
+X (lateral) gives variety without changing era. Optionally let mood drift with
+x: westward (-x) toward decay, wilderness, forgetting; eastward (+x) toward
+order, structure, remembering. Keep it subtle.
+
+ROOM NAMING & TITLE
+-------------------
+- Give each room an evocative NAME fitting its era and place (e.g. "The
+  Antechamber", "The Pinewood Gate", "The Clockmaker's Landing", "Neon Reliquary").
+- The <h1 class="room-name"> text is what neighbouring doors display, and the
+  <title> must read exactly:  Room Name — Journey
+  (rooms.js reads both; keep the " — Journey" suffix.)
+
+STYLING / ERA THEME CLASS
+-------------------------
+Set ONE era class on <body>, matching the band: era-medieval, era-renaissance,
+era-industrial, era-modern, era-steampunk, era-cyberpunk, or era-mythic. The
+class only retints CSS variables; the markup stays identical. The first time the
+story reaches an era not yet defined in style.css, add a new "body.era-NAME {}"
+block there (override the palette tokens only) before using it.
+
+RECURRING MOTIFS (the spine that holds an infinite, branching thing together)
+-----------------------------------------------------------------------------
+- The SPIRAL: a mark that keeps reappearing across eras in different materials
+  (chalk, then ink, then etched steel, then a glowing glyph). The reader's only
+  thread back to themselves.
+- The unfinished JOURNEY: the certainty of having been going somewhere.
+- The BELL / a distant counting of time, reheard in changed forms.
+- The almost-remembered NAME.
+Reuse at least one motif per room; transform it to fit the era.
+
+THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
+-----------------------------------------------------------
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROOM NAME — Journey</title>
+<meta name="description" content="ONE-LINE HOOK, PLAIN TEXT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="room era-ERANAME">
+<div class="wrap">
+
+  <p class="room-coord">X : Y</p>
+  <h1 class="room-name">ROOM NAME</h1>
+
+  <div class="prose">
+    <p>200-300 WORDS OF PROSE, SECOND PERSON PRESENT TENSE. FIRST PARAGRAPH GETS
+    THE DROP CAP AUTOMATICALLY. PAY OFF THE SHARED-DOOR HOOK FROM THE NEIGHBOUR
+    YOU ARRIVED FROM; PLANT HOOKS UNDER THE OTHER DOORS.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="doors" aria-label="Doors out of this room">
+    <p class="doors-title">choose a door</p>
+    <div class="room-square">
+      <a class="door door-top"    href="X.Yplus1.html">&#8593;</a>
+      <a class="door door-right"  href="Xplus1.Y.html">&#8594;</a>
+      <a class="door door-bottom" href="X.Yminus1.html">&#8595;</a>
+      <a class="door door-left"   href="Xminus1.Y.html">&#8592;</a>
+      <span class="room-center" aria-hidden="true">&#10086;</span>
+    </div>
+    <p class="door-readout" aria-live="polite"></p>
+  </nav>
+
+</div>
+<script src="../rooms.js"></script>
+</body>
+</html>
+
+CHECKLIST TO ADD A ROOM (x,y)
+-----------------------------
+[ ] Pick the era band from y; choose the body era-* class (add its palette block
+    to style.css if it is new).
+[ ] Read every existing neighbour file; note the shared-door hook to pay off.
+[ ] Copy the skeleton; set <title> "Name — Journey", room-coord "x : y",
+    room-name, era class, and the four door hrefs to the real neighbour files
+    (mind negative numbers: e.g. "0.-1.html", "-1.0.html").
+[ ] Write 200-300 words; pay off the arrival hook; plant new hooks under the
+    other doors; reuse/transform a motif (the spiral, etc.).
+[ ] Save as rooms/<x>.<y>.html. The neighbouring rooms' doors light up
+    automatically (rooms.js); nothing else to register.
+
+GOTCHAS
+-------
+- Keep everything STATIC: no build tools, no npm, no frameworks.
+- Rooms live one level deep: they reference ../style.css and ../rooms.js.
+- The filename MUST equal "<x>.<y>.html" exactly; the doors link by coordinate.
+- Mobile-first: never widen the layout or shrink touch targets; test narrow.
+- Use plain ASCII inside any code/command text; typographic entities
+  (&mdash; &rsquo; &amp;) are for prose only.
+- Do not delete or rename existing rooms — other rooms link to them by file.

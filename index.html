@@ -3,234 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vlad&rsquo;s Journey</title>
-<meta name="description" content="A self-taught course in penetration testing — from beginner to advanced, tailored for a QA engineer on a Mac. Theory, examples, and hands-on labs.">
+<title>Journey</title>
+<meta name="description" content="A branching work of hypertext fiction. You wake with no name, in a room with four doors.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="era-medieval">
 <div class="wrap">
 
-  <header id="masthead" class="masthead">
-    <button id="masthead-toggle" class="masthead-toggle" type="button"
-            aria-expanded="false" aria-controls="masthead-detail">
-      <span class="masthead-eyebrow">a course in penetration testing</span>
-      <span class="masthead-chevron" aria-hidden="true"></span>
-    </button>
+  <header class="cover">
+    <h1 class="cover-title">Journey</h1>
+    <p class="cover-byline">a fiction in rooms &middot; by victor black</p>
+    <p class="cover-line">You wake on cold flagstones with no name to call your own,
+    in a room with four doors. The way only goes forward.</p>
 
-    <div id="masthead-detail" class="masthead-detail">
-      <div class="masthead-detail-inner">
-        <h1 class="masthead-title">Vlad&rsquo;s Journey</h1>
-        <p class="masthead-motto">A road into penetration testing &mdash; beginner to advanced, one lesson at a time.</p>
-        <p class="about">
-          A self-taught <strong>course</strong> in offensive security, built for a QA
-          engineer working on a Mac. Each lesson pairs the theory with hands-on labs you
-          can run safely and legally. Work through them in order; the journey only goes
-          one way &mdash; forward.
-        </p>
-      </div>
+    <div class="enter">
+      <a class="enter-door" href="rooms/0.0.html">
+        <span class="enter-arrow" aria-hidden="true">&#8593;</span>
+        <span>enter</span>
+      </a>
     </div>
-
-    <div class="ornament-rule" role="presentation"><span class="fleuron">&#10086;</span></div>
   </header>
 
-  <main>
-    <section aria-label="Search">
-      <h2 class="section-heading">Search the archive</h2>
-      <div class="search-box">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
-          <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
-        </svg>
-        <input id="search" class="search-input" type="search"
-               placeholder="Search lessons by topic or tag&hellip;" autocomplete="off"
-               aria-label="Search the lessons">
-      </div>
-      <p id="search-note" class="search-note" hidden></p>
-      <ol id="results" class="entries" hidden></ol>
-    </section>
-
-    <section id="recent-section" aria-label="The curriculum">
-      <h2 class="section-heading">The curriculum</h2>
-      <ol id="recent" class="entries"></ol>
-      <p id="recent-empty" class="empty-note" hidden>
-        No lessons yet &mdash; the first one is on its way.
-      </p>
-      <div id="load-more-wrap" class="load-more-wrap" hidden>
-        <button id="load-more" class="load-more" type="button">
-          <span>Load more</span>
-          <span class="load-more-chevron" aria-hidden="true"></span>
-        </button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="ornament-rule" role="presentation"><span class="fleuron">&#10086;</span></div>
-  </footer>
-
 </div>
-
-<script>
-(function () {
-  const PAGE_SIZE = 10;
-
-  const masthead = document.getElementById('masthead');
-  const mastheadToggle = document.getElementById('masthead-toggle');
-  const searchInput = document.getElementById('search');
-  const searchNote = document.getElementById('search-note');
-  const resultsList = document.getElementById('results');
-  const recentSection = document.getElementById('recent-section');
-  const recentList = document.getElementById('recent');
-  const recentEmpty = document.getElementById('recent-empty');
-  const loadMoreWrap = document.getElementById('load-more-wrap');
-  const loadMoreBtn = document.getElementById('load-more');
-
-  let articles = [];
-  let shown = 0;
-
-  // collapsible masthead — starts collapsed, click reveals the full title + blurb
-  mastheadToggle.addEventListener('click', () => {
-    const open = masthead.classList.toggle('is-open');
-    mastheadToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-
-  function formatDate(iso) {
-    const d = new Date(iso + 'T00:00:00');
-    if (isNaN(d)) return iso;
-    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-  }
-
-  function renderEntry(article) {
-    const li = document.createElement('li');
-    li.className = 'entry';
-
-    const head = document.createElement('div');
-    head.className = 'entry-head';
-
-    const title = document.createElement('a');
-    title.className = 'entry-title';
-    title.href = 'articles/' + article.slug + '.html';
-    title.textContent = article.title;
-    head.appendChild(title);
-
-    const date = document.createElement('span');
-    date.className = 'entry-date';
-    // show the lesson number as the marker; fall back to the date for any
-    // non-lesson page (e.g. an "about" entry without a lesson field)
-    date.textContent = (article.lesson != null)
-      ? 'Lesson ' + article.lesson + (article.level ? ' · ' + article.level : '')
-      : formatDate(article.date);
-    head.appendChild(date);
-
-    li.appendChild(head);
-
-    if (article.summary) {
-      const summary = document.createElement('p');
-      summary.className = 'entry-summary';
-      summary.textContent = article.summary;
-      li.appendChild(summary);
-    }
-
-    if (article.tags && article.tags.length) {
-      const tags = document.createElement('ul');
-      tags.className = 'tags';
-      article.tags.forEach(t => {
-        const tagLi = document.createElement('li');
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'tag';
-        btn.textContent = t;
-        btn.addEventListener('click', () => {
-          searchInput.value = t;
-          runSearch();
-          searchInput.focus();
-        });
-        tagLi.appendChild(btn);
-        tags.appendChild(tagLi);
-      });
-      li.appendChild(tags);
-    }
-
-    return li;
-  }
-
-  function renderList(listEl, items) {
-    listEl.innerHTML = '';
-    items.forEach(a => listEl.appendChild(renderEntry(a)));
-  }
-
-  // append the next page of recent articles, hiding the button once exhausted
-  function showMore() {
-    const next = articles.slice(shown, shown + PAGE_SIZE);
-    next.forEach(a => recentList.appendChild(renderEntry(a)));
-    shown += next.length;
-    loadMoreWrap.hidden = shown >= articles.length;
-  }
-
-  loadMoreBtn.addEventListener('click', showMore);
-
-  function runSearch() {
-    const q = searchInput.value.trim().toLowerCase();
-
-    if (!q) {
-      resultsList.hidden = true;
-      searchNote.hidden = true;
-      recentSection.hidden = false;
-      return;
-    }
-
-    const terms = q.split(/\s+/);
-    const matches = articles.filter(a => {
-      const haystack = [a.title, a.summary || '', (a.tags || []).join(' ')].join(' ').toLowerCase();
-      return terms.every(t => haystack.includes(t));
-    });
-
-    recentSection.hidden = true;
-    resultsList.hidden = false;
-    searchNote.hidden = false;
-    searchNote.textContent = matches.length === 1
-      ? 'One entry found.'
-      : matches.length + ' entries found.';
-    renderList(resultsList, matches);
-  }
-
-  searchInput.addEventListener('input', runSearch);
-
-  fetch('db/articles.json', { cache: 'no-store' })
-    .then(r => r.ok ? r.json() : [])
-    .then(rows => {
-      // course order: by lesson number ascending; anything without a lesson
-      // number sinks to the bottom, then ordered by date
-      articles = (Array.isArray(rows) ? rows : [])
-        .slice()
-        .sort((a, b) => {
-          const la = (a.lesson != null) ? a.lesson : Infinity;
-          const lb = (b.lesson != null) ? b.lesson : Infinity;
-          if (la !== lb) return la - lb;
-          return (a.date || '').localeCompare(b.date || '');
-        });
-
-      if (!articles.length) {
-        recentEmpty.hidden = false;
-      } else {
-        showMore(); // first page of 10, plus a "Load more" button if there are more
-      }
-
-      // allow linking in with a pre-filled query, e.g. index.html?tag=history
-      const params = new URLSearchParams(location.search);
-      const preset = params.get('tag') || params.get('q');
-      if (preset) {
-        searchInput.value = preset;
-        runSearch();
-      }
-    })
-    .catch(() => {
-      recentEmpty.hidden = false;
-    });
-})();
-</script>
 </body>
 </html>
