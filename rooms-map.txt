@@ -18,4 +18,4 @@ HOW TO WRITE THE NEXT ROOM
   - Full authoring rules (continuity, voice, the room skeleton): see write.txt.
 
 LAST ROOM WRITTEN
-  3:1  —  The Conjuring Frame
+  2:-3  —  The Answering Dark
