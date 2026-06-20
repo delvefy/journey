@@ -316,6 +316,20 @@ a:hover { color: var(--amber-bright); }
   box-shadow: 0 0 0 3px var(--paper);
 }
 
+/* a SEALED wall at the rim of the world — a corner room's two outward walls
+   face off-grid (beyond +-150). Not a door: no handle, no hover, no riddle.
+   Authored straight into the corner HTML as `is-rim` (rooms.js never touches
+   it, since there is no matching .riddle-box). It is the edge of creation. */
+.wall.is-rim {
+  background: var(--paper-edge);
+  border-color: var(--rule-strong);
+  border-style: double;
+  border-width: 4px;
+  box-shadow: 0 0 0 3px var(--paper), inset 0 0 7px rgba(0,0,0,0.6);
+  cursor: default;
+}
+.wall.is-rim::after { display: none; }
+
 /* a riddle box — one per wall, stacked beneath the square */
 .riddle-box {
   max-width: var(--measure);

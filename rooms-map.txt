@@ -14,15 +14,30 @@ HOW TO WRITE THE NEXT ROOM
   - Each room IS a single-word/number answer; its four boxes hold riddles whose
     answers are the four NEIGHBOUR names. Read existing neighbours first and match
     their names exactly (the 2D-crossword rule). Full rules: see write.txt.
+  - Difficulty is BANDED by distance d = sqrt(x*x + y*y) and enforced — write to
+    the band, match a written sibling, never let it drift (write.txt section 4).
   - Save it as rooms/<x>/<y>.html, then update the LAST ROOM line below.
 
 SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
-LAST ROOM WRITTEN
+LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
   -1:0  —  River
 
 NEXT ROOM
   The closest unwritten coordinate to (0,0). With the plus filled, the next ring
   is the diagonals; first by the clockwise tie-break is 1:1 — already named NAME
   (fixed by both Echo's east riddle and Bell's north riddle).
+
+THE FOUR CORNERS  (planted AHEAD of the grid — see write.txt section 12)
+  The world is bounded -150..+150 on both axes, so it has four true corners, the
+  hardest rooms (d = 212.13). They were written out of order as endgame flags and
+  are NOT part of the contiguous blob — they do NOT move the LAST ROOM frontier
+  above, and the next normal room is unaffected. Their four names spell, in the
+  one ordering that is a sentence:   WORDS  OPEN  ALL  WALLS.
+    NE  150:150    Words   inward riddles → S hour,  W rune
+    SE  150:-150   Walls   inward riddles → N gate,  W nail
+    SW  -150:-150  All     inward riddles → N loam,  E ore
+    NW  -150:150   Open    inward riddles → S mist,  E hush
+  Each corner's other two walls are the off-grid rim of the world — sealed, no
+  riddle. They are not reachable by normal play until the whole grid is finished.

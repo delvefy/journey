@@ -62,12 +62,49 @@ centre, ECHO north (intangible), BELL east (wrought), STONE south (tangible),
 RIVER west (natural).
 
 
-4. DIFFICULTY BY DISTANCE
--------------------------
-Near the origin: gentle, concrete, classic riddles a child could get. The
-further from (0,0), the harder and more abstract — longer kennings, trickier
-turns, answers that are ideas rather than objects. Scale roughly with the
-straight-line distance from (0,0).
+4. DIFFICULTY BY DISTANCE — BANDED AND ENFORCED
+-----------------------------------------------
+Difficulty is NOT a vibe that creeps up at random — it is a step function of
+one number: d = the straight-line distance from (0,0), d = sqrt(x*x + y*y).
+That is the SAME number that fixes the writing order (section 2), so a room's
+difficulty is known before a word of it is written. Read the band, write to the
+band. Six bands span the world from the threshold to the rim:
+
+  BAND          d range        register / what a riddle may do
+  ----          -------        -------------------------------
+  0 Threshold   d = 0          the origin only. The plainest riddle in the
+                               world ("teeth but cannot bite"). One object, one
+                               turn, <=4 lines.
+  1 Approach    0 <  d <=  50  a child could get it. Concrete everyday objects,
+                               plain words, classic folk riddles, <=4 lines.
+  2 Near Hoard  50 <  d <= 100 solid folk riddles. First person, ONE kenning
+                               allowed, still a touchable object, <=5 lines.
+  3 Deep Hoard  100 < d <= 125 kennings are the norm; one real turn or paradox.
+                               The answer may be a common abstraction (echo,
+                               hour, debt), <=6 lines.
+  4 Far Reaches 125 < d <= 149 layered kennings, deliberate misdirection, a
+                               two-step solve. Answers are ideas, not objects,
+                               <=6 lines.
+  5 The Rim     149 < d < 212   the hardest standard riddles: dense, gnomic,
+                               Exeter-Book obscurity, answers that are concepts.
+  --- The four corners (d = 212.13) are their own apex; see section 12. ---
+
+THREE ANTI-DRIFT RULES (this is the "enforced" part):
+  i.   CEILING & FLOOR. A riddle may never be harder than its band's ceiling
+       nor easier than its floor. Concretely: no room is harder than ANY room
+       in a strictly outer band, and none is easier than any room strictly
+       inward. Difficulty only ever rises outward — it never dips back.
+  ii.  MATCH A SIBLING. Before writing a room, open one ALREADY-WRITTEN room in
+       the same band (nearest by d) and match its register, line count, and kind
+       of answer. A band holds its line only if its rooms sound alike.
+  iii. SELF-TEST AT THE BAND. The cold-read test (section 8) is judged AT the
+       band: an Approach riddle a clever adult finds trivial is correct; a Rim
+       riddle a clever adult finds merely "nice" is too easy — push it.
+
+Because rooms are written closest-first, you finish a whole ring before the next
+begins, so the wall between bands stays clean. Never let a far room drift easy
+because it was fun to write, nor a near room turn cruel because you had a clever
+idea — the number d decides, not the mood.
 
 
 5. THE NAMING RULE
@@ -214,6 +251,9 @@ Notes:
     "undreamt", and a correct answer there lands on 404.html ("not yet dreamt").
     That correct-toward-undreamt answer is exactly the signal to author that
     room next.
+  - CORNER ROOMS differ from this skeleton: they carry only TWO riddle forms
+    (the two inward walls) and two `is-rim` sealed wall <span>s for the off-grid
+    edge of the world (no form, no door). See section 12.
 
 
 10. THE PLAINTEXT TRADE-OFF (known, chosen)
@@ -245,3 +285,59 @@ BELL's west riddle, facing back (answer KEY):
    turn me once, and I undo / the strongest lock in all the land."
 That pair — two riddles across one shared wall, each answering the other room's
 name — is the whole pattern. Build outward, one room at a time.
+
+
+12. THE FOUR CORNERS — THE EDGE OF THE WORLD  (the endgame secret)
+------------------------------------------------------------------
+The world is a bounded square: every axis runs -150..+150 (there are exactly
+301 x-folders, -150..150, and the palette clamps there). So the grid has four
+true corners — the four cells farthest from the origin, d = 212.13, the global
+maximum difficulty:
+
+  NW (-150, 150) natural+intangible        NE (150, 150) wrought+intangible
+                          \               /
+                           the origin (0,0)
+                          /               \
+  SW (-150,-150) natural+tangible          SE (150,-150) wrought+tangible
+
+These four rooms are special in three ways:
+
+  a. THEY SPELL A SENTENCE. Each corner's NAME is one word, and the four words
+     together read:   WORDS  OPEN  ALL  WALLS  — the thesis of the whole hoard,
+     the reward for the one who finishes the world. Each word sits in the corner
+     whose quadrant fits it (only one ordering of the four is a sentence, so a
+     finisher reassembles it unaided):
+        NE  words   wrought+intangible : language, the made/spoken word
+        SE  walls   wrought+tangible   : the built, touchable thing
+        SW  all     natural+tangible   : the whole solid ground, every thing
+        NW  open    natural+intangible : the airy, unwalled, ungraspable state
+     This is the ONE sanctioned exception to "a name is a concrete quadrant
+     noun" (section 5): at the apex the sentence comes first.
+
+  b. TWO WALLS ARE SEALED. A corner touches the rim of the world: two of its
+     four walls face off-grid (beyond +-150). Those are NOT doors — they are the
+     edge of creation, authored as <span class="wall ... is-rim"> with NO riddle
+     form. Only the two INWARD walls carry riddles (among the hardest written),
+     pointing at the corner's two inward neighbours, named here:
+        NE words : S (150,149)  = hour    W (149,150)  = rune
+        SE walls : N (150,-149) = gate    W (149,-150) = nail
+        SW all   : N (-150,-149)= loam    E (-149,-150)= ore
+        NW open  : S (-150,149) = mist    E (-149,150) = hush
+     Whoever one day writes those neighbour rooms must carry a facing riddle back
+     whose answer is the corner's word — the crossword rule (section 6) reaches
+     even here.
+
+  c. NOT REACHABLE BY NORMAL PLAY UNTIL THE GRID IS FINISHED. A corner is only
+     walked into by solving the chain of rooms that leads out to it — which
+     exists only once the whole grid is written. Until then its inward neighbours
+     are undreamt (404) and there is no legitimate path in. We do not, and
+     cannot, enforce this against URL-poking or View-Source (the plaintext
+     trade-off, section 10) — it is a rule of fair play, documented here, not a
+     lock.
+
+OUT-OF-ORDER, ON PURPOSE. The corners are written NOW, ahead of the closest-
+first progression — planted flags, not part of the contiguous blob growing from
+the origin. They do NOT advance the LAST ROOM frontier in rooms-map.txt (which
+still tracks only the unbroken run from 0:0); they are listed there separately.
+The next NORMAL room is still the closest unwritten coordinate to (0,0), exactly
+as if the corners were not there.
