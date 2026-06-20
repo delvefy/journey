@@ -1,257 +1,153 @@
-JOURNEY — HOW TO WRITE THE NEXT ROOM (cheatsheet for AI assistants)
-==================================================================
+JOURNEY — THE RIDDLE-HOARD
+==========================
+How to write rooms. Read this whole file before adding one.
 
-WHAT THIS IS
-------------
-"Journey" is a branching work of hypertext fiction, published as a fully
-static site (GitHub Pages, custom domain in CNAME: journey.victorblackauthor.com).
-No build step, no framework, no server code. Plain HTML + CSS + vanilla JS.
 
-The world is an INFINITE square grid of rooms laid over a plane with two axes
-of MEANING: north/south is TECHNOLOGY, east/west is MAGIC. The protagonist is an
-amnesiac who wakes in the first room and walks from room to room through doors.
-The reader IS the protagonist (second person, present tense). The project grows
-one room at a time, on demand: when the reader chooses a door that leads
-somewhere not yet written, that room gets authored next.
-
-THE TWO COMPANION IDEAS
-  - write.txt (this file): how to WRITE a room and keep the world coherent.
-  - the existing rooms in rooms/: the canon. Always read the neighbours of the
-    room you are about to write before writing it.
-
-FILES
------
-index.html        The cover / threshold. Title + an "enter" door to rooms/0/0.html.
-style.css         Shared stylesheet for the cover and every room. Mobile-first.
-                  Holds the door-square component and the MEDIEVAL :root palette
-                  (the origin's look + the no-JS fallback). It no longer carries
-                  era classes — colour is computed from coordinates now.
-rooms.js          Shared room script. (1) PALETTE ENGINE: reads the room's (x,y)
-                  and interpolates its colours between four corner palettes and a
-                  medieval centre, so the look drifts with position automatically.
-                  (2) DOOR LOGIC: probes each door's neighbour file; written rooms
-                  show "open" (and reveal their name), unwritten ones "undreamt".
-                  Included by every room as <script src="../../rooms.js">.
-rooms/<x>/<y>.html One self-contained page per room. THIS is what you write. The
-                  per-x folders already exist (rooms/-150 .. rooms/150); you only
-                  add the <y>.html file inside the right folder.
-write.txt         This file.
-rooms-map.txt     The room tracker: short how-to-write instructions plus the LAST
-                  ROOM written. The next room is derived from that line (see THE
-                  FRONTIER). Update its LAST ROOM after writing each room. Not
-                  linked by the site.
-CNAME             GitHub Pages domain — do not touch.
-
-THE GRID: COORDINATES, FILENAMES, DOORS
----------------------------------------
-Every room has integer coordinates x:y. The first room is 0:0. Both axes run
-from -150 to +150.
-  x grows to the RIGHT (east) = MORE MAGIC; shrinks LEFT (west) = LESS magic.
-  y grows UPWARD (north, "forward") = MORE TECH; shrinks DOWN (south) = LESS tech.
-
-Path = "rooms/<x>/<y>.html". The x coordinate is the FOLDER, the y coordinate is
-the FILE inside it. Examples:
-  0:0  -> rooms/0/0.html        1:0  -> rooms/1/0.html
- -1:0  -> rooms/-1/0.html       0:-1 -> rooms/0/-1.html
-The "<x>/<y>" path is the canonical coordinate AND the source of the room's
-palette, so both segments must be exactly the integer coordinate — no padding,
-no extra dots, no ".html" on the folder. Integers only. The 301 x-folders
-(rooms/-150 .. rooms/150) are pre-created; never invent a new folder name.
-
-A room is drawn as a SQUARE with one door centred on each wall. From room (x,y)
-the four doors lead to:
-  top    (north / "forward") -> (x,   y+1) -> "<x>.<y+1>.html"   MORE TECH
-  right  (east)              -> (x+1, y  ) -> "<x+1>.<y>.html"   MORE MAGIC
-  bottom (south / "back")    -> (x,   y-1) -> "<x>.<y-1>.html"   LESS TECH
-  left   (west)              -> (x-1, y  ) -> "<x-1>.<y>.html"   LESS MAGIC
-
-All four doors are always present in the HTML. rooms.js styles a door as
-"undreamt" if its target file does not exist yet — that is normal and expected.
-
-SCALE & FILES (how big this gets, and how to find the next room)
-----------------------------------------------------------------
-The coordinate space is bounded: -150..+150 on each axis = at most 301 x 301 =
-90,601 rooms (~250 MB of HTML at most). That sits comfortably within static
-hosting limits, so the whole world can live as plain files in this repo on
-GitHub Pages.
-
-Directory: rooms/ is SHARDED — one folder per x value, rooms/<x>/, holding that
-column's "<y>.html" files. All 301 x-folders (rooms/-150 .. rooms/150) already
-exist; the y.html files are filled in on demand. This keeps every directory well
-under GitHub's ~3,000-entry guidance (at most 301 files per folder) and lets the
-whole bounded world live as plain files on GitHub Pages.
-
-Because rooms now live TWO levels deep (rooms/<x>/<y>.html):
-  - shared assets are referenced as "../../style.css" and "../../rooms.js";
-  - a door to a neighbour in the SAME column (north/south, y±1) links to a bare
-    "<y>.html"; a door to an ADJACENT column (east/west, x±1) links to
-    "../<x±1>/<y>.html";
-  - the coordinate is taken from the last two path segments "<x>/<y>" (rooms.js
-    parses the path; it also falls back to the ".room-coord" text "X : Y").
-
-What to write next = THE FRONTIER. There is no server to log which doors readers
-tried, so the worklist is computed from the files: scan rooms/, and for each room
-that exists, note which of its four neighbours (x,y+1 / x,y-1 / x+1,y / x-1,y) do
-NOT exist yet. Those missing neighbours are the frontier.
-
-ORDER OF WORK (the standing rule): write rooms ONE AT A TIME, and always take the
-unwritten room CLOSEST TO THE ORIGIN first. "Closest" = smallest straight-line
-distance from (0,0); break ties clockwise from north (N, NE, E, SE, S, SW, W, NW),
-so the next room is never ambiguous. This grows the world as a tight blob around
-0:0, so the room you write is always adjacent to one already written — continuity
-stays easy and the map never sprouts disconnected islands.
-
-ONE AT A TIME, NOT IN BATCHES (read this twice). Author each room as a COMPLETE
-unit, end to end, before touching the next: read its neighbours, write the file,
-update the LAST ROOM line in rooms-map.txt — and ONLY THEN move on. Never draft
-several rooms' prose in one sweep and save them at the end: if the process is
-interrupted you lose the whole unsaved batch, whereas the one-at-a-time loop never
-loses more than the single room in progress. It also keeps each room composed with
-full attention against its freshly-written neighbours instead of becoming an
-assembly line.
-
-"ONE AT A TIME" IS ABOUT THE SAVE RHYTHM, NOT A STOP-AFTER-ONE RULE. When the
-request names a number ("write the next 10 rooms"), it means: repeat the one-room
-unit above that many times — write a room, save it, update the tracker, then
-proceed to the next, looping until you have written that many (or the frontier runs
-out). It does NOT mean stop after one. A bare "write the next room" is just the
-count = 1 case. Stop early only if the user tells you to, or if something blocks you
-(in which case report where you stopped — the saved tracker shows exactly that).
-
-Because rooms are always written in this order, the written rooms form one
-unbroken run outward from 0:0 — no full scan or whole-grid map is needed.
-rooms-map.txt records only the LAST ROOM written; the next room is simply the next
-coordinate in the order above. Write it, save the file, then update the LAST ROOM
-line in rooms-map.txt. (If a room is ever added out of order or removed, re-derive
-by walking the order from 0:0 outward and taking the first coordinate with no file.)
-
-THE TWO SPECTRA + THE DIAGONAL OF TIME
+1. THE PREMISE — THE RULE OF THE WORLD
 --------------------------------------
-TECH runs along y, MAGIC along x. They are INDEPENDENT dials. Each runs through
-the same magnitude bands; |value| 0-10 nascent, 10-40 rising, 40-90 high,
-90-150 the pole. Going negative on an axis is not "less" but active LOSS.
+The world is a hoard of rooms, and every room IS a single word or number — the
+answer to the riddle that let you in. You do not walk freely. Each room is
+walled by four riddles; every riddle's answer is the NAME of the room on the
+other side of that wall. Speak the name and the wall opens.
 
-  TECH (the y-axis)
-    y   90..150   The Tech Pole — post-human: self-building matter, intelligence
-                  without flesh, the body wired or shed entirely.
-    y   40..90    high tech — electric light, glass, networks, machines that think.
-    y   10..40    rising tech — the forge matures into the engine: print, steam.
-    y    0..10    nascent tech — hand-tools, the wheel, rushlight. Craft, not industry.
-    y    0        THE START band — medieval craft.
-    y   -1..-90   pre-tool — fire, flint, hide and bone; the made thing half-dreamt.
-    y <= -90      before fire — the body and the dark, older than any tool.
+So the player's whole act is: read a riddle, find the one word it hides, type
+it. A right answer is a door. The craft of this project is writing riddles
+whose answer is exactly one word — the neighbour's name — and nothing else.
 
-  MAGIC (the x-axis)
-    x   90..150   The Magic Pole — reality is consensual: names reshape matter,
-                  gods walk, the dead are neighbours.
-    x   40..90    high magic — magic as infrastructure: wards, summonings, the
-                  dead speak when asked.
-    x   10..40    rising magic — working spells, hedge-witches, spirits answer if called.
-    x    0..10    nascent magic — omens half-believed; a charm that might be coincidence.
-    x    0        THE START band — balance.
-    x   -1..-90   disenchantment — magic remembered, then doubted; the charms stop.
-    x <= -90      magic dead and forgotten; the Waste, where nothing answers.
 
-THE FOUR CORNERS (where the dials reach their extremes together) — suggested
-region names; rename in prose as you like:
-    NE (+tech +magic)  THE LUMEN  — magitech: arcane engines, cities of light,
-                                    spell and circuit fused. The deep FUTURE.
-    NW (+tech -magic)  THE CHROME — the sterile, disenchanted machine; dead neon,
-                                    wonder banished, only the engine left.
-    SE (-tech +magic)  THE WYLD   — pure myth, the age of wonders, not a gear in sight.
-    SW (-tech -magic)  THE WASTE  — ash and ruin, the mundane void; neither spell
-                                    nor engine. The primordial deep PAST.
-    (0,0)              THE THRESHOLD — medieval, both forces nascent. The balance.
+2. THE GRID AND THE ORDER OF WORK  (kept from the old Journey)
+--------------------------------------------------------------
+Rooms live on a 2D grid at  rooms/<x>/<y>.html  — x is the folder, y is the
+file basename. (0,0) is the origin, the room named KEY.
 
-TIME is the SW<->NE DIAGONAL. Toward NE both forces mature together: that reads
-as "later", the future. Toward SW is the primordial past. The off-diagonal
-corners (NW, SE) are timelines that chose a side — a future that killed magic,
-or an eternity that never industrialised.
+Write rooms ONE AT A TIME, never in batches:
+  - Write the room, save the HTML, update the LAST ROOM line in rooms-map.txt,
+    and ONLY THEN start the next room. Saving each room before the next is what
+    makes the work safe to interrupt.
+  - "Write the next N rooms" = repeat that one-room loop N times (write, save,
+    update tracker, proceed). "Write the next room" is just N = 1.
+  - The next room is the unwritten coordinate CLOSEST to the origin (0,0):
+    smallest straight-line distance; ties broken clockwise from north
+    (N, NE, E, SE, S, SW, W, NW).
+  - Written rooms therefore form one unbroken run outward from 0:0. The LAST
+    ROOM line in rooms-map.txt pins exactly where we are.
 
-GRADUAL ALWAYS. A north/south step changes only TECH by one notch (same magic);
-an east/west step changes only MAGIC (same tech). And each step is ~1/150 of a
-spectrum, so neighbours are nearly identical — let the atmosphere drift by a
-hair between rooms, never jump. The palette engine already does this with colour;
-your prose should match its restraint.
+The neighbour coordinate files, by direction, from a room at (x,y):
+  North (x, y+1):  "<y+1>.html"          (same folder)
+  South (x, y-1):  "<y-1>.html"          (same folder)
+  East  (x+1, y):  "../<x+1>/<y>.html"
+  West  (x-1, y):  "../<x-1>/<y>.html"
+These are the data-href values. (Worked: from (1,0), N="1.html", S="-1.html",
+E="../2/0.html", W="../0/0.html".)
 
-VOICE & LENGTH
---------------
-- Second person, present tense ("You wake...", "You step through...").
-- 200-300 words of prose per room. No more.
-- Dreamlike, liminal, literary. Concrete sensory detail over abstraction.
-- The amnesia is a slow drip: never resolve it quickly. A room may surface ONE
-  small fragment (an image, a smell, a name almost remembered) — never a full
-  memory, never a tidy explanation.
-- End the prose with a quiet beat that turns the reader toward the doors. Do not
-  list the doors in prose; the square does that.
 
-CONTINUITY — READ THE NEIGHBOURS FIRST (non-negotiable)
--------------------------------------------------------
-Before writing room (x,y):
-  1. List its four neighbours and check which files already exist in rooms/.
-  2. READ every neighbour that exists.
-  3. Honour the shared edge. The door the reader used to ARRIVE here is the same
-     physical door, seen from the other side, and it is the OPPOSITE cardinal of
-     the one they walked (arrive through a north door -> you entered from the
-     south side). If the neighbour's prose said its east door smelled of
-     spellwork, then arriving from that side, this room's matching (west) door
-     must still owe that scent.
-  4. Carry sensory threads across the seam: a sound, a smell, a quality of light,
-     a temperature, a recurring object. Continuity is mostly atmosphere.
-  5. Plant new hooks under THIS room's unwritten doors that match each door's
-     DIRECTION of drift: north hints at more tech, east at more magic, south at
-     the more primal, west at the more disenchanted. Whoever writes those
-     neighbours later answers your hook.
-  6. Keep tech/magic consistent with position (the spectra above).
+3. THE TWO AXES  (the "spectrum" — what kind of word belongs where)
+-------------------------------------------------------------------
+  x  =  NATURAL (west, -)  <-->  WROUGHT (east, +)
+  y  =  TANGIBLE (south,-) <-->  INTANGIBLE (north, +)
 
-Room 0:0 already plants these hooks, as the template specimen:
-  north door (+tech) -> a faint hum, cold metal-tasting air, a hairline of too-even light
-  east door  (+magic) -> torchlight that bends wrong, a bell rung in the mind, old spellwork
-  south door (-tech)  -> warm, "almost breathing"; wet earth, older than tools
-  west door  (-magic) -> a draught of ash and silence; a gouged SPIRAL, half scratched out
-Any neighbour you write must pay off the hook on its shared door.
+  west  / natural   : made by no hand — river, frost, root, stone, seed, tide
+  east  / wrought   : made by a hand  — key, bell, coin, clock, blade, nail
+  south / tangible  : you can touch it — stone, bone, coin, ash, blade
+  north / intangible: you cannot      — echo, wind, name, silence, hour, debt
 
-THEMING IS AUTOMATIC (do not set an era class)
-----------------------------------------------
-You never choose colours. rooms.js reads the room's coordinates and tints the
-page by interpolating between the four corner palettes (Chrome / Lumen / Wyld /
-Waste) and the medieval centre. Set ONLY <body class="room"> — nothing more. The
-warmth/coldness and hue will already match the room's place in the world; write
-prose whose imagery agrees with the colour it will be shown in.
+So the four corners are four kinds of answer:
+  SW natural+tangible (stone, root)    SE wrought+tangible (bell, coin)
+  NW natural+intangible (wind, frost)  NE wrought+intangible (name, hour)
 
-To RETUNE a region's look (not per room — globally), edit the ANCHOR palettes in
-the PALETTE ENGINE block at the top of rooms.js. The medieval :root block in
-style.css is the origin's palette and the JS-disabled fallback; leave it.
+Choose a room's name to suit the quadrant it sits in. The palette engine
+(rooms.js) tints each room from its (x,y) automatically, so a well-placed name
+also lands in the right colour. The origin seed already lays this out: KEY at
+centre, ECHO north (intangible), BELL east (wrought), STONE south (tangible),
+RIVER west (natural).
 
-ROOM NAMING & TITLE
--------------------
-- Give each room an evocative NAME fitting its tech/magic place (e.g. "The
-  Antechamber", "The Pinewood Gate", "The Clockmaker's Landing", "Neon Reliquary").
-- The <h1 class="room-name"> text is what neighbouring doors display, and the
-  <title> must read exactly:  Room Name — Journey
-  (rooms.js reads both; keep the " — Journey" suffix.)
 
-RECURRING MOTIFS (the spine that holds an infinite, branching thing together)
------------------------------------------------------------------------------
-- The SPIRAL: a mark that keeps reappearing in whatever the room is made of —
-  chalk here, etched steel in the Chrome, a living vine in the Wyld, a glowing
-  glyph in the Lumen, ash-scratch in the Waste. The reader's only thread back to
-  themselves.
-- The unfinished JOURNEY: the certainty of having been going somewhere.
-- The BELL / a distant counting of time, reheard in changed forms (tolling iron,
-  a bell rung in the mind, a network ping).
-- The almost-remembered NAME.
-Reuse at least one motif per room; transform it to fit the room's tech and magic.
+4. DIFFICULTY BY DISTANCE
+-------------------------
+Near the origin: gentle, concrete, classic riddles a child could get. The
+further from (0,0), the harder and more abstract — longer kennings, trickier
+turns, answers that are ideas rather than objects. Scale roughly with the
+straight-line distance from (0,0).
 
-THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
------------------------------------------------------------
+
+5. THE NAMING RULE
+------------------
+A room's name is EXACTLY one word or one number. It must be:
+  - unambiguous (one obvious thing the riddles can point to),
+  - ASCII, no accents (matching is exact; "café" would demand the accent),
+  - lowercase in data-answer; the displayed <h1 class="room-name"> may be
+    capitalised ("Key", "Echo", "7").
+Numbers are welcome (e.g. a riddle whose answer is 7, or 12).
+
+
+6. THE 2D-CROSSWORD RULE  (the heart of the work)
+-------------------------------------------------
+This is the one constraint that makes the hoard hold together. When you write
+room (x,y):
+
+  a. Its OWN NAME is the answer to all four neighbours' riddles that face it.
+     So the moment any neighbour pointing at (x,y) is written, this room's name
+     is fixed. NEVER rename a room that a written neighbour already points to.
+
+  b. You write FOUR riddles, one per wall, whose answers are the four NEIGHBOUR
+     names:
+       - Neighbour ALREADY WRITTEN: open its file, read its <h1 class="room-name">,
+         and write a riddle that resolves to that exact word. You may not rename it.
+       - Neighbour NOT YET WRITTEN: your riddle's answer DEFINES that future
+         room's name. When you later write that room, it must take that name and
+         must carry a facing riddle back whose answer is THIS room's name.
+
+  c. The four answers within one room should be DISTINCT — don't let two walls
+     share a word.
+
+  d. Diagonals are shared. A cell like (1,1) is the east neighbour of (0,1) AND
+     the north neighbour of (1,0); both must name it identically. Before naming
+     an unwritten neighbour, check whether another already-written room also
+     borders it and has already fixed its name. (In the seed: NAME, COIN, WIND,
+     ROOT are each fixed by two of the five rooms.)
+
+Practical loop for one room:
+  1. Read every existing neighbour (up to 4 files). Note their names.
+  2. Decide this room's name (consistent with any neighbour already facing it).
+  3. Write a short prose paragraph (see 7) and the four riddles (see 8).
+  4. For written neighbours, the riddle answer = their name. For unwritten ones,
+     pick a name fitting that quadrant; the answer = that name.
+  5. Save, update rooms-map.txt, then go to the next coordinate.
+
+
+7. THE PROSE
+------------
+Keep a short atmospheric paragraph (about 50-90 words) above the riddles, in
+second person, present tense, that meditates on the room's word and its place
+on the axes. It earns the first-paragraph drop cap and sets mood — but the
+riddles are the room. Don't write the old 200-300 word chapters; the focus has
+moved from story to puzzle.
+
+
+8. RIDDLE CRAFT
+---------------
+  - One unambiguous solution, and it is the neighbour's exact name.
+  - Voice to match the world: the Exeter Book / Hobbit register — first person
+    ("I have a tongue but cannot taste..."), paradox, kennings, plain old words.
+  - 2-6 short lines. Rhyme is welcome but never at the cost of a clean answer.
+  - Test it cold: could a fair reader land on a DIFFERENT single word? If yes,
+    tighten it until only the intended name fits.
+  - Numbers: count things the world counts (days, seasons, points of a compass).
+
+
+9. THE ROOM SKELETON
+--------------------
+Copy this exactly; fill the coord, name, prose, the four hrefs, the four
+answers, the four riddles, and the noscript links. Keep <p class="room-coord">
+and the rooms/<x>/<y>.html path — the palette engine reads them.
+
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ROOM NAME — Journey</title>
-<meta name="description" content="ONE-LINE HOOK, PLAIN TEXT.">
+<title>NAME — Journey</title>
+<meta name="description" content="ONE-LINE HOOK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
@@ -261,27 +157,50 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
 <div class="wrap">
 
   <p class="room-coord">X : Y</p>
-  <h1 class="room-name">ROOM NAME</h1>
+  <h1 class="room-name">NAME</h1>
 
   <div class="prose">
-    <p>200-300 WORDS OF PROSE, SECOND PERSON PRESENT TENSE. FIRST PARAGRAPH GETS
-    THE DROP CAP AUTOMATICALLY. PAY OFF THE SHARED-DOOR HOOK FROM THE NEIGHBOUR
-    YOU ARRIVED FROM; PLANT HOOKS UNDER THE OTHER DOORS (north=more tech,
-    east=more magic, south=more primal, west=more disenchanted).</p>
+    <p>50-90 WORDS, SECOND PERSON, PRESENT TENSE, ON THIS ROOM'S WORD.</p>
   </div>
 
   <div class="fleuron" role="presentation"><span>&#10086;</span></div>
 
-  <nav class="doors" aria-label="Doors out of this room">
-    <p class="doors-title">choose a door</p>
-    <div class="room-square">
-      <a class="door door-top"    href="Yplus1.html">&#8593;</a>
-      <a class="door door-right"  href="../Xplus1/Y.html">&#8594;</a>
-      <a class="door door-bottom" href="Yminus1.html">&#8595;</a>
-      <a class="door door-left"   href="../Xminus1/Y.html">&#8592;</a>
-      <span class="room-center" aria-hidden="true">&#10086;</span>
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
     </div>
+
+    <!-- One <form> per wall. dir = top|right|bottom|left. href per section 2.
+         data-answer = the NEIGHBOUR's name, lowercase. Give each input a unique
+         id (ans-top / ans-right / ans-bottom / ans-left). -->
+    <form class="riddle-box box-top" data-dir="top" data-href="HREF" data-answer="answer" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">RIDDLE LINES, with &lt;br&gt; between them.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <!-- ...box-right (East), box-bottom (South), box-left (West) the same... -->
+
     <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="HREF-N">north</a>, <a href="HREF-E">east</a>,
+        <a href="HREF-S">south</a>, <a href="HREF-W">west</a>.</p>
+    </noscript>
   </nav>
 
 </div>
@@ -289,46 +208,40 @@ THE ROOM SKELETON (copy this; fill the four ALL-CAPS slots)
 </body>
 </html>
 
-CHECKLIST TO ADD A ROOM (x,y)
------------------------------
-[ ] Pick the room: the next coordinate after LAST ROOM in rooms-map.txt — i.e. the
-    unwritten room closest to origin (see THE FRONTIER). Write only this ONE room,
-    even if more were requested (see ORDER OF WORK: no batching).
-[ ] Place the room: read its tech level off y and its magic level off x (the
-    spectra above). Know which corner it leans toward.
-[ ] Read every existing neighbour file; note the shared-door hook to pay off
-    (the arrival door is the OPPOSITE cardinal of the one walked).
-[ ] Copy the skeleton; set <title> "Name — Journey", room-coord "x : y",
-    room-name, body class="room", and the four door hrefs to the real neighbours:
-    north/south stay in this column ("<y+1>.html", "<y-1>.html"); east/west cross
-    to the next column ("../<x+1>/<y>.html", "../<x-1>/<y>.html"). Mind negative
-    numbers: e.g. from 0:0 the south door is "-1.html", the west door is
-    "../-1/0.html".
-[ ] Write 200-300 words; pay off the arrival hook; plant new hooks under the
-    other doors matching their drift; reuse/transform a motif (the spiral, etc.).
-[ ] Do NOT set colours or an era class — the palette is derived from (x,y).
-[ ] Save as rooms/<x>/<y>.html (the x-folder already exists). The neighbouring
-    rooms' doors light up automatically (rooms.js); nothing else to register.
-[ ] Update rooms-map.txt: set its LAST ROOM line to the room you just wrote.
-[ ] Save the file and update the tracker BEFORE starting any further room — that
-    committed state is what makes the work safe to interrupt. If the request asked
-    for more than one room and the count is not yet reached, loop back to the top of
-    this checklist for the next coordinate. When the count is done (or the frontier
-    runs out, or the user stops you), report the room(s) you wrote and the next
-    coordinate in the order.
+Notes:
+  - For a number-answer room, set inputmode="numeric" on that box's input.
+  - A box whose neighbour isn't written yet is fine: rooms.js marks its wall
+    "undreamt", and a correct answer there lands on 404.html ("not yet dreamt").
+    That correct-toward-undreamt answer is exactly the signal to author that
+    room next.
 
-GOTCHAS
--------
-- Keep everything STATIC: no build tools, no npm, no frameworks.
-- Rooms live TWO levels deep (rooms/<x>/<y>.html): they reference ../../style.css
-  and ../../rooms.js. Same-column doors link to a bare "<y>.html"; cross-column
-  doors link to "../<x±1>/<y>.html".
-- The path MUST be "rooms/<x>/<y>.html" exactly — x is the folder, y is the file,
-  both bare integers, ".html" only on the file. The doors link by coordinate AND
-  the palette engine reads it (from the path, falling back to the room-coord
-  text). A wrong path or folder mis-colours the room or breaks its doors.
-- <body class="room"> only. There are no era-* classes any more.
-- Mobile-first: never widen the layout or shrink touch targets; test narrow.
-- Use plain ASCII inside any code/command text; typographic entities
-  (&mdash; &rsquo; &amp;) are for prose only.
-- Do not delete or rename existing rooms — other rooms link to them by file.
+
+10. THE PLAINTEXT TRADE-OFF (known, chosen)
+-------------------------------------------
+Answers live in plain text in data-answer, so anyone can View Source and peek.
+This was chosen for simplicity over secrecy. It is intentional, not a bug. If
+secrecy is ever wanted, hash the answers and compare hashes in rooms.js.
+
+
+11. WORKED EXAMPLE — THE ORIGIN SEED
+------------------------------------
+        (0,1) ECHO
+          |
+(-1,0) RIVER — (0,0) KEY — (1,0) BELL
+          |
+       (0,-1) STONE
+
+  (0,0) KEY      N->echo  E->bell  S->stone  W->river
+  (0,1) ECHO     N->silence  E->name  S->key  W->wind
+  (1,0) BELL     N->name  E->clock  S->coin  W->key
+  (0,-1) STONE   N->key  E->coin  S->bone  W->root
+  (-1,0) RIVER   N->wind  E->key  S->root  W->sea
+
+KEY's east riddle (answer BELL):
+  "I have a tongue but cannot taste, / a mouth that never eats; /
+   I speak just once, and only when / a hammer-stroke me meets."
+BELL's west riddle, facing back (answer KEY):
+  "I am cut with teeth that never chew, / I wear a ring but not a hand; /
+   turn me once, and I undo / the strongest lock in all the land."
+That pair — two riddles across one shared wall, each answering the other room's
+name — is the whole pattern. Build outward, one room at a time.

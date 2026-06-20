@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Wheelwright's Cell — Journey</title>
-<meta name="description" content="North of the antechamber, the world begins to be made: iron, a wheel, a colder air.">
+<title>Echo — Journey</title>
+<meta name="description" content="The room gives your words back, thinned and changed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
@@ -14,46 +14,100 @@
 <div class="wrap">
 
   <p class="room-coord">0 : 1</p>
-  <h1 class="room-name">The Wheelwright's Cell</h1>
+  <h1 class="room-name">Echo</h1>
 
   <div class="prose">
-    <p>You step through into a colder air, and the warmth of the flagstones falls
-    away behind you. This room is made, where the last was only walled: the grey
-    stone here is fitted and squared, and a long bench runs beneath the far wall,
-    its surface scarred by years of patient work you cannot remember doing. Iron
-    tools hang in order on their pegs &mdash; gouges, a drawknife, a hammer worn
-    to the shape of a hand. The air tastes faintly of metal, of cold filings, and
-    you understand now what it was that seeped beneath the door behind you.</p>
-
-    <p>Against the wall stands a great wheel, taller than you and half-built, its
-    spokes set into the hub like the rays of something and its rim not yet closed.
-    A curl of pale shaving has fallen from it to the floor and lies there coiled
-    tight as a spiral, and the sight of it tugs at you &mdash; as though you had
-    cut that curl yourself, in a life you set down somewhere and cannot find.</p>
-
-    <p>Somewhere a slow drip falls into standing water, counting. Not the bell from
-    the room before; a plainer time, measured out in droplets.</p>
-
-    <p>The door at your back glows still with the rushlight you left. To the north,
-    a hairline of light leaks in too straight and too pale to be any flame, and the
-    cold comes off it. To the east, something glints where it should not, a wink of
-    caught colour in the grey. To the west, the metal taste sharpens, exact and
-    joyless. You were going somewhere. The wheel is not yet finished. Neither, it
-    seems, are you.</p>
+    <p>The room answers you. Speak, and a heartbeat later the walls give your words
+    back &mdash; thinned, changed, as though something just behind the stone is learning
+    to talk. You came in on a single word, and it still hangs in the air here, repeating,
+    refusing to fade. Four more riddles wait. Each one you solve will be flung back to
+    you as the name of the room beyond.</p>
   </div>
 
   <div class="fleuron" role="presentation"><span>&#10086;</span></div>
 
-  <nav class="doors" aria-label="Doors out of this room">
-    <p class="doors-title">choose a door</p>
-    <div class="room-square">
-      <a class="door door-top"    href="2.html">&#8593;</a>
-      <a class="door door-right"  href="../1/1.html">&#8594;</a>
-      <a class="door door-bottom" href="0.html">&#8595;</a>
-      <a class="door door-left"   href="../-1/1.html">&#8592;</a>
-      <span class="room-center" aria-hidden="true">&#10086;</span>
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
     </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="2.html" data-answer="silence" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I am broken the very moment I am named.<br>
+      Crowded halls have none of me;<br>
+      I fill the room when no one speaks,<br>
+      and the deepest night is thick with me.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../1/1.html" data-answer="name" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">I belong to you, yet others use me more.<br>
+      I am not your face, your coat, your hand,<br>
+      yet called across a crowded floor<br>
+      I'll turn your head before you understand.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="0.html" data-answer="key" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Teeth I have, and yet no jaw;<br>
+      I turn, and yet I am no wheel;<br>
+      the bolted door, the locked-up drawer,<br>
+      my small cold body will unseal.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-1/1.html" data-answer="wind" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">I am not seen, yet I bend the tree;<br>
+      I have no body, yet I roar;<br>
+      I fill the sail, I turn the mill,<br>
+      and slam the unlatched door.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
     <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="2.html">north</a>, <a href="../1/1.html">east</a>,
+        <a href="0.html">south</a>, <a href="../-1/1.html">west</a>.</p>
+    </noscript>
   </nav>
 
 </div>

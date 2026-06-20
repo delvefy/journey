@@ -1,11 +1,11 @@
 /* ==========================================================================
-   JOURNEY — a branching hypertext fiction
+   JOURNEY — The Riddle-Hoard, a world of rooms unlocked by riddles
    Shared stylesheet for the cover (index.html) and every room (rooms/*.html).
 
-   Mobile-first. The :root palette below is MEDIEVAL — the world's origin and
-   the no-JS fallback. Every other room is tinted at runtime by the PALETTE
-   ENGINE in rooms.js, which interpolates these tokens from the room's (x,y).
-   See "PALETTE" at the foot of the file.
+   Mobile-first. The :root palette below is the warm parchment base — the
+   world's origin (0,0) and the no-JS fallback. Every other room is tinted at
+   runtime by the PALETTE ENGINE in rooms.js, which interpolates these tokens
+   from the room's (x,y). See "PALETTE" at the foot of the file.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -180,18 +180,18 @@ a:hover { color: var(--amber-bright); }
 }
 
 /* --------------------------------------------------------------------------
-   The doors — the room drawn as a square with a door on each wall
+   The riddles — the room as a square (a status map) and four riddle boxes
    -------------------------------------------------------------------------- */
 
-.doors {
+.hoard {
   margin-top: 2.5rem;
   text-align: center;
 }
 
-.doors-title {
+.hoard-title {
   font-family: var(--font-display-sc);
   font-size: 0.78rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: lowercase;
   color: var(--ink-dim);
   margin: 0 0 0.5rem;
@@ -211,7 +211,9 @@ a:hover { color: var(--amber-bright); }
   box-shadow: inset 0 0 34px rgba(0,0,0,0.5);
 }
 
-/* the mark at the heart of the room */
+/* the mark at the heart of the room — decorative, must not eat door clicks
+   (it spans the whole square, so without this it would sit over the doors'
+   enlarged hit areas that reach into the room) */
 .room-center {
   position: absolute;
   inset: 0;
@@ -220,54 +222,232 @@ a:hover { color: var(--amber-bright); }
   justify-content: center;
   color: var(--rule-strong);
   font-size: 1.7rem;
+  pointer-events: none;
 }
 
-.door {
+/* the four walls — doors into the neighbouring rooms. With JS off they are
+   read-only markers; with JS on (.room-square.is-interactive) each becomes a
+   tappable door that reveals its riddle. Lit by rooms.js: is-open (written),
+   is-undreamt / is-disabled (not yet dreamt), is-selected (riddle now shown). */
+.wall {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: var(--paper);
-  color: var(--amber);
-  border: 2px solid var(--amber-deep);
-  border-radius: 2px;
-  font-size: 1.25rem;
-  line-height: 1;
-  text-decoration: none;
-  /* a ring of page colour masks the wall line behind the door */
+  border: 2px solid var(--rule-strong);
+  border-radius: 3px;
+  /* a ring of page colour masks the wall line behind the marker */
   box-shadow: 0 0 0 3px var(--paper);
-  transition: background 150ms ease, color 150ms ease, box-shadow 200ms ease;
-  -webkit-tap-highlight-color: transparent;
+  transition: border-color 200ms ease, box-shadow 200ms ease, background 200ms ease;
 }
-.door:hover,
-.door:focus-visible {
-  background: var(--amber);
-  color: var(--paper);
-  outline: none;
+.wall-top    { top: 0;    left: 50%; transform: translate(-50%, -50%); width: 64px; height: 20px; }
+.wall-bottom { bottom: 0; left: 50%; transform: translate(-50%,  50%); width: 64px; height: 20px; }
+.wall-left   { left: 0;   top: 50%;  transform: translate(-50%, -50%); width: 20px; height: 64px; }
+.wall-right  { right: 0;  top: 50%;  transform: translate( 50%, -50%); width: 20px; height: 64px; }
+
+/* a small handle, so a wall reads as a door */
+.wall.door::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--rule-strong);
+  transition: background 200ms ease;
 }
 
-.door-top    { top: 0;    left: 50%; transform: translate(-50%, -50%); width: 58px; height: 40px; }
-.door-bottom { bottom: 0; left: 50%; transform: translate(-50%,  50%); width: 58px; height: 40px; }
-.door-left   { left: 0;   top: 50%;  transform: translate(-50%, -50%); width: 40px; height: 58px; }
-.door-right  { right: 0;  top: 50%;  transform: translate( 50%, -50%); width: 40px; height: 58px; }
+/* an invisible hit area, larger than the visual door, so the doors are easy to
+   click — especially on desktop. A click on this pseudo-element counts as a
+   click on the door. Each grows mostly INTO the room (and a little sideways),
+   with only a sliver of outward reach so it never swallows clicks above/beside
+   the square. (inset order: top right bottom left.) */
+.wall.door::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+}
+.wall-top.door::before    { inset:  -8px -20px -34px -20px; }
+.wall-bottom.door::before { inset: -34px -20px  -8px -20px; }
+.wall-left.door::before   { inset: -20px -34px -20px  -8px; }
+.wall-right.door::before  { inset: -20px  -8px -20px -34px; }
 
-/* states applied by rooms.js after probing the neighbour file */
-.door.is-open {
+.wall.is-open {
   border-color: var(--amber);
   box-shadow: 0 0 0 3px var(--paper), 0 0 14px var(--glow);
 }
-.door.is-unwritten {
-  color: var(--ink-faint);
+.wall.is-open.door::after { background: var(--amber-deep); }
+
+.wall.is-undreamt {
   border-color: var(--rule);
   border-style: dashed;
 }
-.door.is-unwritten:hover,
-.door.is-unwritten:focus-visible {
+
+/* interactive doors (JS on) — hover / keyboard focus */
+.room-square.is-interactive .wall.door { cursor: pointer; }
+.wall.door:hover,
+.wall.door:focus-visible {
+  border-color: var(--amber-bright);
+  box-shadow: 0 0 0 3px var(--paper), 0 0 16px var(--glow);
+  outline: none;
+}
+.wall.door:hover::after,
+.wall.door:focus-visible::after { background: var(--amber); }
+
+/* the door whose riddle is currently shown */
+.wall.is-selected {
+  background: var(--amber);
+  border-color: var(--amber-bright);
+  box-shadow: 0 0 0 3px var(--paper), 0 0 20px var(--glow);
+}
+.wall.is-selected.door::after { background: var(--paper); }
+
+/* a door to a room not yet dreamt — disabled */
+.wall.is-disabled,
+.wall.is-disabled.door {
+  cursor: not-allowed;
+  border-color: var(--rule);
+  border-style: dashed;
+  opacity: 0.45;
+}
+.wall.is-disabled.door::after { display: none; }
+.wall.is-disabled:hover {
+  border-color: var(--rule);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+
+/* a riddle box — one per wall, stacked beneath the square */
+.riddle-box {
+  max-width: var(--measure);
+  margin: 1rem auto 0;
+  padding: 1rem 1.1rem 0.9rem;
+  text-align: left;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+  box-shadow: inset 0 0 22px rgba(0,0,0,0.32);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.riddle-dir {
+  font-family: var(--font-display-sc);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: lowercase;
+  color: var(--amber);
+  margin: 0 0 0.4rem;
+}
+
+.riddle-text {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.55;
+  margin: 0 0 0.85rem;
+}
+
+.riddle-label {
+  display: block;
+  font-family: var(--font-display-sc);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: var(--ink-faint);
+  margin: 0 0 0.35rem;
+}
+
+.riddle-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.riddle-input {
+  flex: 1 1 auto;
+  min-width: 0;
   background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  padding: 0.6rem 0.7rem;
+  font-family: var(--font-body);
+  font-size: 1rem;            /* >= 16px so iOS doesn't zoom on focus */
+  -webkit-appearance: none;
+  appearance: none;
+}
+.riddle-input:focus {
+  outline: none;
+  border-color: var(--amber);
+  box-shadow: 0 0 0 2px var(--glow);
+}
+.riddle-input[readonly] { color: var(--ink-dim); cursor: default; }
+
+.riddle-go {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0 1.1rem;
+  background: var(--paper);
+  color: var(--amber);
+  border: 1px solid var(--amber-deep);
+  border-radius: 2px;
+  font-family: var(--font-display-sc);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, box-shadow 200ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.riddle-go:hover,
+.riddle-go:focus-visible {
+  background: var(--amber);
+  color: var(--paper);
+  outline: none;
+  box-shadow: 0 0 14px var(--glow);
+}
+
+.riddle-status {
+  min-height: 1.4em;
+  margin: 0.55rem 0 0;
+  font-family: var(--font-display-sc);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
   color: var(--ink-dim);
 }
 
-/* a single line under the square that names where a door leads */
+/* states applied by rooms.js */
+.riddle-box.is-correct {
+  border-color: var(--amber);
+  box-shadow: inset 0 0 22px rgba(0,0,0,0.32), 0 0 16px var(--glow);
+}
+.riddle-box.is-correct .riddle-status { color: var(--amber); }
+.riddle-box.is-wrong .riddle-status { color: var(--ink-dim); font-style: italic; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .riddle-box.is-wrong { animation: riddle-shake 240ms ease; }
+  @keyframes riddle-shake {
+    0%, 100% { transform: translateX(0); }
+    25%      { transform: translateX(-4px); }
+    75%      { transform: translateX(4px); }
+  }
+}
+
+/* door-select mode: ONE riddle at a time, revealed by tapping its door (JS on).
+   With JS off, .hoard never gets .is-interactive and every riddle stays shown. */
+.hoard.is-interactive .riddle-box { display: none; }
+.hoard.is-interactive .riddle-box.is-selected { display: block; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hoard.is-interactive .riddle-box.is-selected {
+    animation: riddle-rise 240ms ease both;
+  }
+  @keyframes riddle-rise {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* a single line under the square — shared status / undreamt hints */
 .door-readout {
   min-height: 1.5em;
   margin: 0.9rem 0 0;
@@ -339,12 +519,13 @@ a:hover { color: var(--amber-bright); }
 }
 
 /* ==========================================================================
-   PALETTE — coordinate-driven, no era classes
-   The look is no longer chosen per room. rooms.js reads each room's (x,y) and
-   interpolates the tokens above between four corner palettes (the genre poles:
-   Chrome / Lumen / Wyld / Waste) and a medieval CENTRE that holds near the
-   origin. See "PALETTE ENGINE" in rooms.js — that is where regions are tuned.
+   PALETTE — coordinate-driven, no per-room classes
+   The look is not chosen per room. rooms.js reads each room's (x,y) and
+   interpolates the tokens above between four corner palettes (the answer-poles:
+   natural/tangible, wrought/tangible, natural/intangible, wrought/intangible)
+   and a CENTRE that holds near the origin. See "PALETTE ENGINE" in rooms.js —
+   that is where regions are tuned.
 
-   The :root values above ARE the medieval base: the origin's palette, and the
-   graceful fallback for the cover and for any page with JavaScript disabled.
+   The :root values above ARE the base: the origin's palette, and the graceful
+   fallback for the cover and for any page with JavaScript disabled.
    ========================================================================== */

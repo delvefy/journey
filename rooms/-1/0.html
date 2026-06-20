@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Scoured Room — Journey</title>
-<meta name="description" content="West of the antechamber the charms have stopped, and a spiral is gouged half away.">
+<title>River — Journey</title>
+<meta name="description" content="Water runs through the room, carving the only way forward.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
@@ -14,47 +14,99 @@
 <div class="wrap">
 
   <p class="room-coord">-1 : 0</p>
-  <h1 class="room-name">The Scoured Room</h1>
+  <h1 class="room-name">River</h1>
 
   <div class="prose">
-    <p>West is colder, and quieter, in a way that has nothing to do with the air.
-    The room is the same grey stone as the first, but stripped: no rushlight, no
-    torch, only a dim even greyness with no source you can name and no warmth in it
-    at all. A fine ash lies over everything, soft as felt and undisturbed but for
-    the prints your own feet are leaving now.</p>
-
-    <p>On the door behind you &mdash; the one you came through &mdash; the spiral is
-    cut deep into the wood at eye height, and then dragged across, again and again,
-    half scratched out. From the far side it was a wound; from here you can see the
-    labour of the unmaking, how someone set themselves to erase it and stopped
-    partway, as if losing faith even in their own refusal. Your fingers fit the
-    gouges exactly. You do not let yourself think about why.</p>
-
-    <p>You wait for the bell &mdash; the counted hour you have carried in your skull
-    since waking &mdash; and it does not come. Here nothing counts. Here, it seems,
-    nothing answers at all, and the silence has the texture of something that was
-    once a sound.</p>
-
-    <p>To the north the grey hardens, edged and exact, a cold that is made rather
-    than felt. To the south the ash deepens toward a colder dark, cinder and bone.
-    To the west, beyond the far door, there is only more of this: the long quiet
-    where even the asking has stopped. Eastward waits the rushlit room you came
-    from, warm and credulous. You were going somewhere. You begin to wonder if you
-    were leaving, instead.</p>
+    <p>Water runs through the room, though you cannot find its source or its end. It crosses
+    the floor in a bright cold seam and slips beneath the far wall, talking to itself the
+    whole way. Nothing here was built; it was carved, slowly, by the going of the water.
+    Follow it. The way out, like the river, only goes forward.</p>
   </div>
 
   <div class="fleuron" role="presentation"><span>&#10086;</span></div>
 
-  <nav class="doors" aria-label="Doors out of this room">
-    <p class="doors-title">choose a door</p>
-    <div class="room-square">
-      <a class="door door-top"    href="1.html">&#8593;</a>
-      <a class="door door-right"  href="../0/0.html">&#8594;</a>
-      <a class="door door-bottom" href="-1.html">&#8595;</a>
-      <a class="door door-left"   href="../-2/0.html">&#8592;</a>
-      <span class="room-center" aria-hidden="true">&#10086;</span>
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
     </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="1.html" data-answer="wind" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">No hand, and yet I turn the mill,<br>
+      no voice, and yet through night I moan;<br>
+      I drive the cloud across the hill<br>
+      and chill you to the bone.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../0/0.html" data-answer="key" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">What has teeth but cannot bite,<br>
+      and turns, and yet is no wheel,<br>
+      and frees, with one cold word of iron,<br>
+      whatever the locks conceal?</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-1.html" data-answer="root" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Below the trunk I creep and spread,<br>
+      I never see the sun;<br>
+      I anchor what the storm would take<br>
+      and feed it, every one.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-2/0.html" data-answer="sea" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">I drink the rivers whole and never fill,<br>
+      no foot will ever cross to my far side;<br>
+      ships ride my back, salt is my blood,<br>
+      and the moon commands my tide.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
     <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="1.html">north</a>, <a href="../0/0.html">east</a>,
+        <a href="-1.html">south</a>, <a href="../-2/0.html">west</a>.</p>
+    </noscript>
   </nav>
 
 </div>
