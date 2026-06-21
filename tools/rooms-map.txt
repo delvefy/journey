@@ -22,21 +22,21 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  -4:-1  —  Flint
+  1:-5  —  Plank
 
 NEXT ROOM
-  The closest unwritten coordinate to (0,0). The sqrt(10), sqrt(13) and d=4 rings are
-  now COMPLETE, and SIX of the eight d=sqrt(17) cells are written. Only TWO cells of the
-  sqrt(17) ring remain, by bearing clockwise from north:
-    -4:1 — already named GLOOM (fixed by Haze's west riddle and Rain's north riddle), then
-    -1:4 — already named YAWN  (fixed by Sigh's north riddle and Dream's west riddle).
-  Writing those two completes the sqrt(17) ring. After them the d=sqrt(18) ring opens
-  (3:3 carol, 3:-3 rake, -3:-3 fern, -3:3 rainbow — all named below by this batch's
-  diagonal riddles), then the d=sqrt(20) ring (2:4 hymn, 4:2 note, 4:-2 hook, 2:-4 tile,
-  -2:-4 nettle, -4:-2 pebble, -4:2 storm, -2:4 dawn — all named below), then the d=5 ring
-  (0:5 sleep, 5:0 axle, 0:-5 sugar, -5:0 snow named below; 3:4, 4:3, 4:-3, 3:-4, -3:-4,
-  -4:-3, -4:3, -3:4 still unnamed), then d=sqrt(26) (1:5 myth, 5:1 beat, 5:-1 hammer,
-  1:-5 plank, -1:-5 berry, -5:-1 coal named below; -5:1, -1:5 still unnamed).
+  The closest unwritten coordinate to (0,0). The sqrt(17), sqrt(18), sqrt(20) and d=5
+  rings are now COMPLETE, and FOUR of the eight d=sqrt(26) cells are written (1:5 myth,
+  5:1 beat, 5:-1 hammer, 1:-5 plank). FOUR cells of the sqrt(26) ring remain, by bearing
+  clockwise from north (resuming after 1:-5 plank at 168.7 deg):
+    -1:-5 — already named BERRY (fixed by Acorn's south riddle and Sugar's west riddle), then
+    -5:-1 — already named COAL  (fixed by Flint's west riddle and Snow's south riddle), then
+    -5:1  — already named DUSK  (fixed by Gloom's west riddle and Snow's north riddle), then
+    -1:5  — already named DOZE  (fixed by Yawn's north riddle and Sleep's west riddle).
+  Writing those four completes the sqrt(26) ring. After them the d=sqrt(29) ring opens
+  (all 8 cells already named below), then d=sqrt(32) (the 4 diagonals, named below), then
+  d=sqrt(34) (8 cells named below), then d=6 (4 axis cells named below), then d=sqrt(37)
+  (only 4 of 8 named so far — see below).
 
 NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
   Ring 2 (d=2, already written as the cells themselves): 0:2 Silence, 2:0 Clock,
@@ -52,18 +52,30 @@ NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
                    -3:-2 Moss · -3:2 Cloud · -2:3 Dew  (ring COMPLETE)
   Ring d=4:        0:4 Dream · 4:0 Wheel · 0:-4 Salt · -4:0 Rain  (ring COMPLETE)
   Ring d=sqrt(17): 1:4 Fable · 4:1 Chord · 4:-1 Anvil · 1:-4 Brick · -1:-4 Acorn ·
-                   -4:-1 Flint  (6 of 8 written; -4:1 gloom and -1:4 yawn remain)
+                   -4:-1 Flint · -4:1 Gloom · -1:4 Yawn  (ring COMPLETE)
+  Ring d=sqrt(18): 3:3 Carol · 3:-3 Rake · -3:-3 Fern · -3:3 Rainbow  (ring COMPLETE)
+  Ring d=sqrt(20): 2:4 Hymn · 4:2 Note · 4:-2 Hook · 2:-4 Tile · -2:-4 Nettle ·
+                   -4:-2 Pebble · -4:2 Storm · -2:4 Dawn  (ring COMPLETE)
+  Ring d=5:        0:5 Sleep · 3:4 Chant · 4:3 Anthem · 5:0 Axle · 4:-3 Hoe · 3:-4 Fork ·
+                   0:-5 Sugar · -3:-4 Reed · -4:-3 Vine · -5:0 Snow · -4:3 Breeze ·
+                   -3:4 Gleam  (ring COMPLETE)
+  Ring d=sqrt(26): 1:5 Myth · 5:1 Beat · 5:-1 Hammer · 1:-5 Plank  (4 of 8 written;
+                   -1:-5 berry, -5:-1 coal, -5:1 dusk, -1:5 doze remain — all named)
   --- Names fixed by the rooms above, awaiting their cells (the next frontier): ---
-  Ring d=sqrt(17) remainder: -4:1 gloom · -1:4 yawn
-  Ring d=sqrt(18) corners fixed by this batch's diagonal riddles:
-    3:3 carol · 3:-3 rake · -3:-3 fern · -3:3 rainbow
-  Ring d=sqrt(20) edges fixed by the sqrt(13) ring's outward riddles:
-    2:4 hymn · 4:2 note · 4:-2 hook · 2:-4 tile · -2:-4 nettle · -4:-2 pebble ·
-    -4:2 storm · -2:4 dawn
-  Ring d=5 axis cells fixed by the d=4 ring's outward riddles:
-    0:5 sleep · 5:0 axle · 0:-5 sugar · -5:0 snow
-  Ring d=sqrt(26) edges fixed by the sqrt(17) ring's outward riddles:
-    1:5 myth · 5:1 beat · 5:-1 hammer · 1:-5 plank · -1:-5 berry · -5:-1 coal
+  Ring d=sqrt(26) remainder: -1:-5 berry · -5:-1 coal · -5:1 dusk · -1:5 doze
+  Ring d=sqrt(29) edges (named by the sqrt(20)/d=5 rooms' outward riddles):
+    2:5 psalm · 5:2 octave · 5:-2 bolt · 2:-5 slate · -2:-5 thistle · -5:-2 gravel ·
+    -5:2 gale · -2:5 noon
+  Ring d=sqrt(32) diagonals (each fixed by two d=5 diagonal rooms):
+    4:4 ballad · 4:-4 drill · -4:-4 peat · -4:4 gust
+  Ring d=sqrt(34) edges (named by the d=5 diagonal rooms' outward riddles):
+    3:5 ode · 5:3 refrain · 5:-3 saw · 3:-5 shovel · -3:-5 rush · -5:-3 ivy ·
+    -5:3 draft · -3:5 glow
+  Ring d=6 axis cells (named by the d=5 axis rooms' outward riddles):
+    0:6 night · 6:0 cog · 0:-6 honey · -6:0 ice
+  Ring d=sqrt(37) edges (only the 4 fixed by the written sqrt(26) rooms so far):
+    1:6 legend · 6:1 tempo · 6:-1 tongs · 1:-6 beam
+    (the other 4 — -1:6, -6:1, -6:-1, -1:-6 — await berry/coal/dusk/doze, still unnamed)
 
 THE FOUR CORNERS  (planted AHEAD of the grid — see write.txt section 12)
   The world is bounded -150..+150 on both axes, so it has four true corners, the

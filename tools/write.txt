@@ -40,6 +40,18 @@ The neighbour coordinate files, by direction, from a room at (x,y):
 These are the data-href values. (Worked: from (1,0), N="1.html", S="-1.html",
 E="../2/0.html", W="../0/0.html".)
 
+TOOLING — STAY NEIGHBOUR-LOCAL. Do NOT grep every room to build name maps; that
+will not scale past a few thousand rooms. Use `hoard.py` (same folder; see README.md):
+  - `hoard.py next N`   -> the next N coords in writing order (maths only)
+  - `hoard.py plan N`   -> per-room briefing: the name each room MUST take and the
+                           exact answer for each wall, reading ONLY the batch's
+                           neighbours (and their neighbours) — never the whole grid
+  - `hoard.py render batch.json` -> render + save each room and advance the LAST
+                           ROOM line per save (the one-at-a-time rhythm, automated)
+  - `hoard.py verify N` -> local crossword check of the batch + its neighbours
+The render template is byte-identical to the skeleton in section 9; you only author
+content (name, desc, prose, four answers, four sets of riddle lines).
+
 
 3. THE TWO AXES  (the "spectrum" — what kind of word belongs where)
 -------------------------------------------------------------------
@@ -143,7 +155,8 @@ room (x,y):
      borders it and has already fixed its name. (In the seed: NAME, COIN, WIND,
      ROOT are each fixed by two of the five rooms.)
 
-Practical loop for one room:
+Practical loop for one room (or run `hoard.py plan` to do steps 1-2/4 for a
+whole batch at once, neighbour-locally):
   1. Read every existing neighbour (up to 4 files). Note their names.
   2. Decide this room's name (consistent with any neighbour already facing it).
   3. Write a short prose paragraph (see 7) and the four riddles (see 8).

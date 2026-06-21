@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gloom — Journey</title>
+<meta name="description" content="The grey half-dark of a heavy day, a sunless mood the sky wears.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-4 : 1</p>
+  <h1 class="room-name">Gloom</h1>
+
+  <div class="prose">
+    <p>You stand where the light gives up without quite going out. Gloom is the grey hour under
+    heavy cloud, the dimness inside a winter wood, the dusk that no lamp was lit against and no
+    hand can sweep away. It is wholly natural and wholly untouchable &mdash; a mood the sky puts
+    on. It keeps the cold north-west. Speak the name at each wall to pass.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="2.html" data-answer="storm" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I gather black and growl aloud,<br>
+      I hurl the rain and crack the cloud;<br>
+      the ships all flee, the shutters slam &mdash;<br>
+      what wind-and-thunder fury am I?</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-3/1.html" data-answer="haze" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A thin grey veil on a summer day,<br>
+      I blur the hills and dull the sun;<br>
+      no rain, no fog &mdash; I drift and stay<br>
+      till the cool of evening's come.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="0.html" data-answer="rain" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Grey threads let down from a low cloud's hem,<br>
+      I patter on roof and run down the glass;<br>
+      the puddles brim, the gardens drink &mdash;<br>
+      I fall a while, then pass.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-5/1.html" data-answer="dusk" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">The sun has slipped, but the dark's not come;<br>
+      I am the grey between the two;<br>
+      the lamps are lit, the swifts fly home &mdash;<br>
+      the day's last hour, gone blue.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="2.html">north</a>, <a href="../-3/1.html">east</a>,
+        <a href="0.html">south</a>, <a href="../-5/1.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

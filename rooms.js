@@ -3,7 +3,7 @@
    single <script src="../../rooms.js"> every room includes:
 
    1. PALETTE ENGINE. The world is a plane: x = NATURAL(-) .. WROUGHT(+),
-      y = TANGIBLE(-) .. INTANGIBLE(+), each running -150..+150 (see write.txt).
+      y = TANGIBLE(-) .. INTANGIBLE(+), each running -150..+150 (see tools/write.txt).
       A room's colours are not authored — they are interpolated from its
       coordinates between four corner palettes and a CENTRE that holds near the
       origin. So the look drifts a hair with every room, and the four corners
