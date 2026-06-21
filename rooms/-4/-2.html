@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grass — Journey</title>
+<meta name="description" content="Grass - the green skin of the world, the plainest and most everywhere of growing things.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-4 : -2</p>
+  <h1 class="room-name">Grass</h1>
+
+  <div class="prose">
+    <p>You walk on it without a thought - the green skin of the world, growing back as fast as it
+    is cut. Grass asks for nothing but rain and light, and covers every field and lawn and verge
+    in the same patient green. Lie down in it and it tickles your neck; pull a blade and whistle
+    through it. It is the plainest, most underfoot of all growing things, and the most everywhere.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-1.html" data-answer="vine" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I climb the wall and will not fall,<br>
+      I cling with tiny hands to all;<br>
+      up the trellis, round the tree,<br>
+      sweet grapes may hang in bunches from me.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-3/-2.html" data-answer="moss" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A soft green velvet, damp and low,<br>
+      on stones and logs and bark I grow;<br>
+      no flower, no stem, I creep and spread,<br>
+      a cushion for the forest's bed.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-3.html" data-answer="branch" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">I reach out sideways from the trunk,<br>
+      with leaves and twigs and nests I'm hung;<br>
+      a bird will perch and sing on me,<br>
+      an arm held out by every tree.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-5/-2.html" data-answer="hill" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">I am a little mountain, soft and green,<br>
+      the gentlest rise that fields have seen;<br>
+      you climb my side to see the view,<br>
+      then roll back down with a whoop or two.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-1.html">north</a>, <a href="../-3/-2.html">east</a>,
+        <a href="-3.html">south</a>, <a href="../-5/-2.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glass — Journey</title>
+<meta name="description" content="Glass - a stone you can see straight through, born of melted sand, one careless knock from ruin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">4 : -3</p>
+  <h1 class="room-name">Glass</h1>
+
+  <div class="prose">
+    <p>Sand, melted in a furnace and cooled, becomes the strangest of made things: a stone you can
+    see straight through. Glass is hard and smooth and cold to the lip, and it holds your water as
+    faithfully as any cup - until the day it slips, and shatters into a hundred bright and
+    dangerous pieces. It lets the light in at every window and keeps the weather out. Born of the
+    beach, clear as still water, and one careless knock from ruin.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-2.html" data-answer="mug" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I'm a fat cup with a sturdy ear,<br>
+      I hold your cocoa, hot and dear;<br>
+      on cold dark mornings, gripped in hand,<br>
+      I'm the cosiest cup in the land.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../5/-3.html" data-answer="broom" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A bundle of bristles, a handle tall,<br>
+      I sweep the dust from floor and hall;<br>
+      a witch will ride me through the night,<br>
+      I brush the cobwebs out of sight.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-4.html" data-answer="lamp" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Click my switch and night turns day,<br>
+      I push the gloomy dark away;<br>
+      a bulb, a shade, a steady glow,<br>
+      on desk or table, soft and low.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../3/-3.html" data-answer="knife" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">I have one edge so sharp and thin,<br>
+      I slice the bread and cut the skin;<br>
+      beside the fork at supper laid,<br>
+      be careful of my shining blade.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-2.html">north</a>, <a href="../5/-3.html">east</a>,
+        <a href="-4.html">south</a>, <a href="../3/-3.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
