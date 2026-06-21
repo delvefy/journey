@@ -47,6 +47,29 @@ grid is bounded -150..+150.
   `&mdash;`).
 - `render room.json --no-track` — re-render without moving the frontier (for
   fixing a single already-written room).
+- `render room.json --d-min N` — relax (or tighten) the same-name minimum gap for
+  this one render (default `D_MIN = 15`).
+- `reindex` — rebuild `names.json` from every room on disk. This is the **one**
+  sanctioned full-grid scan; run it once to bootstrap the index, or to repair it
+  after manual edits/deletions. Prints a repair audit of any twins/clones/close
+  pairs found.
+- `stats` — per-band vocabulary telemetry from the index (rooms, distinct names,
+  max reuse, most-reused words). Early warning that a band is running low on words.
+
+### Duplicate-name policy (enforced)
+
+Names are **not** globally unique — a band's vocabulary is finite over tens of
+thousands of cells, so reuse is inevitable and runtime-safe. `render` **refuses**,
+and `verify` **flags**, three things (full doctrine in `write.txt` §5/§6e):
+
+- **twin** — same name as any of the 8 neighbours (a giveaway / half-clone);
+- **clone** — same name **and** the same four neighbour-names, anywhere;
+- **too close** — same name within `D_MIN` (Euclidean).
+
+A duplicate sharing 3 of 4 neighbours (near-clone) is allowed but warned. The
+check rides on `tools/names.json`, a coord-keyed index `render`/`normalize`
+maintain incrementally (so it stays O(1) per room, never a grid scan); `reindex`
+rebuilds it.
 
 ## render JSON schema
 

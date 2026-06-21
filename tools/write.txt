@@ -161,6 +161,27 @@ A room's name is EXACTLY one word or one number. It must be:
     the riddle is: pick the plainest word that fits the cell and its quadrant.
 Numbers are welcome (e.g. a riddle whose answer is 7, or 12).
 
+DUPLICATES ARE ALLOWED — BUT POLICED. Names are NOT globally unique. A band has a
+finite vocabulary (Approach is plain child-words) spread over tens of thousands of
+cells, so the same word MUST recur as the hoard grows. Reuse is runtime-safe
+(navigation is by coordinate, the palette by (x,y), answer-matching is form-local)
+— this is purely about keeping the puzzle honest. Three rules govern reuse, all
+enforced by hoard.py (render refuses a violation; verify flags one):
+  - NO TWIN. A room's name must differ from all EIGHT surrounding cells (4
+    orthogonal + 4 diagonal). An orthogonal twin is an outright giveaway — the
+    neighbour's required answer is the current room's own visible <h1>; a diagonal
+    twin shares two neighbours and is half a clone.
+  - NO CLONE. No two rooms may share the SAME name AND the same set of four
+    neighbour-names ("an identical cycle of neighbours"). Distance-independent: a
+    clone anywhere makes the name-graph locally ambiguous.
+  - MIN GAP. Two rooms sharing a name must be at least D_MIN apart (Euclidean).
+    D_MIN starts small (15) while the hoard is sparse and rises as bands fill; tune
+    per render with `--d-min`. (A duplicate sharing 3 of 4 neighbours is a
+    near-clone: allowed, but render warns.)
+The check rides on tools/names.json, a coord-keyed index render maintains
+incrementally (never a full-grid scan). `hoard.py reindex` rebuilds it; `hoard.py
+stats` shows how close each band is to exhausting its words. See rule 6e.
+
 
 6. THE 2D-CROSSWORD RULE  (the heart of the work)
 -------------------------------------------------
@@ -187,6 +208,13 @@ room (x,y):
      an unwritten neighbour, check whether another already-written room also
      borders it and has already fixed its name. (In the seed: NAME, COIN, WIND,
      ROOT are each fixed by two of the five rooms.)
+
+  e. NAMES NEED NOT BE GLOBALLY UNIQUE, but a reused name may not form a TWIN
+     (same name as any of the 8 surrounding cells), a CLONE (same name + same four
+     neighbour-names, anywhere), or sit within D_MIN of another same-named room.
+     Full policy in section 5; hoard.py enforces it (render refuses, verify flags),
+     so you rarely think about it — just expect `plan` to list names already taken
+     near a free cell, and pick a different word when it does.
 
 Practical loop for one room (run `hoard.py plan` to do steps 1-2/4 for the next
 room, neighbour-locally):

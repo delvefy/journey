@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sleep — Journey</title>
+<meta name="description" content="Sleep - not a place but a leaving, the body's quiet nightly tide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">0 : 4</p>
+  <h1 class="room-name">Sleep</h1>
+
+  <div class="prose">
+    <p>Each night it comes for you, soft and certain, and takes the day away. Sleep is not a place
+    but a leaving - your eyes grow heavy, the room blurs, and you slip under into hours you will
+    never remember. No one can hand it to you or hold it back for long; it arrives on its own, the
+    body's quiet tide. You go down into the dark, and somewhere in there the dreams begin, and you
+    rise in the morning made new.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="5.html" data-answer="night" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I am the dark half of the day,<br>
+      when sun is gone and stars hold sway;<br>
+      the owls come out, the world grows still,<br>
+      I bring the moon above the hill.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../1/4.html" data-answer="secret" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">Whisper me low so none can hear,<br>
+      I'm meant for just one trusted ear;<br>
+      locked in your heart, I stay unknown -<br>
+      a thing you keep, and keep alone.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="3.html" data-answer="dream" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">At night I visit while you rest,<br>
+      the strangest tales, the silliest quest;<br>
+      you fly, you fall, you meet the dead,<br>
+      all painted in your sleeping head.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-1/4.html" data-answer="star" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">I am a spark in night's wide dome,<br>
+      a million miles from any home;<br>
+      you join my dots to make a bear,<br>
+      I twinkle, cold and far, up there.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="5.html">north</a>, <a href="../1/4.html">east</a>,
+        <a href="3.html">south</a>, <a href="../-1/4.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

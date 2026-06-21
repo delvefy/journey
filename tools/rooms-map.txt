@@ -16,13 +16,17 @@ HOW TO WRITE THE NEXT ROOM
     their names exactly (the 2D-crossword rule). Full rules: see write.txt.
   - Difficulty is BANDED by distance d = sqrt(x*x + y*y) and enforced — write to
     the band, match a written sibling, never let it drift (write.txt section 4).
+  - Duplicate names ARE allowed (finite per-band vocabulary) but policed by hoard.py:
+    no twin (same name as any of the 8 neighbours), no clone (same name + same four
+    neighbours), same-name rooms >= D_MIN apart. render refuses, verify flags. See
+    write.txt section 5; the index lives in tools/names.json (rebuild: hoard.py reindex).
   - Save it as rooms/<x>/<y>.html, then update the LAST ROOM line below.
 
 SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  -3:-1  —  Fern
+  2:-4  —  Pan
 
 NEXT ROOM
   The closest unwritten coordinate to (0,0) is 1:1 (NE, d=sqrt(2)=1.414), which the
