@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Candle — Journey</title>
+<meta name="description" content="Candle - a stick of wax that spends itself to shine, growing shorter hour by hour until a breath ends it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">3 : -5</p>
+  <h1 class="room-name">Candle</h1>
+
+  <div class="prose">
+    <p>You are a stick of wax with a thread up the middle, and a small flame is your whole
+    purpose. Lit, you give a soft and trembling light and a thin curl of smoke; you lean a little,
+    you drip and pool, and all the while you spend yourself to shine. Hour by hour you grow
+    shorter. A single breath can put you out. When the wick burns down to nothing, the dark slips
+    quietly back in.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-4.html" data-answer="bottle" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I have a narrow neck and cap,<br>
+      but never any head;<br>
+      I hold your milk or fizzy pop,<br>
+      till every drop is shed.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../4/-5.html" data-answer="kite" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">I fly the highest on a string,<br>
+      when March winds blow strong;<br>
+      of paper light and a long, long tail,<br>
+      I dip and dance along.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-6.html" data-answer="ball" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Round and bouncy, thrown and caught,<br>
+      I roll across the floor;<br>
+      you kick me high or toss me up,<br>
+      then fetch me back for more.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../2/-5.html" data-answer="tray" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">Flat and shallow, with a rim,<br>
+      I carry cups and plates;<br>
+      you hold me out with both your hands,<br>
+      piled high with food that waits.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-4.html">north</a>, <a href="../4/-5.html">east</a>,
+        <a href="-6.html">south</a>, <a href="../2/-5.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

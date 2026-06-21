@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hush — Journey</title>
+<meta name="description" content="Hush - the held, waiting quiet before something happens, the finger laid against the lips, broken by a single sound.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">0 : 6</p>
+  <h1 class="room-name">Hush</h1>
+
+  <div class="prose">
+    <p>It is the sound of no sound, the finger laid against the lips. A hush falls when the baby
+    is sleeping, when the curtain is about to rise, when something is about to happen and everyone
+    holds their breath. It is not quite silence - more the held, waiting quiet that comes just
+    before. Speak too loud and you break it. It settles softly over a room and asks, without a
+    single word, for everyone to listen.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="7.html" data-answer="yawn" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">When you are tired or it is late,<br>
+      your mouth swings open wide;<br>
+      out comes a great big sleepy breath,<br>
+      you cannot keep me inside.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../1/6.html" data-answer="rule" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">I tell you what you may and mayn't,<br>
+      in games and class and home;<br>
+      'No running by the pool,' I say,<br>
+      'and don't you dare to roam.'</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="5.html" data-answer="night" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">I am the dark half of the day,<br>
+      when stars come out to peep;<br>
+      the moon climbs up, the world grows still,<br>
+      and most folk go to sleep.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-1/6.html" data-answer="planet" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">I am a giant ball in space,<br>
+      that circles round the sun;<br>
+      the Earth is one, and Mars, and more -<br>
+      count them, there's more than one.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="7.html">north</a>, <a href="../1/6.html">east</a>,
+        <a href="5.html">south</a>, <a href="../-1/6.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thorn — Journey</title>
+<meta name="description" content="Thorn - a small hard spike on the stem, the bramble's armour, sharp enough to make any careless hand pay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-5 : -3</p>
+  <h1 class="room-name">Thorn</h1>
+
+  <div class="prose">
+    <p>You are the rose's warning and the bramble's armour - a small hard spike along the stem,
+    sharp enough to draw a bead of blood from any careless hand. Nothing grew you on purpose; you
+    simply harden out of the branch, pointing every way at once. Reach for the fruit or the flower
+    and you make the reacher pay. Snag a sleeve, prick a thumb, and hold fast: that is your whole
+    short, stubborn life.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-2.html" data-answer="hill" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I am a swell of grassy ground,<br>
+      too small to be a mountain tall;<br>
+      you climb up one side, roll down the next,<br>
+      I'm the gentlest slope of all.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-4/-3.html" data-answer="branch" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">I am the arm that leaves the trunk,<br>
+      and hold the leaves up high;<br>
+      the squirrels run along my back,<br>
+      the birds sit where I lie.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-4.html" data-answer="feather" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">I am so light I float on air,<br>
+      and drift down soft and slow;<br>
+      I dropped here from a bird's own wing,<br>
+      all fluffy as I go.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-6/-3.html" data-answer="frog" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">Green and slippery, I can leap,<br>
+      I sit upon a pad;<br>
+      I catch the flies with my long tongue,<br>
+      and ribbit when I'm glad.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-2.html">north</a>, <a href="../-4/-3.html">east</a>,
+        <a href="-4.html">south</a>, <a href="../-6/-3.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
