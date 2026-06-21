@@ -72,21 +72,21 @@ band. Six bands span the world from the threshold to the rim:
 
   BAND          d range        register / what a riddle may do
   ----          -------        -------------------------------
-  0 Threshold   d = 0          the origin only. The plainest riddle in the
-                               world ("teeth but cannot bite"). One object, one
-                               turn, <=4 lines.
-  1 Approach    0 <  d <=  50  a child could get it. Concrete everyday objects,
-                               plain words, classic folk riddles, <=4 lines.
-  2 Near Hoard  50 <  d <= 100 solid folk riddles. First person, ONE kenning
-                               allowed, still a touchable object, <=5 lines.
-  3 Deep Hoard  100 < d <= 125 kennings are the norm; one real turn or paradox.
-                               The answer may be a common abstraction (echo,
-                               hour, debt), <=6 lines.
-  4 Far Reaches 125 < d <= 149 layered kennings, deliberate misdirection, a
-                               two-step solve. Answers are ideas, not objects,
-                               <=6 lines.
+  0 Threshold   d = 0           the origin only. The plainest riddle in the
+                                world ("teeth but cannot bite"). One object, one
+                                turn, <=4 lines.
+  1 Approach    0 <  d <=  100  a child could get it. Concrete everyday objects,
+                                plain words, classic folk riddles, <=4 lines.
+  2 Near Hoard  100 <  d <= 120 solid folk riddles. First person, ONE kenning
+                                allowed, still a touchable object, <=5 lines.
+  3 Deep Hoard  120 < d <= 140  kennings are the norm; one real turn or paradox.
+                                The answer may be a common abstraction (echo,
+                                hour, debt), <=6 lines.
+  4 Far Reaches 140 < d <= 149  layered kennings, deliberate misdirection, a
+                                two-step solve. Answers are ideas, not objects,
+                                <=6 lines.
   5 The Rim     149 < d < 212   the hardest standard riddles: dense, gnomic,
-                               Exeter-Book obscurity, answers that are concepts.
+                                Exeter-Book obscurity, answers that are concepts.
   --- The four corners (d = 212.13) are their own apex; see section 12. ---
 
 THREE ANTI-DRIFT RULES (this is the "enforced" part):

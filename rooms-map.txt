@@ -22,16 +22,21 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  -3:-1  —  Shell
+  -4:-1  —  Flint
 
 NEXT ROOM
-  The closest unwritten coordinate to (0,0). Done through the d=sqrt(10) ring's first
-  six cells; only TWO cells of that ring remain, by bearing clockwise from north:
-    -3:1 — already named HAZE (fixed by Fog's west riddle and Tide's north riddle), then
-    -1:3 — already named SIGH (fixed by Breath's north riddle and Whisper's west riddle).
-  Writing those two completes the sqrt(10) ring. After them the d=sqrt(13) ring opens
-  (2:3 verse, 3:2 tune, 3:-2 chain, 2:-3 spade, -2:-3 thorn, -3:-2 moss, -3:2 cloud,
-  -2:3 dew — all already named below), then the d=4 ring (0:4, 4:0, 0:-4, -4:0).
+  The closest unwritten coordinate to (0,0). The sqrt(10), sqrt(13) and d=4 rings are
+  now COMPLETE, and SIX of the eight d=sqrt(17) cells are written. Only TWO cells of the
+  sqrt(17) ring remain, by bearing clockwise from north:
+    -4:1 — already named GLOOM (fixed by Haze's west riddle and Rain's north riddle), then
+    -1:4 — already named YAWN  (fixed by Sigh's north riddle and Dream's west riddle).
+  Writing those two completes the sqrt(17) ring. After them the d=sqrt(18) ring opens
+  (3:3 carol, 3:-3 rake, -3:-3 fern, -3:3 rainbow — all named below by this batch's
+  diagonal riddles), then the d=sqrt(20) ring (2:4 hymn, 4:2 note, 4:-2 hook, 2:-4 tile,
+  -2:-4 nettle, -4:-2 pebble, -4:2 storm, -2:4 dawn — all named below), then the d=5 ring
+  (0:5 sleep, 5:0 axle, 0:-5 sugar, -5:0 snow named below; 3:4, 4:3, 4:-3, 3:-4, -3:-4,
+  -4:-3, -4:3, -3:4 still unnamed), then d=sqrt(26) (1:5 myth, 5:1 beat, 5:-1 hammer,
+  1:-5 plank, -1:-5 berry, -5:-1 coal named below; -5:1, -1:5 still unnamed).
 
 NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
   Ring 2 (d=2, already written as the cells themselves): 0:2 Silence, 2:0 Clock,
@@ -42,16 +47,23 @@ NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
   Ring d=sqrt(8):  2:2 Rhyme · 2:-2 Drum · -2:-2 Sand · -2:2 Frost
   Ring d=3:        0:3 Whisper · 3:0 Gear · 0:-3 Ash · -3:0 Tide
   Ring d=sqrt(10): 1:3 Tale · 3:1 Flute · 3:-1 Lamp · 1:-3 Bread · -1:-3 Egg · -3:-1 Shell
-                   (still unwritten in this ring: -3:1 haze, -1:3 sigh)
+                   · -3:1 Haze · -1:3 Sigh  (ring COMPLETE)
+  Ring d=sqrt(13): 2:3 Verse · 3:2 Tune · 3:-2 Chain · 2:-3 Spade · -2:-3 Thorn ·
+                   -3:-2 Moss · -3:2 Cloud · -2:3 Dew  (ring COMPLETE)
+  Ring d=4:        0:4 Dream · 4:0 Wheel · 0:-4 Salt · -4:0 Rain  (ring COMPLETE)
+  Ring d=sqrt(17): 1:4 Fable · 4:1 Chord · 4:-1 Anvil · 1:-4 Brick · -1:-4 Acorn ·
+                   -4:-1 Flint  (6 of 8 written; -4:1 gloom and -1:4 yawn remain)
   --- Names fixed by the rooms above, awaiting their cells (the next frontier): ---
-  Ring d=sqrt(10) remainder: -3:1 haze · -1:3 sigh
-  Ring d=sqrt(13) edges/corners fixed by the sqrt(8) & sqrt(10) rings:
-    2:3 verse · 3:2 tune · 3:-2 chain · 2:-3 spade · -2:-3 thorn · -3:-2 moss ·
-    -3:2 cloud · -2:3 dew
-  Ring d=4 edges fixed by ring-3 outward riddles:
-    0:4 dream · 4:0 wheel · 0:-4 salt · -4:0 rain
-  Ring d=sqrt(17) edges fixed by the sqrt(10) ring's outward riddles:
-    1:4 fable · 4:1 chord · 4:-1 anvil · 1:-4 brick · -1:-4 acorn · -4:-1 flint
+  Ring d=sqrt(17) remainder: -4:1 gloom · -1:4 yawn
+  Ring d=sqrt(18) corners fixed by this batch's diagonal riddles:
+    3:3 carol · 3:-3 rake · -3:-3 fern · -3:3 rainbow
+  Ring d=sqrt(20) edges fixed by the sqrt(13) ring's outward riddles:
+    2:4 hymn · 4:2 note · 4:-2 hook · 2:-4 tile · -2:-4 nettle · -4:-2 pebble ·
+    -4:2 storm · -2:4 dawn
+  Ring d=5 axis cells fixed by the d=4 ring's outward riddles:
+    0:5 sleep · 5:0 axle · 0:-5 sugar · -5:0 snow
+  Ring d=sqrt(26) edges fixed by the sqrt(17) ring's outward riddles:
+    1:5 myth · 5:1 beat · 5:-1 hammer · 1:-5 plank · -1:-5 berry · -5:-1 coal
 
 THE FOUR CORNERS  (planted AHEAD of the grid — see write.txt section 12)
   The world is bounded -150..+150 on both axes, so it has four true corners, the
