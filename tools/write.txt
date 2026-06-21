@@ -103,7 +103,7 @@ band. Six bands span the world from the threshold to the rim:
                                 Exeter-Book obscurity, answers that are concepts.
   --- The four corners (d = 212.13) are their own apex; see section 12. ---
 
-THREE ANTI-DRIFT RULES (this is the "enforced" part):
+FOUR ANTI-DRIFT RULES (this is the "enforced" part):
   i.   CEILING & FLOOR. A riddle may never be harder than its band's ceiling
        nor easier than its floor. Concretely: no room is harder than ANY room
        in a strictly outer band, and none is easier than any room strictly
@@ -114,6 +114,32 @@ THREE ANTI-DRIFT RULES (this is the "enforced" part):
   iii. SELF-TEST AT THE BAND. The cold-read test (section 8) is judged AT the
        band: an Approach riddle a clever adult finds trivial is correct; a Rim
        riddle a clever adult finds merely "nice" is too easy — push it.
+  iv.  THE WORD MUST FIT THE BAND, NOT JUST THE CLUE. The hardest part of a
+       riddle is the ANSWER WORD itself: a clue can only retrieve a word the
+       solver ALREADY KNOWS — no wording, however clean, can pull out a word they
+       have never met. So a tidy clue NEVER rescues a too-hard answer. Every time
+       you name a free cell (section 5) you are making a difficulty choice; the
+       word must sit at the band's register or the whole room breaks the band, no
+       matter how fair the riddle reads. Concretely:
+       - APPROACH test — RECALL, not recognition: would an eight-year-old say the
+         word UNPROMPTED? If they would only recognise it, or you would have to
+         define it, it is too hard. Take the plainest everyday word that fits the
+         cell; prefer the common object over the exact/technical term. Real swaps
+         this rule already forced (left = WRONG for Approach, right = right):
+           chisel→knife · lathe→ruler · rivet→pin · mallet→brush · rafter→fence ·
+           scythe→bucket · gorse→grass · lichen→leaf · kelp→weed · heather→daisy ·
+           couplet→word · epic→poem · haiku→story · serenade→joke · fanfare→cheer ·
+           slumber→nap.
+       - BANNED at Approach (these are Deep-Hoard-and-outward registers): trade or
+         workshop jargon (lathe, rivet, scythe), verse/music terms (couplet,
+         sonnet, ode, psalm, haiku, octave, refrain), naturalist or regional names
+         of plants and rocks (gorse, lichen, bracken, kelp, shale, silt), and
+         archaic or poetic synonyms (zephyr, murk, eve). Vocabulary climbs ONLY as
+         d climbs — these words belong in bands 3-5, not at the threshold.
+       - You may NOT rename an older room that already bears a too-hard name (the
+         crossword forbids it, section 6a) — but never ADD to the drift: every new
+         free cell you name must pass the test above. One inherited mistake does
+         not license another.
 
 Because rooms are written closest-first, you finish a whole ring before the next
 begins, so the wall between bands stays clean. Never let a far room drift easy
@@ -127,7 +153,12 @@ A room's name is EXACTLY one word or one number. It must be:
   - unambiguous (one obvious thing the riddles can point to),
   - ASCII, no accents (matching is exact; "café" would demand the accent),
   - lowercase in data-answer; the displayed <h1 class="room-name"> may be
-    capitalised ("Key", "Echo", "7").
+    capitalised ("Key", "Echo", "7"),
+  - AT THE BAND'S READING LEVEL. When you name a free cell, the word itself must
+    pass the band's word-familiarity test (section 4, anti-drift rule iv). At
+    Approach that means a plain everyday word a child would say unprompted — never
+    trade, verse, or naturalist jargon. The name is a difficulty choice as much as
+    the riddle is: pick the plainest word that fits the cell and its quadrant.
 Numbers are welcome (e.g. a riddle whose answer is 7, or 12).
 
 
@@ -163,8 +194,13 @@ room, neighbour-locally):
   2. Decide this room's name (consistent with any neighbour already facing it).
   3. Write a short prose paragraph (see 7) and the four riddles (see 8).
   4. For written neighbours, the riddle answer = their name. For unwritten ones,
-     pick a name fitting that quadrant; the answer = that name.
-  5. Save, update rooms-map.txt, then go to the next coordinate.
+     pick a name fitting that quadrant AND the band's reading level (section 4,
+     rule iv: at Approach, the plainest everyday word a child would say); the
+     answer = that name.
+  5. Before saving, run the band check: is every answer a word the band's solver
+     already knows (not just one a clean clue points at)? If any answer is trade,
+     verse, or naturalist jargon at Approach, swap it for the plainest synonym.
+  6. Save, update rooms-map.txt, then go to the next coordinate.
 
 
 7. THE PROSE
@@ -184,6 +220,10 @@ moved from story to puzzle.
   - 2-6 short lines. Rhyme is welcome but never at the cost of a clean answer.
   - Test it cold: could a fair reader land on a DIFFERENT single word? If yes,
     tighten it until only the intended name fits.
+  - Test it cold a SECOND way: is the answer a word the band's solver already
+    holds? A clue can point at a word but never teach one. At Approach, if a
+    plainer synonym fits the cell the answer is wrong until you use it (knife, not
+    chisel; weed, not kelp). See section 4, anti-drift rule iv.
   - Numbers: count things the world counts (days, seasons, points of a compass).
 
 
