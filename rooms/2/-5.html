@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slate — Journey</title>
+<meta name="description" content="Grey rock split into flat sheets for the roof and the chalkboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">2 : -5</p>
+  <h1 class="room-name">Slate</h1>
+
+  <div class="prose">
+    <p>Grey rock that splits into thin flat sheets, nailed in rows on the roof to throw off rain,
+    or framed for a child's chalk. Slate is worked from natural stone into a useful made thing,
+    hard and flat and lasting. It keeps the worked south-east, among roofs and building stone.
+    Speak the name at each wall to pass.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-4.html" data-answer="tile" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A flat baked square of clay I am,<br>
+      laid in rows on roof or floor;<br>
+      I shed the rain, I pave the hall &mdash;<br>
+      name the fired slab. Say it, sure.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../3/-5.html" data-answer="shovel" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A broad flat blade upon a haft,<br>
+      I scoop the coal, I clear the snow;<br>
+      dig in, lift up, and fling aside &mdash;<br>
+      name the digging tool, heave-ho.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-6.html" data-answer="mortar" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A grey wet paste of lime and sand,<br>
+      I'm spread between the bricks in a row;<br>
+      I set hard and bind them fast &mdash;<br>
+      name the glue of the wall. Now show.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../1/-5.html" data-answer="plank" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A long flat board sawn from a tree,<br>
+      laid down to walk on or to build;<br>
+      the deck, the gangway over the gap &mdash;<br>
+      name the sawn wood, smooth and milled.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-4.html">north</a>, <a href="../3/-5.html">east</a>,
+        <a href="-6.html">south</a>, <a href="../1/-5.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

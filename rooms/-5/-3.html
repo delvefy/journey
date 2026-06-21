@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ivy — Journey</title>
+<meta name="description" content="A dark evergreen climber clinging to wall and tree.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-5 : -3</p>
+  <h1 class="room-name">Ivy</h1>
+
+  <div class="prose">
+    <p>A dark green climber that creeps up the old wall and the bare tree, clinging with a
+    thousand little rooting feet and staying green all winter. Ivy is wholly natural and wholly
+    touchable, the patient evergreen. It keeps the rooted south-west, among creepers and growing
+    things. Speak the name at each wall to pass.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-2.html" data-answer="gravel" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Small loose stones all heaped and spread,<br>
+      they crunch beneath the boot and wheel;<br>
+      raked flat for the path and drive &mdash;<br>
+      name the little stones. They're real.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-4/-3.html" data-answer="vine" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A long green climber, tendril-tight,<br>
+      I twist up post and trellis tall;<br>
+      I bear the grape that makes the wine &mdash;<br>
+      name the trailing plant. Don't fall.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-4.html" data-answer="silt" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Fine soft mud the river drops,<br>
+      where the slow brown water creeps;<br>
+      grey and smooth, it fills the bed &mdash;<br>
+      name the settled mud. It seeps.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-6/-3.html" data-answer="bracken" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A tall coarse fern on the open hill,<br>
+      that browns and rusts when autumn's near;<br>
+      it carpets the moor in feathered fronds &mdash;<br>
+      name the hillside fern. Speak clear.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-2.html">north</a>, <a href="../-4/-3.html">east</a>,
+        <a href="-4.html">south</a>, <a href="../-6/-3.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

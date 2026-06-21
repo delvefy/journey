@@ -2,34 +2,39 @@
 """hoard.py — authoring tool for The Riddle-Hoard (see write.txt, same folder).
 
 The whole point of this tool is to stay NEIGHBOUR-LOCAL: it never scans the
-whole grid. Every command reads only the cells that touch the batch you are
-about to write, so the cost is O(batch size), not O(rooms). That keeps the
+whole grid. Every command reads only the cells that touch the room you are
+about to write, so the cost is O(1), not O(rooms). That keeps the
 work cheap whether the hoard has 90 rooms or 90,000.
 
-WORKFLOW for a batch (the user hands you a count or a list of coords):
+WORKFLOW — ONE ROOM AT A TIME (never in batches). Repeat this loop per room:
 
-  1. python3 tools/hoard.py next 8
-        -> the next 8 unwritten coords in writing order (closest-first,
-           ties clockwise from north). Pure maths + file-existence; no reads.
+  1. python3 tools/hoard.py next
+        -> the next unwritten coord in writing order (closest-first, ties
+           clockwise from north). Pure maths + file-existence; no reads.
+           (next N previews the upcoming order; it does NOT let you write ahead.)
 
-  2. python3 tools/hoard.py plan 8         (or: plan -1:-5 -5:-1 ...)
-        -> a per-room briefing: each room's COMMITTED name (what written
+  2. python3 tools/hoard.py plan           (or: plan -1:-5)
+        -> the briefing for THAT ONE room: its COMMITTED name (what written
            neighbours already call it), and for each of its 4 walls the exact
            answer to write (a written neighbour's name, or an unwritten cell
            already fixed by some other room, or "NAME IT" + the quadrant).
-           Reads only the batch's neighbours (and their neighbours). This is
-           all you need to author the riddles correctly.
+           Reads only that room's neighbours (and their neighbours). This is
+           all you need to author the riddle correctly.
 
-  3. Author the batch as JSON (see the schema printed by `plan --schema`) and:
-     python3 tools/hoard.py render batch.json
-        -> renders each room with the canonical skeleton, writes
-           rooms/<x>/<y>.html in writing order, advances the LAST ROOM line in
-           rooms-map.txt after EACH save (interruption-safe), and runs a local
-           crossword check on every room as it lands.
+  3. Author the ONE room as JSON (see the schema printed by `plan --schema`) and:
+     python3 tools/hoard.py render room.json
+        -> renders the room with the canonical skeleton, writes
+           rooms/<x>/<y>.html, advances the LAST ROOM line in rooms-map.txt, and
+           runs a local crossword check. render takes ONE room and REJECTS a file
+           holding more than one — that is the one-at-a-time rhythm, enforced.
 
-  4. python3 tools/hoard.py verify 8       (or: verify batch.json / coords)
-        -> re-checks the batch + its neighbours: answers match neighbour names,
-           facing pairs agree both ways, answers distinct, 4 walls each.
+  4. python3 tools/hoard.py verify         (or: verify -1:-5 / room.json)
+        -> re-checks that room (the frontier, if no arg) + its neighbours:
+           answers match neighbour names, facing pairs agree both ways, answers
+           distinct, 4 walls each.
+
+  Then return to step 1 for the next room. Saving and tracking each room before
+  starting the next is what makes the work safe to interrupt.
 
 Coords are written "x:y" (e.g. -1:-5). The grid is bounded -150..+150.
 """
@@ -174,7 +179,7 @@ def cmd_next(args):
 def cmd_plan(args):
     if "--schema" in args:
         print(SCHEMA); return
-    for c in targets_from_args(args):
+    for c in (targets_from_args(args) or next_unwritten(1)):
         x, y = c
         d = math.hypot(x, y)
         cn, src, conflict = committed_name(c)
@@ -282,21 +287,21 @@ PAGE = '''<!doctype html>
 </html>
 '''
 
-SCHEMA = '''render JSON schema — a list of rooms. Hrefs/labels/ids are computed for you.
-[
-  {
-    "x": -1, "y": -5,
-    "name": "Berry",
-    "desc": "one-line hook for <meta description>.",
-    "prose": "50-90 words, second person, present tense. Use - for em dashes.",
-    "N": { "a": "acorn",   "lines": ["line 1", "line 2", "line 3", "line 4"] },
-    "E": { "a": "sugar",   "lines": ["...", "..."] },
-    "S": { "a": "honey",   "lines": ["...", "..."] },
-    "W": { "a": "thistle", "lines": ["...", "..."] }
-  }
-]
+SCHEMA = '''render JSON schema — ONE room object (write rooms one at a time, never in batches).
+Hrefs/labels/input ids are computed for you; you supply only the content.
+{
+  "x": -1, "y": -5,
+  "name": "Berry",
+  "desc": "one-line hook for <meta description>.",
+  "prose": "50-90 words, second person, present tense. Use - for em dashes.",
+  "N": { "a": "acorn",   "lines": ["line 1", "line 2", "line 3", "line 4"] },
+  "E": { "a": "sugar",   "lines": ["...", "..."] },
+  "S": { "a": "honey",   "lines": ["...", "..."] },
+  "W": { "a": "thistle", "lines": ["...", "..."] }
+}
 "a" is the neighbour's name (lowercase) = the answer that opens that wall.
-A numeric "a" (e.g. "7") auto-sets inputmode="numeric".'''
+A numeric "a" (e.g. "7") auto-sets inputmode="numeric".
+(A one-element list is also accepted; a file holding more than one room is rejected.)'''
 
 def render_room(rm):
     x, y = rm["x"], rm["y"]
@@ -319,6 +324,11 @@ def advance_tracker(x, y, name):
     if n:
         open(MAP, "w", encoding="utf-8").write(txt2)
     return n
+
+def tracker_frontier():
+    """The LAST ROOM coord recorded in the tracker (the room just written), or None."""
+    m = LAST_RE.search(open(MAP, encoding="utf-8").read())
+    return (int(m.group(2)), int(m.group(3))) if m else None
 
 def check_room(c):
     """Local crossword check for one written cell. Returns list of error strings."""
@@ -343,26 +353,29 @@ def check_room(c):
     return errs
 
 def cmd_render(args):
-    track = "--no-track" not in args            # re-render a single room without moving the frontier
+    track = "--no-track" not in args            # re-render one room without moving the frontier
     args = [a for a in args if a != "--no-track"]
     if not args:
-        sys.exit("usage: render batch.json [--no-track]")
-    rooms = json.load(open(args[0], encoding="utf-8"))
-    rooms.sort(key=lambda r: order_key((r["x"], r["y"])))   # write closest-first
-    total = 0
-    for rm in rooms:
-        x, y = rm["x"], rm["y"]
-        d = os.path.join(ROOMS, str(x))
-        os.makedirs(d, exist_ok=True)
-        open(os.path.join(d, "%d.html" % y), "w", encoding="utf-8").write(render_room(rm))
-        _CACHE.pop((x, y), None)
-        n = advance_tracker(x, y, rm["name"]) if track else 1
-        errs = check_room((x, y))
-        flag = "  !! " + "; ".join(errs) if errs else ""
-        note = "" if n else "  (tracker line not found!)"
-        print("wrote rooms/%d/%d.html  %s%s%s" % (x, y, rm["name"], note, flag))
-        total += 1
-    print("\nrendered %d rooms; frontier now %d:%d %s" % (total, rooms[-1]["x"], rooms[-1]["y"], rooms[-1]["name"]))
+        sys.exit("usage: render room.json [--no-track]   (one room at a time)")
+    data = json.load(open(args[0], encoding="utf-8"))
+    rooms = data if isinstance(data, list) else [data]
+    if len(rooms) != 1:                         # the rule, enforced: never write in batches
+        sys.exit("render writes ONE room at a time, never in batches — found %d rooms in %s.\n"
+                 "Author, render, save and track each room on its own, then go to the next.\n"
+                 "(Write rooms one at a time — see write.txt section 2.)" % (len(rooms), args[0]))
+    rm = rooms[0]
+    x, y = rm["x"], rm["y"]
+    d = os.path.join(ROOMS, str(x))
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, "%d.html" % y), "w", encoding="utf-8").write(render_room(rm))
+    _CACHE.pop((x, y), None)
+    n = advance_tracker(x, y, rm["name"]) if track else 1
+    errs = check_room((x, y))
+    flag = "  !! " + "; ".join(errs) if errs else ""
+    note = "" if n else "  (tracker line not found!)"
+    print("wrote rooms/%d/%d.html  %s%s%s" % (x, y, rm["name"], note, flag))
+    print("tracker not advanced (--no-track)" if not track else
+          "frontier now %d:%d %s" % (x, y, rm["name"]))
 
 DIR2K = {v: k for k, v in NESW.items()}     # dir -> author key (top->N, ...)
 def parse_room(c):
@@ -394,9 +407,14 @@ def cmd_normalize(args):
 
 def cmd_verify(args):
     if len(args) == 1 and args[0].endswith(".json"):
-        coords = [(r["x"], r["y"]) for r in json.load(open(args[0], encoding="utf-8"))]
+        data = json.load(open(args[0], encoding="utf-8"))
+        rooms = data if isinstance(data, list) else [data]
+        coords = [(r["x"], r["y"]) for r in rooms]
     else:
         coords = targets_from_args(args)
+    if not coords:                                  # no arg -> the room you just wrote
+        f = tracker_frontier()
+        coords = [f] if f else []
     errs = []
     for c in coords:
         errs += check_room(c)

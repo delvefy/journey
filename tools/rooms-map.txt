@@ -22,7 +22,7 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  1:-5  —  Plank
+  6:1  —  Tempo
 
 NEXT ROOM
   The closest unwritten coordinate to (0,0). The sqrt(17), sqrt(18), sqrt(20) and d=5
