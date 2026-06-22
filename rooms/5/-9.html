@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hook — Journey</title>
+<meta name="description" content="Hook - a curved and pointed bit of metal bent to one purpose: to catch and hold, the patient little claw on the wall.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">5 : -9</p>
+  <h1 class="room-name">Hook</h1>
+
+  <div class="prose">
+    <p>You are a curved and pointed bit of metal, bent to one purpose: to catch and hold. A smith
+    or a machine shaped you, beak-like, from wire or steel - you are wholly wrought. You hang the
+    coat behind the door, you land the wriggling fish, you snag the rug from the high shelf. Once
+    caught, a thing does not easily slip your barb. Small, sharp, and stubborn, you are grip given
+    a shape, the patient little claw that waits on the wall to hold whatever is hung upon it.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-8.html" data-answer="peg" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A little pincher made of wood<br>
+      that clips the washing tight;<br>
+      or a stake to hold the tent<br>
+      against the wind at night.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../6/-9.html" data-answer="chain" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A string of metal rings linked through,<br>
+      each one inside the next;<br>
+      it locks the bike, it tows the truck,<br>
+      a line of iron, flexed.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-10.html" data-answer="wire" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A long thin thread of bendy metal,<br>
+      it carries light and sound;<br>
+      it fences fields with barbs and twists,<br>
+      and coils up on the ground.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../4/-9.html" data-answer="balloon" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A stretchy bag blown full of breath,<br>
+      all red or blue or green;<br>
+      it bobs upon a string at parties<br>
+      and pops with sudden scream.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-8.html">north</a>, <a href="../6/-9.html">east</a>,
+        <a href="-10.html">south</a>, <a href="../4/-9.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
