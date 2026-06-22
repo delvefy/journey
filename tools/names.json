@@ -40,6 +40,10 @@
    "name": "pebble",
    "sig": "brick|lily|rock|spider"
   },
+  "-1:-9": {
+   "name": "rock",
+   "sig": "pearl|pebble|rose|tile"
+  },
   "-1:0": {
    "name": "river",
    "sig": "key|root|sea|wind"
@@ -75,6 +79,10 @@
   "-1:8": {
    "name": "sun",
    "sig": "comet|fire|snore|space"
+  },
+  "-1:9": {
+   "name": "space",
+   "sig": "flash|hunger|nap|sun"
   },
   "-2:-1": {
    "name": "leaf",
@@ -472,9 +480,17 @@
    "name": "autumn",
    "sig": "moment|month|sunrise|whisper"
   },
+  "-9:-1": {
+   "name": "tail",
+   "sig": "hoof|ice|valley|wing"
+  },
   "-9:0": {
    "name": "valley",
    "sig": "cliff|mountain|sight|tail"
+  },
+  "-9:1": {
+   "name": "sight",
+   "sig": "spark|thirst|touch|valley"
   },
   "0:-1": {
    "name": "stone",
@@ -592,6 +608,10 @@
    "name": "basket",
    "sig": "brick|jar|ladder|sack"
   },
+  "1:-9": {
+   "name": "sack",
+   "sig": "basket|boot|tile|tin"
+  },
   "1:0": {
    "name": "bell",
    "sig": "clock|coin|key|name"
@@ -699,6 +719,10 @@
   "2:8": {
    "name": "idea",
    "sig": "march|memory|pat|plan"
+  },
+  "2:9": {
+   "name": "memory",
+   "sig": "answer|idea|salute|skip"
   },
   "3:-1": {
    "name": "spoon",
@@ -948,6 +972,10 @@
    "name": "gasp",
    "sig": "blink|shrug|sob|tickle"
   },
+  "6:7": {
+   "name": "blink",
+   "sig": "cough|frown|gasp|sneeze"
+  },
   "7:-1": {
    "name": "rope",
    "sig": "comb|mirror|plane|table"
@@ -992,6 +1020,10 @@
    "name": "poke",
    "sig": "knock|pinch|sob|tickle"
   },
+  "7:6": {
+   "name": "sob",
+   "sig": "cough|gasp|hiccup|poke"
+  },
   "8:-1": {
    "name": "mirror",
    "sig": "rocket|rope|shelf|window"
@@ -1027,6 +1059,10 @@
   "8:4": {
    "name": "bang",
    "sig": "ding|knock|pinch|sigh"
+  },
+  "9:-1": {
+   "name": "window",
+   "sig": "car|desk|flag|mirror"
   },
   "9:0": {
    "name": "car",
