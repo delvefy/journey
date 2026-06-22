@@ -1071,6 +1071,10 @@
   "9:1": {
    "name": "fact",
    "sig": "car|lesson|quiz|sum"
+  },
+  "9:2": {
+   "name": "sum",
+   "sig": "click|fact|hour|number"
   }
  },
  "version": 1
