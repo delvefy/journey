@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hen — Journey</title>
+<meta name="description" content="Hen - the busy brown matron of the farmyard, scratching all day for grubs and grain, who gives the world its eggs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-3 : -8</p>
+  <h1 class="room-name">Hen</h1>
+
+  <div class="prose">
+    <p>You are the busy brown matron of the farmyard, scratching all day in the dust for grubs and
+    grain, talking to yourself in soft contented clucks. You are no flier and no beauty, but you
+    give the world its eggs, one warm and perfect each morning, and you sit them faithfully into
+    chicks. Round you the yellow chicks scurry; under your wing they hide from the hawk's shadow.
+    Fussy, plain and endlessly useful, you are the homeliest of birds - and the breakfast table
+    would be a poorer place without you.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-7.html" data-answer="duck" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">With a flat broad bill and webbed feet,<br>
+      I paddle round the pond;<br>
+      of weed and bug I love to eat,<br>
+      and quack the whole day long.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-2/-8.html" data-answer="lily" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A white cup on the still pond's face,<br>
+      a flat green pad below;<br>
+      the frog sits in my resting place,<br>
+      where the slow waters flow.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-9.html" data-answer="pig" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Pink and round with a curly tail,<br>
+      I roll in the mud all day;<br>
+      'oink, oink,' I snuffle for my meal,<br>
+      in the sty I love to stay.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-4/-8.html" data-answer="apple" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">Red or green and round and sweet,<br>
+      I grow upon the tree;<br>
+      crunchy, juicy, good to eat,<br>
+      so take a bite of me.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-7.html">north</a>, <a href="../-2/-8.html">east</a>,
+        <a href="-9.html">south</a>, <a href="../-4/-8.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autumn — Journey</title>
+<meta name="description" content="Autumn - the turning season, the slow gold goodbye between summer's heat and winter's cold, when the leaves catch fire and fall.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-8 : 4</p>
+  <h1 class="room-name">Autumn</h1>
+
+  <div class="prose">
+    <p>You are the turning season, the slow gold goodbye between summer's heat and winter's cold.
+    The leaves catch fire on the trees - red, amber, brown - then loose their hold and come
+    spinning down to crunch underfoot. The harvest is gathered, the apples stored, the swallows
+    gone south overnight. Mornings grow misty, evenings draw in early, the smell of woodsmoke
+    hangs on the cooling air. You are the year growing old gracefully, scattering its riches as it
+    goes, and teaching the world, gently, how to let things fall.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="5.html" data-answer="month" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Some thirty days make up my span,<br>
+      and twelve of me a year;<br>
+      from June to May, the calendar can<br>
+      name each one, never fear.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-7/4.html" data-answer="sunrise" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The east turns pink, the cock will crow,<br>
+      the dark begins to thin;<br>
+      the great gold sun comes up to show<br>
+      the new day's about to begin.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="3.html" data-answer="whisper" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A voice so soft, as light as breath,<br>
+      held close beside the ear;<br>
+      a secret hushed so none but you<br>
+      will ever come to hear.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-9/4.html" data-answer="moment" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A tiny scrap of passing time,<br>
+      the blink of half a thought;<br>
+      'just wait a -,' you hear them chime,<br>
+      so short it can't be caught.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="5.html">north</a>, <a href="../-7/4.html">east</a>,
+        <a href="3.html">south</a>, <a href="../-9/4.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

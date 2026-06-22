@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paw — Journey</title>
+<meta name="description" content="Paw - the soft padded foot of the four-legged ones, the cushioned step of cat and dog and bear, the gentle end of the animal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-6 : -6</p>
+  <h1 class="room-name">Paw</h1>
+
+  <div class="prose">
+    <p>You are the soft padded foot of the four-legged ones, the cushioned step of cat and dog and
+    bear. Beneath your fur lie tough little pads that feel the ground and grip it, and tucked
+    between them the claws that show only when needed. You pad silent across the floor, you knead
+    the blanket, you reach up to scratch at the closed door. A muddy print of you is left across
+    the clean kitchen tiles. Warm, clumsy and trusting when laid in a human hand, you are the
+    gentle end of the animal.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-5.html" data-answer="moth" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Grey of wing, by night I fly,<br>
+      and beat against the pane;<br>
+      the candle's deadly flame I try,<br>
+      and nibble wool again.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-5/-6.html" data-answer="claw" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A curved sharp hook upon the toe,<br>
+      of cat and hawk and crab;<br>
+      I grip, I scratch, I will not go,<br>
+      the sharpest thing I grab.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-7.html" data-answer="fur" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The soft warm coat of cat or bear,<br>
+      that keeps the cold outside;<br>
+      it covers them with downy hair,<br>
+      and you can stroke its hide.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-7/-6.html" data-answer="horn" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A hard curved spike upon the head,<br>
+      that bull and goat both grow;<br>
+      they lower me and charge ahead,<br>
+      and butt their stubborn foe.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-5.html">north</a>, <a href="../-5/-6.html">east</a>,
+        <a href="-7.html">south</a>, <a href="../-7/-6.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

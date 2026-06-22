@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noon — Journey</title>
+<meta name="description" content="Noon - the hinge of the day, the one moment the sun stands straight overhead and shadows hide beneath their owners' feet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-5 : 5</p>
+  <h1 class="room-name">Noon</h1>
+
+  <div class="prose">
+    <p>You are the hinge of the day, the one moment the sun stands straight overhead and the
+    shadows hide beneath their owners' feet. The morning has spent itself; the afternoon has not
+    begun. Bells ring you, stomachs know you, the whole town stops to eat. You cast the shortest
+    shadow of all the hours and burn the brightest, then tip the long slow slide toward evening.
+    You cannot be held or kept - you are only the top of the climbing sun.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="6.html" data-answer="morning" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Breakfast time, and off to school,<br>
+      the sun still climbing high;<br>
+      I am the half-day, fresh and cool,<br>
+      before the noon goes by.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-4/5.html" data-answer="steam" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">From the kettle's spout I rise,<br>
+      a hot white breath of cloud;<br>
+      I fog the glass, I cloud the skies,<br>
+      and whistle long and loud.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="4.html" data-answer="dark" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">When the sun is gone away,<br>
+      and every candle's out;<br>
+      I fill the room and end the day,<br>
+      and make the child cry out.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-6/5.html" data-answer="evening" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">The sun sinks low and red and round,<br>
+      the birds all seek the tree;<br>
+      the day grows still, the supper's found,<br>
+      this quiet time is me.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="6.html">north</a>, <a href="../-4/5.html">east</a>,
+        <a href="4.html">south</a>, <a href="../-6/5.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
