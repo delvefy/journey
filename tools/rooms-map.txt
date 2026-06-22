@@ -26,26 +26,34 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  1:-7  —  Ladder
+  9:1  —  Fact
 
 NEXT ROOM
-  The closest unwritten coordinate to (0,0) is 1:1 (NE, d=sqrt(2)=1.414), which the
-  seed has already named NAME (fixed by Echo's east riddle and Bell's north riddle).
-  After the four d=sqrt(2) diagonals (1:1 name, 1:-1 coin, -1:-1 root, -1:1 wind) comes
-  the d=2 ring (0:2 silence, 2:0 clock, 0:-2 bone, -2:0 sea), then outward by distance.
+  The blob is grown closest-first from 0:0; LAST ROOM above pins the frontier. The next
+  unwritten coordinate is 9:-1 (d=9.055, Approach). It ties at that distance with several
+  cells, taken clockwise from north in this order:
+    9:-1, 1:-9, -1:-9, -9:-1, -9:1, -1:9
+  then the d=9.220 ring (2:9, 6:7, 7:6, ...) and outward. This list goes stale fast — run
+  `hoard.py next` for the live order and `hoard.py plan` for the per-wall briefing before
+  writing anything.
 
-  RESET (2026-06-21): the grid was wiped back to the seed + the four corners. The whole
-  Approach blob from the old run was deleted because its outer rings had drifted above the
-  Approach ceiling — verse/music, trade, naturalist and archaic words a child would never
-  say unprompted (octave, sonnet, zephyr, bracken, silt, murk, ...). See write.txt section 4,
-  anti-drift rule iv. Re-grow the blob closest-first; keep every name a plain everyday word.
+  Keep every Approach name a plain everyday word a child would say unprompted. The blob
+  was once wiped and re-grown because its outer rings had drifted into verse/music, trade,
+  naturalist and archaic words (octave, sonnet, zephyr, bracken, silt, murk, ...). Don't
+  let it happen again — see write.txt section 4, anti-drift rule iv.
 
 NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
-  Ring d=sqrt(2) diagonals (each fixed by two seed rooms):
-    1:1 name · 1:-1 coin · -1:-1 root · -1:1 wind
-  Ring d=2 axis cells (each fixed by one seed room):
-    0:2 silence · 2:0 clock · 0:-2 bone · -2:0 sea
-  (Nothing further is committed yet — the rest of the world is unwritten again.)
+  Each is an unwritten cell whose name a written neighbour has already fixed (the
+  2D-crossword rule); when you reach it, it MUST take this name:
+    9:-2 desk · 2:-9 tin · -2:-9 rose · -9:-2 ice · -9:2 spark · -2:9 flash · 3:9 salute
+  The outward NAME-IT cells in the current ring are yours to name — `hoard.py plan` marks
+  which is which, and lists names already taken near each free cell.
+
+KNOWN ACCEPTED DUPLICATE (do not "fix")
+  'frog' sits at both -6:-3 and -2:-7 (5.66 apart, inside D_MIN). Both names were forced
+  by written neighbours, so neither room can be renamed; the second was rendered with
+  `--d-min`. `hoard.py reindex` flags it as CLOSE — that is expected, a runtime-safe forced
+  duplicate, not a bug. Renaming a crossword-locked room to clear it would break the grid.
 
 THE FOUR CORNERS  (planted AHEAD of the grid — see write.txt section 12)
   The world is bounded -150..+150 on both axes, so it has four true corners, the
