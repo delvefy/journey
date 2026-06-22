@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cave — Journey</title>
+<meta name="description" content="Cave - the dark held inside the hill, a mouth in the rock that breathes cool air and grows stone teeth drop by patient drop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-6 : -2</p>
+  <h1 class="room-name">Cave</h1>
+
+  <div class="prose">
+    <p>You are the dark held inside the hill - a mouth in the rock that breathes cool air and
+    never blinks. Step in past the daylight and the world goes quiet and close around you. Water
+    that took a thousand years to fall drips from your ceiling, and grows it back, drop by patient
+    drop, into teeth of stone. You keep what the weather cannot reach: old bones, old paintings, a
+    bat or two folded in the roof. You are a room the earth made without hands.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-1.html" data-answer="tree" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">I stand with roots dug in the ground,<br>
+      and lift my arms up high;<br>
+      in summer green, in autumn brown,<br>
+      my leaves come floating by.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-5/-2.html" data-answer="hill" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">I rise up green and gently round,<br>
+      not steep to climb with rope;<br>
+      you puff to reach my grassy crown,<br>
+      then roll back down my slope.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-3.html" data-answer="frog" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">I sit upon a lily pad,<br>
+      all green and cool and wet;<br>
+      I leap to snatch a passing fly,<br>
+      the best jumper you have met.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-7/-2.html" data-answer="pond" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A small still pool, no waves, no tide,<br>
+      where ducks and lilies love to ride;<br>
+      the frogs all sing around my rim,<br>
+      and dragonflies above me skim.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-1.html">north</a>, <a href="../-5/-2.html">east</a>,
+        <a href="-3.html">south</a>, <a href="../-7/-2.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

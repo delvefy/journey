@@ -182,6 +182,32 @@ The check rides on tools/names.json, a coord-keyed index render maintains
 incrementally (never a full-grid scan). `hoard.py reindex` rebuilds it; `hoard.py
 stats` shows how close each band is to exhausting its words. See rule 6e.
 
+THE BLIND SPOT — COMMITTED-BUT-UNWRITTEN NAMES. names.json holds only WRITTEN
+rooms, so the twin/clone/min-gap check (and the `plan` "avoid here" list) cannot
+see a name another written room has already COMMITTED to one of its unwritten
+neighbours (a cell `plan` shows as FIXED). So when you name a free ("NAME IT")
+cell, render silently allows a clash with such a commitment. The clash then
+detonates a ring or two later: whichever of the two same-named cells is written
+second is refused (twin, or "too close" within D_MIN), and by then the crossword
+has locked both names — a deadlock that forces a re-render of an older room. This
+has bitten every authoring session; expect it and defend against it both ways:
+  - PREFER A BRAND-NEW WORD. A name used NOWHERE in the region — neither a written
+    room nor a committed answer — cannot twin, clone, or sit too close to
+    anything, so its placement is automatically safe. Get the region's taken set
+    in one cheap local scan and pick a word outside it:
+        grep -rho 'data-answer="[^"]*"' rooms | sed 's/.*="//;s/"//' | sort -u
+    (that is the committed answers; union it with the written room names). Near
+    the origin, D_MIN=15 blankets the whole blob, so reuse there is forbidden
+    anyway — just choose a fresh word in the right quadrant and band register. (At
+    true scale, restrict the grep to a coordinate box of radius ~D_MIN around the
+    cell, to stay neighbour-local.)
+  - PRE-CHECK THE CELL. Before finalizing a NAME IT choice, run
+    `hoard.py plan <that-cell>` and confirm your word differs from every WRITTEN
+    and FIXED neighbour it lists. Glance at `next`/`plan` for the other unwritten
+    cells in the ring you are about to write: any that reads `name MUST be: <X>`
+    means X is taken within D_MIN. Fix a slip by re-rendering the offending room
+    with `render room.json --no-track` (the frontier stays put).
+
 
 6. THE 2D-CROSSWORD RULE  (the heart of the work)
 -------------------------------------------------

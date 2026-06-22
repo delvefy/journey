@@ -71,6 +71,14 @@ check rides on `tools/names.json`, a coord-keyed index `render`/`normalize`
 maintain incrementally (so it stays O(1) per room, never a grid scan); `reindex`
 rebuilds it.
 
+> **Blind spot — read before naming a free cell.** The index holds only *written*
+> rooms, so `render` can't catch a clash with a name another room has already
+> **committed** to an unwritten neighbour (a `FIXED` cell). Your `NAME IT` choice
+> then deadlocks a ring later. Defend by preferring a word that's **brand new to
+> the region** — list what's already taken with
+> `grep -rho 'data-answer="[^"]*"' rooms | sed 's/.*="//;s/"//' | sort -u` — and by
+> pre-checking the cell with `plan <cell>`. Full doctrine in `write.txt` §5.
+
 ## render JSON schema
 
 ONE room object (a one-element list is also accepted; a file with more than one
