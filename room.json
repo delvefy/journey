@@ -1,0 +1,10 @@
+{
+  "x": 7, "y": 15,
+  "name": "Sing",
+  "desc": "Sing - to make music with your own voice, words on a tune.",
+  "prose": "You are to sing - to make music with your own voice, words riding a tune out into the air. You sing in the bath, you sing round the campfire, you sing 'Happy Birthday' off-key and laughing. Birds sing at dawn; whole choirs sing as one. You cannot hold a song in your hand - it lives only while the breath lasts, then floats away. To sing is to turn pure feeling into sound and set it free.",
+  "N": { "a": "song", "lines": ["Words and a tune sung out together,", "'Happy Birthday' or a hymn;", "you sing it loud, you sing it sweet -", "a ___ from heart and limb."] },
+  "E": { "a": "fizz", "lines": ["The tickly bubbling hissing sound", "that lemonade will make;", "it pops upon your nose and tongue -", "a ___ with every shake."] },
+  "S": { "a": "hoot", "lines": ["The call an owl makes in the dark,", "soft and round and low;", "'twit-twoo' from the old oak tree -", "a ___ to say hello."] },
+  "W": { "a": "cry", "lines": ["The sound a baby makes at night", "when hungry, scared, or sad;", "tears roll down and out it comes -", "a ___, not always bad."] }
+}

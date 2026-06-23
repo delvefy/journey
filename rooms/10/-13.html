@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glasses — Journey</title>
+<meta name="description" content="Glasses - two round panes in a frame that make the world sharp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">10 : -13</p>
+  <h1 class="room-name">Glasses</h1>
+
+  <div class="prose">
+    <p>You are glasses - two round panes of glass in a little frame, hooked over the ears and
+    perched on the nose. For eyes that see the world all blurry, you make it sharp and clear
+    again: the letters on the page, the faces in the crowd, the clock across the room. Made by
+    careful hands to bend the light just right, you steam up over hot soup and slip down when you
+    sweat. Put me on, and the fuzzy world clicks into place.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-12.html" data-answer="watch" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A little clock strapped to your wrist,<br>
+      with a strap and a tiny face;<br>
+      glance down to check the time of day -<br>
+      it keeps the steady pace.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../11/-13.html" data-answer="clock" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">Two hands sweep round upon my face,<br>
+      I tick away the day;<br>
+      I hang upon the kitchen wall<br>
+      and tell the time away.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-14.html" data-answer="puzzle" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A hundred funny cardboard shapes<br>
+      that fit to make a scene;<br>
+      press the right ones edge to edge -<br>
+      the trickiest you've seen.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../9/-13.html" data-answer="wand" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A slim and slender magic stick,<br>
+      a star upon the end;<br>
+      wave me and say the magic words -<br>
+      a spell I'll gladly send.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-12.html">north</a>, <a href="../11/-13.html">east</a>,
+        <a href="-14.html">south</a>, <a href="../9/-13.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

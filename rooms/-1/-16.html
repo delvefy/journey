@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiwi — Journey</title>
+<meta name="description" content="Kiwi - the furry brown fruit, bright green and seeded within.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-1 : -16</p>
+  <h1 class="room-name">Kiwi</h1>
+
+  <div class="prose">
+    <p>You are a kiwi - a small brown fruit, furry as a mouse on the outside. Cut me and I am
+    bright green within, ringed with a hundred tiny coal-black seeds, soft and sweet and a little
+    sharp on the tongue. Grown in faraway sunny lands and shipped across the sea, you sit in the
+    bowl beside the apples, the odd one out, fuzzy and plain until the knife shows the jewel
+    inside.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-15.html" data-answer="mango" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A big sweet fruit from sunny lands,<br>
+      with golden juicy flesh;<br>
+      a great flat stone sits in my heart,<br>
+      all orange, soft, and fresh.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../0/-16.html" data-answer="rod" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">Straight and slim from tip to tip,<br>
+      of metal, cane, or wood;<br>
+      I hold the line above the stream<br>
+      where the patient fisher stood.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-17.html" data-answer="seed" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Small and hard, I hide in fruit,<br>
+      or sleep beneath the ground;<br>
+      give me water, sun, and time -<br>
+      a green shoot will be found.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-2/-16.html" data-answer="sprout" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">I am the first green tip<br>
+      that pushes from the seed;<br>
+      tiny, pale, and reaching up -<br>
+      a baby plant indeed.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-15.html">north</a>, <a href="../0/-16.html">east</a>,
+        <a href="-17.html">south</a>, <a href="../-2/-16.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

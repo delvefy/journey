@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moose — Journey</title>
+<meta name="description" content="Moose - the giant of the northern woods, with great flat antlers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-14 : -8</p>
+  <h1 class="room-name">Moose</h1>
+
+  <div class="prose">
+    <p>You are a moose - the giant of the northern woods, taller than a horse, with great flat
+    antlers spread wide as a door. You wade through cold lakes to crop the weed, your long nose
+    dripping, and crash through the pines as if they were grass. Shy and huge and a little
+    comical, you are all legs and shoulders and shovel-shaped horns, the largest deer that walks
+    the snowy world.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-7.html" data-answer="flamingo" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A tall pink bird on stilt-thin legs,<br>
+      I stand on one in the lake;<br>
+      I bend my neck right upside-down<br>
+      to sift the food I take.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-13/-8.html" data-answer="wolf" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A wild grey dog that hunts in packs,<br>
+      I howl at the silver moon;<br>
+      sharp of tooth and yellow of eye -<br>
+      I'll huff your house down soon.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-9.html" data-answer="mule" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Half a horse and half a donkey,<br>
+      I carry loads up the hill;<br>
+      I'm stubborn as can be, they say -<br>
+      I stop, and stand stock-still.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-15/-8.html" data-answer="koala" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A small grey furry bear-like thing,<br>
+      I live in a gum tree high;<br>
+      I cling to the branch and sleep all day,<br>
+      and munch the leaves nearby.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-7.html">north</a>, <a href="../-13/-8.html">east</a>,
+        <a href="-9.html">south</a>, <a href="../-15/-8.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
