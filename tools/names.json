@@ -158,7 +158,7 @@
   },
   "-11:11": {
    "name": "orange",
-   "sig": "grey|murmur|purple|stink"
+   "sig": "grey|purple|stink|whisper"
   },
   "-11:2": {
    "name": "blaze",
@@ -242,7 +242,7 @@
   },
   "-12:10": {
    "name": "cream",
-   "sig": "brown|grey|murmur|tan"
+   "sig": "brown|grey|tan|whisper"
   },
   "-12:2": {
    "name": "warmth",
@@ -406,7 +406,7 @@
   },
   "-14:6": {
    "name": "doubt",
-   "sig": "fret|guilt|muddle|nightmare"
+   "sig": "guilt|muddle|nightmare|worry"
   },
   "-14:7": {
    "name": "muddle",
@@ -422,19 +422,19 @@
   },
   "-15:-1": {
    "name": "fin",
-   "sig": "bay|coral|squid|whisker"
+   "sig": "bay|hand|squid|whisker"
   },
   "-15:-2": {
    "name": "squid",
-   "sig": "eel|fin|oyster|shrimp"
+   "sig": "eel|fin|nose|shrimp"
   },
   "-15:-3": {
    "name": "shrimp",
-   "sig": "clam|lobster|mussel|squid"
+   "sig": "clam|lobster|squid|toe"
   },
   "-15:-4": {
    "name": "clam",
-   "sig": "dragonfly|prawn|seahorse|shrimp"
+   "sig": "dragonfly|ear|seahorse|shrimp"
   },
   "-15:-5": {
    "name": "dragonfly",
@@ -450,7 +450,7 @@
   },
   "-15:2": {
    "name": "trickle",
-   "sig": "fizz|froth|gush|pulse"
+   "sig": "fizz|foam|gush|pulse"
   },
   "-15:3": {
    "name": "gush",
@@ -462,7 +462,7 @@
   },
   "-15:5": {
    "name": "greed",
-   "sig": "fret|guilt|temper|white"
+   "sig": "guilt|temper|white|worry"
   },
   "-1:-1": {
    "name": "root",
@@ -554,7 +554,7 @@
   },
   "-1:15": {
    "name": "whiff",
-   "sig": "40|flutter|glimmer|scent"
+   "sig": "40|flutter|glimmer|smell"
   },
   "-1:2": {
    "name": "cloud",
@@ -802,7 +802,7 @@
   },
   "-3:15": {
    "name": "silver",
-   "sig": "flutter|glisten|shimmer|violet"
+   "sig": "flutter|shimmer|shine|violet"
   },
   "-3:2": {
    "name": "snow",
@@ -862,7 +862,7 @@
   },
   "-4:-15": {
    "name": "pepper",
-   "sig": "leek|lettuce|pumpkin|tomato"
+   "sig": "knee|lettuce|pumpkin|tomato"
   },
   "-4:-2": {
    "name": "grass",
@@ -986,7 +986,7 @@
   },
   "-5:-15": {
    "name": "lettuce",
-   "sig": "onion|pepper|pinecone|radish"
+   "sig": "onion|pepper|pinecone|thumb"
   },
   "-5:-2": {
    "name": "hill",
@@ -1282,7 +1282,7 @@
   },
   "-7:14": {
    "name": "glitter",
-   "sig": "bubble|flurry|gale|glare"
+   "sig": "bubble|gale|glare|snow"
   },
   "-7:2": {
    "name": "light",
@@ -1626,7 +1626,7 @@
   },
   "0:16": {
    "name": "50",
-   "sig": "40|60|scent|tumble"
+   "sig": "40|60|smell|tumble"
   },
   "0:2": {
    "name": "silence",
@@ -1970,7 +1970,7 @@
   },
   "13:-9": {
    "name": "cuff",
-   "sig": "sash|sleeve|trophy|veil"
+   "sig": "hat|sleeve|trophy|veil"
   },
   "13:0": {
    "name": "ship",
@@ -2034,7 +2034,7 @@
   },
   "14:-6": {
    "name": "patch",
-   "sig": "bib|cot|stitch|thimble"
+   "sig": "bib|cot|cup|stitch"
   },
   "14:-7": {
    "name": "bib",
@@ -2098,7 +2098,7 @@
   },
   "15:-5": {
    "name": "cradle",
-   "sig": "cot|pram|thimble|toaster"
+   "sig": "cot|cup|pram|toaster"
   },
   "15:0": {
    "name": "digger",
@@ -2122,7 +2122,7 @@
   },
   "15:5": {
    "name": "lick",
-   "sig": "bite|chop|gnaw|sip"
+   "sig": "bite|chop|rub|sip"
   },
   "1:-1": {
    "name": "coin",
@@ -2586,7 +2586,7 @@
   },
   "4:15": {
    "name": "moo",
-   "sig": "baa|bark|bump|squeal"
+   "sig": "bark|bump|squeal|talk"
   },
   "4:2": {
    "name": "story",
@@ -2710,7 +2710,7 @@
   },
   "5:15": {
    "name": "squeal",
-   "sig": "chatter|cluck|moo|whimper"
+   "sig": "chatter|cry|moo|speak"
   },
   "5:2": {
    "name": "word",
@@ -2826,7 +2826,7 @@
   },
   "6:14": {
    "name": "grunt",
-   "sig": "chatter|hoot|huff|whimper"
+   "sig": "chatter|cry|hoot|huff"
   },
   "6:2": {
    "name": "letter",
@@ -2942,7 +2942,7 @@
   },
   "7:14": {
    "name": "hoot",
-   "sig": "caw|dash|grunt|quack"
+   "sig": "dash|grunt|quack|sing"
   },
   "7:2": {
    "name": "list",

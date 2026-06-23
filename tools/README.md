@@ -49,12 +49,27 @@ grid is bounded -150..+150.
   fixing a single already-written room).
 - `render room.json --d-min N` — relax (or tighten) the same-name minimum gap for
   this one render (default `D_MIN = 15`).
+- `render room.json --allow w1,w2` — bless brand-new plain words past the
+  word-difficulty gate for this render (also persists them to the lexicon).
 - `reindex` — rebuild `names.json` from every room on disk. This is the **one**
   sanctioned full-grid scan; run it once to bootstrap the index, or to repair it
   after manual edits/deletions. Prints a repair audit of any twins/clones/close
   pairs found.
 - `stats` — per-band vocabulary telemetry from the index (rooms, distinct names,
   max reuse, most-reused words). Early warning that a band is running low on words.
+- `words` — manage the Approach lexicon the word-gate enforces: `words` (count),
+  `words bootstrap` (rebuild from disk), `words add W...` (bless by hand),
+  `words audit` (full scan for answers/names that drifted outside the lexicon).
+
+### Word-difficulty gate (enforced)
+
+Anti-drift, mechanical now — not honour-only (full doctrine in `write.txt` §4 rule iv).
+At the **Approach** band, `render` **refuses** any answer or room-name that is not in
+`tools/approach-words.txt`, the finite lexicon of plain words a child says *unprompted*.
+A word new to the band must be blessed on purpose (`words add WORD`, or `render --allow
+WORD`) — that pause **is** the recall test. When a quadrant's easy nouns run out near a
+ring's rim, the fix is to **reuse** a plain word (body parts, common objects), never to
+reach for a hard fresh one. `words audit` finds existing drift.
 
 ### Duplicate-name policy (enforced)
 

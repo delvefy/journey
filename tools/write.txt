@@ -140,6 +140,19 @@ FOUR ANTI-DRIFT RULES (this is the "enforced" part):
          crossword forbids it, section 6a) — but never ADD to the drift: every new
          free cell you name must pass the test above. One inherited mistake does
          not license another.
+       - ENFORCED BY THE TOOL (not honour-only). At the Approach band, `hoard.py render`
+         REFUSES any answer OR room-name that is not in the band lexicon,
+         tools/approach-words.txt — the finite set of plain child-recall words. A word
+         brand-new to the band must be blessed on purpose first: `hoard.py words add WORD`,
+         or `render room.json --allow WORD`. That deliberate pause IS the recall test —
+         if you cannot in good conscience say an eight-year-old would use the word
+         unprompted, do not bless it; pick a plainer synonym (reuse is fine, see section 5).
+         `hoard.py words audit` flags any Approach word that has drifted outside the
+         lexicon; `hoard.py words bootstrap` rebuilds the lexicon from the rooms on disk.
+         (Why a lexicon and not a cleverness check: the failure is always the ANSWER WORD,
+         and the honest fix when a quadrant's easy nouns run out near a ring's rim is to
+         REUSE a plain word — body parts, common objects — never to reach for a hard fresh
+         one. The gate makes reaching impossible without a conscious, reviewable act.)
 
 Because rooms are written closest-first, you finish a whole ring before the next
 begins, so the wall between bands stays clean. Never let a far room drift easy

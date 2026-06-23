@@ -41,9 +41,18 @@ Coords are written "x:y" (e.g. -1:-5). The grid is bounded -150..+150.
 Duplicate names are allowed but policed (see write.txt section 5): render refuses a
 twin (same name as any of the 8 neighbours), a clone (same name + same 4 neighbours),
 or a same-name room closer than D_MIN. The check uses tools/names.json, a coord-keyed
-index render maintains incrementally. Extra commands:
+index render maintains incrementally.
+
+Word difficulty is ALSO enforced (write.txt section 4, rule iv): at the Approach band,
+render refuses any answer or name that is not in tools/approach-words.txt — the band's
+finite lexicon of plain words a child says UNPROMPTED. A brand-new word must be blessed
+on purpose (`words add WORD`, or `render --allow WORD`); that pause is the recall test.
+
+Extra commands:
   reindex  -> rebuild names.json from disk (the one full scan; run once to bootstrap)
   stats    -> per-band vocabulary usage (how close a band is to exhausting its words)
+  words    -> manage the Approach lexicon: `words` (count), `words bootstrap` (build from
+              disk), `words add W...` (bless), `words audit` (find drift outside the lexicon)
 """
 
 import os, re, sys, math, json, textwrap
@@ -55,6 +64,7 @@ MAP = os.path.join(HERE, "rooms-map.txt")              # tracker lives beside th
 NAMES = os.path.join(HERE, "names.json")               # duplicate-name index (incremental sidecar)
 SPAN = 150
 D_MIN = 15           # min Euclidean gap between two rooms sharing a name (small at first; raise as bands fill)
+APPROACH_WORDS = os.path.join(HERE, "approach-words.txt")   # band lexicon for the word-difficulty gate
 
 DELTA = {"top": (0, 1), "right": (1, 0), "bottom": (0, -1), "left": (-1, 0)}
 OPP = {"top": "bottom", "bottom": "top", "left": "right", "right": "left"}
@@ -287,6 +297,49 @@ def audit_index(idx):
                     out.append("CLOSE %r %d:%d ~ %d:%d (dist %.2f < %g)" % (name, c1[0], c1[1], c2[0], c2[1], dist, D_MIN))
     return out
 
+# ---------------------------------------------------------------- word-difficulty gate (write.txt §4 rule iv)
+# Anti-drift, ENFORCED like the duplicate-name policy: at the Approach band every answer (and the
+# room's own name) must be a plain word a child would say UNPROMPTED — i.e. already in the band's
+# finite lexicon, tools/approach-words.txt. A brand-new word is REFUSED until consciously blessed
+# (`words add WORD`, or `render --allow WORD`); that deliberate pause is the recall test itself.
+_APPROACH = None
+def is_number(a):
+    return str(a).strip().lstrip("-").isdigit()
+
+def load_approach_words():
+    """Set of approved Approach words (cached). Missing file -> None (gate disabled until bootstrapped)."""
+    global _APPROACH
+    if _APPROACH is not None:
+        return _APPROACH
+    try:
+        s = set()
+        for line in open(APPROACH_WORDS, encoding="utf-8"):
+            w = line.split("#", 1)[0].strip().lower()
+            if w:
+                s.add(w)
+        _APPROACH = s
+    except FileNotFoundError:
+        return None
+    return _APPROACH
+
+def append_approach_words(words):
+    """Persist newly-blessed words to the lexicon file (kept sorted, deduped)."""
+    global _APPROACH
+    add = {str(w).strip().lower() for w in words if str(w).strip()}
+    cur = load_approach_words()
+    base = set() if cur is None else set(cur)
+    merged = base | add
+    if merged == base:
+        return
+    header = ("# Approach-band lexicon — plain words a child would say UNPROMPTED (write.txt §4 rule iv).\n"
+              "# hoard.py render REFUSES an Approach answer/name not listed here. Add a word only after\n"
+              "# the recall test: would an eight-year-old say it without first being taught it?\n")
+    with open(APPROACH_WORDS, "w", encoding="utf-8") as f:
+        f.write(header)
+        for w in sorted(merged):
+            f.write(w + "\n")
+    _APPROACH = merged
+
 # ---------------------------------------------------------------- commands
 def parse_coords(args):
     out = []
@@ -518,8 +571,15 @@ def cmd_render(args):
     d_min = D_MIN
     if "--d-min" in args:                       # tune the same-name minimum gap for this render
         i = args.index("--d-min"); d_min = float(args[i + 1]); del args[i:i + 2]
+    allow_extra = set()
+    if "--allow" in args:                       # bless new plain words for the word-difficulty gate
+        i = args.index("--allow")
+        if i + 1 >= len(args):
+            sys.exit("--allow needs a comma-separated word list, e.g. --allow knee,toe")
+        allow_extra = {w.strip().lower() for w in args[i + 1].split(",") if w.strip()}
+        del args[i:i + 2]
     if not args:
-        sys.exit("usage: render room.json [--no-track] [--d-min N]   (one room at a time)")
+        sys.exit("usage: render room.json [--no-track] [--d-min N] [--allow w1,w2]   (one room at a time)")
     data = json.load(open(args[0], encoding="utf-8"))
     rooms = data if isinstance(data, list) else [data]
     if len(rooms) != 1:                         # the rule, enforced: never write in batches
@@ -543,6 +603,23 @@ def cmd_render(args):
         sys.exit("render aborted: duplicate-name policy (%d issue%s) — nothing written, tracker unchanged.\n"
                  "Rename this cell, or pass --d-min to relax the gap. See write.txt section 5."
                  % (len(hard), "" if len(hard) == 1 else "s"))
+    # Word-difficulty gate (write.txt §4 rule iv) — enforced like the duplicate gate above. At the
+    # Approach band, the room's name and all four answers must be plain words already in the lexicon.
+    lex = load_approach_words()
+    if lex is not None and band(math.hypot(x, y)) == "Approach":
+        if allow_extra:
+            append_approach_words(allow_extra)          # explicit blessing persists for the future
+        bless = load_approach_words() | allow_extra
+        toohard = sorted({w for w in (set(ans.values()) | {name}) if not is_number(w) and w not in bless})
+        if toohard:
+            for w in toohard:
+                print("!! not in Approach lexicon (too hard for the band?): %r" % w)
+            sys.exit("render aborted: word-difficulty gate (write.txt §4 rule iv) — nothing written.\n"
+                     "Every Approach answer/name must be a word an eight-year-old says UNPROMPTED.\n"
+                     "If a flagged word truly is that plain, bless it once:\n"
+                     "    python3 tools/hoard.py words add %s\n"
+                     "or re-render with  --allow %s .  Otherwise pick a plainer synonym."
+                     % (" ".join(toohard), ",".join(toohard)))
     d = os.path.join(ROOMS, str(x))
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "%d.html" % y), "w", encoding="utf-8").write(render_room(rm))
@@ -654,9 +731,90 @@ def cmd_stats(args):
         print("%-14s rooms=%-6d distinct=%-6d max-reuse=%-3d%s"
               % (b, total, len(names), max(names.values()), top))
 
+def _approach_words_on_disk():
+    """Full scan: every name + answer used by Approach-band rooms (the sanctioned word scan)."""
+    s = set()
+    for root, _dirs, files in os.walk(ROOMS):
+        for fn in files:
+            if not fn.endswith(".html"):
+                continue
+            try:
+                cx = int(os.path.basename(root)); cy = int(fn[:-5])
+            except ValueError:
+                continue
+            if band(math.hypot(cx, cy)) != "Approach":
+                continue
+            r = read_room((cx, cy))
+            if not r:
+                continue
+            if r[0] and not is_number(r[0]):
+                s.add(r[0])
+            for a in r[1].values():
+                a = a.strip().lower()
+                if a and not is_number(a):
+                    s.add(a)
+    return s
+
+def cmd_words(args):
+    """Manage the Approach word lexicon that the render gate enforces (write.txt §4 rule iv)."""
+    sub = args[0] if args else "stats"
+    if sub == "bootstrap":                      # REBUILD the lexicon from every Approach room on disk
+        global _APPROACH
+        s = _approach_words_on_disk()
+        header = ("# Approach-band lexicon — plain words a child would say UNPROMPTED (write.txt §4 rule iv).\n"
+                  "# hoard.py render REFUSES an Approach answer/name not listed here. Add a word only after\n"
+                  "# the recall test: would an eight-year-old say it without first being taught it?\n")
+        with open(APPROACH_WORDS, "w", encoding="utf-8") as f:   # overwrite, not merge
+            f.write(header)
+            for w in sorted(s):
+                f.write(w + "\n")
+        _APPROACH = set(s)
+        print("bootstrapped %d Approach words -> %s" % (len(s), os.path.relpath(APPROACH_WORDS, REPO)))
+        return
+    if sub == "add":                            # bless words by hand after the recall test
+        if len(args) < 2:
+            sys.exit("usage: words add WORD [WORD ...]")
+        append_approach_words(args[1:])
+        print("added to lexicon: %s" % ", ".join(w.strip().lower() for w in args[1:]))
+        return
+    if sub == "audit":                          # full scan: Approach answers/names outside the lexicon
+        lex = load_approach_words() or set()
+        bad = {}
+        for root, _dirs, files in os.walk(ROOMS):
+            for fn in files:
+                if not fn.endswith(".html"):
+                    continue
+                try:
+                    cx = int(os.path.basename(root)); cy = int(fn[:-5])
+                except ValueError:
+                    continue
+                if band(math.hypot(cx, cy)) != "Approach":
+                    continue
+                r = read_room((cx, cy))
+                if not r:
+                    continue
+                words = [(r[0], "name")] + [(a, d) for d, a in r[1].items()]
+                for w, _why in words:
+                    w = (w or "").strip().lower()
+                    if w and not is_number(w) and w not in lex:
+                        bad.setdefault(w, []).append("%d:%d" % (cx, cy))
+        if not bad:
+            print("clean: every Approach answer/name is in the lexicon.")
+            return
+        print("DRIFT — Approach words NOT in the lexicon (%d):" % len(bad))
+        for w in sorted(bad):
+            locs = sorted(set(bad[w]))
+            print("  %-12s %s%s" % (w, ", ".join(locs[:6]), " ..." if len(locs) > 6 else ""))
+        sys.exit(1)
+    lex = load_approach_words()                  # default: stats
+    if lex is None:
+        print("Approach lexicon: MISSING — run `hoard.py words bootstrap` to enable the gate.")
+    else:
+        print("Approach lexicon: %d words (%s)" % (len(lex), os.path.relpath(APPROACH_WORDS, REPO)))
+
 CMDS = {"next": cmd_next, "plan": cmd_plan, "render": cmd_render,
         "normalize": cmd_normalize, "verify": cmd_verify,
-        "reindex": cmd_reindex, "stats": cmd_stats}
+        "reindex": cmd_reindex, "stats": cmd_stats, "words": cmd_words}
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in CMDS:
