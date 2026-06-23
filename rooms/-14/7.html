@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muddle — Journey</title>
+<meta name="description" content="Muddle - the tangle where nothing is in its place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-14 : 7</p>
+  <h1 class="room-name">Muddle</h1>
+
+  <div class="prose">
+    <p>You are the tangle where nothing is in its place - the sock drawer upended, the sums all
+    jumbled, the sleepy head that cannot think straight. No hand makes you; carelessness and
+    confusion do. Bits everywhere, none of them matching. Sort me out slowly, one thing at a time,
+    and the muddle untangles into order again.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="8.html" data-answer="smudge" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A dirty grey smear on the page or your cheek,<br>
+      where the pencil or jam got rubbed;<br>
+      you wipe it and only make it worse -<br>
+      a mark that won't be scrubbed.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-13/7.html" data-answer="blur" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">When you spin fast or lose your specs,<br>
+      the world goes soft and smeared;<br>
+      the speeding car is just a streak,<br>
+      its sharp edges disappeared.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="6.html" data-answer="doubt" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The nagging 'maybe-not' inside,<br>
+      the feeling you're not sure;<br>
+      you half-believe and half do not -<br>
+      unsteady, insecure.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-15/7.html" data-answer="fuss" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A great big bother over a little thing,<br>
+      all flap and flutter and noise;<br>
+      you make a fuss, you whine and fret -<br>
+      over lost or broken toys.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="8.html">north</a>, <a href="../-13/7.html">east</a>,
+        <a href="6.html">south</a>, <a href="../-15/7.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

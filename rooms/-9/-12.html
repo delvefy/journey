@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crocodile — Journey</title>
+<meta name="description" content="Crocodile - the long armoured lurker of the river, all teeth and tail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-9 : -12</p>
+  <h1 class="room-name">Crocodile</h1>
+
+  <div class="prose">
+    <p>You are the long armoured lurker of the river, all teeth and tail, floating like a log
+    until the moment to strike. No hand made you; the ancient swamp did. You snap your great jaws
+    shut on what comes to drink. Smile, and the rows of teeth show. Old as the dinosaurs, patient
+    as stone - never trust a still crocodile.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-11.html" data-answer="turtle" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A slow sea-swimmer in a green shell,<br>
+      with leathery flippers wide;<br>
+      it hauls up the beach to lay its eggs -<br>
+      then back to the rolling tide.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-8/-12.html" data-answer="lion" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The great gold cat with shaggy mane,<br>
+      the roarer, king of all;<br>
+      it hunts the plains and naps in sun -<br>
+      the biggest, proudest call.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-13.html" data-answer="kangaroo" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A beast that bounds on great hind legs,<br>
+      with a pouch where its baby hides;<br>
+      it boxes, hops, and thumps its tail -<br>
+      in hot far lands it strides.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-10/-12.html" data-answer="walrus" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A big fat sea-beast, brown and slow,<br>
+      with two long tusks of white;<br>
+      it flops on ice and barks out loud -<br>
+      with whiskers, quite a sight.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-11.html">north</a>, <a href="../-8/-12.html">east</a>,
+        <a href="-13.html">south</a>, <a href="../-10/-12.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
