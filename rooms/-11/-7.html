@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swan — Journey</title>
+<meta name="description" content="Swan - a great white bird with a long curving neck, the gliding king of the lake.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-11 : -7</p>
+  <h1 class="room-name">Swan</h1>
+
+  <div class="prose">
+    <p>You are a great white bird with a long curving neck, gliding silent and serene across the
+    still lake. No hand makes you; you build your nest at the water's edge and lead your grey
+    cygnets in a line behind you. Calm as you look, you hiss and beat your great wings to guard
+    your young. Graceful, proud, and snow-white.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-6.html" data-answer="sparrow" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A small plain brown-and-grey little bird<br>
+      that chirps in every street;<br>
+      it hops for crumbs, it nests in eaves -<br>
+      the commonest you'll meet.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-10/-7.html" data-answer="robin" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A little bird with a red-orange breast<br>
+      that hops about the snow;<br>
+      it sings all winter, clear and bold -<br>
+      on Christmas cards you know.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-8.html" data-answer="otter" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A sleek brown swimmer of the river,<br>
+      with whiskers and webbed feet;<br>
+      it slides down muddy banks for fun<br>
+      and cracks a shell to eat.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-12/-7.html" data-answer="eagle" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A great fierce bird with hooked sharp beak<br>
+      that soars on the mountain wind;<br>
+      it spies a mouse from miles up high<br>
+      and dives - the king of its kind.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-6.html">north</a>, <a href="../-10/-7.html">east</a>,
+        <a href="-8.html">south</a>, <a href="../-12/-7.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
