@@ -26,14 +26,14 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  12:-6  —  Zip
+  7:12  —  Yelp
 
 NEXT ROOM
   The blob is grown closest-first from 0:0; LAST ROOM above pins the frontier. The next
-  unwritten coordinate is 9:-1 (d=9.055, Approach). It ties at that distance with several
+  unwritten coordinate is 12:7 (d=13.892, Approach). It ties at that distance with several
   cells, taken clockwise from north in this order:
-    9:-1, 1:-9, -1:-9, -9:-1, -9:1, -1:9
-  then the d=9.220 ring (2:9, 6:7, 7:6, ...) and outward. This list goes stale fast — run
+    12:7, 12:-7, 7:-12, -7:-12, -12:-7, -12:7, -7:12
+  then the d=13.928 ring (5:13, ...) and outward. This list goes stale fast — run
   `hoard.py next` for the live order and `hoard.py plan` for the per-wall briefing before
   writing anything.
 
@@ -44,8 +44,13 @@ NEXT ROOM
 
 NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
   Each is an unwritten cell whose name a written neighbour has already fixed (the
-  2D-crossword rule); when you reach it, it MUST take this name:
-    9:-2 desk · 2:-9 tin · -2:-9 rose · -9:-2 ice · -9:2 spark · -2:9 flash · 3:9 salute
+  2D-crossword rule); when you reach it, it MUST take this name. `hoard.py plan` is the
+  source of truth (this list goes stale) — but these are the commitments made by the rooms
+  written in the last session (d ~= 14.1-14.8, just outside the frontier):
+    6:-13 crown · -6:-13 stump · -13:-6 parrot · -13:6 nightmare · -6:13 blizzard
+    9:11 purr · 10:10 stomp · 11:9 tiptoe · 12:8 climb · 14:4 snip · 14:-4 fridge
+    12:-8 wig · 8:-12 robot · 4:-14 teddy · -4:-14 tomato · -8:-12 lion · -12:-8 beaver
+    -14:-4 seahorse · -14:4 yellow · -12:8 red · -8:12 ripple · -4:14 pink · 7:13 quack
   The outward NAME-IT cells in the current ring are yours to name — `hoard.py plan` marks
   which is which, and lists names already taken near each free cell.
 
