@@ -1,10 +1,10 @@
 {
-  "x": 7, "y": 15,
-  "name": "Sing",
-  "desc": "Sing - to make music with your own voice, words on a tune.",
-  "prose": "You are to sing - to make music with your own voice, words riding a tune out into the air. You sing in the bath, you sing round the campfire, you sing 'Happy Birthday' off-key and laughing. Birds sing at dawn; whole choirs sing as one. You cannot hold a song in your hand - it lives only while the breath lasts, then floats away. To sing is to turn pure feeling into sound and set it free.",
-  "N": { "a": "song", "lines": ["Words and a tune sung out together,", "'Happy Birthday' or a hymn;", "you sing it loud, you sing it sweet -", "a ___ from heart and limb."] },
-  "E": { "a": "fizz", "lines": ["The tickly bubbling hissing sound", "that lemonade will make;", "it pops upon your nose and tongue -", "a ___ with every shake."] },
-  "S": { "a": "hoot", "lines": ["The call an owl makes in the dark,", "soft and round and low;", "'twit-twoo' from the old oak tree -", "a ___ to say hello."] },
-  "W": { "a": "cry", "lines": ["The sound a baby makes at night", "when hungry, scared, or sad;", "tears roll down and out it comes -", "a ___, not always bad."] }
+  "x": 16, "y": -5,
+  "name": "Pram",
+  "desc": "Pram - the little bed on wheels that carries a baby out into the world.",
+  "prose": "You are a pram - the little bed on wheels that carries a baby out into the world. Four wheels, a deep cosy hood, a handle for a grown-up to push. The baby lies inside, tucked under blankets, watching the sky go by, lulled to sleep by the bumping of the path. You roll to the shops, round the park, along the street. A first carriage, a rolling cradle, a small one's first set of wheels.",
+  "N": { "a": "fan", "lines": ["On a hot still day you flap it", "to make a little breeze;", "or one that whirrs up on the wall -", "a ___ to cool and please."] },
+  "E": { "a": "knee", "lines": ["The bendy joint halfway down your leg,", "you scrape it when you fall;", "you kneel and bow upon it too -", "a ___, knock it on the wall."] },
+  "S": { "a": "thumb", "lines": ["The short fat finger, set apart,", "that helps you grip and hold;", "'Little Jack Horner' stuck in one -", "a ___, so I'm told."] },
+  "W": { "a": "cradle", "lines": ["The baby's bed that gently rocks,", "set low upon the floor;", "you sing it soft to sleep at night -", "a ___ by the door."] }
 }

@@ -416,6 +416,10 @@
    "name": "moose",
    "sig": "flamingo|koala|mule|wolf"
   },
+  "-14:-9": {
+   "name": "mule",
+   "sig": "camel|moose|shell|snow"
+  },
   "-14:0": {
    "name": "swamp",
    "sig": "bay|jungle|throb|whisker"
@@ -452,6 +456,10 @@
    "name": "smudge",
    "sig": "black|blank|muddle|slush"
   },
+  "-14:9": {
+   "name": "slush",
+   "sig": "dream|hum|lime|smudge"
+  },
   "-150:-150": {
    "name": "all",
    "sig": "loam|ore"
@@ -484,6 +492,10 @@
    "name": "woodpecker",
    "sig": "dragonfly|grasshopper|ostrich|pigeon"
   },
+  "-15:-7": {
+   "name": "ostrich",
+   "sig": "flamingo|kiwi|koala|woodpecker"
+  },
   "-15:0": {
    "name": "bay",
    "sig": "fin|pulse|shore|swamp"
@@ -511,6 +523,10 @@
   "-15:6": {
    "name": "worry",
    "sig": "doubt|fuss|greed|temper"
+  },
+  "-15:7": {
+   "name": "fuss",
+   "sig": "blank|muddle|wish|worry"
   },
   "-16:-1": {
    "name": "hand",
@@ -1348,6 +1364,10 @@
    "name": "monkey",
    "sig": "conker|hamster|rhino|sloth"
   },
+  "-7:-15": {
+   "name": "sloth",
+   "sig": "bark|monkey|pinecone|stone"
+  },
   "-7:-2": {
    "name": "pond",
    "sig": "bird|cave|fish|puddle"
@@ -1408,6 +1428,10 @@
    "name": "glitter",
    "sig": "bubble|gale|glare|snow"
   },
+  "-7:15": {
+   "name": "snow",
+   "sig": "glitter|silence|smile|tornado"
+  },
   "-7:2": {
    "name": "light",
    "sig": "ray|smoke|sound|taste"
@@ -1462,7 +1486,7 @@
   },
   "-8:-14": {
    "name": "rhino",
-   "sig": "meerkat|monkey|sloth|zebra"
+   "sig": "bark|meerkat|monkey|zebra"
   },
   "-8:-2": {
    "name": "puddle",
@@ -1576,6 +1600,10 @@
    "name": "kangaroo",
    "sig": "buffalo|crocodile|meerkat|zebra"
   },
+  "-9:-14": {
+   "name": "meerkat",
+   "sig": "bone|kangaroo|leaf|rhino"
+  },
   "-9:-2": {
    "name": "ice",
    "sig": "puddle|stream|tail|whale"
@@ -1631,6 +1659,10 @@
   "-9:13": {
    "name": "bronze",
    "sig": "blank|copper|gold|spray"
+  },
+  "-9:14": {
+   "name": "copper",
+   "sig": "blush|bronze|bubble|wail"
   },
   "-9:2": {
    "name": "spark",
@@ -2212,6 +2244,10 @@
    "name": "gown",
    "sig": "bib|earring|hat|veil"
   },
+  "14:-9": {
+   "name": "hat",
+   "sig": "cuff|gown|horn|rod"
+  },
   "14:0": {
    "name": "tractor",
    "sig": "bulb|digger|five|ship"
@@ -2246,7 +2282,11 @@
   },
   "14:8": {
    "name": "crouch",
-   "sig": "fold|lean|lift|reach"
+   "sig": "fold|lean|reach|yawn"
+  },
+  "14:9": {
+   "name": "fold",
+   "sig": "crouch|kneel|minute|trust"
   },
   "150:-150": {
    "name": "walls",
@@ -2278,7 +2318,11 @@
   },
   "15:-6": {
    "name": "cup",
-   "sig": "cradle|nappy|patch|pram"
+   "sig": "cradle|nappy|patch|thumb"
+  },
+  "15:-7": {
+   "name": "nappy",
+   "sig": "bib|cup|earring|frisbee"
   },
   "15:0": {
    "name": "digger",
@@ -2308,6 +2352,10 @@
    "name": "sip",
    "sig": "blow|lick|lift|pour"
   },
+  "15:7": {
+   "name": "lift",
+   "sig": "lean|sip|wave|yawn"
+  },
   "16:-1": {
    "name": "plug",
    "sig": "crane|nail|screw|switch"
@@ -2323,6 +2371,10 @@
   "16:-4": {
    "name": "fan",
    "sig": "coin|pram|toaster|whisk"
+  },
+  "16:-5": {
+   "name": "pram",
+   "sig": "cradle|fan|knee|thumb"
   },
   "16:0": {
    "name": "crane",
@@ -2343,6 +2395,10 @@
   "16:4": {
    "name": "slice",
    "sig": "12|chop|rip|rub"
+  },
+  "16:5": {
+   "name": "rub",
+   "sig": "lick|pour|roll|slice"
   },
   "1:-1": {
    "name": "coin",
@@ -2964,6 +3020,10 @@
    "name": "squeal",
    "sig": "chatter|cry|moo|speak"
   },
+  "5:16": {
+   "name": "speak",
+   "sig": "roar|squeal|talk|whisper"
+  },
   "5:2": {
    "name": "word",
    "sig": "letter|riddle|score|story"
@@ -3143,6 +3203,10 @@
   "7:-14": {
    "name": "card",
    "sig": "dice|guitar|throne|ticket"
+  },
+  "7:-15": {
+   "name": "dice",
+   "sig": "card|scroll|torch|whistle"
   },
   "7:-2": {
    "name": "table",
@@ -3376,6 +3440,10 @@
    "name": "wand",
    "sig": "cauldron|glasses|mask|trumpet"
   },
+  "9:-14": {
+   "name": "cauldron",
+   "sig": "bubble|guitar|puzzle|wand"
+  },
   "9:-2": {
    "name": "desk",
    "sig": "blanket|lock|shelf|window"
@@ -3431,6 +3499,10 @@
   "9:13": {
    "name": "ping",
    "sig": "dodge|drag|meow|tick"
+  },
+  "9:14": {
+   "name": "tick",
+   "sig": "dash|fuss|ping|ring"
   },
   "9:2": {
    "name": "sum",
