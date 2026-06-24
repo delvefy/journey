@@ -40,6 +40,7 @@ bee
 beep
 beetle
 bell
+belly
 belt
 bench
 bend
@@ -67,6 +68,7 @@ boot
 boredom
 bottle
 bounce
+bow
 bowl
 box
 bracelet
@@ -82,6 +84,7 @@ bubble
 bucket
 buckle
 buffalo
+bug
 bulb
 bull
 bump
@@ -123,6 +126,8 @@ chick
 chill
 chime
 chin
+chipmunk
+chirp
 chop
 chuckle
 clack
@@ -167,6 +172,7 @@ crash
 crayon
 creak
 cream
+cricket
 crocodile
 crouch
 crow
@@ -178,6 +184,7 @@ cucumber
 cuff
 cup
 cupboard
+curl
 curtain
 cushion
 cymbal
@@ -250,11 +257,13 @@ fizz
 flag
 flame
 flamingo
+flap
 flash
 flea
 flicker
 flip
 flower
+flute
 flutter
 fly
 foal
@@ -262,6 +271,7 @@ foam
 fog
 fold
 folder
+foot
 forest
 fork
 fox
@@ -284,6 +294,7 @@ glass
 glasses
 gleam
 glee
+glide
 glimmer
 glint
 glitter
@@ -415,6 +426,7 @@ lightning
 lily
 lime
 lion
+lip
 list
 lizard
 llama
@@ -431,6 +443,7 @@ mango
 marble
 march
 marker
+mash
 mask
 mat
 medal
@@ -472,6 +485,7 @@ name
 nap
 nappy
 navy
+neck
 necklace
 needle
 nest
@@ -485,6 +499,7 @@ nod
 noise
 noon
 nose
+note
 now
 nudge
 number
@@ -497,11 +512,13 @@ otter
 oven
 owl
 paint
+palm
 pan
 panda
 panic
 pant
 panther
+parcel
 parrot
 pat
 patch
@@ -521,6 +538,7 @@ pencil
 penguin
 pepper
 petal
+piano
 pig
 pigeon
 piglet
@@ -578,6 +596,7 @@ quiet
 quilt
 quiz
 rabbit
+raccoon
 race
 racket
 rain
@@ -593,6 +612,7 @@ reflection
 rest
 rhino
 rhyme
+rib
 ribbon
 riddle
 ring
@@ -644,6 +664,7 @@ seesaw
 seven
 shade
 shadow
+shake
 shame
 shark
 shawl
@@ -652,6 +673,7 @@ sheet
 shelf
 shell
 shimmer
+shin
 shine
 ship
 shirt
@@ -668,6 +690,7 @@ sight
 silence
 silver
 sing
+sink
 sip
 sizzle
 skateboard
@@ -683,6 +706,7 @@ sleet
 sleeve
 slice
 slide
+slip
 slipper
 slosh
 sloth
@@ -726,6 +750,7 @@ spout
 spray
 spring
 sprout
+squash
 squawk
 squeak
 squeal
@@ -738,6 +763,7 @@ stare
 starfish
 starlight
 steam
+stem
 stick
 sticker
 sting
@@ -752,6 +778,7 @@ story
 stream
 stretch
 string
+stroke
 stump
 sulk
 sum
@@ -765,6 +792,7 @@ swamp
 swan
 sweat
 swing
+swirl
 swish
 switch
 table
@@ -777,6 +805,7 @@ tan
 tap
 tape
 taste
+teapot
 tear
 teddy
 temper
@@ -789,6 +818,7 @@ thought
 thread
 three
 thrill
+throat
 throb
 throne
 throw
@@ -811,8 +841,10 @@ today
 toe
 tomato
 tomorrow
+tongue
 tonight
 toot
+tooth
 top
 torch
 tornado
@@ -822,6 +854,7 @@ tractor
 train
 tray
 tree
+triangle
 trick
 trickle
 trophy
@@ -834,6 +867,7 @@ tulip
 tumble
 tune
 turkey
+turn
 turtle
 tusk
 twig
@@ -849,6 +883,7 @@ veil
 vest
 vine
 violet
+violin
 voice
 wail
 wallet
@@ -899,3 +934,4 @@ yelp
 yesterday
 zebra
 zip
+zoom

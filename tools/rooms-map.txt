@@ -26,16 +26,24 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  -17:1  —  Spray
+  -10:-16  —  Bug
 
 NEXT ROOM
   The blob is grown closest-first from 0:0; LAST ROOM above pins the frontier. The next
-  unwritten coordinate is 12:7 (d=13.892, Approach). It ties at that distance with several
-  cells, taken clockwise from north in this order:
-    12:7, 12:-7, 7:-12, -7:-12, -12:-7, -12:7, -7:12
-  then the d=13.928 ring (5:13, ...) and outward. This list goes stale fast — run
-  `hoard.py next` for the live order and `hoard.py plan` for the per-wall briefing before
-  writing anything.
+  unwritten coordinate is -16:-10 (d=18.868, Approach), then the rest of the d~=18.9-19 ring
+  outward. This list goes stale fast — run `hoard.py next` for the live order and
+  `hoard.py plan` for the per-wall briefing before writing anything.
+
+  HELPER (added this session): tools/pick.py X Y word1 word2 ... vets candidate NAME-IT words
+  against names.json AND the lexicon at once — prints SAFE/BLOCKED (with nearest same-name
+  room/commit + distance) and (lex)/(NOT-IN-LEX). It catches commit-vs-commit clashes that
+  `plan`'s avoid-list (written-rooms only) misses, so render refuses far less often.
+
+  The outer Approach rings are saturated: each new NAME-IT cell usually has ONE in-lex word
+  free, often none. When none, bless a genuinely-plain child word with `render --allow WORD`
+  (this session blessed e.g. squash, mash, slip, glide, shake, flap, foot, neck, tooth, rib,
+  belly, throat, lip, palm, shin, raccoon, chipmunk, cricket, teapot, sink, piano, flute,
+  violin, triangle, chirp, zoom). Never reach for a hard word; reuse or bless plain ones.
 
   Keep every Approach name a plain everyday word a child would say unprompted. The blob
   was once wiped and re-grown because its outer rings had drifted into verse/music, trade,
@@ -45,8 +53,8 @@ NEXT ROOM
 NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
   Each is an unwritten cell whose name a written neighbour has already fixed (the
   2D-crossword rule); when you reach it, it MUST take this name. `hoard.py plan` is the
-  source of truth (this list goes stale) — but these are the commitments made by the rooms
-  written in the last session (d ~= 14.1-14.8, just outside the frontier):
+  source of truth (this list goes stale, and the cells below are now mostly WRITTEN — the
+  blob has since grown out to d~=18.9). Kept only as an example of the pattern:
     6:-13 crown · -6:-13 stump · -13:-6 parrot · -13:6 nightmare · -6:13 blizzard
     9:11 purr · 10:10 stomp · 11:9 tiptoe · 12:8 climb · 14:4 snip · 14:-4 fridge
     12:-8 wig · 8:-12 robot · 4:-14 teddy · -4:-14 tomato · -8:-12 lion · -12:-8 beaver

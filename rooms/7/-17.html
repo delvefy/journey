@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern — Journey</title>
+<meta name="description" content="Lantern - a light in a little glass-sided case you carry by a handle in the dark.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">7 : -17</p>
+  <h1 class="room-name">Lantern</h1>
+
+  <div class="prose">
+    <p>You are a lantern - a light kept safe inside a little case of glass, with a handle to swing
+    it by. A candle or a small flame glows within, throwing a warm pool of light on the path while
+    the wind cannot blow it out. You light the way to the shed, you hang from the camping tent,
+    you bob along a dark lane. Made and soldered by a hand, snug and bright, you are a portable
+    piece of warm light to carry into the dark.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-16.html" data-answer="torch" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A light you hold inside your hand<br>
+      to shine in the dark of night;<br>
+      click the switch, a beam shoots out -<br>
+      a ___, a handy light.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../8/-17.html" data-answer="bucket" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A round deep pail with a handle on top<br>
+      you fill with sand or sea;<br>
+      you build a castle on the beach -<br>
+      a ___, for you and me.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-18.html" data-answer="oven" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A big hot box inside the kitchen<br>
+      where cakes and bread are baked;<br>
+      you switch it on and shut the door -<br>
+      an ___, till the cake is made.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../6/-17.html" data-answer="mug" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A big fat cup for cocoa,<br>
+      with a handle you can hold;<br>
+      it keeps your hot drink warm inside -<br>
+      a ___ when days are cold.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-16.html">north</a>, <a href="../8/-17.html">east</a>,
+        <a href="-18.html">south</a>, <a href="../6/-17.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

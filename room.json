@@ -1,10 +1,10 @@
 {
-  "x": -17, "y": 1,
-  "name": "Spray",
-  "desc": "The fine mist of flying droplets thrown up where water breaks.",
-  "prose": "You are the spray - the fine mist of flying droplets thrown up where water breaks. The wave smashes the rock and you burst into the air; the hose, the wave, the waterfall all fling you out in a cloud of tiny drops. You catch the sun and make a little rainbow, then settle wet and cool on every face nearby. Too fine to call rain, too wet to call air, you are the sea flung up in pieces.",
-  "N": { "a": "splash", "lines": ["Jump in the puddle with both your feet", "and water flies up high!;", "a big wet noisy scatter of drops -", "a ___, and you're not dry."] },
-  "E": { "a": "slosh", "lines": ["The sound of water swaying round", "in a bucket as you walk;", "it spills a little over the side -", "a ___, a wet wet talk."] },
-  "S": { "a": "sea", "lines": ["The huge salt water, wide and deep,", "where the waves roll in to land;", "ships sail on it, whales swim in it -", "the ___, and soft wet sand."] },
-  "W": { "a": "plop", "lines": ["The sound a stone makes in a pond,", "or a raindrop in a cup;", "down it drops and - ___! - it's gone,", "the water swallows it up."] }
+  "x": -10, "y": -16,
+  "name": "Bug",
+  "desc": "Bug - any tiny crawly creature with little legs you find under stones and logs.",
+  "prose": "You are a bug - the catch-all name for any tiny crawly creature a child turns over a stone to find. You have little legs that scuttle, maybe wings, maybe a shiny back; you hide in the damp dark under the log and freeze when the light hits you. Beetle, woodlouse, earwig, all of you are bugs. Grown by no hand, small enough to sit on a fingertip, you are the whole busy hidden world that lives down low, beneath the notice of the big.",
+  "N": { "a": "worm", "lines": ["A long pink wiggly thing in the soil,", "with no legs and no eyes;", "it tunnels through the damp dark earth -", "a ___, the robin's prize."] },
+  "E": { "a": "tail", "lines": ["The waggy bit at the back of a dog,", "a swish on horse or cat;", "it wags with joy, it swats a fly -", "a ___ - imagine that!"] },
+  "S": { "a": "cricket", "lines": ["A little jumping chirping bug", "that sings on summer nights;", "it rubs its legs to make its song -", "a ___, hid from sights."] },
+  "W": { "a": "chipmunk", "lines": ["A tiny striped squirrel-ish thing", "with cheeks it stuffs with seeds;", "it scurries fast and stores its food -", "a ___ with greedy needs."] }
 }

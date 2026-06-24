@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fog — Journey</title>
+<meta name="description" content="Fog - thick low cloud that sits on the ground and hides the world from view.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-17 : 3</p>
+  <h1 class="room-name">Fog</h1>
+
+  <div class="prose">
+    <p>You are fog - the cloud come down to walk among us. You hang thick and grey and damp across
+    the road, and the world goes soft and lost: the lamp a smudge, the far hill gone, every sound
+    muffled and close. You wet the cobwebs and bead the hair. No hand can grip you, only walk into
+    you and feel you fold cold around. You drift, you thicken, you thin - and when the sun climbs
+    high you simply lift, and the world comes back.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="4.html" data-answer="wind" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">You cannot see me, but you feel<br>
+      me push against your face;<br>
+      I bend the trees and fly the kites -<br>
+      I blow from place to place.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-16/3.html" data-answer="spout" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The little tube a teapot has<br>
+      to pour the tea out neat;<br>
+      or a whale that shoots a jet up high -<br>
+      a ___, a watery feat.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="2.html" data-answer="splash" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Jump in the puddle with both feet,<br>
+      and water flies up high;<br>
+      a big wet scatter of noisy drops -<br>
+      a ___, and you're not dry.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-18/3.html" data-answer="mist" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A thin pale haze that hangs in air,<br>
+      like fog but soft and light;<br>
+      it veils the morning field in white -<br>
+      a ___, a gauzy sight.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="4.html">north</a>, <a href="../-16/3.html">east</a>,
+        <a href="2.html">south</a>, <a href="../-18/3.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

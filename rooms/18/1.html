@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tale — Journey</title>
+<meta name="description" content="Tale - a story told aloud, of long ago and heroes, knights, and faraway lands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">18 : 1</p>
+  <h1 class="room-name">Tale</h1>
+
+  <div class="prose">
+    <p>You are a tale - a story told, the older and grander the better. You begin 'long, long ago'
+    and carry the listener off to castles and dragons and dark deep woods, to clever youngest sons
+    and wishes that come true with a sting. You are passed from grandparent to child by the fire,
+    changing a little with every telling. No hand can hold you - you live only in the telling, a
+    whole bright world conjured out of nothing but words.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="2.html" data-answer="rhyme" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Cat and hat, and dog and log,<br>
+      words matched at the end;<br>
+      in songs and poems you hear them ring -<br>
+      a ___, a sound-alike friend.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../19/1.html" data-answer="news" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">What the telly tells at six o'clock,<br>
+      of all that's happened today;<br>
+      the paper prints it, grown-ups read -<br>
+      the ___, from far away.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="0.html" data-answer="axe" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A sharp heavy blade upon a handle<br>
+      you swing to chop a tree;<br>
+      crack! the log splits clean in two -<br>
+      an ___, swung mightily.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../17/1.html" data-answer="joke" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A funny tale you tell for fun<br>
+      that ends to make us roar;<br>
+      knock-knock, who's there? you start it off -<br>
+      a ___, then tell one more.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="2.html">north</a>, <a href="../19/1.html">east</a>,
+        <a href="0.html">south</a>, <a href="../17/1.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
