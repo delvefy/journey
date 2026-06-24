@@ -289,3 +289,134 @@
     });
   });
 })();
+
+/* -------------------------------------------------------------------------
+   3. PROGRESS — remember the wanderer's place
+   Every room load records the current room to localStorage; the cover reads
+   it back and offers to resume or start over, with a note of where they were.
+   Storage is best-effort: if it is unavailable (private mode, blocked, no JS)
+   the game plays exactly as before — nothing here gates the riddles.
+   ------------------------------------------------------------------------- */
+(function () {
+  "use strict";
+
+  var KEY = "journey.progress";
+  var VERSION = 1;
+
+  function store() {
+    try { return window.localStorage; } catch (e) { return null; }   // blocked / disabled
+  }
+  function load() {
+    var ls = store();
+    if (!ls) return null;
+    try {
+      var data = JSON.parse(ls.getItem(KEY) || "null");
+      if (data && data.v === VERSION && typeof data.x === "number" && typeof data.y === "number") {
+        return data;
+      }
+    } catch (e) {}
+    return null;
+  }
+  function save(data) {
+    var ls = store();
+    if (!ls) return;
+    try { ls.setItem(KEY, JSON.stringify(data)); } catch (e) {}      // quota / serialise
+  }
+  function clear() {
+    var ls = store();
+    if (!ls) return;
+    try { ls.removeItem(KEY); } catch (e) {}
+  }
+
+  // Same coordinate convention as the palette engine: rooms/<x>/<y>.html,
+  // falling back to the ".room-coord" text "X : Y". null on the cover.
+  function coordsFromPath() {
+    var segs = (location.pathname || "").split("/").filter(Boolean);
+    if (segs.length >= 2) {
+      var xs = segs[segs.length - 2];
+      var ys = segs[segs.length - 1].replace(/\.html?$/i, "");
+      if (/^-?\d+$/.test(xs) && /^-?\d+$/.test(ys)) return [parseInt(xs, 10), parseInt(ys, 10)];
+    }
+    var el = document.querySelector(".room-coord");
+    if (el) {
+      var m = /(-?\d+)\s*:\s*(-?\d+)/.exec(el.textContent || "");
+      if (m) return [parseInt(m[1], 10), parseInt(m[2], 10)];
+    }
+    return null;
+  }
+
+  var coords = coordsFromPath();
+
+  /* ---- IN A ROOM: record the visit ----
+     A real room always carries a .room-name; the cover and the undreamt
+     (404) page do not. Requiring it means a 404 served at a room URL can
+     never be saved as a phantom room. */
+  if (coords) {
+    var nameEl = document.querySelector(".room-name");
+    if (nameEl) {
+      var prev = load();
+      var visited = (prev && Array.isArray(prev.visited)) ? prev.visited : [];
+      var here = coords[0] + "," + coords[1];
+      if (visited.indexOf(here) === -1) visited.push(here);  // distinct rooms seen
+      save({
+        v: VERSION,
+        x: coords[0], y: coords[1],
+        name: (nameEl.textContent || "").trim(),
+        visited: visited,
+        ts: Date.now()
+      });
+    }
+    return;
+  }
+
+  /* ---- ON THE COVER: offer to resume ---- */
+  var cover = document.querySelector(".cover");
+  if (!cover) return;                  // some other page without coords — nothing to do
+  var progress = load();
+  if (!progress) return;               // first-time wanderer — leave the cover pristine
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;        // textContent: stored name is never markup
+    return n;
+  }
+
+  var count = Array.isArray(progress.visited) ? progress.visited.length : 0;
+
+  var panel = el("aside", "resume");
+  panel.setAttribute("role", "region");
+  panel.setAttribute("aria-label", "Your journey so far");
+
+  panel.appendChild(el("p", "resume-title", "You have wandered here before."));
+
+  var where = el("p", "resume-where");
+  where.appendChild(document.createTextNode("Last in "));
+  where.appendChild(el("strong", null, progress.name || ("the room at " + progress.x + " : " + progress.y)));
+  where.appendChild(el("span", "resume-coord", progress.x + " : " + progress.y));
+  panel.appendChild(where);
+
+  if (count > 0) {
+    panel.appendChild(el("p", "resume-count", count + (count === 1 ? " room discovered" : " rooms discovered")));
+  }
+
+  var actions = el("div", "resume-actions");
+  var go = el("a", "resume-go", "resume your journey");
+  go.setAttribute("href", "rooms/" + progress.x + "/" + progress.y + ".html");
+  var reset = el("button", "resume-reset", "start over");
+  reset.setAttribute("type", "button");
+  reset.addEventListener("click", function () {
+    clear();
+    panel.parentNode && panel.parentNode.removeChild(panel);
+    var first = cover.querySelector(".riddle-input");
+    if (first) first.focus();
+  });
+  actions.appendChild(go);
+  actions.appendChild(reset);
+  panel.appendChild(actions);
+
+  // Frame the choice: after the intro lines, just before the first riddle.
+  var anchor = cover.querySelector(".riddle-box");
+  if (anchor) cover.insertBefore(panel, anchor);
+  else cover.appendChild(panel);
+})();
