@@ -47,8 +47,8 @@ grid is bounded -150..+150.
   `&mdash;`).
 - `render room.json --no-track` — re-render without moving the frontier (for
   fixing a single already-written room).
-- `render room.json --d-min N` — relax (or tighten) the same-name minimum gap for
-  this one render (default `D_MIN = 15`).
+- `render room.json --d-min N` — may only **tighten** (raise) the same-name minimum gap
+  for this one render. `D_MIN = 15` is always respected; `--d-min` below it is clamped up.
 - `render room.json --allow w1,w2` — bless brand-new plain words past the
   word-difficulty gate for this render (also persists them to the lexicon).
 - `reindex` — rebuild `names.json` from every room on disk. This is the **one**
@@ -67,8 +67,10 @@ Anti-drift, mechanical now — not honour-only (full doctrine in `write.txt` §4
 At the **Approach** band, `render` **refuses** any answer or room-name that is not in
 `tools/approach-words.txt`, the finite lexicon of plain words a child says *unprompted*.
 A word new to the band must be blessed on purpose (`words add WORD`, or `render --allow
-WORD`) — that pause **is** the recall test. When a quadrant's easy nouns run out near a
-ring's rim, the fix is to **reuse** a plain word (body parts, common objects), never to
+WORD`) — that pause **is** the recall test. The lexicon is a difficulty gate, **not** a
+cap on supply: when a quadrant's easy nouns feel used up, **bless another genuinely-plain
+word** (more body parts, foods, plants, plain actions) — an unused word also clears
+`D_MIN` for free. Only reuse an existing word where it can still sit ≥ `D_MIN` away. Never
 reach for a hard fresh one. `words audit` finds existing drift.
 
 ### Duplicate-name policy (enforced)
@@ -79,20 +81,22 @@ and `verify` **flags**, three things (full doctrine in `write.txt` §5/§6e):
 
 - **twin** — same name as any of the 8 neighbours (a giveaway / half-clone);
 - **clone** — same name **and** the same four neighbour-names, anywhere;
-- **too close** — same name within `D_MIN` (Euclidean).
+- **too close** — same name within `D_MIN` (Euclidean), **always** enforced.
 
 A duplicate sharing 3 of 4 neighbours (near-clone) is allowed but warned. The
 check rides on `tools/names.json`, a coord-keyed index `render`/`normalize`
 maintain incrementally (so it stays O(1) per room, never a grid scan); `reindex`
 rebuilds it.
 
-> **Blind spot — read before naming a free cell.** The index holds only *written*
-> rooms, so `render` can't catch a clash with a name another room has already
-> **committed** to an unwritten neighbour (a `FIXED` cell). Your `NAME IT` choice
-> then deadlocks a ring later. Defend by preferring a word that's **brand new to
-> the region** — list what's already taken with
-> `grep -rho 'data-answer="[^"]*"' rooms | sed 's/.*="//;s/"//' | sort -u` — and by
-> pre-checking the cell with `plan <cell>`. Full doctrine in `write.txt` §5.
+> **Blind spot — now closed by the tool.** `names.json` also carries a `commits` map
+> (every name a written room assigns to an unwritten neighbour), and `render` runs
+> `commit_violations`: every name *this* room is the first/free to choose for a neighbour
+> is checked against the twin/min-gap policy **at that neighbour cell**, and refused
+> before it is written. A name a neighbour already **fixed** is crossword-forced and
+> skipped (no deadlock). When a quadrant feels used up, the fix is to **bless a fresh
+> plain word** (`words add WORD`) — an unused word clears `D_MIN` automatically — not to
+> reuse a near neighbour. `reindex` reports any inherited latent commit-vs-written close
+> pairs. Full doctrine in `write.txt` §5.
 
 ## render JSON schema
 

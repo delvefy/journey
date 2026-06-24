@@ -405,18 +405,30 @@
   go.setAttribute("href", "rooms/" + progress.x + "/" + progress.y + ".html");
   var reset = el("button", "resume-reset", "start over");
   reset.setAttribute("type", "button");
-  reset.addEventListener("click", function () {
-    clear();
-    panel.parentNode && panel.parentNode.removeChild(panel);
-    var first = cover.querySelector(".riddle-input");
-    if (first) first.focus();
-  });
   actions.appendChild(go);
   actions.appendChild(reset);
   panel.appendChild(actions);
 
-  // Frame the choice: after the intro lines, just before the first riddle.
-  var anchor = cover.querySelector(".riddle-box");
-  if (anchor) cover.insertBefore(panel, anchor);
+  // While a journey is saved, the cover offers only resume/start-over. The
+  // fresh-start entrance (the first riddle and the "step inside" link) stays
+  // hidden until the wanderer chooses to start over. (JS-only: with no JS we
+  // never get here, so the entrance simply shows as normal.)
+  var entrance = [];
+  var riddle = cover.querySelector(".riddle-box");
+  if (riddle) entrance.push(riddle);
+  var stepLink = cover.querySelector(".cover-line a");
+  if (stepLink) entrance.push(stepLink.closest ? stepLink.closest(".cover-line") : stepLink.parentNode);
+  entrance.forEach(function (n) { if (n) n.style.display = "none"; });
+
+  reset.addEventListener("click", function () {
+    clear();
+    if (panel.parentNode) panel.parentNode.removeChild(panel);
+    entrance.forEach(function (n) { if (n) n.style.display = ""; });  // reveal the fresh start
+    var first = cover.querySelector(".riddle-input");
+    if (first) first.focus();
+  });
+
+  // Frame the choice: after the intro lines, just before the (now hidden) riddle.
+  if (riddle) cover.insertBefore(panel, riddle);
   else cover.appendChild(panel);
 })();

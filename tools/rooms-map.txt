@@ -26,7 +26,7 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  16:-5  —  Pram
+  -17:1  —  Spray
 
 NEXT ROOM
   The blob is grown closest-first from 0:0; LAST ROOM above pins the frontier. The next
@@ -54,11 +54,23 @@ NAMES COMMITTED BY WRITTEN NEIGHBOURS (write these when their cell comes up)
   The outward NAME-IT cells in the current ring are yours to name — `hoard.py plan` marks
   which is which, and lists names already taken near each free cell.
 
-KNOWN ACCEPTED DUPLICATE (do not "fix")
-  'frog' sits at both -6:-3 and -2:-7 (5.66 apart, inside D_MIN). Both names were forced
-  by written neighbours, so neither room can be renamed; the second was rendered with
-  `--d-min`. `hoard.py reindex` flags it as CLOSE — that is expected, a runtime-safe forced
-  duplicate, not a bug. Renaming a crossword-locked room to clear it would break the grid.
+MIN-GAP POLICY (D_MIN = 15, ALWAYS respected — changed)
+  render NEVER writes a sub-D_MIN duplicate, and `--d-min` may only TIGHTEN the gap, never
+  relax it below 15. The blind spot is CLOSED: names.json carries a `commits` map and
+  render's `commit_violations` refuses a free NAME-IT/commit that would sit within D_MIN of
+  a same-name written-or-committed cell. A crossword-FORCED name is skipped by that gate
+  (no free choice) but still checked as the room's own name — so when you reach an inherited
+  cell whose forced name lands within D_MIN of a twin, render REFUSES it; fix by re-rendering
+  the upstream committer with a FRESHER answer (bless a plain word: `words add WORD`).
+  When a quadrant feels "used up", BLESS a fresh plain word rather than reuse a near one —
+  an unused word clears D_MIN for free. The lexicon is a difficulty gate, not a supply cap.
+
+KNOWN ACCEPTED DUPLICATES (inherited, do not "fix")
+  Several same-name pairs predate the always-respected policy and remain (their names are
+  crossword-locked, so clearing them would break the grid): 'frog' -6:-3 ~ -2:-7 (5.66),
+  plus 'worry','whisper','snow','cry','hat','shine','cup' (4.1-13.9 apart). `reindex` lists
+  them as CLOSE — expected, runtime-safe, not bugs. (The 2.24 'gorilla'/'drag' close-dups
+  and the dist-1.0 'temper'/'grasshopper' twins WERE fixed -> elbow, fib, hush, ankle.)
 
 THE FOUR CORNERS  (planted AHEAD of the grid — see write.txt section 12)
   The world is bounded -150..+150 on both axes, so it has four true corners, the

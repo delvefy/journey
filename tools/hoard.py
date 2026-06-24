@@ -204,6 +204,7 @@ def load_index():
     except Exception as e:
         sys.stderr.write("warning: names.json unreadable (%s); run `hoard.py reindex`.\n" % e)
         _NAME_INDEX = {"version": 1, "rooms": {}}
+    _NAME_INDEX.setdefault("commits", {})       # blind-spot guard: names committed to UNWRITTEN cells
     return _NAME_INDEX
 
 def save_index(idx):
@@ -225,7 +226,36 @@ def name_view(idx):
 def index_put(idx, c, name, sig):
     global _NAME_VIEW
     idx["rooms"][coord_key(c)] = {"name": name.strip().lower(), "sig": sig}
+    idx.setdefault("commits", {}).pop(coord_key(c), None)   # c is now a real room, not a pending commit
     _NAME_VIEW = None
+
+def update_commits(idx, c, ans):
+    """Record the names room c COMMITS to its still-UNWRITTEN neighbours (so two pending commits, or a
+    commit and a later free choice, can be checked against each other — closing the blind spot, §5)."""
+    commits = idx.setdefault("commits", {})
+    for dr, (dx, dy) in DELTA.items():
+        if dr not in ans:
+            continue
+        nc = (c[0] + dx, c[1] + dy)
+        if read_room(nc):                       # a real room already — not a commitment
+            commits.pop(coord_key(nc), None)
+            continue
+        commits[coord_key(nc)] = {"name": str(ans[dr]).strip().lower(), "by": coord_key(c)}
+
+def commits_within(idx, c, radius, exclude=()):
+    """[(name, coord)] committed strictly within `radius` of c (excludes c and any `exclude` coords)."""
+    x, y = c; r = int(math.ceil(radius)); commits = idx.get("commits", {}); out = []
+    for dx in range(-r, r + 1):
+        for dy in range(-r, r + 1):
+            if dx == 0 and dy == 0:
+                continue
+            oc = (x + dx, y + dy)
+            if oc in exclude:
+                continue
+            e = commits.get("%d:%d" % oc)
+            if e and math.hypot(dx, dy) < radius:
+                out.append((e["name"], oc))
+    return out
 
 def names_within(idx, c, radius):
     """Set of names sitting strictly within `radius` of c (excludes c). Box scan, O(radius^2)."""
@@ -276,7 +306,68 @@ def policy_violations(c, name, sig, idx, d_min):
             hard.append("too close: %r also at %d:%d (dist %.2f < D_min %g)" % (lname, oc[0], oc[1], dist, d_min))
         if _overlap(mine, rsig.split("|")) >= 3:
             warn.append("near-clone of %d:%d (3+ of 4 neighbours shared)" % (oc[0], oc[1]))
+    # Tier 3 (commits): the room's own name must also clear D_MIN of any COMMITTED same-name cell
+    # (a name promised to an unwritten neighbour). Excludes c itself — when c's name is forced, the
+    # neighbours committed `lname` to c, which is this very room, not a separate cell.
+    for cname, oc in commits_within(idx, c, d_min, exclude=(c,)):
+        if cname != lname or oc in twin:
+            continue
+        dist = math.hypot(oc[0] - x, oc[1] - y)
+        kind = "twin (committed)" if dist < 2 else "too close"
+        hard.append("%s: %r also committed at %d:%d (dist %.2f < D_min %g)" % (kind, lname, oc[0], oc[1], dist, d_min))
     return hard, warn
+
+def _name_at(oc, c, lname):
+    """Name at cell oc, treating the room being rendered (c, named lname) as already placed."""
+    if oc == c:
+        return lname
+    r = read_room(oc)
+    return r[0] if r else None
+
+def commit_violations(c, name, ans, idx, d_min):
+    """Closes the blind spot (write.txt §5). render checks a room's OWN name (policy_violations), but
+    historically NOT the names it COMMITS to its unwritten neighbours via its riddle answers — so a
+    colliding commit slipped through and detonated a too-close/twin duplicate a ring later, when the
+    crossword had locked both names. Here we validate every name this room is the FIRST/free to choose
+    for a neighbour. A neighbour already FIXED by another written room is forced by the crossword (no
+    free choice) and is skipped; only genuinely free 'NAME IT' commits are gated. Each index hit is
+    confirmed against the real file, so a stale index never false-rejects."""
+    x, y = c; hard = []; lname = name.strip().lower()
+    for dr, (dx, dy) in DELTA.items():
+        if dr not in ans:
+            continue
+        nc = (x + dx, y + dy); A = ans[dr]
+        if read_room(nc):                          # neighbour already written — crossword/check_room owns it
+            continue
+        forced, _src, _conf = committed_name(nc, ignore=c)
+        if forced:                                 # already fixed by another written room — not a free choice
+            continue
+        # nc is a free cell this room is naming A. Would naming nc=A break the duplicate policy AT nc?
+        for ox in (-1, 0, 1):                      # Tier 1: twin among nc's 8 surrounders (incl. c itself)
+            for oy in (-1, 0, 1):
+                if ox == 0 and oy == 0:
+                    continue
+                oc = (nc[0] + ox, nc[1] + oy)
+                if _name_at(oc, c, lname) == A:
+                    kind = "orthogonal" if ox == 0 or oy == 0 else "diagonal"
+                    hard.append("commit twin: would name free %d:%d %r, but %s neighbour %d:%d is already %r"
+                                % (nc[0], nc[1], A, kind, oc[0], oc[1], A))
+        for k in name_view(idx).get(A, []):        # Tier 3: min-gap vs WRITTEN same-name rooms
+            oc = parse_coord_key(k)
+            if oc == nc:
+                continue
+            rr = read_room(oc)
+            if not rr or rr[0] != A:
+                continue                           # stale index entry — ignore
+            dist = math.hypot(oc[0] - nc[0], oc[1] - nc[1])
+            if 2 <= dist < d_min:
+                hard.append("commit too close: would name free %d:%d %r, but written %r at %d:%d (dist %.2f < D_min %g)"
+                            % (nc[0], nc[1], A, A, oc[0], oc[1], dist, d_min))
+        for cname, oc in commits_within(idx, nc, d_min, exclude=(nc, c)):   # Tier 3: vs OTHER pending commits
+            if cname == A and math.hypot(oc[0] - nc[0], oc[1] - nc[1]) >= 2:
+                hard.append("commit too close: would name free %d:%d %r, but %r already committed at %d:%d"
+                            % (nc[0], nc[1], A, A, oc[0], oc[1]))
+    return hard
 
 def audit_index(idx):
     """List existing twin/clone/close-pair violations across the whole index (used by reindex)."""
@@ -569,8 +660,9 @@ def cmd_render(args):
     track = "--no-track" not in args            # re-render one room without moving the frontier
     args = [a for a in args if a != "--no-track"]
     d_min = D_MIN
-    if "--d-min" in args:                       # tune the same-name minimum gap for this render
-        i = args.index("--d-min"); d_min = float(args[i + 1]); del args[i:i + 2]
+    if "--d-min" in args:                       # may only TIGHTEN the gap; D_MIN is always respected
+        i = args.index("--d-min"); req = float(args[i + 1]); del args[i:i + 2]
+        d_min = max(D_MIN, req)                  # clamp: --d-min can raise the gap, never relax below D_MIN
     allow_extra = set()
     if "--allow" in args:                       # bless new plain words for the word-difficulty gate
         i = args.index("--allow")
@@ -579,7 +671,7 @@ def cmd_render(args):
         allow_extra = {w.strip().lower() for w in args[i + 1].split(",") if w.strip()}
         del args[i:i + 2]
     if not args:
-        sys.exit("usage: render room.json [--no-track] [--d-min N] [--allow w1,w2]   (one room at a time)")
+        sys.exit("usage: render room.json [--no-track] [--d-min N>=%g] [--allow w1,w2]   (one room at a time)" % D_MIN)
     data = json.load(open(args[0], encoding="utf-8"))
     rooms = data if isinstance(data, list) else [data]
     if len(rooms) != 1:                         # the rule, enforced: never write in batches
@@ -594,15 +686,22 @@ def cmd_render(args):
     ans = {NESW[k]: str(rm[k]["a"]).strip().lower() for k in ("N", "E", "S", "W") if k in rm}
     sig = room_signature(ans)
     idx = load_index()
-    hard, warn = policy_violations((x, y), name, sig, idx, d_min)
+    existing = read_room((x, y))
+    if existing and existing[0] == name:        # re-render, name UNCHANGED — its placement is already settled
+        hard, warn = [], []                      # (don't re-litigate an on-disk name; an inherited latent dup
+    else:                                        #  is caught when the OTHER cell is written, not on a riddle edit)
+        hard, warn = policy_violations((x, y), name, sig, idx, d_min)
+    hard += commit_violations((x, y), name, ans, idx, d_min)   # commits may have changed — always re-checked
     for w in warn:
         print("WARN:", w)
     if hard:
         for h in hard:
             print("!!", h)
         sys.exit("render aborted: duplicate-name policy (%d issue%s) — nothing written, tracker unchanged.\n"
-                 "Rename this cell, or pass --d-min to relax the gap. See write.txt section 5."
-                 % (len(hard), "" if len(hard) == 1 else "s"))
+                 "D_MIN=%g is ALWAYS respected (no relaxing). The fix is a FRESHER name, not a bypass:\n"
+                 "pick a plain word used nowhere nearby (bless it with `words add WORD` if new to the band),\n"
+                 "or, for a COMMIT issue, give that free wall a different answer. See write.txt section 5."
+                 % (len(hard), "" if len(hard) == 1 else "s", D_MIN))
     # Word-difficulty gate (write.txt §4 rule iv) — enforced like the duplicate gate above. At the
     # Approach band, the room's name and all four answers must be plain words already in the lexicon.
     lex = load_approach_words()
@@ -624,7 +723,9 @@ def cmd_render(args):
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "%d.html" % y), "w", encoding="utf-8").write(render_room(rm))
     _CACHE.pop((x, y), None)
-    index_put(idx, (x, y), name, sig); save_index(idx)
+    index_put(idx, (x, y), name, sig)
+    update_commits(idx, (x, y), ans)            # record this room's commitments to its unwritten neighbours
+    save_index(idx)
     n = advance_tracker(x, y, rm["name"]) if track else 1
     errs = check_room((x, y))
     flag = "  !! " + "; ".join(errs) if errs else ""
@@ -662,6 +763,7 @@ def cmd_normalize(args):
         r = read_room(c)                        # keep the name index consistent (no policy gate here)
         if r:
             index_put(idx, c, r[0], room_signature(r[1]))
+            update_commits(idx, c, r[1])
         errs = check_room(c)
         print("normalized %d:%d  %s%s" % (c[0], c[1], rm["name"], "  !! " + "; ".join(errs) if errs else ""))
     save_index(idx)
@@ -684,10 +786,28 @@ def cmd_verify(args):
     print("checked %d rooms; %d errors" % (len(coords), len(errs)))
     sys.exit(1 if errs else 0)
 
+def audit_commits(idx):
+    """Latent blind-spot pairs the OLD render could not see: a pending commit (a name a written room has
+    assigned to an unwritten neighbour) sitting too close to a same-name WRITTEN room. Diagnostic only —
+    render now prevents NEW ones; an existing pair here will be forced when that cell is finally written."""
+    rooms = idx["rooms"]; commits = idx.get("commits", {})
+    rview = {}
+    for k, e in rooms.items():
+        rview.setdefault(e["name"], []).append(parse_coord_key(k))
+    out = []
+    for ck, ce in commits.items():
+        cc = parse_coord_key(ck); nm = ce["name"]
+        for rc in rview.get(nm, []):
+            d = math.hypot(rc[0] - cc[0], rc[1] - cc[1])
+            if 0 < d < D_MIN:
+                out.append((d, "%-12s commit %d:%d ~ written %d:%d (dist %.2f)" % (repr(nm), cc[0], cc[1], rc[0], rc[1], d)))
+    out.sort(key=lambda t: t[0])
+    return [s for _d, s in out]
+
 def cmd_reindex(args):
     """Rebuild names.json from every room on disk — the ONE sanctioned full scan (bootstrap/repair)."""
     global _NAME_INDEX, _NAME_VIEW
-    idx = {"version": 1, "rooms": {}}
+    idx = {"version": 1, "rooms": {}, "commits": {}}
     count = 0
     for root, _dirs, files in os.walk(ROOMS):
         for fn in files:
@@ -702,10 +822,20 @@ def cmd_reindex(args):
                 continue
             idx["rooms"][coord_key((cx, cy))] = {"name": r[0], "sig": room_signature(r[1])}
             count += 1
+    for k in list(idx["rooms"]):                # pass 2: rebuild the commitments map from every room's answers
+        c = parse_coord_key(k); r = read_room(c)
+        for dr, (dx, dy) in DELTA.items():
+            nc = (c[0] + dx, c[1] + dy)
+            if coord_key(nc) in idx["rooms"]:
+                continue                        # a real room, not a commitment
+            a = r[1].get(dr)
+            if a:
+                idx["commits"][coord_key(nc)] = {"name": str(a).strip().lower(), "by": k}
     save_index(idx)
     _NAME_INDEX, _NAME_VIEW = idx, None
     distinct = len({e["name"] for e in idx["rooms"].values()})
-    print("reindexed %d rooms; %d distinct names -> %s" % (count, distinct, os.path.relpath(NAMES, REPO)))
+    print("reindexed %d rooms; %d distinct names; %d commitments -> %s"
+          % (count, distinct, len(idx["commits"]), os.path.relpath(NAMES, REPO)))
     issues = audit_index(idx)
     if issues:
         print("policy issues found (%d):" % len(issues))
@@ -713,6 +843,11 @@ def cmd_reindex(args):
             print("  " + s)
     else:
         print("no twin / clone / too-close violations.")
+    latent = audit_commits(idx)                 # blind-spot early warning (commit sits too close to a same-name room)
+    if latent:
+        print("latent commit-vs-written close pairs (%d; render now blocks NEW ones, worst shown):" % len(latent))
+        for s in latent[:8]:
+            print("  " + s)
 
 def cmd_stats(args):
     """Per-band vocabulary telemetry from the index: how saturated each band's word-supply is."""

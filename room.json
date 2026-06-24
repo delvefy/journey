@@ -1,10 +1,10 @@
 {
-  "x": 16, "y": -5,
-  "name": "Pram",
-  "desc": "Pram - the little bed on wheels that carries a baby out into the world.",
-  "prose": "You are a pram - the little bed on wheels that carries a baby out into the world. Four wheels, a deep cosy hood, a handle for a grown-up to push. The baby lies inside, tucked under blankets, watching the sky go by, lulled to sleep by the bumping of the path. You roll to the shops, round the park, along the street. A first carriage, a rolling cradle, a small one's first set of wheels.",
-  "N": { "a": "fan", "lines": ["On a hot still day you flap it", "to make a little breeze;", "or one that whirrs up on the wall -", "a ___ to cool and please."] },
-  "E": { "a": "knee", "lines": ["The bendy joint halfway down your leg,", "you scrape it when you fall;", "you kneel and bow upon it too -", "a ___, knock it on the wall."] },
-  "S": { "a": "thumb", "lines": ["The short fat finger, set apart,", "that helps you grip and hold;", "'Little Jack Horner' stuck in one -", "a ___, so I'm told."] },
-  "W": { "a": "cradle", "lines": ["The baby's bed that gently rocks,", "set low upon the floor;", "you sing it soft to sleep at night -", "a ___ by the door."] }
+  "x": -17, "y": 1,
+  "name": "Spray",
+  "desc": "The fine mist of flying droplets thrown up where water breaks.",
+  "prose": "You are the spray - the fine mist of flying droplets thrown up where water breaks. The wave smashes the rock and you burst into the air; the hose, the wave, the waterfall all fling you out in a cloud of tiny drops. You catch the sun and make a little rainbow, then settle wet and cool on every face nearby. Too fine to call rain, too wet to call air, you are the sea flung up in pieces.",
+  "N": { "a": "splash", "lines": ["Jump in the puddle with both your feet", "and water flies up high!;", "a big wet noisy scatter of drops -", "a ___, and you're not dry."] },
+  "E": { "a": "slosh", "lines": ["The sound of water swaying round", "in a bucket as you walk;", "it spills a little over the side -", "a ___, a wet wet talk."] },
+  "S": { "a": "sea", "lines": ["The huge salt water, wide and deep,", "where the waves roll in to land;", "ships sail on it, whales swim in it -", "the ___, and soft wet sand."] },
+  "W": { "a": "plop", "lines": ["The sound a stone makes in a pond,", "or a raindrop in a cup;", "down it drops and - ___! - it's gone,", "the water swallows it up."] }
 }

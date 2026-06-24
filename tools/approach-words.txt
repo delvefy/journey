@@ -6,9 +6,12 @@ acorn
 afternoon
 air
 alarm
+anchor
 anger
+ankle
 answer
 ant
+antler
 apple
 apron
 ash
@@ -102,6 +105,7 @@ card
 carpet
 carrot
 cart
+cartwheel
 cat
 catch
 caterpillar
@@ -111,12 +115,14 @@ chain
 chair
 chalk
 chatter
+cheek
 cheer
 cherry
 chew
 chick
 chill
 chime
+chin
 chop
 chuckle
 clack
@@ -174,6 +180,7 @@ cup
 cupboard
 curtain
 cushion
+cymbal
 daffodil
 daisy
 dance
@@ -209,6 +216,7 @@ drawer
 dread
 dream
 dress
+drill
 drip
 drizzle
 drum
@@ -221,6 +229,7 @@ earring
 echo
 eel
 egg
+elbow
 envelope
 envy
 evening
@@ -231,9 +240,11 @@ fear
 feather
 fence
 fern
+fib
 fin
 fire
 fish
+fist
 five
 fizz
 flag
@@ -282,6 +293,7 @@ glow
 glue
 goat
 gold
+gong
 goose
 gorilla
 gown
@@ -315,6 +327,7 @@ hat
 haze
 heat
 hedgehog
+heel
 helmet
 hen
 hiccup
@@ -340,13 +353,16 @@ hum
 hundred
 hunger
 hush
+hyena
 ice
 idea
 ink
 island
 itch
 jacket
+jaguar
 jar
+jaw
 jellyfish
 jigsaw
 jingle
@@ -371,6 +387,7 @@ knife
 knob
 knock
 knot
+knuckle
 koala
 label
 lace
@@ -400,8 +417,10 @@ lime
 lion
 list
 lizard
+llama
 lobster
 lock
+locket
 log
 love
 luck
@@ -482,6 +501,7 @@ pan
 panda
 panic
 pant
+panther
 parrot
 pat
 patch
@@ -500,6 +520,7 @@ pen
 pencil
 penguin
 pepper
+petal
 pig
 pigeon
 piglet
@@ -516,6 +537,7 @@ plane
 planet
 plank
 plate
+plop
 plug
 plum
 pocket
@@ -649,8 +671,10 @@ sing
 sip
 sizzle
 skateboard
+skid
 skip
 skirt
+skunk
 sky
 slap
 sledge
@@ -687,6 +711,7 @@ song
 sound
 space
 spade
+spanner
 spark
 sparkle
 sparrow
@@ -701,6 +726,7 @@ spout
 spray
 spring
 sprout
+squawk
 squeak
 squeal
 squeeze
@@ -745,6 +771,7 @@ table
 tadpole
 tag
 tail
+tale
 talk
 tan
 tap
@@ -813,6 +840,7 @@ twig
 twilight
 twinkle
 twirl
+twist
 umbrella
 valley
 van
@@ -845,6 +873,7 @@ whistle
 white
 whoosh
 wig
+wiggle
 wind
 window
 wing
@@ -852,6 +881,7 @@ wink
 winter
 wire
 wish
+wobble
 wolf
 wonder
 woodpecker
@@ -860,6 +890,7 @@ word
 worm
 worry
 wriggle
+wrist
 yawn
 year
 yell
