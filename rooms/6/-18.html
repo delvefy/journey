@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pot — Journey</title>
+<meta name="description" content="A deep round metal vessel that sits over the fire and turns water and bones into soup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">6 : -18</p>
+  <h1 class="room-name">Pot</h1>
+
+  <div class="prose">
+    <p>You are a pot - a deep round vessel of metal, made to sit over a flame and hold what cooks.
+    A hand hammered or cast you; a hand fills you with water and beans and bones, and a long slow
+    afternoon turns it all to soup. You can be held, scrubbed, dented, hung on a hook. Of all the
+    things in the kitchen you are the patient one, bubbling away while the cook does something
+    else, asking only to be stirred.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-17.html" data-answer="mug" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A fat round cup with a sturdy handle,<br>
+      you fill it with cocoa or tea;<br>
+      warm in your hands on a cold grey day -<br>
+      a ___, just for me.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../7/-18.html" data-answer="oven" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A hot box in the kitchen wall<br>
+      where cakes and bread are baked;<br>
+      you shut the door and set it warm -<br>
+      an ___, till the dinner's made.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-19.html" data-answer="pan" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A flat round dish with a long handle,<br>
+      you fry your eggs in it;<br>
+      it sizzles hot upon the stove -<br>
+      a ___, where the bacon's spit.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../5/-18.html" data-answer="toaster" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">Pop in two slices of soft white bread,<br>
+      it heats them brown and crisp;<br>
+      up they jump when they are done -<br>
+      a ___ with a click and hiss.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-17.html">north</a>, <a href="../7/-18.html">east</a>,
+        <a href="-19.html">south</a>, <a href="../5/-18.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

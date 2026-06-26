@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creak — Journey</title>
+<meta name="description" content="The slow eerie sound old wood makes when it bends - a stair at night, a rusty hinge, an old ship's timbers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">4 : 20</p>
+  <h1 class="room-name">Creak</h1>
+
+  <div class="prose">
+    <p>You are a creak - the slow eerie sound old wood makes when it bends: a stair underfoot at
+    night, a rusty hinge, a tall tree in the wind, the timbers of an old ship. No hand quite means
+    to make you; weight and age and stiffness do. You cannot be touched, only heard - and in a
+    quiet dark house, one creak can stand the hair up on your neck. You are the long-drawn
+    complaint of anything old that is asked to move.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="21.html" data-answer="crunch" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">The sound of biting an apple or crisp,<br>
+      or boots on the frosty snow;<br>
+      crisp and loud between your teeth -<br>
+      a ___, crackle and go.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../5/20.html" data-answer="list" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">Things written down one by one,<br>
+      what to buy, what to do;<br>
+      you tick them off as they are done -<br>
+      a ___, for me and you.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="19.html" data-answer="hiss" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The long thin sound a snake lets out,<br>
+      or steam from a kettle's spout;<br>
+      a cat will do it, cross and scared -<br>
+      a ___, watch out, watch out.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../3/20.html" data-answer="beep" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">The sharp little sound a machine makes,<br>
+      the microwave when it's done;<br>
+      a car horn, an alarm, a phone -<br>
+      a ___, then comes another one.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="21.html">north</a>, <a href="../5/20.html">east</a>,
+        <a href="19.html">south</a>, <a href="../3/20.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

@@ -1,10 +1,10 @@
 {
-  "x": -10, "y": -16,
-  "name": "Bug",
-  "desc": "Bug - any tiny crawly creature with little legs you find under stones and logs.",
-  "prose": "You are a bug - the catch-all name for any tiny crawly creature a child turns over a stone to find. You have little legs that scuttle, maybe wings, maybe a shiny back; you hide in the damp dark under the log and freeze when the light hits you. Beetle, woodlouse, earwig, all of you are bugs. Grown by no hand, small enough to sit on a fingertip, you are the whole busy hidden world that lives down low, beneath the notice of the big.",
-  "N": { "a": "worm", "lines": ["A long pink wiggly thing in the soil,", "with no legs and no eyes;", "it tunnels through the damp dark earth -", "a ___, the robin's prize."] },
-  "E": { "a": "tail", "lines": ["The waggy bit at the back of a dog,", "a swish on horse or cat;", "it wags with joy, it swats a fly -", "a ___ - imagine that!"] },
-  "S": { "a": "cricket", "lines": ["A little jumping chirping bug", "that sings on summer nights;", "it rubs its legs to make its song -", "a ___, hid from sights."] },
-  "W": { "a": "chipmunk", "lines": ["A tiny striped squirrel-ish thing", "with cheeks it stuffs with seeds;", "it scurries fast and stores its food -", "a ___ with greedy needs."] }
+  "x": -10, "y": -19,
+  "name": "Toad",
+  "desc": "The warty brown hopper that squats in the damp garden, fatter and drier than a frog.",
+  "prose": "You are a toad - the warty brown squatter of the damp garden, fatter and drier and slower than your cousin the frog. You hide all day under a cool stone and come out at dusk to snap up slugs and beetles with a flick of your tongue. Your skin is bumpy and your eyes are gold, and a fairy tale swears a kiss will turn you to a prince. You do not leap so much as lumber. You are the gardener's quiet friend, ugly and useful, lurking in the cool dark with a stomach full of pests.",
+  "N": { "a": "firefly", "lines": ["A little bug that glows in the dark,", "a lantern in its tail;", "it blinks across the summer lawn -", "a ___, a tiny trail."] },
+  "E": { "a": "feather", "lines": ["A soft light thing that grows on a bird,", "it drifts down on the air;", "you tickle a nose or stuff a pillow -", "a ___, beyond compare."] },
+  "S": { "a": "newt", "lines": ["A little lizard that swims in the pond,", "with a wavy crest on its back;", "it wriggles through the weedy dark -", "a ___, both slim and black."] },
+  "W": { "a": "owl", "lines": ["A round-eyed bird that hunts at night,", "it hoots from a hollow tree;", "it swoops on mice with silent wings -", "an ___, as wise as can be."] }
 }

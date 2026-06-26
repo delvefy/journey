@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dandelion — Journey</title>
+<meta name="description" content="The bright yellow weed that turns to a ball of white fluff - you blow the seeds away and make a wish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-2 : -21</p>
+  <h1 class="room-name">Dandelion</h1>
+
+  <div class="prose">
+    <p>You are a dandelion - the cheerful yellow flower that springs up in every lawn, no matter
+    how often it is pulled. When your bloom is done you turn to a soft round ball of white fluff,
+    and a child blows you apart to scatter your seeds and make a wish on the wind. You are
+    natural, grown wild and free, a weed that nobody plants and everybody knows. You are the
+    bright sunny face of summer grass, and then the floating wish that follows.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-20.html" data-answer="weed" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A wild plant nobody wanted there,<br>
+      it springs up in the bed;<br>
+      you pull it out to save the flowers -<br>
+      a ___, best left for dead.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-1/-21.html" data-answer="cactus" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A fat green plant all stuck with spikes,<br>
+      it grows where rain is rare;<br>
+      it stores up water in the desert sun -<br>
+      a ___, so prickly there.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-22.html" data-answer="mushroom" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A little umbrella sprung up overnight,<br>
+      with a stalk and a round soft cap;<br>
+      it grows in the damp dark wood -<br>
+      a ___, after a rainy tap.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-3/-21.html" data-answer="clover" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A small green leaf with three round parts,<br>
+      it carpets the field so deep;<br>
+      find one with four for luck, they say -<br>
+      a ___, in the grass they keep.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-20.html">north</a>, <a href="../-1/-21.html">east</a>,
+        <a href="-22.html">south</a>, <a href="../-3/-21.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map — Journey</title>
+<meta name="description" content="A drawing of the land, all shrunk down small - roads, rivers, towns, and an X where the treasure hides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">21 : 1</p>
+  <h1 class="room-name">Map</h1>
+
+  <div class="prose">
+    <p>You are a map - the land drawn small and flat on a sheet so a traveller can find the way.
+    Roads thread across you, rivers wiggle blue, towns sit as little dots, and a pirate inks an X
+    where the gold is buried. You fold up into a pocket, then open wide to hold a whole country.
+    You cannot be touched in the real, only read. You are the world shrunk down to paper, the
+    picture that turns a lost wanderer into someone who knows just where to go.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="2.html" data-answer="yell" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A great loud shout at the top of your voice,<br>
+      to call across the field;<br>
+      you do it when you're cross or scared -<br>
+      a ___, that won't be stilled.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../22/1.html" data-answer="sign" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A board beside the road that tells<br>
+      to stop, or slow, or turn;<br>
+      a picture of a deer means watch -<br>
+      a ___ for all to learn.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="0.html" data-answer="shovel" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A wide flat blade on a long stout pole,<br>
+      you dig and scoop with this;<br>
+      it heaves the snow up off the path -<br>
+      a ___, no heap you'll miss.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../20/1.html" data-answer="plan" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">You think it out before you start,<br>
+      step one and two and three;<br>
+      a clever scheme to reach a goal -<br>
+      a ___, as neat as can be.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="2.html">north</a>, <a href="../22/1.html">east</a>,
+        <a href="0.html">south</a>, <a href="../20/1.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

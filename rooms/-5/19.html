@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blaze — Journey</title>
+<meta name="description" content="A great roaring fire - all leaping flames and heat, eating the logs and lighting the night orange.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-5 : 19</p>
+  <h1 class="room-name">Blaze</h1>
+
+  <div class="prose">
+    <p>You are a blaze - a great roaring fire, all leaping flames and heat and light, eating up
+    the logs and lighting the whole night orange. No hand need make you, though a match will; once
+    started, you grow and grow, climbing higher with a crackle and a roar. You cannot be touched,
+    only watched from back and warmed by. A bonfire, a forest fire, a hearth heaped high - you are
+    fire at its biggest and most alive, hungry and bright and dangerous all at once.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="20.html" data-answer="smoke" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Grey curling clouds that rise from fire<br>
+      and sting and make you cough;<br>
+      where there's a flame there's sure to be -<br>
+      a ___, drifting off.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-4/19.html" data-answer="trickle" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A tiny thin stream of water<br>
+      that dribbles down so slow;<br>
+      the last drops from the leaky tap -<br>
+      a ___, drip by drop they go.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="18.html" data-answer="flame" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The hot bright dancing tongue of fire<br>
+      that flickers on a candle top;<br>
+      it gives off light, it burns your hand -<br>
+      a ___ that will not stop.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-6/19.html" data-answer="rainbow" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">After the rain the sun comes out<br>
+      and paints a great curved bow;<br>
+      red and orange, green and blue -<br>
+      a ___ starts to show.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="20.html">north</a>, <a href="../-4/19.html">east</a>,
+        <a href="18.html">south</a>, <a href="../-6/19.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

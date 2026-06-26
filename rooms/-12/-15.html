@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mole — Journey</title>
+<meta name="description" content="A small velvet-furred animal that digs its whole life in the dark, deep under the lawn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-12 : -15</p>
+  <h1 class="room-name">Mole</h1>
+
+  <div class="prose">
+    <p>You are a mole - a small velvet-furred animal that lives its whole life in the dark, deep
+    under the lawn. No hand made you; the earth did, and gave you great spade-like paws to dig and
+    dig, throwing up little hills of soil that the gardener hates. You are felt only rarely, for
+    you almost never come up. Half-blind, you find your way by smell and touch through a hidden
+    maze of tunnels. You are the quiet digger beneath everything, the secret of the dark soil.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-14.html" data-answer="palm" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">The flat soft inside of your hand,<br>
+      where the coins and crumbs all sit;<br>
+      a fortune-teller reads its lines -<br>
+      a ___, smooth as it.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-11/-15.html" data-answer="raccoon" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A furry grey thief with a black mask face<br>
+      and a ringed and bushy tail;<br>
+      it raids the bins for scraps at night -<br>
+      a ___ on the trail.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-16.html" data-answer="porcupine" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A round brown animal covered in spikes<br>
+      that rattle when it walks;<br>
+      don't poke it or you'll get a prick -<br>
+      a ___ that never talks.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-13/-15.html" data-answer="finger" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">One of five upon your hand,<br>
+      it points and pokes and grips;<br>
+      you wear a ring on one of them -<br>
+      a ___, with bendy tips.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-14.html">north</a>, <a href="../-11/-15.html">east</a>,
+        <a href="-16.html">south</a>, <a href="../-13/-15.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

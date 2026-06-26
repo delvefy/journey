@@ -26,11 +26,11 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  -10:-16  —  Bug
+  -10:-19  —  Toad
 
 NEXT ROOM
   The blob is grown closest-first from 0:0; LAST ROOM above pins the frontier. The next
-  unwritten coordinate is -16:-10 (d=18.868, Approach), then the rest of the d~=18.9-19 ring
+  unwritten coordinate is 15:14 (d=20.518, Approach), then the rest of the d~=20.5-21 ring
   outward. This list goes stale fast — run `hoard.py next` for the live order and
   `hoard.py plan` for the per-wall briefing before writing anything.
 
@@ -44,6 +44,19 @@ NEXT ROOM
   (this session blessed e.g. squash, mash, slip, glide, shake, flap, foot, neck, tooth, rib,
   belly, throat, lip, palm, shin, raccoon, chipmunk, cricket, teapot, sink, piano, flute,
   violin, triangle, chirp, zoom). Never reach for a hard word; reuse or bless plain ones.
+
+  LATER SESSION (rooms out to d~=20.5, frontier 14:15): the d~=18.9-20.5 rings clustered into
+  themes per ring-arc, which made naming easy — instruments (harp/tuba/cello/banjo/harmonica/
+  accordion/recorder/xylophone/tambourine), body parts (finger/eye/chest/spine/hip/skin/heart/
+  brain/arm/jaw/mouth/beard/hair/wrist), motions (dive/dip/bob/float/drift/soar/swoop/leap/
+  spring/whirl/sweep/trip/fall/skip), sounds (squeak/squeal/groan/grunt/cough/sob/coo/cluck-no,
+  squawk/roar/cheep), kitchen/household (pan/whisk/saucer/tray/sink/bath/shower/towel/sponge/
+  lamp/candle/fridge/fan), trees/fruit (oak/pine/willow/wood/apple/pear/banana/clover/cactus/
+  dandelion/nut), metals (gold/silver/copper/bronze/tin/diamond), small mammals (mole/weasel/
+  porcupine/armadillo/platypus), time/number (year/day/moment/today/tomorrow/100), word-concepts
+  (name/letter/rule/list/clue/story/rhyme/plan/map/quiz/test/dare/game/prank/treat/secret).
+  All blessed via --allow as plain child-recall words. Number ladder up the N axis now at 100
+  (0:21). Never reach for a hard word; reuse or bless plain ones.
 
   Keep every Approach name a plain everyday word a child would say unprompted. The blob
   was once wiped and re-grown because its outer rings had drifted into verse/music, trade,

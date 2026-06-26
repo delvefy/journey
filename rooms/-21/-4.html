@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banana — Journey</title>
+<meta name="description" content="The long yellow fruit with a peel you strip - sweet and soft, a monkey's favourite.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-21 : -4</p>
+  <h1 class="room-name">Banana</h1>
+
+  <div class="prose">
+    <p>You are a banana - the long curved fruit in its bright yellow jacket, sweet and soft
+    inside. You strip down in three quick pulls and there is the pale fruit, ready to eat without
+    a knife or a wash. The monkey loves you best, and the clumsy clown slips on your tossed-off
+    skin. You grow in great hands of green and ripen to gold, then to brown spots that mean the
+    very sweetest. You are the easiest fruit of all, no stone, no pips, just peel and bite.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-3.html" data-answer="pear" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A sweet green fruit, fat at the base,<br>
+      and narrow up at the top;<br>
+      it ripens soft and the juice runs down -<br>
+      a ___, ripe as a drop.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-20/-4.html" data-answer="apple" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A round red fruit that grows on a tree,<br>
+      crisp and sweet to bite;<br>
+      you give one to your teacher, shiny -<br>
+      an ___, a crunchy delight.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-5.html" data-answer="thorn" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A sharp little spike on a rose's stem,<br>
+      it pricks your careless thumb;<br>
+      the bush is armed with rows of them -<br>
+      a ___, where the blood spots come.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-22/-4.html" data-answer="grape" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A little round fruit in a bunch on a vine,<br>
+      green or purple and sweet;<br>
+      you pop them whole into your mouth -<br>
+      a ___, a juicy treat.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-3.html">north</a>, <a href="../-20/-4.html">east</a>,
+        <a href="-5.html">south</a>, <a href="../-22/-4.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
