@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radio — Journey</title>
+<meta name="description" content="A box that pulls songs and voices out of the empty air - sound caught from the sky.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">5 : -21</p>
+  <h1 class="room-name">Radio</h1>
+
+  <div class="prose">
+    <p>You are a radio - a box that pulls songs and voices out of the empty air. No wire runs to
+    the music; it rides in on waves you cannot see, and you turn the dial until it comes clear.
+    Grandparents danced to you in the dark of the war; drivers sing along to you on the long road
+    home. You crackle, you hum, you fill the kitchen with news and tunes. You are sound caught
+    from the sky and set loose in a room.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-20.html" data-answer="fan" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Spinning blades that stir the air,<br>
+      to cool you in the heat;<br>
+      it hums and turns upon the desk -<br>
+      a ___ makes the breeze complete.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../6/-21.html" data-answer="sieve" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A bowl of mesh with little holes,<br>
+      you shake the flour through;<br>
+      the lumps stay back, the fine falls down -<br>
+      a ___ for baking, too.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-22.html" data-answer="phone" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A little box you hold and talk,<br>
+      to a friend who's far away;<br>
+      it rings and lights and shows the time -<br>
+      a ___ you use each day.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../4/-21.html" data-answer="latch" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A little catch that holds a gate,<br>
+      you lift it up to pass;<br>
+      it clicks back down to keep it shut -<br>
+      a ___ of iron or brass.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-20.html">north</a>, <a href="../6/-21.html">east</a>,
+        <a href="-22.html">south</a>, <a href="../4/-21.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

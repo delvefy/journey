@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vine — Journey</title>
+<meta name="description" content="The long green climber that twists up walls and trees, gripping with little tendrils - the plant that travels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-21 : -8</p>
+  <h1 class="room-name">Vine</h1>
+
+  <div class="prose">
+    <p>You are a vine - the long green climber that twists and curls its way up walls, trees, and
+    trellises, gripping with little tendrils as it goes. The grapes hang heavy from your arms; the
+    ivy and the bean and the morning glory are all kinds of you. You cannot stand on your own, so
+    you cling and climb on whatever you find. Left alone, you swallow a whole fence in a summer.
+    You are the plant that travels, forever reaching upward and along.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-7.html" data-answer="claw" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A sharp curved nail upon a paw,<br>
+      the cat and eagle wear;<br>
+      it grips and scratches, hooks the prey -<br>
+      a ___, sharp, beware.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-20/-8.html" data-answer="root" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The hidden part beneath the plant,<br>
+      that drinks down in the dark;<br>
+      it grips the soil and holds the tree -<br>
+      a ___ below the bark.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-9.html" data-answer="dirt" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The plain brown earth beneath your boots,<br>
+      it smears your hands and face;<br>
+      you dig in it to plant your seeds -<br>
+      the ___ of the place.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-22/-8.html" data-answer="branch" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A woody arm upon a tree,<br>
+      that holds the leaves up high;<br>
+      the birds perch on it, swings hang down -<br>
+      a ___ against the sky.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-7.html">north</a>, <a href="../-20/-8.html">east</a>,
+        <a href="-9.html">south</a>, <a href="../-22/-8.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

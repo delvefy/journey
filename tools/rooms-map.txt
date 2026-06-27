@@ -26,7 +26,7 @@ SEED WRITTEN (the origin plus)
   0:0 Key · 0:1 Echo · 1:0 Bell · 0:-1 Stone · -1:0 River
 
 LAST ROOM WRITTEN  (the frontier of the contiguous blob growing from 0:0)
-  -10:-19  —  Toad
+  0:-23  —  Toenail
 
 NEXT ROOM
   The blob is grown closest-first from 0:0; LAST ROOM above pins the frontier. The next

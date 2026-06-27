@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cave — Journey</title>
+<meta name="description" content="A hollow worn into the rock, dark and cool, where echoes live and the daylight gives up at the door.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-15 : -17</p>
+  <h1 class="room-name">Cave</h1>
+
+  <div class="prose">
+    <p>You are a cave - a hollow worn into the hillside, dark and cool the deeper you go. Water
+    drips somewhere you cannot see, and your breath comes back to you as echo. Bats hang from your
+    roof; a bear might sleep the winter in your mouth. The daylight reaches only a little way past
+    your door, then gives up, and the rest of you is older than any candle.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-16.html" data-answer="hill" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A gentle rise of grassy ground,<br>
+      not steep enough to climb with rope;<br>
+      you roll straight down it on your side -<br>
+      a ___, a little green slope.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-14/-17.html" data-answer="knuckle" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A knot of bone halfway up a finger,<br>
+      it bends so the hand can fold;<br>
+      you rap one on the door - knock knock -<br>
+      a ___, hard to hold.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-18.html" data-answer="pebble" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A little stone, smoothed by the stream,<br>
+      small enough to pocket;<br>
+      you skim one out across the lake -<br>
+      a ___ skips and rockets.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-16/-17.html" data-answer="island" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A patch of land with sea all round,<br>
+      no bridge and no dry track;<br>
+      a boat must bring you out to it -<br>
+      an ___, water at its back.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-16.html">north</a>, <a href="../-14/-17.html">east</a>,
+        <a href="-18.html">south</a>, <a href="../-16/-17.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

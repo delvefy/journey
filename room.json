@@ -1,10 +1,10 @@
 {
-  "x": -10, "y": -19,
-  "name": "Toad",
-  "desc": "The warty brown hopper that squats in the damp garden, fatter and drier than a frog.",
-  "prose": "You are a toad - the warty brown squatter of the damp garden, fatter and drier and slower than your cousin the frog. You hide all day under a cool stone and come out at dusk to snap up slugs and beetles with a flick of your tongue. Your skin is bumpy and your eyes are gold, and a fairy tale swears a kiss will turn you to a prince. You do not leap so much as lumber. You are the gardener's quiet friend, ugly and useful, lurking in the cool dark with a stomach full of pests.",
-  "N": { "a": "firefly", "lines": ["A little bug that glows in the dark,", "a lantern in its tail;", "it blinks across the summer lawn -", "a ___, a tiny trail."] },
-  "E": { "a": "feather", "lines": ["A soft light thing that grows on a bird,", "it drifts down on the air;", "you tickle a nose or stuff a pillow -", "a ___, beyond compare."] },
-  "S": { "a": "newt", "lines": ["A little lizard that swims in the pond,", "with a wavy crest on its back;", "it wriggles through the weedy dark -", "a ___, both slim and black."] },
-  "W": { "a": "owl", "lines": ["A round-eyed bird that hunts at night,", "it hoots from a hollow tree;", "it swoops on mice with silent wings -", "an ___, as wise as can be."] }
+  "x": 15, "y": -17,
+  "name": "Tent",
+  "desc": "The little house of cloth you pitch in the wild, held by poles and pegs - a roof you carry on your back.",
+  "prose": "You are a tent - the little house of cloth you pitch out in the wild, held up by poles and pegged tight to the ground. You flap in the wind and drum under the rain, while inside the campers lie snug in their sleeping bags by torchlight. Children make one of a sheet draped over chairs. You fold away into a bag no bigger than a cushion. You are a roof you can carry on your back, a home for a night under the open sky.",
+  "N": { "a": "flag", "lines": ["A bright cloth flown upon a pole,", "it ripples in the wind;", "each country has its own design -", "a ___ you wave, unpinned."] },
+  "E": { "a": "tape", "lines": ["A long thin strip that's sticky on one side,", "you tear it off the roll;", "you mend a tear, you wrap a gift -", "a ___ keeps it whole."] },
+  "S": { "a": "compass", "lines": ["A little dial with a quivering arm,", "it always points to north;", "the hiker reads it for the way -", "a ___ to set you forth."] },
+  "W": { "a": "saucepan", "lines": ["A round metal pot with one long handle,", "it bubbles on the hob;", "you boil the soup and porridge in it -", "a ___, hard at its job."] }
 }
