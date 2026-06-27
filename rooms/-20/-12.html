@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brain — Journey</title>
+<meta name="description" content="The soft grey wrinkled organ inside your head, where all your thinking, remembering, and dreaming happens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-20 : -12</p>
+  <h1 class="room-name">Brain</h1>
+
+  <div class="prose">
+    <p>You are the brain - the soft grey wrinkled organ folded up inside the skull, busy every
+    second of your life. You do the thinking, the remembering, the dreaming; you work the fingers
+    and read these very words. Asleep or awake you never switch off, humming away in the dark
+    behind the eyes. Pink-grey and crinkled like a walnut, you weigh hardly anything, yet you hold
+    a whole person's worth of thoughts. You are the quiet boss of the body, hidden in its bony
+    helmet.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-11.html" data-answer="eyelash" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A tiny hair along your lid<br>
+      that guards your eye from dust;<br>
+      you make a wish and blow one off -<br>
+      an ___ you can trust.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-19/-12.html" data-answer="lung" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A spongy bag inside your chest<br>
+      that fills with air you take;<br>
+      you have a pair, they puff and shrink -<br>
+      a ___, for breathing's sake.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-13.html" data-answer="crab" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">It scuttles sideways on the sand<br>
+      with claws that pinch and snap;<br>
+      it wears its shell upon its back -<br>
+      a ___, beware the trap.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-21/-12.html" data-answer="skull" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">The hard round bone that holds your head,<br>
+      it keeps your brain inside;<br>
+      a skeleton grins with one of these -<br>
+      a ___, hollow-eyed.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-11.html">north</a>, <a href="../-19/-12.html">east</a>,
+        <a href="-13.html">south</a>, <a href="../-21/-12.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

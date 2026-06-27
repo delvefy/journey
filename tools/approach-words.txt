@@ -24,6 +24,7 @@ ash
 autumn
 axe
 back
+backpack
 badge
 badger
 bag
@@ -39,6 +40,7 @@ barrel
 basket
 bat
 bath
+battery
 bay
 beach
 bead
@@ -62,6 +64,7 @@ bet
 bib
 bike
 bin
+binoculars
 bird
 bite
 black
@@ -77,6 +80,7 @@ blur
 blush
 boat
 bob
+boil
 bolt
 bone
 bongo
@@ -86,11 +90,13 @@ boom
 boot
 boredom
 bottle
+boulder
 bounce
 bow
 bowl
 box
 bracelet
+brag
 brain
 branch
 breath
@@ -99,10 +105,12 @@ brick
 bronze
 broom
 brown
+bruise
 brush
 bubble
 bucket
 buckle
+bud
 buffalo
 bug
 bulb
@@ -190,6 +198,7 @@ comb
 comet
 comfort
 compass
+computer
 conker
 coo
 copper
@@ -201,6 +210,7 @@ cough
 courage
 cow
 crab
+crack
 crackle
 cradle
 cramp
@@ -263,10 +273,12 @@ doll
 dolphin
 donkey
 door
+doorbell
 doubt
 dove
 doze
 dozen
+draft
 drag
 dragonfly
 drawer
@@ -277,12 +289,14 @@ drift
 drill
 drip
 drizzle
+drop
 drum
 duck
 duckling
 dunk
 dusk
 dust
+duvet
 eagle
 ear
 earring
@@ -307,6 +321,7 @@ feather
 fence
 fern
 ferret
+fever
 fib
 fiddle
 field
@@ -330,7 +345,9 @@ flicker
 flip
 flipper
 float
+flood
 floor
+flop
 flow
 flower
 flute
@@ -358,6 +375,7 @@ fun
 funnel
 fur
 fuss
+galaxy
 gale
 gallop
 game
@@ -380,6 +398,7 @@ gloom
 glove
 glow
 glue
+goal
 goat
 gold
 goldfish
@@ -410,6 +429,7 @@ gush
 gust
 hail
 hair
+half
 hammer
 hamster
 hand
@@ -486,6 +506,7 @@ kazoo
 kennel
 kettle
 key
+keyhole
 kick
 kindness
 kiss
@@ -513,6 +534,7 @@ lantern
 latch
 laugh
 lava
+lavender
 leaf
 leak
 lean
@@ -544,6 +566,7 @@ locket
 log
 love
 luck
+lullaby
 lung
 magic
 magnet
@@ -559,6 +582,7 @@ marker
 mash
 mask
 mat
+mattress
 medal
 meerkat
 melon
@@ -586,6 +610,7 @@ moonlight
 moose
 mop
 morning
+mosquito
 moss
 moth
 mountain
@@ -613,6 +638,7 @@ net
 nettle
 news
 newt
+nibble
 night
 nightmare
 nine
@@ -623,9 +649,11 @@ nose
 note
 now
 nudge
+numb
 number
 nut
 oak
+ocean
 octopus
 oink
 onion
@@ -642,6 +670,7 @@ panda
 panic
 pant
 panther
+paper
 parcel
 parrot
 party
@@ -654,6 +683,7 @@ pea
 peace
 peach
 peacock
+peanut
 pear
 pearl
 pebble
@@ -673,6 +703,7 @@ pillow
 pin
 pinch
 pine
+pineapple
 pinecone
 ping
 pink
@@ -742,6 +773,7 @@ ram
 rat
 rattle
 ray
+razor
 reach
 recorder
 red
@@ -778,6 +810,7 @@ rug
 rule
 ruler
 rumble
+rush
 rustle
 sack
 sadness
@@ -788,16 +821,20 @@ sandal
 saucepan
 saucer
 saw
+saxophone
+scab
 scamper
 scarf
 scissors
 scoop
+scoot
 scooter
 score
 scramble
 scratch
 scream
 screw
+screwdriver
 scroll
 scrub
 scurry
@@ -818,6 +855,7 @@ shake
 shame
 shampoo
 shark
+sharpener
 shawl
 shed
 sheep
@@ -854,10 +892,12 @@ sip
 sizzle
 skate
 skateboard
+ski
 skid
 skin
 skip
 skirt
+skull
 skunk
 sky
 slap
@@ -885,6 +925,7 @@ snap
 sneak
 sneeze
 sniff
+sniffle
 snip
 snooze
 snore
@@ -892,6 +933,7 @@ snort
 snow
 snowball
 snowflake
+snowstorm
 snuggle
 soak
 soap
@@ -899,6 +941,7 @@ soar
 sob
 sock
 sofa
+soil
 song
 sound
 space
@@ -908,8 +951,10 @@ spark
 sparkle
 sparrow
 speak
+speech
 spell
 spider
+spill
 spin
 spine
 splash
@@ -928,7 +973,9 @@ squeeze
 squelch
 squid
 squint
+squirm
 squirrel
+stable
 stamp
 staple
 star
@@ -949,6 +996,7 @@ stool
 storm
 story
 straw
+strawberry
 stream
 stretch
 string
@@ -999,6 +1047,7 @@ thaw
 thigh
 thimble
 thirst
+thistle
 thorn
 thought
 thread
@@ -1010,6 +1059,7 @@ throne
 throw
 thud
 thumb
+thump
 thunder
 tick
 ticket
@@ -1032,11 +1082,13 @@ tomato
 tomorrow
 tongue
 tonight
+tonsil
 toot
 tooth
 toothbrush
 toothpaste
 top
+topple
 torch
 tornado
 toss
@@ -1086,6 +1138,7 @@ vine
 violet
 violin
 voice
+volcano
 waddle
 wail
 wait
@@ -1093,6 +1146,7 @@ wall
 wallet
 walrus
 wand
+wander
 wardrobe
 warmth
 warning
@@ -1136,6 +1190,7 @@ word
 worm
 worry
 wriggle
+wrinkle
 wrist
 xylophone
 yarn
@@ -1146,5 +1201,6 @@ yellow
 yelp
 yesterday
 zebra
+zigzag
 zip
 zoom

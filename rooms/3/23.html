@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patter — Journey</title>
+<meta name="description" content="The light quick tapping of many small sounds - raindrops on the window, little feet down the hall.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">3 : 23</p>
+  <h1 class="room-name">Patter</h1>
+
+  <div class="prose">
+    <p>You are a patter - the light quick tapping of many small soft sounds running together. Rain
+    does you on the windowpane; little bare feet do you down the hall at bedtime; a hundred
+    hurried taps that never quite become a drum. You are gentle and busy at once, a sound that
+    makes a room feel cosy and full. Half a whisper, half a knock, you fill the quiet without ever
+    being loud. You are the soft music of small things in a hurry.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="24.html" data-answer="thump" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A heavy dull and solid sound,<br>
+      a fist upon a drum;<br>
+      your heart goes loud when you're afraid -<br>
+      a ___, a steady thrum.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../4/23.html" data-answer="sizzle" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The spitting hiss of frying food,<br>
+      the bacon in the pan;<br>
+      it crackles, pops, and dances hot -<br>
+      a ___ where it began.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="22.html" data-answer="hum" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A tune you make with lips shut tight,<br>
+      no words, just mmm-mmm-mmm;<br>
+      the bee and fridge can do it too -<br>
+      a ___, a quiet strum.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../2/23.html" data-answer="buzz" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">The low rough drone a bee lets out,<br>
+      or a phone upon the desk;<br>
+      it sets the air a-trembling so -<br>
+      a ___, quick and brusque.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="24.html">north</a>, <a href="../4/23.html">east</a>,
+        <a href="22.html">south</a>, <a href="../2/23.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

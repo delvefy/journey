@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magnet — Journey</title>
+<meta name="description" content="The piece of metal with an invisible pull that snaps to the fridge and tugs at pins and nails.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">17 : -16</p>
+  <h1 class="room-name">Magnet</h1>
+
+  <div class="prose">
+    <p>You are a magnet - the small piece of metal with an invisible pull. Hold you near a pin and
+    it leaps to you; stick you to the fridge and you cling without a nail. Your two ends are
+    choosy: one snaps tight to another magnet, flip it round and it shoves away. Children chase
+    iron filings across paper with you and gasp at the trick. You hold notes on the fridge door
+    and the compass true to north. You are a quiet, unseen grip in a lump of grey metal.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-15.html" data-answer="needle" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A thin sharp sliver with an eye,<br>
+      you thread it to sew cloth;<br>
+      it darts in, out, and mends the tear -<br>
+      a ___, quick as a moth.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../18/-16.html" data-answer="screwdriver" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A handle and a flat or cross tip,<br>
+      you fit it in the screw;<br>
+      you twist and twist to drive it home -<br>
+      a ___ for me and you.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-17.html" data-answer="spanner" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A metal tool that grips a nut<br>
+      and turns it loose or tight;<br>
+      the mechanic reaches for one -<br>
+      a ___, hold it right.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../16/-16.html" data-answer="staple" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A little bent wire of shiny steel<br>
+      that pins your pages neat;<br>
+      you press the stapler down - ker-chunk! -<br>
+      a ___ holds the sheet.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-15.html">north</a>, <a href="../18/-16.html">east</a>,
+        <a href="-17.html">south</a>, <a href="../16/-16.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

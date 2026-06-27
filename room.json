@@ -1,10 +1,10 @@
 {
-  "x": 15, "y": -17,
-  "name": "Tent",
-  "desc": "The little house of cloth you pitch in the wild, held by poles and pegs - a roof you carry on your back.",
-  "prose": "You are a tent - the little house of cloth you pitch out in the wild, held up by poles and pegged tight to the ground. You flap in the wind and drum under the rain, while inside the campers lie snug in their sleeping bags by torchlight. Children make one of a sheet draped over chairs. You fold away into a bag no bigger than a cushion. You are a roof you can carry on your back, a home for a night under the open sky.",
-  "N": { "a": "flag", "lines": ["A bright cloth flown upon a pole,", "it ripples in the wind;", "each country has its own design -", "a ___ you wave, unpinned."] },
-  "E": { "a": "tape", "lines": ["A long thin strip that's sticky on one side,", "you tear it off the roll;", "you mend a tear, you wrap a gift -", "a ___ keeps it whole."] },
-  "S": { "a": "compass", "lines": ["A little dial with a quivering arm,", "it always points to north;", "the hiker reads it for the way -", "a ___ to set you forth."] },
-  "W": { "a": "saucepan", "lines": ["A round metal pot with one long handle,", "it bubbles on the hob;", "you boil the soup and porridge in it -", "a ___, hard at its job."] }
+  "x": 19, "y": 14,
+  "name": "Trick",
+  "desc": "A clever sly move that fools the eye - the skateboarder's flip, the magician's vanish, the fox's dodge.",
+  "prose": "You are a trick - a clever sly move that fools the eye or beats the odds. The skateboarder flips the board and lands it; the magician makes the coin vanish; the fox doubles back to lose the hounds. You take practice and cunning and a little showing-off. Half of you is skill and half is surprise. People gasp, then grin, then ask how it was done. You are cleverness with a flourish, the quick move that leaves everyone wondering.",
+  "N": { "a": "scoot", "lines": ["You shove yourself along quick-quick,", "or budge to make some room;", "\"___ over!\" your friend says on the bench -", "to ___ and make space soon."] },
+  "E": { "a": "prank", "lines": ["A silly joke you play on a friend,", "a whoopee cushion's puff;", "\"April Fool!\" you shout and laugh -", "a ___, all in good stuff."] },
+  "S": { "a": "surf", "lines": ["You ride the breaking wave standing tall", "on a board across the sea;", "you race the white foam to the shore -", "to ___ feels wild and free."] },
+  "W": { "a": "magic", "lines": ["Wands and spells and rabbits from hats,", "the magician's clever art;", "\"abracadabra!\" - poof, it's gone -", "a ___ to fool the heart."] }
 }
