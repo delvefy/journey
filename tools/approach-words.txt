@@ -388,6 +388,7 @@ dozen
 draft
 drag
 dragonfly
+draw
 drawer
 dread
 dream
@@ -507,6 +508,7 @@ frisbee
 frog
 frolic
 frost
+frosty
 frown
 fun
 funnel
@@ -718,6 +720,7 @@ knee
 kneecap
 kneel
 knife
+knit
 knob
 knock
 knot
@@ -1215,6 +1218,7 @@ shudder
 shuffle
 shush
 shutter
+shy
 sieve
 sigh
 sight
@@ -1413,6 +1417,7 @@ swan
 swarm
 sway
 sweat
+sweaty
 sweep
 swell
 swerve
@@ -1510,6 +1515,7 @@ top
 topple
 torch
 tornado
+tortoise
 toss
 touch
 towel
@@ -1593,6 +1599,7 @@ wardrobe
 warmth
 warning
 wart
+wash
 wasp
 watch
 waterfall

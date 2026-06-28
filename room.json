@@ -1,10 +1,30 @@
 {
-  "x": -6, "y": -27,
-  "name": "Pecan",
-  "desc": "A long wrinkly nut, sweet and rich, in a smooth shell.",
-  "prose": "You are a pecan - a long oval nut, deeply wrinkled and grooved, sitting in a smooth reddish-brown shell. Crack you open and the rich sweet kernel inside is buttery and good, baked into sticky pies or toffee or eaten just as you are. Squirrels bury you for winter. Rich and wrinkled and sweetly oily, you are one of the tastiest nuts of all, the star of a gooey pie and a favourite hoard of every busy squirrel.",
-  "N": { "a": "cashew", "lines": ["A smooth creamy nut curved like a moon,", "pale gold and buttery sweet;", "you reach for a handful first of all -", "a ___, a lovely treat."] },
-  "E": { "a": "sapling", "lines": ["A young little tree, all slender and new,", "no thicker than your wrist;", "it bends in the wind and will one day be tall -", "a ___, you can't resist."] },
-  "S": { "a": "monkeynut", "lines": ["A peanut still wrapped in its crinkly shell,", "you crack it open in two;", "two little nuts in a wrinkly pod -", "a ___, just for you."] },
-  "W": { "a": "brazilnut", "lines": ["A big hard nut with three flat sides,", "in a shell so tough to crack;", "it sits in the mixed-nut bowl at Christmas -", "a ___, at the back."] }
+  "x": -22, "y": 17,
+  "name": "overflow",
+  "desc": "What water does when there is simply too much to hold.",
+  "prose": "Overflow is what water does when there is simply too much. The bath fills past the brim and spills onto the floor; the river swells with rain and climbs its banks; the cup runs over your hand. It is fullness that cannot be held any longer, the moment the vessel gives up and lets go. You cannot catch it - it pours away wherever it likes. Natural and weightless, it is the water saying enough, there is no more room, and brimming over.",
+  "N": { "a": "drip", "lines": [
+    "Plip. The tap is not quite off,",
+    "and now and then, just one",
+    "small drop falls down into the sink -",
+    "plip, plop, it's never done."
+  ]},
+  "E": { "a": "trickle", "lines": [
+    "A thin slow thread of running wet,",
+    "too small to call a stream;",
+    "down the rock it slips and slides -",
+    "the gentlest flow, I deem."
+  ]},
+  "S": { "a": "tear", "lines": [
+    "A salty drop that fills your eye",
+    "and slides down your cheek;",
+    "it falls when you are sad or hurt -",
+    "no word you have to speak."
+  ]},
+  "W": { "a": "drizzle", "lines": [
+    "Not proper rain, just tiny drops,",
+    "a fine and misty wet;",
+    "too light for brollies, soft and grey -",
+    "the smallest rain you'll get."
+  ]}
 }
