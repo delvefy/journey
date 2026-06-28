@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hutch — Journey</title>
+<meta name="description" content="A wooden box-and-run where a pet rabbit lives.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">24 : -8</p>
+  <h1 class="room-name">Hutch</h1>
+
+  <div class="prose">
+    <p>You are a hutch - a little wooden box with a door of wire mesh and a run for hopping, built
+    in the garden to keep a rabbit or a guinea pig safe and dry. Hands hammer you together and
+    line you with sweet straw. The pet thumps inside you and pokes its nose to the wire for a
+    dandelion. You shelter the small and the soft from the rain and the fox. Snug and wooden and
+    full of straw, you are the whole world to one fat happy bunny.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-7.html" data-answer="mirror" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A sheet of glass that shows you back,<br>
+      your own face staring out;<br>
+      you pull a face and it does too -<br>
+      a ___, no doubt.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../25/-8.html" data-answer="coop" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A little house of wire and wood<br>
+      where the hens roost for the night;<br>
+      they cluck and peck and lay their eggs -<br>
+      a ___, shut up tight.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-9.html" data-answer="glove" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A cosy cover for a cold hand<br>
+      with a pocket for each finger;<br>
+      you pull one on each side to play -<br>
+      a ___ that makes warmth linger.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../23/-8.html" data-answer="stable" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A long warm building floored with straw<br>
+      where the horses spend the night;<br>
+      they lean their heads over the half-doors -<br>
+      a ___, snug and tight.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-7.html">north</a>, <a href="../25/-8.html">east</a>,
+        <a href="-9.html">south</a>, <a href="../23/-8.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

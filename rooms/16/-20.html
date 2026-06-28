@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Globe — Journey</title>
+<meta name="description" content="A round ball model of the Earth that spins on a stand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">16 : -20</p>
+  <h1 class="room-name">Globe</h1>
+
+  <div class="prose">
+    <p>You are a globe - a round ball model of the whole Earth, painted with all its blue seas and
+    patchwork countries, mounted on a little stand so it can spin. A finger gives you a push and
+    the world whirls; a finger stops you, and you land on somewhere far. You sit on the classroom
+    shelf gathering dust between geography lessons. Round and tilted and slowly turning, you are
+    the whole planet shrunk small enough to spin with one fingertip and dream of faraway places.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-19.html" data-answer="map" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A flat drawn picture of the land,<br>
+      with roads and rivers and seas;<br>
+      you trace your finger to find the way -<br>
+      a ___ folds at the knees.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../17/-20.html" data-answer="cog" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A little wheel with teeth all round<br>
+      that turns the next one too;<br>
+      they mesh and spin inside the clock -<br>
+      a ___, round goes the crew.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-21.html" data-answer="atlas" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A big fat book all full of maps,<br>
+      of every land and sea;<br>
+      you flip it open to find a place -<br>
+      an ___ on your knee.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../15/-20.html" data-answer="telescope" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A long thin tube of polished glass<br>
+      to peer at distant stars;<br>
+      you shut one eye and squint through it -<br>
+      a ___ shows you Mars.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-19.html">north</a>, <a href="../17/-20.html">east</a>,
+        <a href="-21.html">south</a>, <a href="../15/-20.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

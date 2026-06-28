@@ -1,10 +1,10 @@
 {
-  "x": 19, "y": 14,
-  "name": "Trick",
-  "desc": "A clever sly move that fools the eye - the skateboarder's flip, the magician's vanish, the fox's dodge.",
-  "prose": "You are a trick - a clever sly move that fools the eye or beats the odds. The skateboarder flips the board and lands it; the magician makes the coin vanish; the fox doubles back to lose the hounds. You take practice and cunning and a little showing-off. Half of you is skill and half is surprise. People gasp, then grin, then ask how it was done. You are cleverness with a flourish, the quick move that leaves everyone wondering.",
-  "N": { "a": "scoot", "lines": ["You shove yourself along quick-quick,", "or budge to make some room;", "\"___ over!\" your friend says on the bench -", "to ___ and make space soon."] },
-  "E": { "a": "prank", "lines": ["A silly joke you play on a friend,", "a whoopee cushion's puff;", "\"April Fool!\" you shout and laugh -", "a ___, all in good stuff."] },
-  "S": { "a": "surf", "lines": ["You ride the breaking wave standing tall", "on a board across the sea;", "you race the white foam to the shore -", "to ___ feels wild and free."] },
-  "W": { "a": "magic", "lines": ["Wands and spells and rabbits from hats,", "the magician's clever art;", "\"abracadabra!\" - poof, it's gone -", "a ___ to fool the heart."] }
+  "x": -6, "y": -27,
+  "name": "Pecan",
+  "desc": "A long wrinkly nut, sweet and rich, in a smooth shell.",
+  "prose": "You are a pecan - a long oval nut, deeply wrinkled and grooved, sitting in a smooth reddish-brown shell. Crack you open and the rich sweet kernel inside is buttery and good, baked into sticky pies or toffee or eaten just as you are. Squirrels bury you for winter. Rich and wrinkled and sweetly oily, you are one of the tastiest nuts of all, the star of a gooey pie and a favourite hoard of every busy squirrel.",
+  "N": { "a": "cashew", "lines": ["A smooth creamy nut curved like a moon,", "pale gold and buttery sweet;", "you reach for a handful first of all -", "a ___, a lovely treat."] },
+  "E": { "a": "sapling", "lines": ["A young little tree, all slender and new,", "no thicker than your wrist;", "it bends in the wind and will one day be tall -", "a ___, you can't resist."] },
+  "S": { "a": "monkeynut", "lines": ["A peanut still wrapped in its crinkly shell,", "you crack it open in two;", "two little nuts in a wrinkly pod -", "a ___, just for you."] },
+  "W": { "a": "brazilnut", "lines": ["A big hard nut with three flat sides,", "in a shell so tough to crack;", "it sits in the mixed-nut bowl at Christmas -", "a ___, at the back."] }
 }

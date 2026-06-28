@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thermometer — Journey</title>
+<meta name="description" content="A thin glass tube that measures how hot you are.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">9 : -25</p>
+  <h1 class="room-name">Thermometer</h1>
+
+  <div class="prose">
+    <p>You are a thermometer - a thin glass tube with a silver line inside that creeps up when
+    things get warm. Pop one under a tongue and it tells whether a fever is brewing; dip one
+    outdoors and it tells how cold the day is. The warmer it gets, the higher the line climbs,
+    marked off in little numbered notches. Slim and clever and patient, you turn something you can
+    only feel - the heat of a body or a day - into a number anyone can read, so the nurse knows
+    just how poorly you are.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-24.html" data-answer="medicine" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A spoonful of syrup, a pill to swallow,<br>
+      to take when you are ill;<br>
+      it tastes a bit nasty but makes you well -<br>
+      a ___, against the chill.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../10/-25.html" data-answer="sling" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A cloth loop tied round the back of your neck,<br>
+      to cradle a poorly arm;<br>
+      it holds it still so the bone can mend -<br>
+      a ___, to keep it from harm.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-26.html" data-answer="stethoscope" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Two tubes to the ears and a disc you press,<br>
+      the doctor listens to your chest;<br>
+      it hears your heart go thud-thud-thud -<br>
+      a ___, knows you best.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../8/-25.html" data-answer="slipper" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A soft squashy shoe with no laces at all,<br>
+      you wear it about the house;<br>
+      it waits by the bed for cold morning feet -<br>
+      a ___, quiet as a mouse.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-24.html">north</a>, <a href="../10/-25.html">east</a>,
+        <a href="-26.html">south</a>, <a href="../8/-25.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

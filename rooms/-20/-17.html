@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brook — Journey</title>
+<meta name="description" content="A small, clear stream that babbles over the stones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-20 : -17</p>
+  <h1 class="room-name">Brook</h1>
+
+  <div class="prose">
+    <p>You are a brook - a small bright stream no wider than a stride, hurrying clear and cold
+    over its bed of pebbles. You babble and chatter to yourself all day, winking in the sun, with
+    little fish darting in your shallows and ferns leaning over your banks. Children dam you with
+    stones and float twig boats down you. Cheerful and busy and always moving, you trickle down
+    from the hills to join a bigger river at last, singing your small song the whole way down.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-16.html" data-answer="rapids" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">Fast white water that churns over rocks,<br>
+      it foams and tumbles and roars;<br>
+      the raft bounces through with a splash and a shout -<br>
+      the ___, between the shores.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-19/-17.html" data-answer="meadow" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A wide green field of grass and flowers,<br>
+      where butterflies drift and play;<br>
+      the cows graze slow in the summer sun -<br>
+      a ___, on a warm long day.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-18.html" data-answer="coral" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">Hard knobbly branches that grow in the sea,<br>
+      in pink and orange and white;<br>
+      tiny creatures build it bit by bit -<br>
+      a ___, a colourful sight.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-21/-17.html" data-answer="spring" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">Where water bubbles up fresh from the ground,<br>
+      cold and clear from below;<br>
+      it wells from the rock and starts a stream -<br>
+      a ___, where rivers grow.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-16.html">north</a>, <a href="../-19/-17.html">east</a>,
+        <a href="-18.html">south</a>, <a href="../-21/-17.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Score — Journey</title>
+<meta name="description" content="The running count of points in a game.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">20 : 13</p>
+  <h1 class="room-name">Score</h1>
+
+  <div class="prose">
+    <p>You are a score - the running count of who is winning, climbing on the board point by
+    point. You are the goal that just went in, the run that just came home, the number everybody
+    glances up to check. No hand holds you, yet hands win you, earn you, and chalk you up. You
+    decide the cheers and the groans. You are the game kept honest in numbers, the answer to the
+    only question that matters when the whistle blows: who's ahead?</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="14.html" data-answer="prank" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A trick you pull to fool a friend,<br>
+      a rubber spider in their bag;<br>
+      they jump and shriek, then laugh it off -<br>
+      a ___, what a gag.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../21/13.html" data-answer="dribble" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The footballer taps the ball along,<br>
+      close to his nimble feet;<br>
+      past the defenders, down the pitch -<br>
+      a ___, fast and neat.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="12.html" data-answer="dunk" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">You dip your biscuit into the tea,<br>
+      or slam the ball through the hoop;<br>
+      down it goes with a splash or a swoosh -<br>
+      a ___, in one swoop.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../19/13.html" data-answer="surf" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">You ride the breaking wave standing tall,<br>
+      on a board across the sea;<br>
+      you race the white foam to the shore -<br>
+      to ___, wild and free.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="14.html">north</a>, <a href="../21/13.html">east</a>,
+        <a href="12.html">south</a>, <a href="../19/13.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

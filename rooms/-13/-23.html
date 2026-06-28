@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graze — Journey</title>
+<meta name="description" content="A scrape on the skin from a fall, raw and stinging.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-13 : -23</p>
+  <h1 class="room-name">Graze</h1>
+
+  <div class="prose">
+    <p>You are a graze - the raw red scrape left when skin is dragged across something rough. A
+    tumble off the bike, a slide on the playground, a knee skidded along the path: out you come,
+    stinging and weeping little beads. You are not deep like a cut, just sore and pink and gritty.
+    A wash, a dab and a plaster, and in a few days you scab over and heal. Common as can be and
+    quick to mend, you are the everyday badge of an adventurous afternoon spent falling over and
+    getting up again.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-22.html" data-answer="blister" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A small sore bubble upon your skin,<br>
+      puffed up with watery sting;<br>
+      a new tight shoe will rub one raw -<br>
+      a ___, a tender thing.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-12/-23.html" data-answer="husky" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A thick-furred dog that pulls a sled,<br>
+      through snow with its team in a line;<br>
+      it howls at the moon with bright blue eyes -<br>
+      a ___, strong and fine.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-24.html" data-answer="polarbear" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A huge white bear on the frozen ice,<br>
+      it hunts the seals in the cold;<br>
+      it swims through the freezing arctic sea -<br>
+      a ___, fierce and bold.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-14/-23.html" data-answer="snowflake" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A tiny six-armed star of frost,<br>
+      it floats from the sky so light;<br>
+      no two are ever quite the same -<br>
+      a ___, fluttering white.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-22.html">north</a>, <a href="../-12/-23.html">east</a>,
+        <a href="-24.html">south</a>, <a href="../-14/-23.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

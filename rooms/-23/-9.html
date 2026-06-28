@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ash — Journey</title>
+<meta name="description" content="The soft grey powder a fire leaves once it has died.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-23 : -9</p>
+  <h1 class="room-name">Ash</h1>
+
+  <div class="prose">
+    <p>You are ash - the soft pale-grey powder left in the grate when the fire has burned itself
+    out and gone cold. No hand makes you; burning does, turning the heavy log into a heap so light
+    a breath can scatter it. You smudge a finger grey and drift up the chimney on a draught.
+    Gardeners dig you in to feed the soil. The quiet leftover of every flame, you are what remains
+    when all the heat and light have finished and the warmth is only a memory.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-8.html" data-answer="soil" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">The dark crumbly earth beneath the grass<br>
+      where roots dig down to drink;<br>
+      the worms wind through it, seeds take hold -<br>
+      the ___, browner than ink.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-22/-9.html" data-answer="dust" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The soft grey fluff on a shelf untouched,<br>
+      it floats in a beam of sun;<br>
+      you wipe it off but it comes again -<br>
+      the ___, never done.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-10.html" data-answer="blossom" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The pink and white that crowds a tree<br>
+      the moment spring arrives;<br>
+      it drifts down soft like fragrant snow -<br>
+      the ___ where the bee dives.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-24/-9.html" data-answer="ember" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">The last red glowing lump of coal<br>
+      that breathes deep in the grate;<br>
+      it pulses orange when you blow -<br>
+      an ___, awake but late.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-8.html">north</a>, <a href="../-22/-9.html">east</a>,
+        <a href="-10.html">south</a>, <a href="../-24/-9.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

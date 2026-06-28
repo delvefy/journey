@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volcano — Journey</title>
+<meta name="description" content="A fire-breathing mountain that spits melted rock.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-24 : 0</p>
+  <h1 class="room-name">Volcano</h1>
+
+  <div class="prose">
+    <p>You are a volcano - a mountain with fire in its belly, a chimney straight down to the
+    molten heart of the world. For years you sleep, green and quiet, and then you wake and roar,
+    hurling ash to the sky and pouring red rivers down your sides. No hand made you; the deep
+    earth did, pushing up through a crack. Whole islands are your old work, cooled and grown over.
+    You are the mountain that is never finished, building and burning by turns.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="1.html" data-answer="rustle" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">The soft dry sound that dead leaves make<br>
+      when the wind walks through the trees;<br>
+      or paper crinkling in your hand -<br>
+      a ___ in the breeze.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-23/0.html" data-answer="lava" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">Red-hot melted rock that pours,<br>
+      glowing down the mountain's side;<br>
+      it burns a path and hardens black -<br>
+      the ___ on its slide.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-1.html" data-answer="bruise" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A blue-black mark where you banged your shin,<br>
+      it aches when you press it sore;<br>
+      it fades to yellow and green in a week -<br>
+      a ___, then it's no more.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-25/0.html" data-answer="mountain" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A giant hill that touches the clouds,<br>
+      with snow upon its top;<br>
+      you climb all day to reach the peak -<br>
+      a ___, then you stop.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="1.html">north</a>, <a href="../-23/0.html">east</a>,
+        <a href="-1.html">south</a>, <a href="../-25/0.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

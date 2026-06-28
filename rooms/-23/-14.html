@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woodlouse — Journey</title>
+<meta name="description" content="A tiny grey armoured bug that rolls into a ball.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-23 : -14</p>
+  <h1 class="room-name">Woodlouse</h1>
+
+  <div class="prose">
+    <p>You are a woodlouse - a tiny grey bug in a suit of overlapping armoured plates, no bigger
+    than a pea. You live in the cool dark damp, under stones and rotting logs, scuttling on a
+    great many little legs. Touch you and you tuck up tight into a perfect armoured ball. Harmless
+    and shy and a favourite of every log-turning child, you trundle about the leaf-mould all your
+    days, a knight in grey armour the size of a fingernail, rolling away from the light.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-13.html" data-answer="mussel" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A smooth blue-black shell in two halves,<br>
+      it clings to the rocks in clumps;<br>
+      you steam it open to eat what's inside -<br>
+      a ___, in salty lumps.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-22/-14.html" data-answer="toadstool" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A mushroom you must never eat,<br>
+      red with white spots on its cap;<br>
+      a fairy might sit on its dome in the rain -<br>
+      a ___, watch for the trap.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-15.html" data-answer="swamp" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A wet muddy land all thick with trees,<br>
+      where the water lies still and green;<br>
+      the crocodiles lurk in its murky pools -<br>
+      a ___, hardly seen.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-24/-14.html" data-answer="leech" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A slimy black worm that sucks your blood,<br>
+      it clings in the pond and the bog;<br>
+      it fattens up and won't let go -<br>
+      a ___, on your leg like a clog.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-13.html">north</a>, <a href="../-22/-14.html">east</a>,
+        <a href="-15.html">south</a>, <a href="../-24/-14.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

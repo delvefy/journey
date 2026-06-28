@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woodlouse — Journey</title>
+<meta name="description" content="A tiny grey armoured bug under logs that rolls into a ball.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-8 : -25</p>
+  <h1 class="room-name">Woodlouse</h1>
+
+  <div class="prose">
+    <p>You are a woodlouse - a tiny grey bug in a suit of overlapping plates, no bigger than a
+    pea. You live in the dark and the damp, under stones and rotting logs, scuttling on more legs
+    than anyone can count. Touch you and some of your kind curl up tight into a little armoured
+    ball. Harmless and shy and oddly endearing, you trundle about the leaf-mould all your life, a
+    tiny knight in grey armour, and children turn over every log just to watch you scuttle for
+    cover.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-24.html" data-answer="slug" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A soft slimy crawler with no shell at all,<br>
+      it leaves a silver trail;<br>
+      it munches the lettuce in the night -<br>
+      a ___, slow as a snail.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-7/-25.html" data-answer="hazelnut" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A small round nut in a smooth brown shell,<br>
+      the squirrel buries a hoard;<br>
+      you crack it open to eat the kernel -<br>
+      a ___, a tasty reward.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-26.html" data-answer="millipede" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A long thin bug that crawls on the ground,<br>
+      with hundreds of tiny legs;<br>
+      they ripple in waves as it creeps along -<br>
+      a ___, on its many pegs.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-9/-25.html" data-answer="tarantula" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A big hairy spider, fat and slow,<br>
+      with eight thick furry legs;<br>
+      it lurks in a burrow and waits for prey -<br>
+      a ___, it never begs.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-24.html">north</a>, <a href="../-7/-25.html">east</a>,
+        <a href="-26.html">south</a>, <a href="../-9/-25.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

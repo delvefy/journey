@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slug — Journey</title>
+<meta name="description" content="A slimy snail with no shell, leaving a shiny trail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-8 : -24</p>
+  <h1 class="room-name">Slug</h1>
+
+  <div class="prose">
+    <p>You are a slug - a soft slimy snail that lost its shell, oozing slow across the cool wet
+    garden at night and leaving a silver trail that catches the morning light. No hand makes you;
+    the damp dark earth does. You munch the lettuces and the gardener despairs. You shrink up
+    small at a touch and slide on a foot of slime. Squidgy and shiny and gloriously gross, you are
+    the garden's slowest traveller, in no hurry at all to be anywhere.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-23.html" data-answer="mosquito" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A tiny long-legged whining pest<br>
+      that bites you in the night;<br>
+      it leaves an itchy lump behind -<br>
+      a ___, out of sight.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-7/-24.html" data-answer="walnut" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A wrinkled nut in a hard round shell<br>
+      that splits in halves just so;<br>
+      the kernel looks like a little brain -<br>
+      a ___, sweet and slow.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-25.html" data-answer="woodlouse" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A little grey bug in armoured plates<br>
+      that hides beneath a stone;<br>
+      it rolls up tight into a ball -<br>
+      a ___, all alone.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-9/-24.html" data-answer="scorpion" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A creepy thing with pinching claws<br>
+      and a sting curled up behind;<br>
+      it scuttles in the desert sand -<br>
+      a ___, the nippy kind.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-23.html">north</a>, <a href="../-7/-24.html">east</a>,
+        <a href="-25.html">south</a>, <a href="../-9/-24.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

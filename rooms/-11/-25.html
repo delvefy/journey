@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starfish — Journey</title>
+<meta name="description" content="A five-armed star that creeps on the seabed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-11 : -25</p>
+  <h1 class="room-name">Starfish</h1>
+
+  <div class="prose">
+    <p>You are a starfish - a flat five-armed star that lives on the bed of the sea, creeping so
+    slowly along on hundreds of tiny tube feet that you never seem to move at all. You cling to
+    the rocks in pools left by the tide, and if you lose an arm you can simply grow a new one.
+    Orange or pink or purple, you spread your points like a child's drawing of a star. Slow and
+    patient and perfectly star-shaped, you are the sea's own little starlight, washed up gleaming
+    on the sand.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-24.html" data-answer="pufferfish" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A funny round fish that swells up big,<br>
+      into a spiny ball when scared;<br>
+      it gulps down water and puffs right out -<br>
+      a ___, caught unprepared.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-10/-25.html" data-answer="seal" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A sleek grey creature that swims in the sea,<br>
+      and flops on the rocks to bask;<br>
+      it barks and claps with its flippers wide -<br>
+      a ___, at its happy task.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-26.html" data-answer="swordfish" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A big fast fish with a long pointed nose,<br>
+      as sharp as a sword up front;<br>
+      it slices through the waves so quick -<br>
+      a ___, on the hunt.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-12/-25.html" data-answer="poodle" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A dog with curly fluffy fur,<br>
+      all clipped in puffs and balls;<br>
+      it prances along so proud and neat -<br>
+      a ___, at the shows and halls.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-24.html">north</a>, <a href="../-10/-25.html">east</a>,
+        <a href="-26.html">south</a>, <a href="../-12/-25.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

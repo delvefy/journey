@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peanut — Journey</title>
+<meta name="description" content="A little nut in a crinkly shell that grows underground.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-7 : -23</p>
+  <h1 class="room-name">Peanut</h1>
+
+  <div class="prose">
+    <p>You are a peanut - a little nut in a crinkly shell, two to a pod, and unlike all the others
+    you grow in the ground, not on a tree. Roasted and salted, ground to butter, or thrown to the
+    monkeys at the zoo, you are everyone's favourite handful. No hand made you; the warm earth
+    did. Crack your papery shell and there are the two pale beans inside. You are the nut that
+    hides underground, small and humble and loved by all.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-22.html" data-answer="chestnut" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A shiny brown nut in a spiky green case,<br>
+      it falls from the tree in the fall;<br>
+      you roast it on the fire at Christmas -<br>
+      a ___, warm for all.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-6/-23.html" data-answer="coconut" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A big brown hairy nut from the palm,<br>
+      hard as a helmet outside;<br>
+      crack it open for the sweet white milk -<br>
+      a ___, treasure inside.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-24.html" data-answer="walnut" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A wrinkly nut in a round hard shell,<br>
+      it looks like a tiny brain;<br>
+      you crack it open with a nutcracker -<br>
+      a ___, worth the strain.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-8/-23.html" data-answer="mosquito" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A whining biting bug of the night,<br>
+      it drinks a drop of your blood;<br>
+      it leaves an itchy bump behind -<br>
+      a ___ from the mud.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-22.html">north</a>, <a href="../-6/-23.html">east</a>,
+        <a href="-24.html">south</a>, <a href="../-8/-23.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

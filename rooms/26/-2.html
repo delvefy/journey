@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notebook — Journey</title>
+<meta name="description" content="A book of blank pages, for writing and drawing in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">26 : -2</p>
+  <h1 class="room-name">Notebook</h1>
+
+  <div class="prose">
+    <p>You are a notebook - a stack of blank pages bound between two covers, waiting to be filled.
+    Sums and spellings, doodles and lists, secret plans and half-finished stories all end up
+    inside you. Your pages crinkle when they turn and curl at the corners with use. Some of you
+    have lines, some are plain, some lock with a little clasp. Patient and ready, you carry
+    whatever a busy mind pours out, and you keep it safe between your covers until someone opens
+    you again.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-1.html" data-answer="cloth" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A piece of woven fabric, soft and flat,<br>
+      you cut it and stitch it to wear;<br>
+      or wipe a spill or polish a shoe -<br>
+      a ___, with threads to spare.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../27/-2.html" data-answer="paperclip" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A little bent loop of springy wire,<br>
+      it pinches your pages tight;<br>
+      it holds a sheaf of sheets together -<br>
+      a ___, snug and light.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-3.html" data-answer="ink" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The dark wet liquid inside a pen,<br>
+      it flows in a glossy line;<br>
+      it dries on the page as words and shapes -<br>
+      an ___, black or blue, so fine.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../25/-2.html" data-answer="ruler" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A long straight stick all marked with lines,<br>
+      to measure and draw things true;<br>
+      you press it down and trace its edge -<br>
+      a ___, straight through and through.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-1.html">north</a>, <a href="../27/-2.html">east</a>,
+        <a href="-3.html">south</a>, <a href="../25/-2.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

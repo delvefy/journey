@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyline — Journey</title>
+<meta name="description" content="The jagged outline of a city's buildings against the sky.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-6 : 26</p>
+  <h1 class="room-name">Skyline</h1>
+
+  <div class="prose">
+    <p>You are a skyline - the ragged dark outline a city makes against the evening sky, all
+    towers and spires and rooftops cut from black. Seen from far off across the river, you tell a
+    whole city in a single jagged shape: here a great glass tower, there a domed roof, there a
+    pointed steeple. As the sun sets behind you, you turn to a row of dark cut-outs. Bold and
+    famous and instantly known, you are a city's signature drawn on the sky, the shape that says
+    exactly which place this is.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="27.html" data-answer="haze" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A thin misty blur in the warm still air,<br>
+      it softens the far-off hills;<br>
+      the distance goes dreamy and pale and vague -<br>
+      a ___, the valley fills.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-5/26.html" data-answer="starlight" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The faint silver glow of stars at night,<br>
+      so far and so long ago;<br>
+      it pricks the dark with a thousand points -<br>
+      a ___, soft and slow.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="25.html" data-answer="horizon" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">The far-off line where the sky meets the land,<br>
+      or the sea at the edge of sight;<br>
+      the sun sinks down past it at dusk -<br>
+      a ___, out of flight.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-7/26.html" data-answer="bite" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">To cut into food with your sharp front teeth,<br>
+      you sink them into the apple;<br>
+      a chunk comes away with a satisfying crunch -<br>
+      a ___, with which to grapple.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="27.html">north</a>, <a href="../-5/26.html">east</a>,
+        <a href="25.html">south</a>, <a href="../-7/26.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

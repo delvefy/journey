@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rustle — Journey</title>
+<meta name="description" content="The soft dry whisper of leaves stirred by the wind.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-24 : 1</p>
+  <h1 class="room-name">Rustle</h1>
+
+  <div class="prose">
+    <p>You are a rustle - the soft dry whisper of many small things stirring at once: leaves in
+    the hedge, paper in a bag, a mouse in the straw. You are barely a sound at all, a papery
+    shiver that comes and goes with the wind. No hand makes you; the breeze does, brushing through
+    the dry and the crinkly. You make the autumn wood sound alive. You are the quietest noise the
+    world keeps, the soft secret stir at the edge of hearing.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="2.html" data-answer="drizzle" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A fine light rain that mists the air,<br>
+      it drifts down soft and slow;<br>
+      you hardly feel it wet your coat -<br>
+      a ___ you hardly know.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-23/1.html" data-answer="whoosh" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">The sound of something rushing past,<br>
+      the wind, a car, a slide;<br>
+      the air goes swooping by your ears -<br>
+      a ___ on the ride.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="0.html" data-answer="volcano" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A fire-breathing mountain that roars,<br>
+      it spits out melted rock;<br>
+      ash to the sky and lava down -<br>
+      a ___, what a shock.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-25/1.html" data-answer="buzz" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">The sound a bee makes near the flowers,<br>
+      a humming droning sound;<br>
+      your phone makes one on silent too -<br>
+      a ___ that goes round.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="2.html">north</a>, <a href="../-23/1.html">east</a>,
+        <a href="0.html">south</a>, <a href="../-25/1.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manure — Journey</title>
+<meta name="description" content="Animal dung spread on fields to make the crops grow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-25 : -8</p>
+  <h1 class="room-name">Manure</h1>
+
+  <div class="prose">
+    <p>You are manure - the good brown muck the farmer spreads across the fields, straight from
+    the cow shed and the stable. You smell strong and you look unlovely, but you are full of all
+    the goodness the soil is hungry for. Forked out and dug in, you rot down and feed the roots,
+    and up come fat cabbages and tall green corn. Earthy and humble and wonderfully useful, you
+    are nature's way of giving back, turning yesterday's hay into next year's harvest.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-7.html" data-answer="snout" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">The long flat nose at the front of a pig,<br>
+      all wrinkly and pink and round;<br>
+      it snuffles and roots in the muddy ground -<br>
+      a ___, sniffing the ground.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-24/-8.html" data-answer="compost" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A heap of old peelings and grass and leaves,<br>
+      all rotting down to crumbs;<br>
+      you dig it in to feed the soil -<br>
+      a ___, when spring comes.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-9.html" data-answer="log" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A thick round chunk of a fallen tree,<br>
+      you stack them up by the shed;<br>
+      you split them for the fire in the grate -<br>
+      a ___, the cold to shed.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-26/-8.html" data-answer="hay" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">Dried grass cut and gathered in bales,<br>
+      to feed the cows all winter long;<br>
+      it smells of summer, golden and sweet -<br>
+      a stack of ___, fat and strong.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-7.html">north</a>, <a href="../-24/-8.html">east</a>,
+        <a href="-9.html">south</a>, <a href="../-26/-8.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

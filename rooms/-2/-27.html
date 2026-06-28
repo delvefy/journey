@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poppy — Journey</title>
+<meta name="description" content="A bright red flower with crinkly, papery petals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-2 : -27</p>
+  <h1 class="room-name">Poppy</h1>
+
+  <div class="prose">
+    <p>You are a poppy - a flower of the brightest blazing red, with petals thin and crinkled like
+    tissue paper round a dark seed-button heart. You spring up wild in fields and along roadsides,
+    nodding in the breeze on a slender hairy stem, scattering your tiny seeds far and wide. People
+    wear you in autumn to remember. Bold and papery and brilliantly red, you are a splash of
+    scarlet in the green, here for a few summer days and then gone, your petals dropping at the
+    lightest touch.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-26.html" data-answer="snowdrop" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A tiny white bell that hangs its head,<br>
+      first up when winter's deep;<br>
+      it pushes through the frosty ground -<br>
+      a ___, while gardens sleep.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-1/-27.html" data-answer="tulip" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A cup upon a tall green stem,<br>
+      it opens in the spring;<br>
+      red and yellow, smooth and bright -<br>
+      a ___, a lovely thing.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-28.html" data-answer="crocus" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A small low flower that comes up first,<br>
+      purple and gold and white;<br>
+      it opens its goblet to the early sun -<br>
+      a ___, a springtime sight.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-3/-27.html" data-answer="flea" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A tiny brown bug that hops and bites,<br>
+      it lives in a doggy's fur;<br>
+      it springs so high for so small a thing -<br>
+      a ___, a jumping blur.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-26.html">north</a>, <a href="../-1/-27.html">east</a>,
+        <a href="-28.html">south</a>, <a href="../-3/-27.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>

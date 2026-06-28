@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canyon — Journey</title>
+<meta name="description" content="A deep narrow gorge with steep rock walls and a river far below.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="room">
+<div class="wrap">
+
+  <p class="room-coord">-16 : -20</p>
+  <h1 class="room-name">Canyon</h1>
+
+  <div class="prose">
+    <p>You are a canyon - a deep narrow crack cut into the rock over millions of years by a
+    patient river, with sheer red walls rising on either side and the thin glint of water far, far
+    below. No hand digs you; the slow river does. Your echo bounces back twice. Eagles ride the
+    warm air up your cliffs. Deep and steep and ancient, you are the river's great carving, a
+    chasm so vast a shout takes a moment to come back across it.</p>
+  </div>
+
+  <div class="fleuron" role="presentation"><span>&#10086;</span></div>
+
+  <nav class="hoard" aria-label="The four riddles of this room">
+    <p class="hoard-title">four ways out &middot; speak the name to pass</p>
+
+    <div class="room-square" aria-hidden="true">
+      <span class="wall wall-top"></span>
+      <span class="wall wall-right"></span>
+      <span class="wall wall-bottom"></span>
+      <span class="wall wall-left"></span>
+      <span class="room-center">&#10086;</span>
+    </div>
+
+    <form class="riddle-box box-top" data-dir="top" data-href="-19.html" data-answer="mountain" novalidate>
+      <p class="riddle-dir">North</p>
+      <p class="riddle-text">A giant heap of rock and snow<br>
+      that scrapes against the sky;<br>
+      you climb all day and reach the top -<br>
+      a ___ steep and high.</p>
+      <label class="riddle-label" for="ans-top">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-top" name="ans-top" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-right" data-dir="right" data-href="../-15/-20.html" data-answer="gravel" novalidate>
+      <p class="riddle-dir">East</p>
+      <p class="riddle-text">A path of little crunchy stones<br>
+      that scatter when you tread;<br>
+      it grinds beneath the bicycle wheel -<br>
+      the ___ where you're led.</p>
+      <label class="riddle-label" for="ans-right">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-right" name="ans-right" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-bottom" data-dir="bottom" data-href="-21.html" data-answer="crater" novalidate>
+      <p class="riddle-dir">South</p>
+      <p class="riddle-text">A big round bowl-shaped hole in the ground,<br>
+      blown out or punched by a rock;<br>
+      the moon is covered all over in them -<br>
+      a ___, what a shock.</p>
+      <label class="riddle-label" for="ans-bottom">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-bottom" name="ans-bottom" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <form class="riddle-box box-left" data-dir="left" data-href="../-17/-20.html" data-answer="dune" novalidate>
+      <p class="riddle-dir">West</p>
+      <p class="riddle-text">A great smooth hill of heaped-up sand<br>
+      the wind builds in the waste;<br>
+      it shifts and slides and creeps along -<br>
+      a ___, slowly traced.</p>
+      <label class="riddle-label" for="ans-left">Your answer</label>
+      <div class="riddle-row">
+        <input class="riddle-input" id="ans-left" name="ans-left" type="text" inputmode="text"
+               autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
+               enterkeyhint="go" placeholder="speak the name&hellip;">
+        <button class="riddle-go" type="submit">Pass</button>
+      </div>
+      <p class="riddle-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="door-readout" aria-live="polite"></p>
+
+    <noscript>
+      <p class="riddle-status">The riddles need JavaScript to test your answers. The four ways:
+        <a href="-19.html">north</a>, <a href="../-15/-20.html">east</a>,
+        <a href="-21.html">south</a>, <a href="../-17/-20.html">west</a>.</p>
+    </noscript>
+  </nav>
+
+</div>
+<script src="../../rooms.js"></script>
+</body>
+</html>
