@@ -1,30 +1,30 @@
 {
-  "x": -22, "y": 17,
-  "name": "overflow",
-  "desc": "What water does when there is simply too much to hold.",
-  "prose": "Overflow is what water does when there is simply too much. The bath fills past the brim and spills onto the floor; the river swells with rain and climbs its banks; the cup runs over your hand. It is fullness that cannot be held any longer, the moment the vessel gives up and lets go. You cannot catch it - it pours away wherever it likes. Natural and weightless, it is the water saying enough, there is no more room, and brimming over.",
-  "N": { "a": "drip", "lines": [
-    "Plip. The tap is not quite off,",
-    "and now and then, just one",
-    "small drop falls down into the sink -",
-    "plip, plop, it's never done."
+  "x": 21, "y": -19,
+  "name": "hacksaw",
+  "desc": "The saw with a fine tight blade made for cutting through metal.",
+  "prose": "A hacksaw is the saw you reach for when the job is metal, not wood - a thin, fine-toothed blade stretched tight in a sturdy bow of a frame. Where a big wood saw would just skid and screech, the hacksaw bites slowly through a pipe or a bolt or a padlock, back and forth, back and forth, leaving a little pile of bright metal dust. Change the blade when it goes blunt. Patient and tough, it cuts the things nothing else will.",
+  "N": { "a": "sandpaper", "lines": [
+    "Rough scratchy paper, gritty and tough,",
+    "rub it on wood to make it smooth;",
+    "it wears the bumps and splinters off -",
+    "scritch-scratch, it sands the groove."
   ]},
-  "E": { "a": "trickle", "lines": [
-    "A thin slow thread of running wet,",
-    "too small to call a stream;",
-    "down the rock it slips and slides -",
-    "the gentlest flow, I deem."
+  "E": { "a": "plunger", "lines": [
+    "A rubber cup upon a stick,",
+    "push it down on the blocked-up drain;",
+    "squelch and pull with all your might -",
+    "pop! the water flows again."
   ]},
-  "S": { "a": "tear", "lines": [
-    "A salty drop that fills your eye",
-    "and slides down your cheek;",
-    "it falls when you are sad or hurt -",
-    "no word you have to speak."
+  "S": { "a": "hoe", "lines": [
+    "A long-handled tool with a flat blade end,",
+    "chop the weeds and break the soil;",
+    "drag it through the vegetable patch -",
+    "a gardener's friend for the digging toil."
   ]},
-  "W": { "a": "drizzle", "lines": [
-    "Not proper rain, just tiny drops,",
-    "a fine and misty wet;",
-    "too light for brollies, soft and grey -",
-    "the smallest rain you'll get."
+  "W": { "a": "crowbar", "lines": [
+    "A long iron bar with a curved flat end,",
+    "shove it under and lever it up;",
+    "prise the lid off the heavy crate -",
+    "pop! with a heave and a tug."
   ]}
 }

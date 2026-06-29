@@ -116,6 +116,7 @@ bog
 boil
 bolt
 bone
+bonfire
 bongo
 boo
 book
@@ -140,6 +141,7 @@ brazilnut
 breaker
 breath
 breeze
+breezy
 brick
 bronze
 brook
@@ -182,6 +184,7 @@ camera
 canal
 candle
 canoe
+canvas
 canyon
 cap
 cape
@@ -194,6 +197,7 @@ carrot
 cart
 cartwheel
 cashew
+cast
 cat
 catch
 caterpillar
@@ -248,6 +252,7 @@ climb
 clingfilm
 clink
 clip
+clipboard
 cloak
 clock
 clog
@@ -271,6 +276,7 @@ collarbone
 comb
 comet
 comfort
+comic
 compass
 compost
 computer
@@ -300,6 +306,7 @@ cradle
 cramp
 crane
 crash
+crate
 crater
 crawl
 crayon
@@ -337,6 +344,7 @@ cymbal
 daffodil
 daisy
 dalmatian
+dam
 damp
 dance
 dandelion
@@ -367,6 +375,7 @@ dimple
 ding
 dip
 dirt
+disco
 dish
 dive
 dizzy
@@ -451,6 +460,7 @@ fiddle
 fidget
 field
 fig
+file
 fin
 finger
 fingernail
@@ -498,6 +508,7 @@ forehead
 forest
 fork
 fossil
+foul
 fountain
 fox
 freckle
@@ -518,6 +529,7 @@ galaxy
 gale
 gallop
 game
+gape
 gargle
 gasp
 gate
@@ -553,6 +565,7 @@ gnaw
 goal
 goat
 gobble
+goggles
 gold
 goldfish
 gong
@@ -566,6 +579,7 @@ grass
 grasshopper
 grater
 gravel
+gravity
 graze
 greed
 green
@@ -573,6 +587,7 @@ grey
 grief
 grin
 groan
+grow
 growl
 grumble
 grump
@@ -618,6 +633,7 @@ heel
 helicopter
 helmet
 hen
+herd
 hiccup
 hide
 highfive
@@ -631,6 +647,7 @@ hippo
 hiss
 hive
 hobble
+hoe
 holepunch
 holler
 holly
@@ -688,6 +705,7 @@ jeans
 jellyfish
 jet
 jetty
+jewel
 jig
 jiggle
 jigsaw
@@ -823,13 +841,16 @@ microscope
 midnight
 millipede
 mind
+minus
 minute
 mirror
 mischief
 mist
+misty
 mitten
 mix
 moan
+moat
 molar
 mole
 moment
@@ -898,6 +919,7 @@ noon
 nose
 note
 notebook
+notepad
 now
 nudge
 numb
@@ -905,9 +927,11 @@ number
 nut
 oak
 oasis
+oats
 ocean
 octopus
 oink
+olive
 onion
 ooze
 orange
@@ -994,12 +1018,14 @@ plate
 platter
 platypus
 play
+playdough
 pliers
 plop
 plough
 plug
 plum
 plunge
+plunger
 pocket
 poem
 point
@@ -1032,12 +1058,14 @@ pretend
 pride
 promise
 protractor
+proud
 prowl
 puddle
 puff
 pufferfish
 pull
 pulse
+pump
 pumpkin
 punch
 puppet
@@ -1106,6 +1134,7 @@ rockinghorse
 rockpool
 rod
 roll
+rollerskate
 rollingpin
 roof
 rooster
@@ -1126,15 +1155,18 @@ rustle
 sack
 sadness
 sag
+sailboat
 salt
 salute
 sand
 sandal
 sandpaper
+sandstorm
 sap
 sapling
 sapphire
 satellite
+satsuma
 saucepan
 saucer
 save
@@ -1160,6 +1192,7 @@ scrape
 scratch
 scream
 screech
+screen
 screw
 screwdriver
 scroll
@@ -1170,6 +1203,7 @@ scuttle
 sea
 seahorse
 seal
+seashore
 seaweed
 second
 secret
@@ -1197,6 +1231,7 @@ shell
 shimmer
 shin
 shine
+shiny
 ship
 shirt
 shiver
@@ -1258,6 +1293,7 @@ slime
 sling
 slip
 slipper
+slippers
 slither
 slop
 slope
@@ -1309,6 +1345,7 @@ song
 soot
 sore
 sound
+sour
 space
 spade
 spanner
@@ -1342,6 +1379,7 @@ sprinkle
 sprint
 sprout
 spurt
+spy
 squash
 squat
 squawk
@@ -1367,6 +1405,7 @@ starfish
 starlight
 steam
 stem
+step
 stethoscope
 stick
 sticker
@@ -1379,6 +1418,7 @@ stomach
 stomp
 stone
 stool
+stopwatch
 storm
 story
 straw
@@ -1641,6 +1681,7 @@ wince
 wind
 window
 windpipe
+windy
 wing
 wink
 winter
