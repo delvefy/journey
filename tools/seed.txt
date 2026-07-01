@@ -1,0 +1,752 @@
+================================================================================
+THE LOOM OF HEAVENS — MULTIVERSE SEED
+A worldbible for a neverending wiki
+================================================================================
+
+PURPOSE
+-------
+This file is the seed for an ever-expanding wiki (a "wikia") of a single
+multiverse — the LOOM OF HEAVENS — under which every story in this writing
+folder is a separate universe. It gathers, in one place, the worlds, the
+characters, the power systems, the events, and (most important for a wiki that
+must keep growing) the OPEN HOOKS that can be expanded into new articles
+forever.
+
+The seed does not tell the stories. It maps them, so that lore, events, and
+characters can be spun out into wiki entries indefinitely without contradicting
+what the source drafts already establish.
+
+--------------------------------------------------------------------------------
+0. HOW TO USE THIS SEED (rules for the wiki generator)
+--------------------------------------------------------------------------------
+
+CANON DISCIPLINE. This is a LOOSE multiverse with LATENT links. That means:
+
+  1. Each universe is self-contained. Its own physics, its own cast, its own
+     history. Treat it as a standalone world first.
+
+  2. The LOOM OF HEAVENS is the shared frame that contains them all — but the
+     inhabitants of almost every universe do NOT know the Loom exists, do not
+     know other universes exist, and have never met anyone from another stitch.
+
+  3. Cross-universe connections are, by default, LATENT — hooks, resonances,
+     and theories, NOT confirmed facts. The wiki may write "Theories" and
+     "Resonances" sections that speculate about links. It must NOT state a
+     crossover as canon unless this seed explicitly marks it CONFIRMED.
+
+  4. There are exactly TWO CONFIRMED cross-universe anchors (see Section 2).
+     Everything else stays a thread the reader may pull, never a knot already
+     tied.
+
+TIERS. Universes are marked by how much source material exists:
+  - [ESTABLISHED]  — has real drafted chapters. Highest canon weight.
+  - [SKETCH]       — has a premise, meta notes, maybe a partial draft.
+  - [BLUEPRINT]    — fully outlined but unwritten.
+  - [META]         — the frame layer (the Weavings). Handle with care.
+
+When source drafts and this seed disagree, the DRAFTS win for that universe.
+When expanding, prefer to fill OPEN HOOKS over inventing new top-level facts.
+
+ARTICLE TYPES the wiki should support: Universe, Character, Location, Power
+System / Cultivation Path, Faction / Sect / Organization, Event, Artifact,
+Species, Concept (cosmology), and Thread (an open mystery tracked across
+articles).
+
+--------------------------------------------------------------------------------
+1. THE MASTER COSMOLOGY — THE LOOM OF HEAVENS
+--------------------------------------------------------------------------------
+
+THE WEAVE. Above and between all worlds hangs the Loom of Heavens: a vast
+tapestry in an empty between-place, on which every universe is a single stitch
+of cold fire. Threads of space run between the stitches like tunnels drawn
+through the void; from outside, the whole resembles the inside of an enormous
+brain — bright cores knotted at the center by thousands of crossings, lonely
+little points at the dim edges tied to the rest of creation by only three or
+four thin threads.
+
+Central universes are dense and well-connected. Frontier universes hang at the
+rim with almost no threads at all. Most worlds in this seed are frontier
+stitches — backwaters — which is exactly why almost no one in them has ever
+suspected the Loom is there.
+
+TWO KINDS OF THREAD.
+  - THREADS OF SPACE: the great roads of the Loom, the tunnels binding universe
+    to universe. Travel between stitches runs along these. Only a being of
+    sufficient power can walk them.
+  - KARMA THREADS: the finer, private web running BETWEEN souls — debt, love,
+    grudge, the pull of master to inheritor, the alignment of a destiny. Karma
+    is invisible to mortals; the heaviest cords begin to glow to advanced
+    cultivators; to the very highest beings nearly all of it is legible. Fate
+    can be READ along a karma thread, and — very carefully — nudged.
+
+THE LADDER (the known ascent, in cultivation-type universes). The road of
+cultivation has nine realms:
+    1. Spirit Gathering      — first sense and draw of qi
+    2. Foundation Forging    — body, meridians, dantian made into a vessel
+    3. Core Condensation     — qi wrought into a permanent core
+    4. Soul Expansion        — the soul widened; spiritual sense sharpens;
+                               heavy karma begins to glow
+    5. Void Stepping         — a small inner world opens; travel between
+                               universes becomes possible
+    6. Heaven Harmonizing    — the inner world expands into an inner galaxy
+    7. Divine Seed           — an inner universe takes seed; mastery of at least
+                               one Dao
+    8. Dao Divinity          — godhood, scaled to the number of Daos mastered
+    9. Primordial God        — the peak; all ten primordial Daos fused into the
+                               being; stands outside any single universe
+
+Across most universes no one has ever passed the middle realms. Across the
+entire Loom, in all the eras of all creation, only a handful have ever reached
+the ninth realm at all.
+
+THE PRICE OF THE NINTH REALM: SEVERANCE. The moment a cultivator completes the
+ninth realm — the moment all ten primordial Daos fuse into their being — every
+thread of space binding them to their home universe snaps at once. They rise
+out of their world into the empty between-place above the Loom. Alone. A
+Primordial God is exiled by their own ascension.
+
+THE TEN PRIMORDIAL DAOS (the fundamental laws all lesser Daos descend from):
+  - Two polarities: the DAO OF ORDER (shape, position, consequence) and the
+    DAO OF CHAOS (change, drift, consumption).
+  - Four Daos of Order: Time, Space, Life, Death.
+  - Four Daos of Chaos: Wind, Earth, Fire, Water.
+  - Every smaller Dao — Sword, Healing, Lightning, Deception, and the rest —
+    is a child of these.
+
+THE LID ABOVE EVERY SKY (the political truth of the Loom). A recurring, dreaded
+truth surfaces from more than one universe: the sky of a lower world is not open
+— it is a LID, a seal placed from above by higher-realm powers, and the lower
+world beneath it is FARMED. Ignorance is the keystone of the seal; a world that
+KNOWS what its sky really is becomes far harder to keep sealed. This is the
+cosmology's cruelty: the Loom is not a neutral tapestry but a hierarchy, its
+lower stitches kept small and quiet on purpose. "There is always a smaller sky,
+and a larger one above it." The mountain beyond the mountain never ends.
+
+HOW SOULS CROSS BETWEEN STITCHES. The Loom permits a pattern (a soul) to move
+between universes by several local mechanisms — which the inhabitants of each
+world explain in their own terms, never suspecting they are all the same act:
+  - ASCENSION: climbing the ladder past Void Stepping (cultivation worlds).
+  - VOID-RESURRECTION: a void entity pulling a dead pattern into a new body on
+    a compatible world (the Engine universe).
+  - DIVINE SUMMONING: a god or an entity calling a champion out of one world
+    into another (Champion of the Light; the Tavern).
+  - JUDGED REINCARNATION: a soul weighed by a bureaucracy of death and reseeded
+    into a new life, sometimes across worlds (the Charlatan).
+  - ENGINEERED GATES: technology weaponizing the same seam (the Exodus
+    stargates of the Engine universe).
+These are five names for one door.
+
+THE WEAVING MOTIF (a resonance to track, not yet a fact). Three universes carry
+the same image without knowing the others exist:
+  - the LOOM OF HEAVENS itself (a weave of worlds);
+  - the WEAVERS and their CODEX, a far-future civilization whose machine has
+    begun detecting "a current — the same shape repeating across worlds";
+  - the WEAVINGS — a collection of found notebooks and lost memoirs (the meta
+    layer).
+Whether the Weavers are unknowingly reading the Loom, whether the Codex's
+"current" is a karma thread, and whether the Found Notebooks are fragments
+recovered from across the weave — all of this is OPEN. The wiki may theorize.
+It may not conclude.
+
+--------------------------------------------------------------------------------
+2. THE CONFIRMED SPINE (the only crossovers treated as canon)
+--------------------------------------------------------------------------------
+
+ANCHOR A — SKOLAR: THE CHARLATAN WHO BECAME A PRIMORDIAL GOD. [CONFIRMED]
+The being who floats above the Loom as the Primordial God SKOLAR (see Universe:
+Blaze) and the reincarnated con-artist cultivator SKOLAR (see Universe: The
+Charlatan) are ONE SOUL across different eras. The Charlatan is the mortal
+origin — or an early incarnation — of the entity who eventually climbs all nine
+realms to the top of the Loom.
+
+  Why it fits: the Charlatan's soul is unusually strong (measured at mid-Hegemon
+  strength) and was SEALED by the Judges of Reincarnation, yet he kept his
+  memories anyway — the mark of a pattern too heavy to fully bind. His chosen
+  Daos are DECEPTION and SPACETIME. The Primordial God Skolar's signature act is
+  the grandest deception in the multiverse: shaping a qi-less double of himself
+  and wrapping it in seven veils of TIME, SPACE, and ORDER so that not even
+  another Primordial God can see it. The con artist grew up to fool the Heavens
+  themselves.
+
+  This is the SPINE of the whole multiverse — the one soul the wiki can follow
+  from the bottom of the ladder to the empty place above the Loom. Everything
+  between the Charlatan's sealed rebirth and Skolar's lonely eternity is open
+  territory the wiki may expand: which universes he climbed through, whom he
+  loved and lost, when the severance took him, and how many eras he waited
+  before he found the second pair of eyes (see Blaze).
+
+ANCHOR B — THE HUNDRED-ELEVEN ROSTER SHARES A NAME WITH BLAZE. [CONFIRMED]
+The mercenary company of Universe: 111 (the Hundred-Eleven) has, on its roster,
+soldier #45 named BLAZE — the same name as the protagonist-lineage of Universe:
+Blaze. The narrator of 111, ALDEN, is soldier #82. So the roster of the
+Hundred-Eleven and the world of Blaze share at least one figure.
+
+  What is CONFIRMED: the name/character link and the shared roster.
+  What is OPEN (a Thread): HOW. Does the cultivator's fire-road ("Blaze
+  Tempering") end with its bearer bound into a grimoire company in another
+  world? Is the Hundred-Eleven a company that recruits ACROSS stitches of the
+  Loom (its human-skin Grimoire holds thousands of names though the company is
+  only 111 strong)? Is "Blaze" a title passed down rather than a person? The
+  wiki should keep this a mystery and resist resolving it prematurely.
+
+Everything NOT in this section is latent. See Section 4 for the resonance
+catalogue.
+
+--------------------------------------------------------------------------------
+3. THE UNIVERSES (stitches of the Loom)
+--------------------------------------------------------------------------------
+
+================================================================================
+UNIVERSE: BLAZE   [ESTABLISHED]   —   the frontier cultivation world & the Loom
+================================================================================
+TYPE: Xianxia / cultivation progression. This universe also HOLDS the master
+frame (the Loom of Heavens is seen from here, in the prologue).
+
+THE WORLD. A small grey planet at the dim edge of the Loom — thin qi, shallow
+seas, tied to the rest of creation by only four faint golden threads of space.
+Its sects reach no higher than Spirit Gathering, with rare Foundation Forging
+elders at the heads of the great city walls. A backwater, worth no second glance
+— except for a destiny about to be born on it.
+
+KEY LOCATIONS:
+  - SCARLET CITY — the main city; concentric wards from a red-tiled crown down
+    to the merchant districts, craftsman wards, tenements, and the SLUMS on the
+    eastern flank beyond a dry, bone-littered moat. Contains a hidden
+    cultivators' market.
+  - THE EASTERN FOREST, THE RIVER, THE WATERFALL CAVE — where Rin is swept over
+    the falls and finds the pearl that ignites his road.
+  - VANCIA — a northern farming village; site of the qi-stone warehouse heist.
+  - THE GREY MIRE, THE GREAT GREY CLIFF — the poison bog and thousand-meter wall
+    of the Sky Sect candidate race.
+  - THE SKY SECT COMPOUND & OUTER SLOPE — white-walled sect on the highest hill;
+    a true, larger headquarters sits on a different continent.
+  - THE CRIMSON FOOTHILLS / CRIMSON MOUNTAIN — highland rumored to hide
+    reclusive body-cultivation masters (a name: "Blue Fire").
+  - THE DEAD MOUNTAINS — a lifeless range where Skolar's veiled avatar sits.
+  - THE LOOM OF HEAVENS & the empty between-place above it — Skolar's vantage.
+
+POWER SYSTEMS:
+  - The standard nine-realm qi-gathering LADDER (see Section 1).
+  - THE BLAZE TEMPERING — Rin's secret BODY-cultivation road. Forty layers
+    across seven Condensations. It does not store qi in the dantian; it CONSUMES
+    qi, igniting it via an [Igniting Sigil] at the solar plexus and burning
+    impurities out through the skin as slag. Each layer doubles raw strength,
+    density, and durability. Its bearer reads to any standard test as an
+    ordinary mortal with disconnected meridians — invisible by design.
+  - QI MECHANICS: qi drawn from air, herbs, pills, qi stones (marble-sized
+    crystals of crystallized qi), and spirit veins; stored in the dantian and
+    carried by meridians. Qi deviation and overdraw kill.
+
+KEY CHARACTERS:
+  - RIN — the protagonist; the "bearer" of the rare destiny from the prologue.
+    A red-haired former slum orphan; born meridian-defective ("a bucket with no
+    bottom"), which closes the standard road but makes him perfect for the Blaze
+    Tempering. Secret body cultivator, thief, patient and cold under pressure,
+    illiterate at first (learning letters). Carries revenge debts. UNAWARE that a
+    Primordial God has chosen his trajectory.
+  - SKOLAR — the Primordial God; the only being ever to reach the ninth realm
+    and read the Loom from above. Gaunt, white-haired, ancient, dry-humored;
+    severed from his home universe for eras. Discovers Rin's karma trajectory
+    mirrors his own and could carry Rin to the ninth realm — a possible second
+    Primordial God, "a second pair of eyes." Cannot go himself (his karmic
+    weight would crush the fragile destiny — a mountain set beside a pebble), so
+    he pinches a wisp from his own TRUESOUL, shapes a qi-less double, wraps it in
+    SEVEN VEILS (3 Time, 2 Space, 2 Order), and sends it to wait on a dead
+    mountain for the child's birth, two hundred years off. Its only orders:
+    "Watch. Wait. Do not interfere." [SPINE — same soul as the Charlatan.]
+  - WHITEFLAME — a hunted body-cultivation master who scattered his dying soul
+    into a hundred blood-drops across the Loom; one drop seeds Rin's road. His
+    wisp teaches Rin the first layers and leaves a debt of revenge as the price
+    of inheritance. [Multiverse hook: a master scattered ACROSS the weave.]
+  - VIOLET — scout of Myron's bandit crew; black hair, purple eyes, knife
+    thrower; Rin's mentor and love interest; vanishes after the massacre,
+    leaving a letter Rin can't yet read pointing to a place called Sisma.
+  - MYRON'S CREW — the bandit chief Myron, his wife Wanda, and others; a
+    surrogate family, massacred by Barza.
+  - BARZA — Foundation Forging Sky Sect enforcer; bladed chains; slaughtered
+    Myron's crew as a casual contract; a primary revenge target who does not
+    recognize Rin as the survivor.
+  - AVALYN — arrogant formation-master's daughter and race rival; her Heaven-
+    ranked [Eight Directions Binding Net] fails against Rin.
+  - MENG — Rin's blinded childhood friend, whom Rin means to return for.
+  - Others: the Sky Sect outer-slope circle (Pim, Sela, Garron, Bren, Old Cobb);
+    watchers who sense something wrong with Rin (Yorrin, Kell); the vendetta
+    list (Roian the betrayer, the merchant Liu family, Young Master Liu).
+
+KEY EVENTS (Volume 1): the slum heist and blinding of Young Master Liu; Rin's
+broken legs and flight; the waterfall and the awakening of the Blaze Tempering;
+months with Myron's crew; the Vancia qi-stone heist; the massacre and Violet's
+disappearance; the ruin of the Slums (Meng blinded, guardians killed); selling
+one qi stone for a fortune; the Sky Sect candidate race (mire, beast, cliff);
+arrival on the outer slope with his nature still hidden.
+
+OPEN HOOKS: Skolar's two-century vigil and the moment of Rin's birth; who
+Whiteflame's enemies are and where the other 99 blood-drops fell; Violet's past
+and Sisma; the true Sky Sect headquarters and the higher continents; Rin's
+climb toward Void Stepping (the realm at which HE could step between stitches);
+the far-horizon seeds (a "Limitless Company" mercenary guild; an "Eternal
+Emperor"; a watership named Murky Waters).
+
+================================================================================
+UNIVERSE: 111 — THE HUNDRED-ELEVEN   [ESTABLISHED]   —   the grimoire company
+================================================================================
+TYPE: Grim military dark-fantasy. A journal-narrated mercenary saga.
+
+THE WORLD. VELEH — a fractured vassal kingdom squeezed between three empires:
+MECHIL (northeast), BLORIA (northwest), and USTRUS (southeast), which has ruled
+Veleh by proxy for fifty years. Medieval-equivalent, with magic but NO
+cultivation. Its politics are modeled on real history — the seed folder keeps a
+chronology of Michael the Brave (Mihai Viteazul), 1594-1600, as the structural
+template: a three-way squeeze, a claimant prince, tax-farming despots, shifting
+alliances, and betrayal.
+
+KEY LOCATIONS: TULLANON (a floating clam-town on rotting pillars over swamp
+water, the narrator's birthplace); OCRISTAN (the walled capital); THE RIFT (the
+siege fortress of seven kimberstone towers); BEIT HAIFUD (the southern imperial
+capital of Ustrus); STROVA (the eastern coast); TRANTAR (the late-book battle
+city); rivers Olta and Vorn Danu.
+
+POWER SYSTEM: THE GRIMOIRE — a parasitic, human-skin-bound book. A recruit
+swears an oath on it, takes the "111" brand, and is bound body and soul into the
+company. The Grimoire grants strength, endurance, magic-resistance, and clean
+healing — and COMPELS killing to feed itself; it can lock a bound soldier's
+muscles. It BURNS mages who try to swear; women's oaths "don't take." Its pages
+hold THOUSANDS of names though the company is only ever 111 strong — a hook
+toward reincarnation, long cycles, or recruitment across worlds. Rank is a
+number (#1 the Centurion down to #111); as soldiers die, the survivors are
+renumbered downward. Trained combat is called "the Pattern."
+
+KEY CHARACTERS:
+  - ALDEN (born Sadim), #82 → #39 — the narrator; an 18-year-old orphan of
+    Tullanon who joins for food and cannot leave. His journal is honest in ways
+    his life can't be; trauma numbs him arc by arc. Nicknamed "Paymaster." His
+    dead adoptive father "Pa" taught him to read.
+  - ELRIC, the Centurion (#1) — ancient, cold, from a wild land across the
+    Eastern Sea; has outlived many companies; loyal to the contract, not to
+    people. Hints of a very long life. [Hook: how long, exactly, and how?]
+  - BARON MIHAIL — the employer; a candidate for Veleh's throne; rumored
+    revenant (waxy-pale, wolf-gold eyes, never ages), quietly backed by Bloria.
+  - The Deans (#2-#11): MALKIRON (Alden's brutal-mentor squad leader; dies),
+    FARRICK, THORNE ("you've got the right kind of luck, boy"), KELLEN, ZANE,
+    and others.
+  - MIRA — a baker's daughter Alden loves at the Rift; murdered by one of his
+    own; her death is the hinge of his character.
+  - BLAZE — soldier #45. [CONFIRMED cross-universe anchor with Universe: Blaze.]
+  - Antagonist-adjacent: Voievod OLEGZANDER (tax-farming despot, later
+    assassinated); Lord ANDREJ (the Rift's defender).
+
+KEY EVENTS: the oath at Tullanon; the siege and sack of the Rift (and Mira's
+murder); the gold-heist embassy to Beit Haifud; the assassination/bribery
+campaign that buys Veleh's council; the incited peasant revolt in the west; the
+disastrous battle and retreat at Trantar; the long bleed home as the roster
+falls from 82 to 39.
+
+OPEN HOOKS: the true nature and origin of the Grimoire (the thousands of names);
+Elric's impossibly long service; the mechanism of Anchor B (how "Blaze" comes to
+be #45); the boy's Day-61 myth of the oak sapling that grows into a city, takes
+too much, and chooses to die so something cleaner can grow — which Alden says
+"reads like the soul-oath in my own brand" (a possible loom/cycle parable).
+
+================================================================================
+UNIVERSE: THE ENGINE (Neanderthal / EngineNeanderthal)   [ESTABLISHED]
+================================================================================
+TYPE: Immortal-wanderer science-fantasy spanning 100,000 years and 50 galaxies.
+"EngineNeanderthal" is the developed version; "neanderthal" the earlier draft.
+
+THE COSMOLOGY. The setting spans the Local Group and its neighbours — the ~50
+nearest galaxies. The MILKY WAY has five planets in play (EARTH is Planet 1);
+each other galaxy has three. Named early worlds: PLANAR (toxic-plant world),
+BALOR (wet, high-gravity Earth-analog), LYRIA (near-Earth twin that independently
+evolved a near-Neanderthal species). The far future adds ANDROMEDA and the
+Weavers' station (~55,000 AD).
+
+THE MECHANIC: VOID-RESURRECTION. Death is a doorway. When the body fails, the
+void entity VAEL pulls the wanderer's pattern through the Void and reseeds it in
+a new body on a biocompatible world. THE PLANET RULE: die on Earth, wake off-
+world; die off-world, usually wake on Earth. Roughly every other life is Earth.
+He cannot choose when, where, or which body. Off-world lives are hostile and
+often solitary — the loneliness is the true cost.
+
+OTHER POWERS:
+  - THE HOARD — a subspace inventory keyed to the man, not the planet; contents
+    never decay (a cigarette lit in a 1944 foxhole is still lit millennia
+    later). Cannot store anything heavier than his current body, anything still
+    breathing, or another void-touched thing.
+  - IMPROVED-BODY ("the discipline") — absolute autonomic control and clean
+    healing, built with Vael over centuries; includes "THE BELL," a grown organ
+    behind the sternum that floods him into a berserker state at severe cost.
+  - Slow-acquired knacks: perfect recall, silent movement, fast language
+    learning, minor animal sway, going unseen. He is NOT a god — a bullet still
+    hurts; only what happens after is different.
+
+KEY CHARACTERS:
+  - GHOR / "ADAM" — the protagonist and first-person narrator. Born ~45,000 BC,
+    a Neanderthal; dies at fourteen and entangles with Vael. Short, broad, cold-
+    adapted; the body is always recognizably him. Weary-amused, long-tempered,
+    has buried more people than any city. Goes by many names (Adam most of all;
+    also Yam, Adan, Adem, Adamski, Adam Cory, "the Stranger," and more).
+  - VAEL — a Spectral Void Entity bound to Ghor since his death. STRICT RULE:
+    she is never seen or heard directly; everything about her reaches the reader
+    only through Ghor's paraphrase. Quirky, funny in inhuman ways, alien in her
+    sense of time; the source of all his powers. Not the only one of her kind —
+    Ghor has felt OTHERS at distance, and felt her flinch.
+  - SEFIRA — a Weaver; the liaison "in the chair across from his," selected over
+    four thousand years to interview him.
+  - The Weavers — a hyper-advanced Andromeda civilization ~55,000 AD; orphaned
+    descendants of the Exodus colonists, cut off when the stargate network
+    collapsed. Their CODEX (inherited machinery older than they understand)
+    reconstructs lost data and has begun DETECTING "a current — the same shape
+    repeating across worlds," and has glimpsed the Hoard at distance.
+  - The Long Stoop crew (his most recent life): MIRA (helm), ONSHO (one-eyed
+    Carrick, guns), PINCH.
+  - Deep-history figures: Spring Drop, One Eye, Rat (his first killer), Wet
+    Grass, Wet Tip, Adamski (the Krakow printer whose page the Codex recovered).
+
+KEY EVENTS: the first death (~45,000 BC) and the binding to Vael; millennia of
+lives (he invents the wheel; loses and has his mind rebuilt around the year
+1,000; seeds a "Dynasty of Starman"); THE EXODUS (~3,500 AD) — Ghor weaponizes
+one of his own deaths into a network of stargates, humanity spreads across the
+galaxies, the network frays and collapses, and he never rebuilds it; Chapter 1
+(~55,000 AD) — he wakes in the Weavers' white cube and negotiates terms with
+Sefira.
+
+OPEN HOOKS: what Vael IS and why she chose him; the other void-touched entities
+(and why Vael fears them); the Codex's "current" and whether it is reading the
+Loom; the Hoard's ceiling; the many unwritten off-world lives (150 named-slot
+planets to fill); whether he is ever put on the same off-world planet a third
+time, and what that would mean.
+
+================================================================================
+UNIVERSE: SKY PILLAR   [ESTABLISHED]   —   the god-tree
+================================================================================
+TYPE: Xianxia from a non-human point of view — the rise of a sentient cultivator
+tree to world-shaking power.
+
+THE WORLD: YUNUS PLANET, whose "Small Southern Archipelago" holds hundreds of
+continents. Cultivation ladder: Qi Condensation → Foundation → Core Formation →
+Hegemon → Monarch → Autarch. Divine sense (spiritual perception) reaches
+hundreds of kilometers for Core Formation, thousands for Monarchs. Monarchs form
+inner worlds (pocket universes); Autarchs create galaxies and can eventually
+roam between worlds.
+
+KEY CHARACTER:
+  - EVERGREEN — a sapling that woke to sentience after absorbing the blood of a
+    dying cultivator. It grows ear-shaped leaves to learn human speech, discovers
+    it is a cultivator with divine sense, and climbs from City Guardian to
+    enslaver-ruler to Monarch, reaching a thousand-plus kilometers tall and
+    feeding on the planet's magma through roots kilometers deep. A slow, patient,
+    morally hardening intelligence.
+
+OTHER CHARACTERS: DEDALUS (the boy who first spoke to Evergreen; grows into a
+Hegemon and dies trying to liberate the enslaved city); Elder Hamas; the Hegemons
+Sage Qilin (killed), Undying Summer (enslaved), Blind Evening; the ancient
+Monarch DAVION and the Monarch Snowy Wood, who come to investigate the massive
+energy drain Evergreen causes.
+
+KEY EVENTS: awakening from blood; learning language; the long climb to Core
+Formation; near-total destruction by distant immortals and a decades-long
+regrowth (learning the Dao of Life); becoming an enslaver via soul-marks;
+killing Dedalus; ascending toward Monarch as elder cultivators converge.
+
+OPEN HOOKS: Evergreen's pocket inner-world and what grows in it; the distant
+immortals who nearly killed it; whether an unbodied intelligence can ascend the
+whole ladder; the coming clash with Davion's generation.
+
+================================================================================
+UNIVERSE: THE CHARLATAN   [SKETCH]   —   the con artist who fooled the Heavens
+================================================================================
+TYPE: Xianxia trickster progression. THE MORTAL ORIGIN OF SKOLAR. [SPINE]
+
+THE WORLD: a xianxia cultivation world of sects, noble families, and a kingdom
+at war; ladder from Qi Condensation up through Foundation, Core Formation,
+Nascent Soul, and Hegemon. Above it sits a celestial bureaucracy — the JUDGES /
+COURTS OF REINCARNATION — that weighs souls and reseeds them.
+
+THE PROTAGONIST: SKOLAR — an old charlatan guru who, at seventy, had an
+enlightenment go wrong on a mountain: his soul expanded until he detonated. His
+soul (as strong as a mid-stage Hegemon's) was hauled before a stoic Judge, sealed
+with two soul-seals, and reincarnated into a respectable family — but he kept ALL
+his memories and Dao knowledge. Reborn a prodigy, he builds his path on stealth,
+thievery, illusion, and fabricated cultivation techniques. His signature is the
+DAO OF DECEPTION (turning others' belief in falsehoods into cultivational
+currency; shifting tribulations onto enemies; layered "truth veils") paired with a
+DAO OF SPACETIME (spatial storage items, teleportation tokens; becoming the best
+thief and escape artist in the world).
+
+SUPPORTING CAST: mother Akoto; father Ryuru; uncle Sondras (8th-layer, early
+teacher); Elder Mogor; teacher of arms Ostrom; the rival prodigy Sharah.
+
+WIKI DIRECTIVE: this is the low end of the SPINE. The wiki may trace, in open
+territory, how the Charlatan's Deception-and-Spacetime road eventually becomes
+the seven-veiled avatar-craft of the Primordial God Skolar (Blaze). Do not
+contradict either endpoint.
+
+OPEN HOOKS: the identity of the Judges and the machinery of reincarnation; how a
+Dao of Deception climbs toward Order; the eras between this life and severance;
+the first universe he ever left.
+
+================================================================================
+UNIVERSE: CHAMPION OF THE LIGHT (Cotl)   [SKETCH]
+================================================================================
+TYPE: Summoned-hero portal fantasy with a litRPG attribute system.
+
+THE WORLD: a medieval fantasy of small kingdoms under invasion by the TRAXIAN
+empire from the north. Power comes from elemental "gates/essences" (Earth, Wind,
+Fire, Water) measured in attributes (str/agi/reg); combining gates forms
+"confluences" that double an attribute. THE LIGHT is a goddess who summons
+champions in times of need; an opposing COVENANT tears the sky and pours in
+nightmares and undead.
+
+KEY CHARACTERS: VIRAH (also "Roger") — the summoned champion, memories excised,
+monstrously strong and regenerative; RHUNA — the king's abused bastard princess,
+bound to Virah as his anchor/seal-holder; KING ARGUS — abusive king, last of the
+Church of the Light; MELLYSA — his legitimate princess; DRUS — a 70-year-honed
+wind+fire speedster and follower of prophecy who trains Virah.
+
+PREMISE/EVENTS: summoned and bound; flees the cruel king with Rhuna; caravan-
+guard life; waves of undead and a hunting necromancer; the sky-tear of the
+Covenant; Virah dies collapsing the portal into the undead dimension; epilogue
+from Rhuna's view; Virah is re-summoned by the Light with his memories excised
+again — a LOOP.
+
+MULTIVERSE HOOKS: summoning a soul out of one world into another (a Loom door);
+the goddess's separate "realm of Light"; the memory-wipe loop; many past
+champions, most fallen.
+
+================================================================================
+UNIVERSE: THE TAVERN   [SKETCH]
+================================================================================
+TYPE: Pocket-universe / champion-forge portal fantasy.
+
+THE WORLD: a pocket universe where only THE TAVERN exists, with a vestibule of
+many portals. The Tavern is itself an ENTITY, powered by an atomic-fusion core
+that runs on water; it seeks and forges champions, sending them through portals
+on missions (fetch water, wood, supplies) to grow larger. Its stated purpose: to
+forge TEN CHAMPIONS to battle a coming CALAMITY. A "Hearthstone" teleports its
+user home instantly, on death or at will (resurrections are limited).
+
+KEY CHARACTERS: ROBERT REDFORT — an ordinary man summoned from a gas-station job
+on Earth to be the Tavern Keeper; THE TAVERN itself.
+
+ONE KNOWN DESTINATION: River Evrion, on a gravity-locked frozen world whose sun-
+facing side has melted into an ocean, so the planet looks like a vast eye.
+
+MULTIVERSE HOOKS: portals to many worlds (a Loom node); summoning from Earth; the
+Calamity and the ten champions; limited resurrection.
+
+================================================================================
+UNIVERSE: THE SOURCE   [SKETCH]
+================================================================================
+TYPE: Lost-colony planetary science-fantasy.
+
+THE WORLD: a huge world of many empires and two native sentient species
+(demon-like and elf-like). Humans arrived 5,000 years ago on a colony ship; the
+planet emanates an energy called THE SOURCE, and only ~0.1% of humans can use it
+(via AI-edited DNA). Humans conquered by technology, then forgot their origin and
+became dominant. "Prophecies" of the end of the world are really the ship AI's
+predictions. The AI built (or is building) a device to shield the planet by
+harvesting its mana, needing a conduit of Demon + Elf + Human. The world-core is
+spongelike; there are muddy volcanoes.
+
+KEY CHARACTERS: an unnamed protagonist ("MainC"); "THE FIRST" — the first seven
+humans able to touch the Source, all long dead; the ship's AI.
+
+MULTIVERSE HOOKS: a colony ship arriving from elsewhere (Earth?); an AI reframed
+as prophecy/divinity; the conduit trinity.
+
+================================================================================
+UNIVERSE: THE NINE VAULTS CONTINENT (xianxiaArcs / "The Hollow Lantern")
+[BLUEPRINT]   —   fully outlined, unwritten
+================================================================================
+TYPE: Classic xianxia progression in ten arcs; the "sky is a lid" cosmology in
+its purest form.
+
+THE WORLD: the NINE VAULTS CONTINENT — a single landmass whose people do not
+know a larger sky exists above. Law: "the strong set the rules; the weak inherit
+them." Information is hoarded; manuals are secrets. Ladder: Body Tempering → Qi
+Condensation → Foundation Establishment → Core Formation → Nascent Soul → Soul
+Transformation → Dao Seeking → Ascension.
+
+THE PROTAGONIST: LU CHEN (placeholder name) — a poor village boy falsely labeled
+"dead root," in truth the sealed bloodline of the erased LU CLAN. His golden
+finger is THE HOLLOW LANTERN, a relic holding the soul-ash of a dead immortal;
+it grants APPRAISAL (name any technique's flaw) and MEMORY-DRIP (costly fragments
+of the immortal's past). Using it ages his soul — power with real price.
+
+KEY SUPPORTING CAST: Lu Yan (grandfather, dies); the Lantern / the DEAD IMMORTAL
+(tool → partner → teacher → a gift finally let go); Bai Lu (alchemist ally whose
+clan relic pairs with Lu Chen's key); Wei Tian (cross-sect rival); Su Yanran
+(honorable rival → ally); Captain Luo (officer who defects); Lady Wen (neutral
+Marketmaster, possible higher-world exile); Elder Hai (killed); Grand Censor Xu
+(the PREFECTURE spider-master, destroyed); Enforcer Mo (killed).
+
+THE FOUR SECTS that buried the Lu bloodline: Azure Cloud Sect, Heavenfall
+Pavilion, Crimson Pill Hall, Hundred Rivers Court. Above them all: the PREFECTURE,
+a shadow authority that enforces the seal.
+
+THE TEN ARCS (escalating local → institutional → regional → cosmic):
+  1. The Hollow Lantern (awakening) · 2. The Outer Sect Trials · 3. The Sealed
+  Vale (the "forbidden truth about the SKY" first surfaces) · 4. The Azure
+  Heaven Rankings · 5. Ashes of Pinewend (revenge; the Prefecture revealed) ·
+  6. The Ten-Year Auction (the sky-truth: the sky is a LID) · 7. The Heart-Demon
+  Seclusion (the Dao of the Unveiled) · 8. The Thunder That Knows Your Name
+  (tribulation under assassination) · 9. The War of the Spilled Banner (the seal
+  is placed from ABOVE; lower worlds are FARMED) · 10. The Smaller Sky
+  (ascension into the Spirit World, where the ladder resets and there is yet
+  another lid above).
+
+THE CORE COSMIC TRUTH (this universe states the Loom's political law outright):
+the Continent's sky is a seal placed by higher-realm powers; the world is farmed;
+ignorance is the keystone; a world that KNOWS cannot be re-sealed. This is the
+clearest in-world articulation of the "lid above every sky" concept in Section 1.
+
+OPEN HOOKS: everything above the Continent (the Spirit World and beyond); who
+farms the worlds and why; the dead immortal's name and faction; whether the
+Nine Vaults Continent is one of the Loom's dim frontier stitches.
+
+--------------------------------------------------------------------------------
+3b. THE META LAYER
+--------------------------------------------------------------------------------
+
+================================================================================
+THE WEAVINGS — FOUND NOTEBOOKS / LOST MEMOIRS   [META]
+================================================================================
+WHAT IT IS: a collection framed as recovered notebooks, lost memoirs, and
+"weavings" — short pieces, some near-complete, some one-line seeds, bound
+together by an authorial/autobiographical frame (childhood memory-fragments:
+the door that looked like two doors, the green kindergarten stairs, the broken
+sunglasses). The frame's theme: the grit that makes the pearl — suffering,
+invisibility, and transformation.
+
+WHY IT MATTERS TO THE LOOM: the WEAVINGS complete the weaving motif (Loom ↔
+Weavers/Codex ↔ Weavings). Treat the Found Notebooks as a possible IN-UNIVERSE
+ARTIFACT: a collection of fragments recovered from across the weave — memoirs of
+lives lived in many stitches, gathered by an unnamed collector. This gives the
+wiki a "frame device" it can use to file orphan stories and short lore as
+"recovered pages." Handle as [META]: never assert the frame as hard canon; offer
+it as the wiki's connective conceit.
+
+THE PIECES (each can be its own small universe / recovered memoir):
+  - DEVIL'S FORK (002.devils.fork) — near-complete. ANASTASIA, an 11-year-old
+    girl, grazing cattle, is lost in the "Devil's Fork," a liminal place where
+    paths loop forever; she escapes by trusting her mare YANA and her prayers.
+    Slavic/Eastern-European magical realism. ("Devil's Fork" is the one recurring
+    named location in the collection.)
+  - HUBRIS (royalroad/001.hubris) — complete novella in log form. Captain
+    IKAROS of the generation ship GAIA journeys 400 years to a world he renames
+    ALERYA, only to arrive and find humanity already colonized it centuries
+    earlier via faster later ships — the explorer made a fossil by progress.
+    (Resonates hard with the Engine's Exodus and with obsolescence across time.)
+  - MIND.READER / NEURAL.DRIFT (duplicate seeds) — a long-haul space crew whose
+    consciousness is digital, waking into a body only for a shift; a warning
+    carved on the protagonist's arm: "beware of the cargo hold H7."
+  - LINE.HOLDER.HERO — a lone hero holds a wall against millions with a "Sword
+    of Light" that ignites the soul; ancient prophecies were ignored. (Resonates
+    with Cotl's Light and the Tavern's calamity-champions.)
+  - SNAIL.LIFE — a one-line seed: "life as a snail; only move after the rain."
+
+OPEN HOOKS: who the collector is; whether the autobiographical frame-voice is a
+character in the Loom; whether "Devil's Fork" is a karma-thread snarl made
+physical; whether the recovered memoirs are Ghor's, or Skolar's, or a thousand
+strangers'.
+
+--------------------------------------------------------------------------------
+4. THE RESONANCE CATALOGUE (latent links — theories, NOT facts)
+--------------------------------------------------------------------------------
+
+These are the threads the wiki may pull to grow, always as "Theories" /
+"Resonances," never as confirmed crossovers (except the two Spine anchors).
+
+R1. THE WEAVING TRIAD. Loom of Heavens (Blaze) ↔ the Weavers & Codex detecting
+    "the same shape repeating across worlds" (Engine) ↔ the Weavings notebooks
+    (meta). Theory: three views of one weave. The Codex's "current" may be a
+    karma thread; the Found Notebooks may be its recovered output.
+
+R2. THE FIVE DOORS ARE ONE DOOR. Ascension (Blaze, Sky Pillar, Nine Vaults),
+    Void-Resurrection (Engine), Divine Summoning (Cotl, Tavern), Judged
+    Reincarnation (Charlatan), Engineered Gates (Engine's Exodus). Theory: every
+    world explains soul-movement between stitches in its own language.
+
+R3. THE LID ABOVE EVERY SKY. The Nine Vaults' "sky is a seal, worlds are farmed"
+    is the same hierarchy that severs Primordial Gods from their worlds in Blaze
+    and that keeps frontier stitches small. Theory: the Prefecture, the Sky
+    Sect's distant HQ, and the higher realms are all rungs of the Loom's
+    enforcement of ignorance.
+
+R4. THE VOID ENTITIES. Vael (Engine) is "not the only one of her kind." Theory:
+    void-touched entities are agents (or parasites, or weavers) of the between-
+    place — kin to whatever a Primordial God becomes after severance, or to the
+    Tavern-entity, or to the Grimoire of the Hundred-Eleven.
+
+R5. THE NAME "ADAM." Ghor's most-used name is Adam, "older than the Hebrew."
+    Theory: a recurring first-man archetype seeded across stitches (echo him in
+    summoned champions, first-men like "The First" of the Source, or the "second
+    pair of eyes" Skolar seeks).
+
+R6. THE CHAMPIONS AND THE CALAMITY. Cotl's Light, the Tavern's ten champions,
+    the line.holder hero, and even the Hundred-Eleven are all "forged champions
+    against a doom." Theory: something in the Loom keeps drafting mortals to hold
+    a line — and keeps wiping or spending them.
+
+R7. THE SCATTERED MASTER / THE ASH IN THE RELIC. Whiteflame scatters his soul
+    into a hundred blood-drops (Blaze); the Hollow Lantern holds a dead
+    immortal's soul-ash (Nine Vaults); Sky Pillar's Evergreen wakes from a dead
+    cultivator's blood. Theory: dying high-realm beings seed lower stitches with
+    themselves — a way to cheat severance, or to plant inheritors.
+
+R8. OBSOLESCENCE ACROSS TIME. Ikaros arriving too late (Hubris) ↔ the Engine's
+    Exodus network collapsing ↔ the Weavers orphaned from a forgotten origin.
+    Theory: the Loom's frontier is littered with civilizations outrun by their
+    own reach.
+
+--------------------------------------------------------------------------------
+5. WIKI-GENERATION GUIDELINES
+--------------------------------------------------------------------------------
+
+VOICE & TONE. Write wiki articles in a neutral, in-universe encyclopedic
+register (like a fan wikia). Match each universe's flavor in flavor-text pull-
+quotes only. Respect the author's hard style rules: no tautological "X was X"
+constructions; do not give inanimate things human agency (a bog does not
+"teach," a mountain does not "decide") — a person or a named entity owns every
+active verb.
+
+EXPANDING WITHOUT BREAKING CANON:
+  - Prefer filling an OPEN HOOK over inventing a new top-level fact.
+  - Keep each universe internally consistent first; only then reach for a
+    Resonance.
+  - Never resolve a Thread that this seed leaves open (especially Anchor B's
+    "how," Vael's nature, the identity of the higher powers). Deepen mysteries;
+    do not close them. A neverending wiki needs its questions to stay alive.
+  - When you introduce a new named entity, give it: a universe, a tier, at
+    least one relationship to an existing entity, and one open hook.
+
+CROSS-LINKING. Every article should link to: its Universe, its Power System,
+and any Threads it touches. Spine articles (Skolar, and the Blaze↔111 link) may
+link ACROSS universes. Non-spine articles link across universes ONLY inside a
+clearly labeled "Theories / Resonances" section.
+
+SEED FACTS TO NEVER CONTRADICT (the load-bearing canon):
+  - The Loom has nine realms; the ninth (Primordial God) severs its holder from
+    their home universe.
+  - Only a handful have ever reached the ninth realm; Skolar is one, and Skolar
+    began as the Charlatan. [SPINE]
+  - Karma threads bind souls; space threads bind worlds; they are different.
+  - Blaze's Rin is a body-cultivator hidden from all standard testing, watched
+    (unknowingly) by Skolar's veiled avatar.
+  - 111's power is the Grimoire, not cultivation; "Blaze" is soldier #45.
+    [ANCHOR B]
+  - The Engine's Ghor cannot choose when/where/which body he resurrects; Vael is
+    never shown directly.
+  - Most worlds do not know the Loom exists.
+
+STARTER ARTICLE BACKLOG (good first pages to generate):
+  Concepts: The Loom of Heavens · Threads of Space vs. Karma Threads · The Nine
+  Realms · The Ten Primordial Daos · The Lid Above Every Sky · The Five Doors.
+  Spine: Skolar (Charlatan → Primordial God) · The Seven Veils · The Hundred-
+  Eleven Roster and the Mystery of #45.
+  Universes: one Universe page per stitch above, each seeded from Section 3.
+  Threads: R1-R8 as living mystery-pages.
+
+================================================================================
+END OF SEED
+================================================================================

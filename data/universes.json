@@ -1,0 +1,32 @@
+{
+  "concepts": {
+    "name": "Cosmology & Concepts",
+    "tagline": "The shared frame that contains every stitch — the Loom, its threads, its ladder and its lid.",
+    "tier": "META"
+  },
+  "blaze": {
+    "name": "Blaze",
+    "tagline": "A backwater cultivation world at the dim edge of the Loom — and the vantage from which the Loom is first seen.",
+    "tier": "ESTABLISHED"
+  },
+  "111": {
+    "name": "The Hundred-Eleven",
+    "tagline": "A grimoire-bound mercenary company in the fractured kingdom of Veleh.",
+    "tier": "ESTABLISHED"
+  },
+  "engine": {
+    "name": "The Engine",
+    "tagline": "An immortal wanderer reseeded life after life across fifty galaxies and a hundred thousand years.",
+    "tier": "ESTABLISHED"
+  },
+  "sky-pillar": {
+    "name": "Sky Pillar",
+    "tagline": "The rise of a sentient cultivator tree to world-shaking power.",
+    "tier": "ESTABLISHED"
+  },
+  "charlatan": {
+    "name": "The Charlatan",
+    "tagline": "The con artist who fooled the Heavens — the mortal origin of the Primordial God Skolar.",
+    "tier": "SKETCH"
+  }
+}

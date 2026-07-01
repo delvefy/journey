@@ -1,0 +1,180 @@
+================================================================================
+WRITE.TXT — HOW TO WRITE FOR THE LOOM OF HEAVENS WIKI
+A companion to seed.txt (the worldbible). Read seed.txt for WHAT is true;
+read this for HOW to turn it into pages.
+================================================================================
+
+--------------------------------------------------------------------------------
+0. THE SHAPE OF THE SITE
+--------------------------------------------------------------------------------
+
+The wiki is a STATIC HTML site generated from markdown source. You never edit
+the HTML by hand — you write a markdown file, run the build, and the generator
+produces the pages, the per-universe indexes, the homepage, and the search
+index.
+
+    data/                        <-- SOURCE (what you edit)
+      universes.json               universe display names, taglines, tiers
+      articles/
+        <universe>/                one folder per universe (a "stitch")
+          <slug>.md                one markdown file per article
+
+    articles/                    <-- GENERATED (never edit by hand)
+      <universe>/
+        <slug>.html                the article page
+        index.html                 the universe's article list
+    index.html                   <-- GENERATED homepage (search + recent)
+    search-index.json            <-- GENERATED client-side search index
+
+    assets/  style.css · theme.js · search.js   (the shared front-end)
+    tools/   build.py · seed.txt · write.txt
+
+--------------------------------------------------------------------------------
+1. THE ONE COMMAND
+--------------------------------------------------------------------------------
+
+    python3 tools/build.py            # rebuild the whole site
+    python3 tools/build.py --check    # rebuild + list dead wiki-links
+
+Run it after adding or editing ANY .md file or universes.json. It has no
+third-party dependencies — plain Python 3.
+
+--------------------------------------------------------------------------------
+2. ADDING AN ARTICLE (the whole workflow)
+--------------------------------------------------------------------------------
+
+  1. Pick the universe folder under data/articles/. If the universe is new,
+     create the folder AND add an entry to data/universes.json (see §5).
+  2. Create  data/articles/<universe>/<slug>.md.  The file name (minus .md) is
+     the article's SLUG — the thing other pages link to with [[slug]]. Keep it
+     lowercase-with-hyphens and stable; renaming it breaks inbound links.
+  3. Write the frontmatter block, then the body (see §3, §4).
+  4. Run  python3 tools/build.py --check  and fix any dead links you didn't
+     intend.
+
+--------------------------------------------------------------------------------
+3. FRONTMATTER (the block between the --- lines at the top)
+--------------------------------------------------------------------------------
+
+    ---
+    title: The Loom of Heavens
+    universe: concepts
+    type: Concept
+    tier: META
+    summary: One-sentence hook shown under the title and in search results.
+    tags: [cosmology, loom, threads]
+    date: 2026-07-01
+    ---
+
+FIELDS:
+  title    (required) Display title. Quote it if it contains a colon, e.g.
+           title: "Universe: Blaze"
+  universe (required, but inferred from the folder if omitted) The stitch this
+           page belongs to; must match a data/universes.json key.
+  type     Article type. Use one of the seed's types: Universe, Character,
+           Location, Power System, Faction, Event, Artifact, Species, Concept,
+           Thread. Add a "(Spine)" suffix for the two confirmed crossovers.
+  tier     ESTABLISHED | SKETCH | BLUEPRINT | META  (see seed §"TIERS").
+  summary  One neutral sentence. Drives the homepage cards and search.
+  tags     Inline list in [square, brackets]. Lowercase, hyphenated.
+  date     ISO date (YYYY-MM-DD). Controls "Recent articles" ordering — set it
+           to the day you write the page.
+
+--------------------------------------------------------------------------------
+4. THE MARKDOWN SUBSET (what the renderer understands)
+--------------------------------------------------------------------------------
+
+  # H1  ## H2  ### H3            headings (H2/H3 for article sections)
+  **bold**   *italic*           inline emphasis
+  `code`                        inline code / literal terms
+  - item   or   * item          unordered list
+  1. item                       ordered list
+  > quoted line                 blockquote — USE FOR FLAVOUR PULL-QUOTES
+  ---                           horizontal rule
+  [text](https://url)           external / absolute link
+  [[slug]]                      WIKI-LINK to another article (see §6)
+  [[slug|Display text]]         wiki-link with custom link text
+
+Paragraphs are separated by a blank line. That is the whole grammar — keep to
+it. Do not paste raw HTML; it will be escaped and shown as text.
+
+--------------------------------------------------------------------------------
+5. REGISTERING A UNIVERSE (data/universes.json)
+--------------------------------------------------------------------------------
+
+    "sky-pillar": {
+      "name": "Sky Pillar",
+      "tagline": "The rise of a sentient cultivator tree to world-shaking power.",
+      "tier": "ESTABLISHED"
+    }
+
+The KEY ("sky-pillar") is the folder name under data/articles/ and the URL
+segment. "name" is the display title used on the homepage, universe index, and
+breadcrumbs. A universe with no articles yet is fine to list; it simply won't
+appear on the homepage until it has at least one page.
+
+--------------------------------------------------------------------------------
+6. CROSS-LINKING RULES (this is the heart of a wiki)
+--------------------------------------------------------------------------------
+
+  * Link with [[slug]] (the target file's name without .md) OR with the
+    target's exact title — both are matched loosely (case- and punctuation-
+    insensitive), so [[skolar]], [[Skolar]], and [[The Loom of Heavens]] all
+    resolve. Use [[slug|Display text]] to override the visible text.
+  * A link whose target does not yet exist renders as a RED "dead link" — this
+    is intentional (like a real wiki's red links). It marks a page worth
+    writing. Run --check to see the full list of unwritten targets.
+  * Every article SHOULD link to: its Universe page, its Power System (if any),
+    and any Threads it touches.
+  * CANON DISCIPLINE ON LINKS (from the seed):
+      - Spine pages (Skolar, and the Blaze<->111 #45 link) MAY link ACROSS
+        universes freely.
+      - Every other article links across universes ONLY inside a clearly
+        labelled "Theories & Resonances" section, and always as theory, never
+        as confirmed fact.
+
+--------------------------------------------------------------------------------
+7. VOICE & STYLE (the author's hard rules — do not break these)
+--------------------------------------------------------------------------------
+
+  * Neutral, in-universe encyclopedic register, like a fan wikia. Save flavour
+    for blockquote pull-quotes.
+  * NO tautological "X was X" constructions.
+  * NO human agency for inanimate things: a bog does not "teach", a mountain
+    does not "decide". A person or a named entity owns every active verb.
+  * DEEPEN mysteries; never resolve an open Thread the seed leaves open
+    (Anchor B's "how", Vael's nature, the identity of the higher powers).
+  * When you introduce a new named entity, give it: a universe, a tier, at
+    least one relationship to an existing entity, and one open hook.
+  * Prefer filling an OPEN HOOK from the seed over inventing new top-level
+    facts. When drafts and seed disagree, the drafts win for that universe.
+
+--------------------------------------------------------------------------------
+8. SUGGESTED SECTION ORDER BY ARTICLE TYPE
+--------------------------------------------------------------------------------
+
+  Universe : The world / Key locations / Power systems / Key characters /
+             Key events / Open hooks
+  Character: Lead paragraph / Role & history / Powers or techniques /
+             Relationships / Open hooks / (Theories & Resonances)
+  Concept  : Definition / Mechanics / Consequences / Theories & Resonances
+  Thread   : What is confirmed / What is open / Resonances it touches
+
+End most pages with an "Open hooks" list — a neverending wiki lives on its
+unanswered questions.
+
+--------------------------------------------------------------------------------
+9. STARTER BACKLOG (good next pages — see seed §5)
+--------------------------------------------------------------------------------
+
+  Concepts: The Nine Realms · The Ten Primordial Daos · The Lid Above Every
+            Sky · The Five Doors.
+  Spine:    The Charlatan · The Seven Veils · The Hundred-Eleven Roster and
+            the Mystery of #45.
+  Universes:one Universe page per stitch in seed §3 (111, Engine, Sky Pillar,
+            Charlatan, and the Sketch/Blueprint worlds).
+  Threads:  R1-R8 from the seed's Resonance Catalogue, as living mystery-pages.
+
+================================================================================
+END OF WRITE.TXT
+================================================================================
