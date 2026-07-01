@@ -14,6 +14,20 @@
     "url": "articles/111/alden.html"
   },
   {
+    "title": "Elric",
+    "universe": "The Hundred-Eleven",
+    "type": "Character",
+    "summary": "The Centurion, #1 of the Hundred-Eleven — ancient, cold, and from a wild land across the Eastern Sea; loyal to the contract rather than to people, he has outlived more companies than any soldier should, by a means the drafts do not explain.",
+    "tags": [
+      "111",
+      "character",
+      "elric",
+      "centurion",
+      "grimoire"
+    ],
+    "url": "articles/111/elric.html"
+  },
+  {
     "title": "The Grimoire",
     "universe": "The Hundred-Eleven",
     "type": "Power System",
@@ -56,6 +70,20 @@
     "url": "articles/111/the-hundred-eleven.html"
   },
   {
+    "title": "The Blaze Tempering",
+    "universe": "Blaze",
+    "type": "Power System",
+    "summary": "The secret body-cultivation road of Blaze — forty layers that do not store qi but consume it, igniting it to burn impurities out as slag and doubling raw power with each layer, while leaving its bearer invisible to every standard test.",
+    "tags": [
+      "blaze",
+      "power-system",
+      "blaze-tempering",
+      "body-cultivation",
+      "igniting-sigil"
+    ],
+    "url": "articles/blaze/blaze-tempering.html"
+  },
+  {
     "title": "Rin",
     "universe": "Blaze",
     "type": "Character",
@@ -95,6 +123,35 @@
       "loom"
     ],
     "url": "articles/blaze/universe-blaze.html"
+  },
+  {
+    "title": "Whiteflame",
+    "universe": "Blaze",
+    "type": "Character",
+    "summary": "A hunted body-cultivation master who, dying, scattered his soul into a hundred blood-drops across the Loom; one drop seeded Rin's road, and his surviving wisp taught the first layers of the Blaze Tempering — leaving a debt of revenge as the price of the inheritance.",
+    "tags": [
+      "blaze",
+      "character",
+      "whiteflame",
+      "scattered-master",
+      "blaze-tempering"
+    ],
+    "url": "articles/blaze/whiteflame.html"
+  },
+  {
+    "title": "The Judges of Reincarnation",
+    "universe": "The Charlatan",
+    "type": "Faction",
+    "summary": "The celestial bureaucracy that weighs dead souls and reseeds them into new lives — the court that sealed the Charlatan twice and failed to erase his memory, and thereby set the lowest rung of the Spine in motion.",
+    "tags": [
+      "charlatan",
+      "faction",
+      "judges",
+      "reincarnation",
+      "spine",
+      "doors"
+    ],
+    "url": "articles/charlatan/judges-of-reincarnation.html"
   },
   {
     "title": "Universe: The Charlatan",
@@ -166,6 +223,20 @@
     "url": "articles/concepts/nine-realms.html"
   },
   {
+    "title": "The Scattered Master",
+    "universe": "Cosmology & Concepts",
+    "type": "Thread",
+    "summary": "A recurring pattern across the weave — a dying high-realm being seeds a lower stitch with a fragment of itself, whether as blood-drops, soul-ash in a relic, or blood soaked into a sapling. A living mystery the wiki tracks, never a confirmed crossing.",
+    "tags": [
+      "thread",
+      "resonance",
+      "scattered-master",
+      "inheritance",
+      "seeding"
+    ],
+    "url": "articles/concepts/scattered-master.html"
+  },
+  {
     "title": "The Ten Primordial Daos",
     "universe": "Cosmology & Concepts",
     "type": "Concept",
@@ -191,6 +262,36 @@
       "fate"
     ],
     "url": "articles/concepts/threads-of-space-vs-karma.html"
+  },
+  {
+    "title": "Universe: Champion of the Light",
+    "universe": "Champion of the Light",
+    "type": "Universe",
+    "summary": "A medieval kingdom under invasion where a goddess called the Light summons champions from other worlds to hold the line — and, when they fall, summons them again with their memories wiped, turning heroism into a loop.",
+    "tags": [
+      "cotl",
+      "universe",
+      "summoning",
+      "light",
+      "covenant",
+      "sketch"
+    ],
+    "url": "articles/cotl/champion-of-the-light.html"
+  },
+  {
+    "title": "Virah",
+    "universe": "Champion of the Light",
+    "type": "Character",
+    "summary": "The summoned champion of the Light, also called Roger — monstrously strong, regenerative, and stripped of memory by design; a hero who dies to close a rift and is summoned again, emptied, to fight the same war a second time.",
+    "tags": [
+      "cotl",
+      "protagonist",
+      "virah",
+      "summoned-hero",
+      "loop",
+      "sketch"
+    ],
+    "url": "articles/cotl/virah.html"
   },
   {
     "title": "Ghor",
@@ -233,6 +334,48 @@
       "paraphrase"
     ],
     "url": "articles/engine/vael.html"
+  },
+  {
+    "title": "The Hollow Lantern",
+    "universe": "The Nine Vaults Continent",
+    "type": "Artifact",
+    "summary": "A relic holding the soul-ash of a dead immortal, which lets its bearer name the flaw in any technique and drink fragments of a vanished life — power whose price is measured in the years of the bearer's own soul.",
+    "tags": [
+      "nine-vaults",
+      "artifact",
+      "hollow-lantern",
+      "soul-ash",
+      "blueprint"
+    ],
+    "url": "articles/nine-vaults/hollow-lantern.html"
+  },
+  {
+    "title": "Lu Chen",
+    "universe": "The Nine Vaults Continent",
+    "type": "Character",
+    "summary": "A village boy branded a \"dead root\" who is in truth the sealed heir of the erased Lu Clan, and the bearer of the Hollow Lantern — the relic that lets him name any technique's flaw at the cost of ageing his own soul.",
+    "tags": [
+      "nine-vaults",
+      "protagonist",
+      "lu-chen",
+      "hollow-lantern",
+      "blueprint"
+    ],
+    "url": "articles/nine-vaults/lu-chen.html"
+  },
+  {
+    "title": "Universe: The Nine Vaults Continent",
+    "universe": "The Nine Vaults Continent",
+    "type": "Universe",
+    "summary": "A single landmass whose people do not know a larger sky hangs above them — the clearest in-world statement of the Loom's cruelest law, that a sky can be a lid and the world beneath it farmed.",
+    "tags": [
+      "nine-vaults",
+      "universe",
+      "xianxia",
+      "lid",
+      "blueprint"
+    ],
+    "url": "articles/nine-vaults/the-nine-vaults-continent.html"
   },
   {
     "title": "Evergreen",

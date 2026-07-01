@@ -28,5 +28,15 @@
     "name": "The Charlatan",
     "tagline": "The con artist who fooled the Heavens — the mortal origin of the Primordial God Skolar.",
     "tier": "SKETCH"
+  },
+  "nine-vaults": {
+    "name": "The Nine Vaults Continent",
+    "tagline": "A single landmass whose people do not know a larger sky hangs above — the lid cosmology in its purest form.",
+    "tier": "BLUEPRINT"
+  },
+  "cotl": {
+    "name": "Champion of the Light",
+    "tagline": "A goddess summons champions to hold the line against the Covenant — and wipes their memories to summon them again.",
+    "tier": "SKETCH"
   }
 }
