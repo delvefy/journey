@@ -1,5 +1,75 @@
 [
   {
+    "title": "Alden",
+    "universe": "The Hundred-Eleven",
+    "type": "Character",
+    "summary": "Born Sadim, soldier #82 falling to #39 — the eighteen-year-old orphan of Tullanon whose honest journal narrates the Hundred-Eleven, and who cannot leave the company he joined for food.",
+    "tags": [
+      "narrator",
+      "orphan",
+      "paymaster",
+      "111",
+      "alden"
+    ],
+    "url": "articles/111/alden.html"
+  },
+  {
+    "title": "The Grimoire",
+    "universe": "The Hundred-Eleven",
+    "type": "Power System",
+    "summary": "The parasitic, human-skin-bound book that binds a mercenary company body and soul, grants its powers, and compels the killing that feeds it — holding thousands of names though the company is only ever 111 strong.",
+    "tags": [
+      "grimoire",
+      "oath",
+      "parasite",
+      "power-system",
+      "111"
+    ],
+    "url": "articles/111/grimoire.html"
+  },
+  {
+    "title": "The Hundred-Eleven Roster and the Mystery of #45",
+    "universe": "The Hundred-Eleven",
+    "type": "Thread (Spine)",
+    "summary": "One of the multiverse's two confirmed cross-universe anchors — the roster of the Hundred-Eleven carries a soldier named Blaze at #45, sharing a name with the protagonist-lineage of an entire other world. What is confirmed is the link; what stays open is how.",
+    "tags": [
+      "spine",
+      "anchor",
+      "roster",
+      "blaze",
+      "thread"
+    ],
+    "url": "articles/111/roster-and-the-mystery-of-45.html"
+  },
+  {
+    "title": "Universe: The Hundred-Eleven",
+    "universe": "The Hundred-Eleven",
+    "type": "Universe",
+    "summary": "A grim journal-narrated mercenary saga set in the fractured vassal kingdom of Veleh, where a company of exactly 111 soldiers is bound body and soul to a parasitic human-skin grimoire.",
+    "tags": [
+      "dark-fantasy",
+      "mercenary",
+      "grimoire",
+      "veleh",
+      "111"
+    ],
+    "url": "articles/111/the-hundred-eleven.html"
+  },
+  {
+    "title": "Rin",
+    "universe": "Blaze",
+    "type": "Character",
+    "summary": "A red-haired slum orphan of Scarlet City, born meridian-defective and for that reason the perfect vessel for the Blaze Tempering — unaware that a Primordial God has chosen his trajectory.",
+    "tags": [
+      "blaze",
+      "protagonist",
+      "body-cultivation",
+      "blaze-tempering",
+      "rin"
+    ],
+    "url": "articles/blaze/rin.html"
+  },
+  {
     "title": "Skolar",
     "universe": "Blaze",
     "type": "Character (Spine)",
@@ -27,6 +97,48 @@
     "url": "articles/blaze/universe-blaze.html"
   },
   {
+    "title": "Universe: The Charlatan",
+    "universe": "The Charlatan",
+    "type": "Universe",
+    "summary": "A xianxia world of sects, noble families, and a celestial bureaucracy of reincarnation — and the mortal origin of the Primordial God Skolar.",
+    "tags": [
+      "xianxia",
+      "trickster",
+      "reincarnation",
+      "spine",
+      "charlatan"
+    ],
+    "url": "articles/charlatan/the-charlatan.html"
+  },
+  {
+    "title": "The Five Doors",
+    "universe": "Cosmology & Concepts",
+    "type": "Concept",
+    "summary": "The five local mechanisms by which a soul moves between stitches of the Loom — ascension, void-resurrection, divine summoning, judged reincarnation, and engineered gates — which are five names for one act.",
+    "tags": [
+      "cosmology",
+      "souls",
+      "crossing",
+      "doors",
+      "frame"
+    ],
+    "url": "articles/concepts/five-doors.html"
+  },
+  {
+    "title": "The Lid Above Every Sky",
+    "universe": "Cosmology & Concepts",
+    "type": "Concept",
+    "summary": "The political truth of the Loom — that a lower world's sky is not open but a seal placed from above, beneath which the world is farmed and kept ignorant.",
+    "tags": [
+      "cosmology",
+      "lid",
+      "hierarchy",
+      "farming",
+      "ignorance"
+    ],
+    "url": "articles/concepts/lid-above-every-sky.html"
+  },
+  {
     "title": "The Loom of Heavens",
     "universe": "Cosmology & Concepts",
     "type": "Concept",
@@ -40,6 +152,34 @@
     "url": "articles/concepts/loom-of-heavens.html"
   },
   {
+    "title": "The Nine Realms",
+    "universe": "Cosmology & Concepts",
+    "type": "Concept",
+    "summary": "The nine-realm ladder of cultivation — the known ascent from a mortal's first breath of qi to the severed godhood of a Primordial God.",
+    "tags": [
+      "cosmology",
+      "cultivation",
+      "ladder",
+      "realms",
+      "ascension"
+    ],
+    "url": "articles/concepts/nine-realms.html"
+  },
+  {
+    "title": "The Ten Primordial Daos",
+    "universe": "Cosmology & Concepts",
+    "type": "Concept",
+    "summary": "The ten fundamental laws from which every lesser Dao descends — two polarities, four Daos of Order, four of Chaos — and the fusion of all ten that makes a Primordial God.",
+    "tags": [
+      "cosmology",
+      "dao",
+      "order",
+      "chaos",
+      "primordial"
+    ],
+    "url": "articles/concepts/ten-primordial-daos.html"
+  },
+  {
     "title": "Threads of Space vs. Karma Threads",
     "universe": "Cosmology & Concepts",
     "type": "Concept",
@@ -51,5 +191,75 @@
       "fate"
     ],
     "url": "articles/concepts/threads-of-space-vs-karma.html"
+  },
+  {
+    "title": "Ghor",
+    "universe": "The Engine",
+    "type": "Character",
+    "summary": "Born a Neanderthal around 45,000 BC, dead at fourteen and bound to a void entity ever since — the immortal wanderer of the Engine, who has gone by Adam more than any other of his hundred names.",
+    "tags": [
+      "protagonist",
+      "immortal",
+      "adam",
+      "neanderthal",
+      "engine"
+    ],
+    "url": "articles/engine/ghor.html"
+  },
+  {
+    "title": "Universe: The Engine",
+    "universe": "The Engine",
+    "type": "Universe",
+    "summary": "An immortal-wanderer science-fantasy spanning a hundred thousand years and fifty galaxies, in which a man dies and is reseeded life after life across worlds by the void entity bound to him.",
+    "tags": [
+      "science-fantasy",
+      "immortality",
+      "void",
+      "weavers",
+      "engine"
+    ],
+    "url": "articles/engine/the-engine.html"
+  },
+  {
+    "title": "Vael",
+    "universe": "The Engine",
+    "type": "Species",
+    "summary": "The Spectral Void Entity bound to Ghor since his first death — the unseen source of all his powers, never shown directly, and by her own hint not the only one of her kind.",
+    "tags": [
+      "void-entity",
+      "unseen",
+      "vael",
+      "engine",
+      "paraphrase"
+    ],
+    "url": "articles/engine/vael.html"
+  },
+  {
+    "title": "Evergreen",
+    "universe": "Sky Pillar",
+    "type": "Character",
+    "summary": "A sapling that woke to sentience on the blood of a dying cultivator and climbed the ladder to Monarch — a slow, patient, morally hardening intelligence a thousand kilometres tall, feeding on a planet's magma.",
+    "tags": [
+      "god-tree",
+      "monarch",
+      "non-human",
+      "evergreen",
+      "sky-pillar"
+    ],
+    "url": "articles/sky-pillar/evergreen.html"
+  },
+  {
+    "title": "Universe: Sky Pillar",
+    "universe": "Sky Pillar",
+    "type": "Universe",
+    "summary": "A xianxia told from a non-human point of view — the rise of a sentient cultivator tree from a woken sapling to a world-shaking Monarch a thousand kilometres tall.",
+    "tags": [
+      "xianxia",
+      "non-human",
+      "god-tree",
+      "yunus",
+      "sky-pillar"
+    ],
+    "url": "articles/sky-pillar/sky-pillar.html"
   }
 ]
